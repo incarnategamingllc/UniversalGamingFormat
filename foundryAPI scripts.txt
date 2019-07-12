@@ -1,0 +1,48 @@
+canvas.walls.draw()
+
+$("#sidebar").hide();
+$("#sidebar").show();
+
+async function createPlaceholderCharacters(number) {
+  for ( let i=0; i<number; i++) {
+    await Actor5e.create({name: `Placeholder${i+1}`, type: "npc"}, {"displaySheet": false});
+  }
+}
+createPlaceholderCharacters(5000);
+createPlaceholderCharacters(3);
+
+
+you could make a simple mod to do it though
+you could disable the "Change World" button if game.options.demo is true
+
+@Pro_Nobis (Philip) [UTC-4] I didn't check the current hooks available for that, but I would do the render, then on a render hook, I would make it scroll
+see for example lines 84 to 92 here : https://github.com/kakaroto/fvtt-module-entityorder/blob/master/entityorder/entityorder.js#L84
+
+
+Hooks.on("preCreateChatMessage",  function(message) {
+    console.log("This worked",message); 
+    return false; 
+});
+
+Hooks.call
+
+
+  
+  class ActorSheet extends BaseEntitySheet {
+    _onResize(event) {
+    console.log("Test Result");
+	console.log(event);
+    }
+}
+    Folder._entityorder_original_setupFolders = Folder.setupFolders;
+    Folder.setupFolders = EntityOrder.setupFolders
+    SidebarDirectory.prototype._entityorder_original_onDrop = SidebarDirectory.prototype._onDrop;
+    SidebarDirectory.prototype._onDrop = EntityOrder._onDrop
+	
+async function populateCompendiumFromJSON(src) {
+  const json = await fetch(src).then(r => r.json());
+  for ( let data of json ) {
+    let actor = await CONFIG.Actor.entityClass.create(data, {temporary: true, displaySheet: false});
+    await pack.importEntity(actor);
+  }
+}
