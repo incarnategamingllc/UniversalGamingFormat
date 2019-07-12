@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2019 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="cpp"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="8" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="22"/>
+					</targets>
+					<view ltx="81" lty="-350" rbx="119" rby="-333"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="225" lty="123" rbx="276" rby="140"/>
+					<data>
+						<constant value="\n" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="13" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="225" lty="139" rbx="315" rby="156"/>
+					<data>
+						<constant value="&lt;/p&gt;&lt;p&gt;" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="225" lty="206" rbx="276" rby="223"/>
+					<data>
+						<constant value="\n" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="16" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="225" lty="222" rbx="315" rby="239"/>
+					<data>
+						<constant value="&lt;/p&gt;&lt;p&gt;" datatype="string"/>
+					</data>
+				</component>
+				<component name="replace" library="lang" uid="15" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="16"/>
+						<datapoint pos="1" key="15"/>
+						<datapoint pos="2" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="321" lty="153" rbx="418" rby="223"/>
+				</component>
+				<component name="replace" library="lang" uid="11" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="4"/>
+						<datapoint pos="1" key="5"/>
+						<datapoint pos="2" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="321" lty="70" rbx="418" rby="140"/>
+				</component>
+				<component name="constant" library="core" uid="17" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="447" lty="233" rbx="533" rby="250"/>
+					<data>
+						<constant value="sE2sE150" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="18" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="447" lty="217" rbx="582" rby="234"/>
+					<data>
+						<constant value="FpilpJ8GmJCZhKaK" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="19" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="21"/>
+					</targets>
+					<view ltx="447" lty="201" rbx="610" rby="218"/>
+					<data>
+						<constant value="Conundrums, Riddles and Puzzles" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="23" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="32"/>
+					</targets>
+					<view ltx="81" lty="-180" rbx="119" rby="-163"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="25" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="35"/>
+					</targets>
+					<view ltx="81" lty="-95" rbx="119" rby="-78"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="puzzles" library="text" uid="2" kind="16">
+					<properties/>
+					<view rbx="180" rby="305"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="62" expanded="1">
+										<entry name="Type" outkey="63"/>
+										<entry name="Riddle" outkey="10"/>
+										<entry name="Answer" outkey="64"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" inputinstance="D:\IncarnateGaming\puzzles.csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="	" quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="puzzles" block="Rows">
+									<field0 name="Link" type="string"/>
+									<field1 name="Title" type="string"/>
+									<field2 name="Type" type="string"/>
+									<field3 name="Modified (Y_N)" realname="Modified (Y/N)" type="string"/>
+									<field4 name="Riddle" type="string"/>
+									<field5 name="Answer" type="string"/>
+									<field6 name="Page" type="string"/>
+									<field7 name="Field8" type="string"/>
+									<field8 name="Field9" type="string"/>
+									<field9 name="Field10" type="string"/>
+									<field10 name="Field11" type="string"/>
+									<field11 name="Field12" type="string"/>
+									<field12 name="Field13" type="string"/>
+									<field13 name="Field14" type="string"/>
+									<field14 name="Field15" type="string"/>
+									<field15 name="Field16" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="31" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="65"/>
+						<datapoint pos="1" key="48"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="66"/>
+					</targets>
+					<view ltx="98" lty="-233" rbx="154" rby="-179"/>
+				</component>
+				<component name="equal" library="core" uid="32" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="67"/>
+						<datapoint pos="1" key="54"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="68"/>
+					</targets>
+					<view ltx="98" lty="-148" rbx="154" rby="-94"/>
+				</component>
+				<component name="equal" library="core" uid="33" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="69"/>
+						<datapoint pos="1" key="70"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="71"/>
+					</targets>
+					<view ltx="98" lty="-63" rbx="154" rby="-9"/>
+				</component>
+				<component name="constant" library="core" uid="29" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="41"/>
+					</targets>
+					<view ltx="46" lty="-79" rbx="110" rby="-62"/>
+					<data>
+						<constant value="quip" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="21" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="27"/>
+					</targets>
+					<view ltx="81" lty="-265" rbx="119" rby="-248"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="auto-number" library="core" uid="7" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="23"/>
+						<datapoint pos="2" key="24"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="177" lty="-362" rbx="315" rby="-276"/>
+				</component>
+				<component name="UGFDraft10" library="xml" uid="3" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="607" lty="-32" rbx="879" rby="168"/>
+					<data>
+						<root scrollposition="379">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="chapters" expanded="1">
+											<entry name="riddlesChapter" expanded="1">
+												<entry name="riddles" expanded="1">
+													<entry name="riddle" inpkey="72" expanded="1">
+														<entry name="riddleID" type="attribute" inpkey="26"/>
+														<entry name="riddleAnswer">
+															<entry name="p" inpkey="9"/>
+														</entry>
+														<entry name="riddleDescription">
+															<entry name="p" inpkey="73"/>
+														</entry>
+														<entry name="riddleName" inpkey="74"/>
+														<entry name="riddleSource" inpkey="75" expanded="1">
+															<entry name="FID" type="attribute" inpkey="20"/>
+															<entry name="UGFLinkReference" type="attribute" inpkey="18"/>
+														</entry>
+														<entry name="riddleType" inpkey="76"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="UGFDraft10.xsd" outputinstance="UGFDraft10.xml" instanceroot="{}root"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="496" lty="-223" rbx="550" rby="-206"/>
+					<data>
+						<constant value="rIrI" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="35" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="42"/>
+						<datapoint pos="1" key="43"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="44"/>
+					</targets>
+					<view ltx="544" lty="-192" rbx="622" rby="-136"/>
+				</component>
+				<component name="auto-number" library="core" uid="22" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="28"/>
+						<datapoint pos="2" key="29"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="30"/>
+					</targets>
+					<view ltx="177" lty="-277" rbx="315" rby="-191"/>
+				</component>
+				<component name="constant" library="core" uid="27" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="38"/>
+					</targets>
+					<view ltx="81" lty="-249" rbx="154" rby="-232"/>
+					<data>
+						<constant value="poetry" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="36" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="47"/>
+						<datapoint pos="1" key="46"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="45"/>
+					</targets>
+					<view ltx="397" lty="-203" rbx="475" rby="-147"/>
+				</component>
+				<component name="auto-number" library="core" uid="24" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="33"/>
+						<datapoint pos="2" key="34"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="56"/>
+					</targets>
+					<view ltx="177" lty="-192" rbx="315" rby="-106"/>
+				</component>
+				<component name="constant" library="core" uid="28" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="39"/>
+					</targets>
+					<view ltx="81" lty="-164" rbx="147" rby="-147"/>
+					<data>
+						<constant value="math" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="38" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="51"/>
+						<datapoint pos="1" key="53"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="52"/>
+					</targets>
+					<view ltx="381" lty="-148" rbx="459" rby="-92"/>
+				</component>
+				<component name="auto-number" library="core" uid="26" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="36"/>
+						<datapoint pos="2" key="37"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="77"/>
+					</targets>
+					<view ltx="177" lty="-107" rbx="315" rby="-21"/>
+				</component>
+				<component name="if-else" library="core" uid="20" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="78"/>
+						<datapoint pos="1" key="50"/>
+						<datapoint pos="2" key="79"/>
+						<datapoint pos="3" key="57"/>
+						<datapoint pos="4" key="80"/>
+						<datapoint pos="5" key="81"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="82"/>
+					</targets>
+					<view ltx="479" lty="-148" rbx="582" rby="-7"/>
+				</component>
+				<component name="concat" library="core" uid="40" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="59"/>
+						<datapoint pos="1" key="58"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="60"/>
+					</targets>
+					<view ltx="368" lty="-93" rbx="446" rby="-37"/>
+				</component>
+				<component name="constant" library="core" uid="41" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="61"/>
+					</targets>
+					<view ltx="314" lty="-123" rbx="382" rby="-106"/>
+					<data>
+						<constant value="Quip " datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="39" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="55"/>
+					</targets>
+					<view ltx="315" lty="-180" rbx="385" rby="-163"/>
+					<data>
+						<constant value="Math " datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="37" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="49"/>
+					</targets>
+					<view ltx="321" lty="-249" rbx="392" rby="-232"/>
+					<data>
+						<constant value="Poem " datatype="string"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="64">
+						<edges>
+							<edge vertexkey="16"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="23"/>
+							<edge vertexkey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="26"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="28"/>
+							<edge vertexkey="29"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="33"/>
+							<edge vertexkey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="36"/>
+							<edge vertexkey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="43"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="50"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="56">
+						<edges>
+							<edge vertexkey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77">
+						<edges>
+							<edge vertexkey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="61">
+						<edges>
+							<edge vertexkey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="65"/>
+							<edge vertexkey="67"/>
+							<edge vertexkey="69"/>
+							<edge vertexkey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="78"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="68">
+						<edges>
+							<edge vertexkey="79"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="71">
+						<edges>
+							<edge vertexkey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="60">
+						<edges>
+							<edge vertexkey="81"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
