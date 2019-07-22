@@ -98,14 +98,22 @@
 																		<children>
 																			<template subtype="element" match="classArchetype">
 																				<children>
+																					<calltemplate subtype="named" match="a00ClassArchetypeDescription">
+																						<parameters/>
+																					</calltemplate>
 																					<calltemplate subtype="named" match="a00ClassArchetypeTemplate">
 																						<parameters/>
 																					</calltemplate>
 																					<template subtype="element" match="classArchetypeTraits">
 																						<children>
-																							<calltemplate subtype="named" match="a00ClassArchetypeTraitTemplate">
-																								<parameters/>
-																							</calltemplate>
+																							<template subtype="element" match="classArchetypeTrait">
+																								<children>
+																									<calltemplate subtype="named" match="a00ClassArchetypeTraitTemplate">
+																										<parameters/>
+																									</calltemplate>
+																								</children>
+																								<variables/>
+																							</template>
 																						</children>
 																						<variables/>
 																					</template>
@@ -4238,61 +4246,66 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 						</children>
 					</condition>
 					<text fixtext="},&quot;children&quot;:["/>
-					<template subtype="element" filter="1" match="classArchetypeTraits">
+					<template subtype="element" match="classArchetypeTraits">
 						<children>
-							<text fixtext="{&quot;_id&quot;:&quot;"/>
-							<template subtype="attribute" match="FID">
+							<template subtype="element" filter="1" match="classArchetypeTrait">
 								<children>
-									<content subtype="regular"/>
+									<text fixtext="{&quot;_id&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;,&quot;level&quot;:"/>
+									<template subtype="element" match="classTraitLevel">
+										<children>
+											<content subtype="regular">
+												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+											</content>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext=",&quot;name&quot;:&quot;"/>
+									<template subtype="element" match="classTraitName">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
 								</children>
 								<variables/>
 							</template>
-							<text fixtext="&quot;,&quot;level&quot;:"/>
-							<template subtype="element" match="classTraitLevel">
+							<template subtype="element" filter="position()&gt;1" match="classArchetypeTrait">
 								<children>
-									<content subtype="regular">
-										<format basic-type="xsd" datatype="nonNegativeInteger"/>
-									</content>
+									<text fixtext=",{&quot;_id&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;,&quot;level&quot;:"/>
+									<template subtype="element" match="classTraitLevel">
+										<children>
+											<content subtype="regular">
+												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+											</content>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext=",&quot;name&quot;:&quot;"/>
+									<template subtype="element" match="classTraitName">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
 								</children>
 								<variables/>
 							</template>
-							<text fixtext=",&quot;name&quot;:&quot;"/>
-							<template subtype="element" match="classTraitName">
-								<children>
-									<content subtype="regular"/>
-								</children>
-								<variables/>
-							</template>
-							<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="element" filter="position()&gt;1" match="classArchetypeTraits">
-						<children>
-							<text fixtext=",{&quot;_id&quot;:&quot;"/>
-							<template subtype="attribute" match="FID">
-								<children>
-									<content subtype="regular"/>
-								</children>
-								<variables/>
-							</template>
-							<text fixtext="&quot;,&quot;level&quot;:"/>
-							<template subtype="element" match="classTraitLevel">
-								<children>
-									<content subtype="regular">
-										<format basic-type="xsd" datatype="nonNegativeInteger"/>
-									</content>
-								</children>
-								<variables/>
-							</template>
-							<text fixtext=",&quot;name&quot;:&quot;"/>
-							<template subtype="element" match="classTraitName">
-								<children>
-									<content subtype="regular"/>
-								</children>
-								<variables/>
-							</template>
-							<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
 						</children>
 						<variables/>
 					</template>
@@ -5422,27 +5435,32 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 									</template>
 									<template subtype="element" match="classArchetypeTraits">
 										<children>
-											<text fixtext="&lt;h3&gt;"/>
-											<template subtype="element" match="classTraitLevel">
+											<template subtype="element" match="classArchetypeTrait">
 												<children>
-													<content subtype="regular">
-														<format basic-type="xsd" datatype="nonNegativeInteger"/>
-													</content>
-													<text fixtext=" "/>
-												</children>
-												<variables/>
-											</template>
-											<template subtype="element" match="classTraitName">
-												<children>
-													<content subtype="regular"/>
-												</children>
-												<variables/>
-											</template>
-											<text fixtext="&lt;/h3&gt;\n"/>
-											<template subtype="element" match="classTraitDescription">
-												<children>
-													<content subtype="regular"/>
-													<text fixtext="\n"/>
+													<text fixtext="&lt;h3&gt;"/>
+													<template subtype="element" match="classTraitLevel">
+														<children>
+															<content subtype="regular">
+																<format basic-type="xsd" datatype="nonNegativeInteger"/>
+															</content>
+															<text fixtext=" "/>
+														</children>
+														<variables/>
+													</template>
+													<template subtype="element" match="classTraitName">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&lt;/h3&gt;\n"/>
+													<template subtype="element" match="classTraitDescription">
+														<children>
+															<content subtype="regular"/>
+															<text fixtext="\n"/>
+														</children>
+														<variables/>
+													</template>
 												</children>
 												<variables/>
 											</template>
@@ -5742,27 +5760,32 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 					</template>
 					<template subtype="element" match="classArchetypeTraits">
 						<children>
-							<text fixtext="&lt;h3&gt;"/>
-							<template subtype="element" match="classTraitLevel">
+							<template subtype="element" match="classArchetypeTrait">
 								<children>
-									<content subtype="regular">
-										<format basic-type="xsd" datatype="nonNegativeInteger"/>
-									</content>
-									<text fixtext=" "/>
-								</children>
-								<variables/>
-							</template>
-							<template subtype="element" match="classTraitName">
-								<children>
-									<content subtype="regular"/>
-								</children>
-								<variables/>
-							</template>
-							<text fixtext="&lt;/h3&gt;\n"/>
-							<template subtype="element" match="classTraitDescription">
-								<children>
-									<content subtype="regular"/>
-									<text fixtext="\n"/>
+									<text fixtext="&lt;h3&gt;"/>
+									<template subtype="element" match="classTraitLevel">
+										<children>
+											<content subtype="regular">
+												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+											</content>
+											<text fixtext=" "/>
+										</children>
+										<variables/>
+									</template>
+									<template subtype="element" match="classTraitName">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&lt;/h3&gt;\n"/>
+									<template subtype="element" match="classTraitDescription">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
+										</children>
+										<variables/>
+									</template>
 								</children>
 								<variables/>
 							</template>
@@ -7482,13 +7505,13 @@ if ( ability =&quot;charisma&quot; ) then &quot;cha&quot; else &quot;&quot;"/>
 										<variables/>
 									</template>
 									<text fixtext="&quot;}"/>
-									<calltemplate subtype="named" match="damage">
+									<calltemplate subtype="named" match="damageItem1">
 										<parameters/>
 									</calltemplate>
 									<calltemplate subtype="named" match="damageType">
 										<parameters/>
 									</calltemplate>
-									<calltemplate subtype="named" match="damage2">
+									<calltemplate subtype="named" match="damageItem2">
 										<parameters/>
 									</calltemplate>
 									<calltemplate subtype="named" match="damage2Type">
@@ -7663,7 +7686,7 @@ if ( ability =&quot;charisma&quot; ) then &quot;cha&quot; else &quot;&quot;"/>
 									<text fixtext=",&quot;proficient&quot;:{&quot;type&quot;:&quot;Boolean&quot;,&quot;label&quot;:&quot;Proficient&quot;,&quot;value&quot;:true}"/>
 								</children>
 							</conditionbranch>
-							<conditionbranch xpath="(itemTypeSubtype =&quot;Artisan&apos;s Tool&quot;) or (itemTypeSubtype =&quot;Equipment Kits&quot;) or (itemTypeSubtype =&quot;Gaming Set&quot;) or (itemTypeSubtype =&quot;Musical Instrument&quot;)">
+							<conditionbranch xpath="(itemTypeSubtype =&quot;Artisan&apos;s Tool&quot;) or (itemTypeSubtype =&quot;Equipment Kits&quot;) or (itemTypeSubtype =&quot;Gaming Set&quot;) or (itemTypeSubtype =&quot;Musical Instrument&quot;) or (itemTypeSubtype =&quot;Tool&quot;)">
 								<children>
 									<text fixtext=",&quot;ability&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Default Ability&quot;,&quot;value&quot;:&quot;"/>
 									<autocalc xpath="if ( VTTcode/UGFStandard/skill/ability = &quot;strength&quot; ) then &quot;str&quot; else if ( VTTcode/UGFStandard/skill/ability = &quot;dexterity&quot; ) then &quot;dex&quot; else if ( VTTcode/UGFStandard/skill/ability = &quot;constitution&quot; ) then &quot;con&quot; else if ( VTTcode/UGFStandard/skill/ability = &quot;intelligence&quot; ) then &quot;int&quot; else if ( VTTcode/UGFStandard/skill/ability = &quot;wisdom&quot; ) then &quot;wis&quot; else if ( VTTcode/UGFStandard/skill/ability = &quot;charisma&quot; ) then &quot;cha&quot; else &quot;error ability not found&quot;"/>
