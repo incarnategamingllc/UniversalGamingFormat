@@ -51,6 +51,9 @@
 														<children>
 															<template subtype="element" match="background">
 																<children>
+																	<calltemplate subtype="named" match="a00BackgroundDescriptionTemplate">
+																		<parameters/>
+																	</calltemplate>
 																	<calltemplate subtype="named" match="a00BackgroundTemplate">
 																		<parameters/>
 																	</calltemplate>
@@ -78,6 +81,9 @@
 														<children>
 															<template subtype="element" match="class">
 																<children>
+																	<calltemplate subtype="named" match="a00ClassDescriptionTemplate">
+																		<parameters/>
+																	</calltemplate>
 																	<calltemplate subtype="named" match="a00ClassTemplate">
 																		<parameters/>
 																	</calltemplate>
@@ -172,6 +178,9 @@
 														<children>
 															<template subtype="element" match="race">
 																<children>
+																	<calltemplate subtype="named" match="a00RaceDescriptionTemplate">
+																		<parameters/>
+																	</calltemplate>
 																	<calltemplate subtype="named" match="a00RaceTemplate">
 																		<parameters/>
 																	</calltemplate>
@@ -192,6 +201,9 @@
 																		<children>
 																			<template subtype="element" match="subrace">
 																				<children>
+																					<calltemplate subtype="named" match="a00RaceSubraceDescriptionTemplate">
+																						<parameters/>
+																					</calltemplate>
 																					<calltemplate subtype="named" match="a00SubraceTemplate">
 																						<parameters/>
 																					</calltemplate>
@@ -5269,6 +5281,13 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 			<globaltemplate subtype="named" match="a00ClassDescriptionTemplate">
 				<parameters/>
 				<children>
+					<template subtype="element" match="classDescription">
+						<children>
+							<content subtype="regular"/>
+							<text fixtext="\n"/>
+						</children>
+						<variables/>
+					</template>
 					<template subtype="element" match="classHitPoints">
 						<children>
 							<text fixtext="&lt;h2&gt;Hit Points&lt;/h2&gt;\n"/>
@@ -5473,13 +5492,6 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<template subtype="element" match="classDescription">
-						<children>
-							<content subtype="regular"/>
-							<text fixtext="\n"/>
-						</children>
-						<variables/>
-					</template>
 					<condition>
 						<children>
 							<conditionbranch xpath="(classSpellcasting/PactMagic &gt; 0)or(classSpellcasting/Runecrafting &gt; 0)or(classSpellcasting/Spellcasting &gt; 0)">
@@ -5578,15 +5590,71 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 							</conditionbranch>
 						</children>
 					</condition>
+					<template subtype="element" match="classLegal">
+						<children>
+							<content subtype="regular"/>
+							<text fixtext="\n"/>
+						</children>
+						<variables/>
+					</template>
 				</children>
 			</globaltemplate>
 			<globaltemplate subtype="named" match="a00ClassArchetypeDescription">
 				<parameters/>
 				<children>
+					<template subtype="element" match="classArchetypeName">
+						<children>
+							<text fixtext="&lt;h2&gt;"/>
+							<content subtype="regular"/>
+							<text fixtext="&lt;/h2&gt;\n"/>
+						</children>
+						<variables/>
+					</template>
+					<template subtype="element" match="classArchetypeTraits">
+						<children>
+							<template subtype="element" match="classArchetypeTrait">
+								<children>
+									<text fixtext="&lt;h3&gt;"/>
+									<template subtype="element" match="classTraitLevel">
+										<children>
+											<content subtype="regular">
+												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+											</content>
+											<text fixtext=" "/>
+										</children>
+										<variables/>
+									</template>
+									<template subtype="element" match="classTraitName">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&lt;/h3&gt;\n"/>
+									<template subtype="element" match="classTraitDescription">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
 								<children>
+									<template subtype="element" match="classDescription">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
+										</children>
+										<variables/>
+									</template>
 									<template subtype="element" match="classHitPoints">
 										<children>
 											<text fixtext="&lt;h2&gt;Hit Points&lt;/h2&gt;\n"/>
@@ -5738,71 +5806,6 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 										</children>
 										<variables/>
 									</template>
-									<template subtype="element" match="classArchetypes">
-										<children>
-											<text fixtext="&lt;h1&gt;Archetypes&lt;/h1&gt;\n"/>
-										</children>
-										<variables/>
-									</template>
-								</children>
-								<variables/>
-							</template>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="element" match="classArchetypeName">
-						<children>
-							<text fixtext="&lt;h2&gt;"/>
-							<content subtype="regular"/>
-							<text fixtext="&lt;/h2&gt;\n"/>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="element" match="classArchetypeTraits">
-						<children>
-							<template subtype="element" match="classArchetypeTrait">
-								<children>
-									<text fixtext="&lt;h3&gt;"/>
-									<template subtype="element" match="classTraitLevel">
-										<children>
-											<content subtype="regular">
-												<format basic-type="xsd" datatype="nonNegativeInteger"/>
-											</content>
-											<text fixtext=" "/>
-										</children>
-										<variables/>
-									</template>
-									<template subtype="element" match="classTraitName">
-										<children>
-											<content subtype="regular"/>
-										</children>
-										<variables/>
-									</template>
-									<text fixtext="&lt;/h3&gt;\n"/>
-									<template subtype="element" match="classTraitDescription">
-										<children>
-											<content subtype="regular"/>
-											<text fixtext="\n"/>
-										</children>
-										<variables/>
-									</template>
-								</children>
-								<variables/>
-							</template>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="userdefined" match="..">
-						<children>
-							<template subtype="userdefined" match="..">
-								<children>
-									<template subtype="element" match="classDescription">
-										<children>
-											<content subtype="regular"/>
-											<text fixtext="\n"/>
-										</children>
-										<variables/>
-									</template>
 								</children>
 								<variables/>
 							</template>
@@ -5907,6 +5910,13 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 							</conditionbranch>
 						</children>
 					</condition>
+					<template subtype="element" match="classArchetypeLegal">
+						<children>
+							<content subtype="regular"/>
+							<text fixtext="\n"/>
+						</children>
+						<variables/>
+					</template>
 				</children>
 			</globaltemplate>
 			<globaltemplate subtype="named" match="a00RaceDescriptionTemplate">
@@ -6052,11 +6062,58 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
+					<template subtype="element" match="raceLegal">
+						<children>
+							<content subtype="regular"/>
+							<text fixtext="\n"/>
+						</children>
+						<variables/>
+					</template>
 				</children>
 			</globaltemplate>
 			<globaltemplate subtype="named" match="a00RaceSubraceDescriptionTemplate">
 				<parameters/>
 				<children>
+					<template subtype="element" match="subraceName">
+						<children>
+							<text fixtext="&lt;h2&gt;"/>
+							<content subtype="regular"/>
+							<text fixtext="&lt;/h2&gt;\n"/>
+						</children>
+						<variables/>
+					</template>
+					<template subtype="element" match="subraceDescription">
+						<children>
+							<content subtype="regular"/>
+							<text fixtext="\n"/>
+						</children>
+						<variables/>
+					</template>
+					<template subtype="element" match="subraceTraits">
+						<children>
+							<template subtype="element" match="subraceTrait">
+								<children>
+									<template subtype="element" match="subraceTraitName">
+										<children>
+											<text fixtext="&lt;h3&gt;"/>
+											<content subtype="regular"/>
+											<text fixtext="&lt;/h3&gt;\n"/>
+										</children>
+										<variables/>
+									</template>
+									<template subtype="element" match="subraceTraitDescription">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
@@ -6156,43 +6213,10 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<template subtype="element" match="subraceName">
-						<children>
-							<text fixtext="&lt;h2&gt;"/>
-							<content subtype="regular"/>
-							<text fixtext="&lt;/h2&gt;\n"/>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="element" match="subraceDescription">
+					<template subtype="element" match="subraceLegal">
 						<children>
 							<content subtype="regular"/>
 							<text fixtext="\n"/>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="element" match="subraceTraits">
-						<children>
-							<template subtype="element" match="subraceTrait">
-								<children>
-									<template subtype="element" match="subraceTraitName">
-										<children>
-											<text fixtext="&lt;h3&gt;"/>
-											<content subtype="regular"/>
-											<text fixtext="&lt;/h3&gt;\n"/>
-										</children>
-										<variables/>
-									</template>
-									<template subtype="element" match="subraceTraitDescription">
-										<children>
-											<content subtype="regular"/>
-											<text fixtext="\n"/>
-										</children>
-										<variables/>
-									</template>
-								</children>
-								<variables/>
-							</template>
 						</children>
 						<variables/>
 					</template>
@@ -6201,6 +6225,13 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 			<globaltemplate subtype="named" match="a00BackgroundDescriptionTemplate">
 				<parameters/>
 				<children>
+					<template subtype="element" match="backgroundDescription">
+						<children>
+							<content subtype="regular"/>
+							<text fixtext="\n"/>
+						</children>
+						<variables/>
+					</template>
 					<template subtype="element" match="backgroundSkillProficiencies">
 						<children>
 							<template subtype="element" match="description">
@@ -6320,13 +6351,13 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<template subtype="element" match="backgroundDescription">
+					<template subtype="element" match="backgroundLegal">
 						<children>
 							<content subtype="regular"/>
+							<text fixtext="\n"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="\n"/>
 				</children>
 			</globaltemplate>
 			<globaltemplate subtype="named" match="damageItem1">

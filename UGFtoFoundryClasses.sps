@@ -75,6 +75,13 @@
 																		<variables/>
 																	</template>
 																	<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																	<template subtype="element" match="classDescription">
+																		<children>
+																			<content subtype="regular"/>
+																			<text fixtext="\n"/>
+																		</children>
+																		<variables/>
+																	</template>
 																	<template subtype="element" match="classHitPoints">
 																		<children>
 																			<text fixtext="&lt;h2&gt;Hit Points&lt;/h2&gt;\n"/>
@@ -279,13 +286,6 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<template subtype="element" match="classDescription">
-																		<children>
-																			<content subtype="regular"/>
-																			<text fixtext="\n"/>
-																		</children>
-																		<variables/>
-																	</template>
 																	<condition>
 																		<children>
 																			<conditionbranch xpath="(classSpellcasting/PactMagic &gt; 0)or(classSpellcasting/Runecrafting &gt; 0)or(classSpellcasting/Spellcasting &gt; 0)">
@@ -384,6 +384,13 @@
 																			</conditionbranch>
 																		</children>
 																	</condition>
+																	<template subtype="element" match="classLegal">
+																		<children>
+																			<content subtype="regular"/>
+																			<text fixtext="\n"/>
+																		</children>
+																		<variables/>
+																	</template>
 																	<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;&quot;}},&quot;folder&quot;:&quot;"/>
 																	<template subtype="attribute" match="FID">
 																		<children>
@@ -639,10 +646,59 @@
 																						<variables/>
 																					</template>
 																					<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																					<template subtype="element" match="classArchetypeName">
+																						<children>
+																							<text fixtext="&lt;h2&gt;"/>
+																							<content subtype="regular"/>
+																							<text fixtext="&lt;/h2&gt;\n"/>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="classArchetypeTraits">
+																						<children>
+																							<template subtype="element" match="classArchetypeTrait">
+																								<children>
+																									<text fixtext="&lt;h3&gt;"/>
+																									<template subtype="element" match="classTraitLevel">
+																										<children>
+																											<content subtype="regular">
+																												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																											</content>
+																											<text fixtext=" "/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="classTraitName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&lt;/h3&gt;\n"/>
+																									<template subtype="element" match="classTraitDescription">
+																										<children>
+																											<content subtype="regular"/>
+																											<text fixtext="\n"/>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
 																					<template subtype="userdefined" match="..">
 																						<children>
 																							<template subtype="userdefined" match="..">
 																								<children>
+																									<template subtype="element" match="classDescription">
+																										<children>
+																											<content subtype="regular"/>
+																											<text fixtext="\n"/>
+																										</children>
+																										<variables/>
+																									</template>
 																									<template subtype="element" match="classHitPoints">
 																										<children>
 																											<text fixtext="&lt;h2&gt;Hit Points&lt;/h2&gt;\n"/>
@@ -794,71 +850,6 @@
 																										</children>
 																										<variables/>
 																									</template>
-																									<template subtype="element" match="classArchetypes">
-																										<children>
-																											<text fixtext="&lt;h1&gt;Archetypes&lt;/h1&gt;\n"/>
-																										</children>
-																										<variables/>
-																									</template>
-																								</children>
-																								<variables/>
-																							</template>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="classArchetypeName">
-																						<children>
-																							<text fixtext="&lt;h2&gt;"/>
-																							<content subtype="regular"/>
-																							<text fixtext="&lt;/h2&gt;\n"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="classArchetypeTraits">
-																						<children>
-																							<template subtype="element" match="classArchetypeTrait">
-																								<children>
-																									<text fixtext="&lt;h3&gt;"/>
-																									<template subtype="element" match="classTraitLevel">
-																										<children>
-																											<content subtype="regular">
-																												<format basic-type="xsd" datatype="nonNegativeInteger"/>
-																											</content>
-																											<text fixtext=" "/>
-																										</children>
-																										<variables/>
-																									</template>
-																									<template subtype="element" match="classTraitName">
-																										<children>
-																											<content subtype="regular"/>
-																										</children>
-																										<variables/>
-																									</template>
-																									<text fixtext="&lt;/h3&gt;\n"/>
-																									<template subtype="element" match="classTraitDescription">
-																										<children>
-																											<content subtype="regular"/>
-																											<text fixtext="\n"/>
-																										</children>
-																										<variables/>
-																									</template>
-																								</children>
-																								<variables/>
-																							</template>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="userdefined" match="..">
-																						<children>
-																							<template subtype="userdefined" match="..">
-																								<children>
-																									<template subtype="element" match="classDescription">
-																										<children>
-																											<content subtype="regular"/>
-																											<text fixtext="\n"/>
-																										</children>
-																										<variables/>
-																									</template>
 																								</children>
 																								<variables/>
 																							</template>
@@ -963,6 +954,13 @@
 																							</conditionbranch>
 																						</children>
 																					</condition>
+																					<template subtype="element" match="classArchetypeLegal">
+																						<children>
+																							<content subtype="regular"/>
+																							<text fixtext="\n"/>
+																						</children>
+																						<variables/>
+																					</template>
 																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;"/>
 																					<template subtype="element" match="classArchetypeName">
 																						<children>
