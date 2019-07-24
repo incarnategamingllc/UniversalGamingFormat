@@ -5116,7 +5116,7 @@
 			<xs:element name="raceLanguages">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="raceLanguages" type="npcLanguages" maxOccurs="unbounded"/>
+						<xs:element name="raceLanguage" type="npcLanguages" maxOccurs="unbounded"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -5182,7 +5182,7 @@
 									<xs:element name="subraceLanguages" minOccurs="0">
 										<xs:complexType>
 											<xs:sequence>
-												<xs:element name="subraceLanguages" type="npcLanguages" maxOccurs="unbounded"/>
+												<xs:element name="subraceLanguage" type="npcLanguages" maxOccurs="unbounded"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>

@@ -714,1368 +714,11 @@
 					</targets>
 					<view ltx="506" lty="1610" rbx="584" rby="1666"/>
 				</component>
-				<component name="UGFDraft15" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-9" lty="1084" rbx="264" rby="1549"/>
-					<data>
-						<root scrollposition="929">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="root" expanded="1">
-										<entry name="chapters" expanded="1">
-											<entry name="frontMatter">
-												<entry name="credits" outkey="1429" expanded="1">
-													<entry name="FID" type="attribute" outkey="1965"/>
-													<entry name="UGF" type="attribute" outkey="1966"/>
-													<entry name="team" outkey="1967" expanded="1">
-														<entry name="FID" type="attribute" outkey="1968"/>
-														<entry name="name" type="attribute" outkey="1969"/>
-														<entry name="UGF" type="attribute" outkey="1970"/>
-														<entry name="position" outkey="1971" expanded="1">
-															<entry name="FID" type="attribute" outkey="1972"/>
-															<entry name="name" type="attribute" outkey="1973"/>
-															<entry name="UGF" type="attribute" outkey="1974"/>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="legal" outkey="269" expanded="1">
-													<entry name="FID" type="attribute" outkey="270"/>
-													<entry name="UGF" type="attribute" outkey="1975"/>
-													<entry name="sections">
-														<entry name="section1" outkey="271" expanded="1">
-															<entry name="FID" type="attribute" outkey="272"/>
-															<entry name="secID" type="attribute" outkey="273"/>
-															<entry name="heading1" outkey="274"/>
-															<entry name="section2" outkey="275" expanded="1">
-																<entry name="FID" type="attribute" outkey="276"/>
-																<entry name="sec2ID" type="attribute" outkey="277"/>
-																<entry name="heading2" outkey="278"/>
-																<entry name="section3" outkey="279" expanded="1">
-																	<entry name="FID" type="attribute" outkey="280"/>
-																	<entry name="sec3ID" type="attribute" outkey="281"/>
-																	<entry name="heading3" outkey="282"/>
-																	<entry name="section4" outkey="283" expanded="1">
-																		<entry name="FID" type="attribute" outkey="284"/>
-																		<entry name="sec4ID" type="attribute" outkey="285"/>
-																		<entry name="heading4" outkey="286"/>
-																		<entry name="section5" outkey="287" expanded="1">
-																			<entry name="FID" type="attribute" outkey="288"/>
-																			<entry name="sec5ID" type="attribute" outkey="289"/>
-																			<entry name="heading5" outkey="290"/>
-																			<entry name="section6" outkey="291" expanded="1">
-																				<entry name="FID" type="attribute" outkey="292"/>
-																				<entry name="sec6ID" type="attribute" outkey="293"/>
-																				<entry name="heading6" outkey="294"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="introduction" outkey="295" expanded="1">
-													<entry name="FID" type="attribute" outkey="296"/>
-													<entry name="UGF" type="attribute" outkey="1976"/>
-													<entry name="sections">
-														<entry name="section1" outkey="297" expanded="1">
-															<entry name="FID" type="attribute" outkey="298"/>
-															<entry name="secID" type="attribute" outkey="299"/>
-															<entry name="heading1" outkey="300"/>
-															<entry name="section2" outkey="301" expanded="1">
-																<entry name="FID" type="attribute" outkey="302"/>
-																<entry name="sec2ID" type="attribute" outkey="303"/>
-																<entry name="heading2" outkey="304"/>
-																<entry name="section3" outkey="305" expanded="1">
-																	<entry name="FID" type="attribute" outkey="306"/>
-																	<entry name="sec3ID" type="attribute" outkey="307"/>
-																	<entry name="heading3" outkey="308"/>
-																	<entry name="section4" outkey="309" expanded="1">
-																		<entry name="FID" type="attribute" outkey="310"/>
-																		<entry name="sec4ID" type="attribute" outkey="311"/>
-																		<entry name="heading4" outkey="312"/>
-																		<entry name="section5" outkey="313" expanded="1">
-																			<entry name="FID" type="attribute" outkey="314"/>
-																			<entry name="sec5ID" type="attribute" outkey="315"/>
-																			<entry name="heading5" outkey="316"/>
-																			<entry name="section6" outkey="317" expanded="1">
-																				<entry name="FID" type="attribute" outkey="318"/>
-																				<entry name="sec6ID" type="attribute" outkey="319"/>
-																				<entry name="heading6" outkey="320"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="GMsBlind" outkey="321">
-												<entry name="FID" type="attribute" outkey="322"/>
-												<entry name="miscellaneousChapterID" type="attribute" outkey="323"/>
-												<entry name="sections">
-													<entry name="section1" outkey="324" expanded="1">
-														<entry name="FID" type="attribute" outkey="325"/>
-														<entry name="secID" type="attribute" outkey="326"/>
-														<entry name="heading1" outkey="327"/>
-														<entry name="section2" outkey="328" expanded="1">
-															<entry name="FID" type="attribute" outkey="329"/>
-															<entry name="sec2ID" type="attribute" outkey="330"/>
-															<entry name="heading2" outkey="331"/>
-															<entry name="section3" outkey="332" expanded="1">
-																<entry name="FID" type="attribute" outkey="333"/>
-																<entry name="sec3ID" type="attribute" outkey="334"/>
-																<entry name="heading3" outkey="335"/>
-																<entry name="section4" outkey="336" expanded="1">
-																	<entry name="FID" type="attribute" outkey="337"/>
-																	<entry name="sec4ID" type="attribute" outkey="338"/>
-																	<entry name="heading4" outkey="339"/>
-																	<entry name="section5" outkey="340" expanded="1">
-																		<entry name="FID" type="attribute" outkey="341"/>
-																		<entry name="sec5ID" type="attribute" outkey="342"/>
-																		<entry name="heading5" outkey="343"/>
-																		<entry name="section6" outkey="344" expanded="1">
-																			<entry name="FID" type="attribute" outkey="345"/>
-																			<entry name="sec6ID" type="attribute" outkey="346"/>
-																			<entry name="heading6" outkey="347"/>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="PlayerQuickSheet" outkey="348">
-												<entry name="FID" type="attribute" outkey="349"/>
-												<entry name="miscellaneousChapterID" type="attribute" outkey="350"/>
-												<entry name="sections">
-													<entry name="section1" outkey="351" expanded="1">
-														<entry name="FID" type="attribute" outkey="352"/>
-														<entry name="secID" type="attribute" outkey="353"/>
-														<entry name="heading1" outkey="354"/>
-														<entry name="section2" outkey="355" expanded="1">
-															<entry name="FID" type="attribute" outkey="356"/>
-															<entry name="sec2ID" type="attribute" outkey="357"/>
-															<entry name="heading2" outkey="358"/>
-															<entry name="section3" outkey="359" expanded="1">
-																<entry name="FID" type="attribute" outkey="360"/>
-																<entry name="sec3ID" type="attribute" outkey="361"/>
-																<entry name="heading3" outkey="362"/>
-																<entry name="section4" outkey="363" expanded="1">
-																	<entry name="FID" type="attribute" outkey="364"/>
-																	<entry name="sec4ID" type="attribute" outkey="365"/>
-																	<entry name="heading4" outkey="366"/>
-																	<entry name="section5" outkey="367" expanded="1">
-																		<entry name="FID" type="attribute" outkey="368"/>
-																		<entry name="sec5ID" type="attribute" outkey="369"/>
-																		<entry name="heading5" outkey="370"/>
-																		<entry name="section6" outkey="371" expanded="1">
-																			<entry name="FID" type="attribute" outkey="372"/>
-																			<entry name="sec6ID" type="attribute" outkey="373"/>
-																			<entry name="heading6" outkey="374"/>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="backgroundChapter">
-												<entry name="backgroundsIntroduction">
-													<entry name="sections">
-														<entry name="section1" outkey="375" expanded="1">
-															<entry name="FID" type="attribute" outkey="376"/>
-															<entry name="secID" type="attribute" outkey="377"/>
-															<entry name="heading1" outkey="378"/>
-															<entry name="section2" outkey="379" expanded="1">
-																<entry name="FID" type="attribute" outkey="380"/>
-																<entry name="sec2ID" type="attribute" outkey="381"/>
-																<entry name="heading2" outkey="382"/>
-																<entry name="section3" outkey="383" expanded="1">
-																	<entry name="FID" type="attribute" outkey="384"/>
-																	<entry name="sec3ID" type="attribute" outkey="385"/>
-																	<entry name="heading3" outkey="386"/>
-																	<entry name="section4" outkey="387" expanded="1">
-																		<entry name="FID" type="attribute" outkey="388"/>
-																		<entry name="sec4ID" type="attribute" outkey="389"/>
-																		<entry name="heading4" outkey="390"/>
-																		<entry name="section5" outkey="391" expanded="1">
-																			<entry name="FID" type="attribute" outkey="392"/>
-																			<entry name="sec5ID" type="attribute" outkey="393"/>
-																			<entry name="heading5" outkey="394"/>
-																			<entry name="section6" outkey="395" expanded="1">
-																				<entry name="FID" type="attribute" outkey="396"/>
-																				<entry name="sec6ID" type="attribute" outkey="397"/>
-																				<entry name="heading6" outkey="398"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="backgrounds">
-													<entry name="background" outkey="399" expanded="1">
-														<entry name="backgroundID" type="attribute" outkey="400"/>
-														<entry name="FID" type="attribute" outkey="401"/>
-														<entry name="backgroundFeature" outkey="402">
-															<entry name="backgroundFeatureID" type="attribute" outkey="403"/>
-															<entry name="FID" type="attribute" outkey="404"/>
-															<entry name="backgroundFeatureName" outkey="405"/>
-														</entry>
-														<entry name="backgroundName" outkey="406"/>
-														<entry name="backgroundSuggestedCharacteristics">
-															<entry name="backgroundPersonality" outkey="407">
-																<entry name="tableID" type="attribute" outkey="408"/>
-																<entry name="FID" type="attribute" outkey="409"/>
-															</entry>
-															<entry name="backgroundIdeal" outkey="410">
-																<entry name="tableID" type="attribute" outkey="411"/>
-																<entry name="FID" type="attribute" outkey="412"/>
-															</entry>
-															<entry name="backgroundBond" outkey="413">
-																<entry name="tableID" type="attribute" outkey="414"/>
-																<entry name="FID" type="attribute" outkey="415"/>
-															</entry>
-															<entry name="backgroundFlaw" outkey="416">
-																<entry name="tableID" type="attribute" outkey="417"/>
-																<entry name="FID" type="attribute" outkey="418"/>
-															</entry>
-															<entry name="backgroundMiscellaneous" outkey="2277">
-																<entry name="tableID" type="attribute" outkey="2278"/>
-																<entry name="FID" type="attribute" outkey="2279"/>
-																<entry name="title" outkey="2280"/>
-															</entry>
-														</entry>
-														<entry name="moods" outkey="2281">
-															<entry name="FID" type="attribute" outkey="2282"/>
-															<entry name="UGF" type="attribute" outkey="2283"/>
-															<entry name="mood" outkey="2284" expanded="1">
-																<entry name="FID" type="attribute" outkey="2285"/>
-																<entry name="UGF" type="attribute" outkey="2286"/>
-																<entry name="name" outkey="2287"/>
-															</entry>
-														</entry>
-														<entry name="questRecommendations" expanded="1">
-															<entry name="tier1" outkey="2288">
-																<entry name="tableID" type="attribute" outkey="2289"/>
-																<entry name="FID" type="attribute" outkey="2290"/>
-																<entry name="title" outkey="2291"/>
-															</entry>
-															<entry name="tier2" outkey="2292">
-																<entry name="tableID" type="attribute" outkey="2293"/>
-																<entry name="FID" type="attribute" outkey="2294"/>
-																<entry name="title" outkey="2295"/>
-															</entry>
-															<entry name="tier3" outkey="2296">
-																<entry name="tableID" type="attribute" outkey="2297"/>
-																<entry name="FID" type="attribute" outkey="2298"/>
-																<entry name="title" outkey="2299"/>
-															</entry>
-															<entry name="tier4" outkey="2300" expanded="1">
-																<entry name="tableID" type="attribute" outkey="2301"/>
-																<entry name="FID" type="attribute" outkey="2302"/>
-																<entry name="title" outkey="2303"/>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="dreams" expanded="1">
-													<entry name="dream" outkey="2304">
-														<entry name="FID" type="attribute" outkey="2305"/>
-														<entry name="UGF" type="attribute" outkey="2306"/>
-														<entry name="name" type="attribute" outkey="2307"/>
-													</entry>
-												</entry>
-												<entry name="personalities" expanded="1">
-													<entry name="personality" outkey="2308">
-														<entry name="FID" type="attribute" outkey="2309"/>
-														<entry name="UGF" type="attribute" outkey="2310"/>
-														<entry name="name" type="attribute" outkey="2311"/>
-													</entry>
-												</entry>
-												<entry name="needs" expanded="1">
-													<entry name="need" outkey="2312">
-														<entry name="FID" type="attribute" outkey="2313"/>
-														<entry name="UGF" type="attribute" outkey="2314"/>
-														<entry name="name" type="attribute" outkey="2315"/>
-													</entry>
-												</entry>
-												<entry name="moods" expanded="1">
-													<entry name="mood" outkey="2316">
-														<entry name="FID" type="attribute" outkey="2317"/>
-														<entry name="UGF" type="attribute" outkey="2318"/>
-														<entry name="name" type="attribute" outkey="2319"/>
-													</entry>
-												</entry>
-												<entry name="wants" expanded="1">
-													<entry name="want" outkey="2320">
-														<entry name="FID" type="attribute" outkey="2321"/>
-														<entry name="UGF" type="attribute" outkey="2322"/>
-														<entry name="name" type="attribute" outkey="2323"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="classChapter">
-												<entry name="classIntroduction" expanded="1">
-													<entry name="sections">
-														<entry name="section1" outkey="419" expanded="1">
-															<entry name="FID" type="attribute" outkey="420"/>
-															<entry name="secID" type="attribute" outkey="421"/>
-															<entry name="heading1" outkey="422"/>
-															<entry name="section2" outkey="423" expanded="1">
-																<entry name="FID" type="attribute" outkey="424"/>
-																<entry name="sec2ID" type="attribute" outkey="425"/>
-																<entry name="heading2" outkey="426"/>
-																<entry name="section3" outkey="427" expanded="1">
-																	<entry name="FID" type="attribute" outkey="428"/>
-																	<entry name="sec3ID" type="attribute" outkey="429"/>
-																	<entry name="heading3" outkey="430"/>
-																	<entry name="section4" outkey="431" expanded="1">
-																		<entry name="FID" type="attribute" outkey="432"/>
-																		<entry name="sec4ID" type="attribute" outkey="433"/>
-																		<entry name="heading4" outkey="434"/>
-																		<entry name="section5" outkey="435" expanded="1">
-																			<entry name="FID" type="attribute" outkey="436"/>
-																			<entry name="sec5ID" type="attribute" outkey="437"/>
-																			<entry name="heading5" outkey="438"/>
-																			<entry name="section6" outkey="439" expanded="1">
-																				<entry name="FID" type="attribute" outkey="440"/>
-																				<entry name="sec6ID" type="attribute" outkey="441"/>
-																				<entry name="heading6" outkey="442"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="classes">
-													<entry name="class" outkey="443" expanded="1">
-														<entry name="classID" type="attribute" outkey="444"/>
-														<entry name="FID" type="attribute" outkey="445"/>
-														<entry name="classAmmendments" outkey="446">
-															<entry name="cLaMID" type="attribute" outkey="447"/>
-															<entry name="FID" type="attribute" outkey="1977"/>
-														</entry>
-														<entry name="classArchetypes">
-															<entry name="classArchetype" outkey="520">
-																<entry name="classArchtypeID" type="attribute" outkey="521"/>
-																<entry name="FID" type="attribute" outkey="522"/>
-																<entry name="classArchetypeName" outkey="523"/>
-																<entry name="classArchetypeTraits" outkey="524" expanded="1">
-																	<entry name="classArchtypeTraitID" type="attribute" outkey="525"/>
-																	<entry name="FID" type="attribute" outkey="526"/>
-																	<entry name="classTraitName" outkey="527"/>
-																</entry>
-															</entry>
-														</entry>
-														<entry name="className" outkey="448"/>
-														<entry name="classTable" outkey="528" expanded="1">
-															<entry name="tableID" type="attribute" outkey="529"/>
-															<entry name="FID" type="attribute" outkey="530"/>
-														</entry>
-														<entry name="classTraits">
-															<entry name="classTrait" outkey="531" expanded="1">
-																<entry name="classTraitID" type="attribute" outkey="532"/>
-																<entry name="FID" type="attribute" outkey="533"/>
-																<entry name="classTraitName" outkey="534"/>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="encounterChapter">
-												<entry name="encountersIntroduction">
-													<entry name="sections">
-														<entry name="section1" outkey="535" expanded="1">
-															<entry name="FID" type="attribute" outkey="536"/>
-															<entry name="secID" type="attribute" outkey="537"/>
-															<entry name="heading1" outkey="538"/>
-															<entry name="section2" outkey="539" expanded="1">
-																<entry name="FID" type="attribute" outkey="540"/>
-																<entry name="sec2ID" type="attribute" outkey="541"/>
-																<entry name="heading2" outkey="542"/>
-																<entry name="section3" outkey="543" expanded="1">
-																	<entry name="FID" type="attribute" outkey="544"/>
-																	<entry name="sec3ID" type="attribute" outkey="545"/>
-																	<entry name="heading3" outkey="546"/>
-																	<entry name="section4" outkey="547" expanded="1">
-																		<entry name="FID" type="attribute" outkey="548"/>
-																		<entry name="sec4ID" type="attribute" outkey="549"/>
-																		<entry name="heading4" outkey="550"/>
-																		<entry name="section5" outkey="551" expanded="1">
-																			<entry name="FID" type="attribute" outkey="552"/>
-																			<entry name="sec5ID" type="attribute" outkey="553"/>
-																			<entry name="heading5" outkey="554"/>
-																			<entry name="section6" outkey="555" expanded="1">
-																				<entry name="FID" type="attribute" outkey="556"/>
-																				<entry name="sec6ID" type="attribute" outkey="557"/>
-																				<entry name="heading6" outkey="558"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="variables" expanded="1">
-														<entry name="encounterCRs" expanded="1">
-															<entry name="encounterCR" outkey="1736" expanded="1">
-																<entry name="FID" type="attribute" outkey="1978"/>
-																<entry name="UGF" type="attribute" outkey="1979"/>
-															</entry>
-														</entry>
-														<entry name="encounterTerrains" expanded="1">
-															<entry name="encounterTerrain" outkey="1980" expanded="1">
-																<entry name="FID" type="attribute" outkey="1981"/>
-																<entry name="UGF" type="attribute" outkey="1982"/>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="encounters">
-													<entry name="encounter" outkey="559" expanded="1">
-														<entry name="encounterID" type="attribute" outkey="560"/>
-														<entry name="FID" type="attribute" outkey="561"/>
-														<entry name="encounterName" outkey="562"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="featChapter">
-												<entry name="featsIntroduction" expanded="1">
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="795" expanded="1">
-															<entry name="FID" type="attribute" outkey="796"/>
-															<entry name="secID" type="attribute" outkey="797"/>
-															<entry name="heading1" outkey="798"/>
-															<entry name="section2" outkey="799" expanded="1">
-																<entry name="FID" type="attribute" outkey="800"/>
-																<entry name="sec2ID" type="attribute" outkey="801"/>
-																<entry name="heading2" outkey="802"/>
-																<entry name="section3" outkey="803" expanded="1">
-																	<entry name="FID" type="attribute" outkey="804"/>
-																	<entry name="sec3ID" type="attribute" outkey="805"/>
-																	<entry name="heading3" outkey="806"/>
-																	<entry name="section4" outkey="807" expanded="1">
-																		<entry name="FID" type="attribute" outkey="808"/>
-																		<entry name="sec4ID" type="attribute" outkey="809"/>
-																		<entry name="heading4" outkey="810"/>
-																		<entry name="section5" outkey="811" expanded="1">
-																			<entry name="FID" type="attribute" outkey="812"/>
-																			<entry name="sec5ID" type="attribute" outkey="813"/>
-																			<entry name="heading5" outkey="814"/>
-																			<entry name="section6" outkey="815" expanded="1">
-																				<entry name="FID" type="attribute" outkey="816"/>
-																				<entry name="sec6ID" type="attribute" outkey="817"/>
-																				<entry name="heading6" outkey="818"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="feats" expanded="1">
-													<entry name="feat" outkey="819">
-														<entry name="featID" type="attribute" outkey="820"/>
-														<entry name="FID" type="attribute" outkey="821"/>
-														<entry name="featname" outkey="822"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="itemChapter">
-												<entry name="itemsIntroduction">
-													<entry name="sections">
-														<entry name="section1" outkey="823" expanded="1">
-															<entry name="FID" type="attribute" outkey="824"/>
-															<entry name="secID" type="attribute" outkey="825"/>
-															<entry name="heading1" outkey="826"/>
-															<entry name="section2" outkey="827" expanded="1">
-																<entry name="FID" type="attribute" outkey="828"/>
-																<entry name="sec2ID" type="attribute" outkey="829"/>
-																<entry name="heading2" outkey="830"/>
-																<entry name="section3" outkey="831" expanded="1">
-																	<entry name="FID" type="attribute" outkey="832"/>
-																	<entry name="sec3ID" type="attribute" outkey="833"/>
-																	<entry name="heading3" outkey="834"/>
-																	<entry name="section4" outkey="835" expanded="1">
-																		<entry name="FID" type="attribute" outkey="836"/>
-																		<entry name="sec4ID" type="attribute" outkey="837"/>
-																		<entry name="heading4" outkey="838"/>
-																		<entry name="section5" outkey="839" expanded="1">
-																			<entry name="FID" type="attribute" outkey="840"/>
-																			<entry name="sec5ID" type="attribute" outkey="841"/>
-																			<entry name="heading5" outkey="842"/>
-																			<entry name="section6" outkey="843" expanded="1">
-																				<entry name="FID" type="attribute" outkey="844"/>
-																				<entry name="sec6ID" type="attribute" outkey="845"/>
-																				<entry name="heading6" outkey="846"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="variables" expanded="1">
-														<entry name="itemTypes" outkey="1983" expanded="1">
-															<entry name="FID" type="attribute" outkey="1984"/>
-															<entry name="type" type="attribute" outkey="1985"/>
-															<entry name="UGFReference" type="attribute" outkey="1986"/>
-															<entry name="itemType" outkey="1987" expanded="1">
-																<entry name="UGFReference" type="attribute" outkey="1988"/>
-																<entry name="FID" type="attribute" outkey="1989"/>
-																<entry name="type" type="attribute" outkey="1990"/>
-																<entry name="itemSubtypes" expanded="1">
-																	<entry name="itemSubtype" outkey="1991" expanded="1">
-																		<entry name="UGFReference" type="attribute" outkey="1992"/>
-																		<entry name="FID" type="attribute" outkey="1993"/>
-																		<entry name="type" type="attribute" outkey="1994"/>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="items" expanded="1">
-													<entry name="item" outkey="847">
-														<entry name="itemID" type="attribute" outkey="848"/>
-														<entry name="FID" type="attribute" outkey="849"/>
-														<entry name="itemName" outkey="850"/>
-													</entry>
-												</entry>
-												<entry name="itemPacks" expanded="1">
-													<entry name="itemPack" outkey="851" expanded="1">
-														<entry name="FID" type="attribute" outkey="852"/>
-														<entry name="itemPackID" type="attribute" outkey="853"/>
-														<entry name="itemPackName" outkey="854"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="magicitemTemplatesChapter">
-												<entry name="magicItemTemplatesIntroduction" expanded="1">
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="855">
-															<entry name="FID" type="attribute" outkey="856"/>
-															<entry name="secID" type="attribute" outkey="857"/>
-															<entry name="heading1" outkey="858"/>
-															<entry name="section2" outkey="859" expanded="1">
-																<entry name="FID" type="attribute" outkey="860"/>
-																<entry name="sec2ID" type="attribute" outkey="861"/>
-																<entry name="heading2" outkey="862"/>
-																<entry name="section3" outkey="863" expanded="1">
-																	<entry name="FID" type="attribute" outkey="864"/>
-																	<entry name="sec3ID" type="attribute" outkey="865"/>
-																	<entry name="heading3" outkey="866"/>
-																	<entry name="section4" outkey="867" expanded="1">
-																		<entry name="FID" type="attribute" outkey="868"/>
-																		<entry name="sec4ID" type="attribute" outkey="869"/>
-																		<entry name="heading4" outkey="870"/>
-																		<entry name="section5" outkey="871" expanded="1">
-																			<entry name="FID" type="attribute" outkey="872"/>
-																			<entry name="sec5ID" type="attribute" outkey="873"/>
-																			<entry name="heading5" outkey="874"/>
-																			<entry name="section6" outkey="875" expanded="1">
-																				<entry name="FID" type="attribute" outkey="876"/>
-																				<entry name="sec6ID" type="attribute" outkey="877"/>
-																				<entry name="heading6" outkey="878"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="magicItemTemplates">
-													<entry name="magicItemTemplate" outkey="879" expanded="1">
-														<entry name="magicItemTemplateID" type="attribute" outkey="880"/>
-														<entry name="FID" type="attribute" outkey="881"/>
-														<entry name="templateName" outkey="882"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="miscellaneousChapters" expanded="1">
-												<entry name="miscellaneousChapter" outkey="883" expanded="1">
-													<entry name="FID" type="attribute" outkey="884"/>
-													<entry name="miscellaneousChapterID" type="attribute" outkey="885"/>
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="886" expanded="1">
-															<entry name="FID" type="attribute" outkey="887"/>
-															<entry name="secID" type="attribute" outkey="888"/>
-															<entry name="heading1" expanded="1">
-																<entry name="#text" outkey="2464"/>
-															</entry>
-															<entry name="section2" outkey="890" expanded="1">
-																<entry name="FID" type="attribute" outkey="891"/>
-																<entry name="sec2ID" type="attribute" outkey="892"/>
-																<entry name="heading2" expanded="1">
-																	<entry name="#text" outkey="2465"/>
-																</entry>
-																<entry name="section3" outkey="894" expanded="1">
-																	<entry name="FID" type="attribute" outkey="895"/>
-																	<entry name="sec3ID" type="attribute" outkey="896"/>
-																	<entry name="heading3" expanded="1">
-																		<entry name="#text" outkey="2466"/>
-																	</entry>
-																	<entry name="section4" outkey="898" expanded="1">
-																		<entry name="FID" type="attribute" outkey="899"/>
-																		<entry name="sec4ID" type="attribute" outkey="900"/>
-																		<entry name="heading4" expanded="1">
-																			<entry name="#text" outkey="2467"/>
-																		</entry>
-																		<entry name="section5" outkey="902" expanded="1">
-																			<entry name="FID" type="attribute" outkey="903"/>
-																			<entry name="sec5ID" type="attribute" outkey="904"/>
-																			<entry name="heading5" expanded="1">
-																				<entry name="#text" outkey="2468"/>
-																			</entry>
-																			<entry name="section6" outkey="906" expanded="1">
-																				<entry name="FID" type="attribute" outkey="907"/>
-																				<entry name="sec6ID" type="attribute" outkey="908"/>
-																				<entry name="heading6" expanded="1">
-																					<entry name="#text" outkey="2469"/>
-																				</entry>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="chapterName" outkey="910"/>
-												</entry>
-											</entry>
-											<entry name="npcChapter">
-												<entry name="npcsIntroduction" expanded="1">
-													<entry name="sections">
-														<entry name="section1" outkey="911" expanded="1">
-															<entry name="FID" type="attribute" outkey="912"/>
-															<entry name="secID" type="attribute" outkey="913"/>
-															<entry name="heading1" outkey="914"/>
-															<entry name="section2" outkey="915" expanded="1">
-																<entry name="FID" type="attribute" outkey="916"/>
-																<entry name="sec2ID" type="attribute" outkey="917"/>
-																<entry name="heading2" outkey="918"/>
-																<entry name="section3" outkey="919" expanded="1">
-																	<entry name="FID" type="attribute" outkey="920"/>
-																	<entry name="sec3ID" type="attribute" outkey="921"/>
-																	<entry name="heading3" outkey="922"/>
-																	<entry name="section4" outkey="923" expanded="1">
-																		<entry name="FID" type="attribute" outkey="924"/>
-																		<entry name="sec4ID" type="attribute" outkey="925"/>
-																		<entry name="heading4" outkey="926"/>
-																		<entry name="section5" outkey="927" expanded="1">
-																			<entry name="FID" type="attribute" outkey="928"/>
-																			<entry name="sec5ID" type="attribute" outkey="929"/>
-																			<entry name="heading5" outkey="930"/>
-																			<entry name="section6" outkey="931" expanded="1">
-																				<entry name="FID" type="attribute" outkey="932"/>
-																				<entry name="sec6ID" type="attribute" outkey="933"/>
-																				<entry name="heading6" outkey="934"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="variables" outkey="1995" expanded="1">
-														<entry name="FID" type="attribute" outkey="1996"/>
-														<entry name="UGFReference" type="attribute" outkey="1997"/>
-														<entry name="alphabetically" outkey="1998" expanded="1">
-															<entry name="FID" type="attribute" outkey="1999"/>
-															<entry name="UGFReference" type="attribute" outkey="2000"/>
-														</entry>
-														<entry name="attackSaves" outkey="2001" expanded="1">
-															<entry name="FID" type="attribute" outkey="2002"/>
-															<entry name="UGFReference" type="attribute" outkey="2003"/>
-															<entry name="attackSave" outkey="1756" expanded="1">
-																<entry name="FID" type="attribute" outkey="2004"/>
-																<entry name="UGFReference" type="attribute" outkey="2005"/>
-															</entry>
-														</entry>
-														<entry name="authors" outkey="2006" expanded="1">
-															<entry name="FID" type="attribute" outkey="2007"/>
-															<entry name="UGFReference" type="attribute" outkey="2008"/>
-															<entry name="author" outkey="1766" expanded="1">
-																<entry name="FID" type="attribute" outkey="2009"/>
-																<entry name="UGFReference" type="attribute" outkey="2010"/>
-															</entry>
-														</entry>
-														<entry name="CRs" outkey="2011" expanded="1">
-															<entry name="FID" type="attribute" outkey="2012"/>
-															<entry name="UGFReference" type="attribute" outkey="2013"/>
-															<entry name="CR" outkey="2014" expanded="1">
-																<entry name="FID" type="attribute" outkey="2015"/>
-																<entry name="string" type="attribute" outkey="2016"/>
-																<entry name="UGFReference" type="attribute" outkey="2017"/>
-															</entry>
-														</entry>
-														<entry name="functions" outkey="2018" expanded="1">
-															<entry name="FID" type="attribute" outkey="2019"/>
-															<entry name="UGFReference" type="attribute" outkey="2020"/>
-															<entry name="function" outkey="1783" expanded="1">
-																<entry name="FID" type="attribute" outkey="2021"/>
-																<entry name="UGFReference" type="attribute" outkey="2022"/>
-															</entry>
-														</entry>
-														<entry name="immunities" outkey="2023" expanded="1">
-															<entry name="FID" type="attribute" outkey="2024"/>
-															<entry name="UGFReference" type="attribute" outkey="2025"/>
-															<entry name="immunity" outkey="1788" expanded="1">
-																<entry name="FID" type="attribute" outkey="2026"/>
-																<entry name="UGFReference" type="attribute" outkey="2027"/>
-															</entry>
-														</entry>
-														<entry name="lores" outkey="2028" expanded="1">
-															<entry name="FID" type="attribute" outkey="2029"/>
-															<entry name="UGFReference" type="attribute" outkey="2030"/>
-															<entry name="lore" outkey="2031" expanded="1">
-																<entry name="FID" type="attribute" outkey="2032"/>
-																<entry name="UGFReference" type="attribute" outkey="2033"/>
-															</entry>
-														</entry>
-														<entry name="resistances" outkey="2034" expanded="1">
-															<entry name="FID" type="attribute" outkey="2035"/>
-															<entry name="UGFReference" type="attribute" outkey="2036"/>
-															<entry name="resistance" outkey="1803" expanded="1">
-																<entry name="FID" type="attribute" outkey="2037"/>
-																<entry name="UGFReference" type="attribute" outkey="2038"/>
-															</entry>
-														</entry>
-														<entry name="terrains" outkey="2039" expanded="1">
-															<entry name="FID" type="attribute" outkey="2040"/>
-															<entry name="UGFReference" type="attribute" outkey="2041"/>
-															<entry name="terrain" outkey="1811" expanded="1">
-																<entry name="FID" type="attribute" outkey="2042"/>
-																<entry name="UGFReference" type="attribute" outkey="2043"/>
-															</entry>
-														</entry>
-														<entry name="types" outkey="2044" expanded="1">
-															<entry name="FID" type="attribute" outkey="2045"/>
-															<entry name="UGFReference" type="attribute" outkey="2046"/>
-															<entry name="type" outkey="1821" expanded="1">
-																<entry name="FID" type="attribute" outkey="2047"/>
-																<entry name="UGFReference" type="attribute" outkey="2048"/>
-															</entry>
-														</entry>
-														<entry name="vulnerabilities" outkey="2049" expanded="1">
-															<entry name="FID" type="attribute" outkey="2050"/>
-															<entry name="UGFReference" type="attribute" outkey="2051"/>
-															<entry name="vulnerability" outkey="1826" expanded="1">
-																<entry name="FID" type="attribute" outkey="2052"/>
-																<entry name="UGFReference" type="attribute" outkey="2053"/>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="npcs">
-													<entry name="npc" outkey="935" expanded="1">
-														<entry name="FID" type="attribute" outkey="936"/>
-														<entry name="npcID" type="attribute" outkey="937"/>
-														<entry name="npcName" outkey="938"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="planeChapter">
-												<entry name="planesIntroduction" expanded="1">
-													<entry name="sections">
-														<entry name="section1" outkey="2324" expanded="1">
-															<entry name="FID" type="attribute" outkey="2325"/>
-															<entry name="secID" type="attribute" outkey="2326"/>
-															<entry name="heading1" outkey="2327"/>
-															<entry name="section2" outkey="2328" expanded="1">
-																<entry name="FID" type="attribute" outkey="2329"/>
-																<entry name="sec2ID" type="attribute" outkey="2330"/>
-																<entry name="heading2" outkey="2331"/>
-																<entry name="section3" outkey="2332" expanded="1">
-																	<entry name="FID" type="attribute" outkey="2333"/>
-																	<entry name="sec3ID" type="attribute" outkey="2334"/>
-																	<entry name="heading3" outkey="2335"/>
-																	<entry name="section4" outkey="2336" expanded="1">
-																		<entry name="FID" type="attribute" outkey="2337"/>
-																		<entry name="sec4ID" type="attribute" outkey="2338"/>
-																		<entry name="heading4" outkey="2339"/>
-																		<entry name="section5" outkey="2340" expanded="1">
-																			<entry name="FID" type="attribute" outkey="2341"/>
-																			<entry name="sec5ID" type="attribute" outkey="2342"/>
-																			<entry name="heading5" outkey="2343"/>
-																			<entry name="section6" outkey="2344" expanded="1">
-																				<entry name="FID" type="attribute" outkey="2345"/>
-																				<entry name="sec6ID" type="attribute" outkey="2346"/>
-																				<entry name="heading6" outkey="2347"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="planes" expanded="1">
-													<entry name="plane" outkey="2348" expanded="1">
-														<entry name="FID" type="attribute" outkey="2349"/>
-														<entry name="UGF" type="attribute" outkey="2350"/>
-														<entry name="name" outkey="2351"/>
-														<entry name="planets" expanded="1">
-															<entry name="planet" outkey="2352" expanded="1">
-																<entry name="FID" type="attribute" outkey="2353"/>
-																<entry name="UGF" type="attribute" outkey="2354"/>
-																<entry name="name" outkey="2355"/>
-																<entry name="countries" expanded="1">
-																	<entry name="country" outkey="2356" expanded="1">
-																		<entry name="FID" type="attribute" outkey="2357"/>
-																		<entry name="UGF" type="attribute" outkey="2358"/>
-																		<entry name="name" outkey="2359"/>
-																		<entry name="states" expanded="1">
-																			<entry name="state" outkey="2360" expanded="1">
-																				<entry name="FID" type="attribute" outkey="2361"/>
-																				<entry name="UGF" type="attribute" outkey="2362"/>
-																				<entry name="name" outkey="2363"/>
-																				<entry name="cities" expanded="1">
-																					<entry name="city" outkey="2364" expanded="1">
-																						<entry name="FID" type="attribute" outkey="2365"/>
-																						<entry name="UGF" type="attribute" outkey="2366"/>
-																						<entry name="name" outkey="2367"/>
-																						<entry name="districts" expanded="1">
-																							<entry name="district" outkey="2368" expanded="1">
-																								<entry name="FID" type="attribute" outkey="2369"/>
-																								<entry name="UGF" type="attribute" outkey="2370"/>
-																								<entry name="name" outkey="2371"/>
-																								<entry name="buildings" expanded="1">
-																									<entry name="building" outkey="2372" expanded="1">
-																										<entry name="FID" type="attribute" outkey="2373"/>
-																										<entry name="UGF" type="attribute" outkey="2374"/>
-																										<entry name="name" outkey="2375"/>
-																										<entry name="citizens" expanded="1">
-																											<entry name="citizen" outkey="2376" expanded="1">
-																												<entry name="FID" type="attribute" outkey="2377"/>
-																												<entry name="pregenSheetID" type="attribute" outkey="2378"/>
-																												<entry name="characterName" outkey="2379"/>
-																											</entry>
-																										</entry>
-																										<entry name="pointsOfInterest" expanded="1">
-																											<entry name="pointOfInterest" outkey="2380" expanded="1">
-																												<entry name="UGF" type="attribute" outkey="2381"/>
-																												<entry name="FID" type="attribute" outkey="2382"/>
-																												<entry name="name" outkey="2383"/>
-																												<entry name="citizens" expanded="1">
-																													<entry name="citizen" outkey="2384" expanded="1">
-																														<entry name="FID" type="attribute" outkey="2385"/>
-																														<entry name="pregenSheetID" type="attribute" outkey="2386"/>
-																														<entry name="characterName" outkey="2387"/>
-																													</entry>
-																												</entry>
-																												<entry name="subPoints" expanded="1">
-																													<entry name="subPoint" outkey="2388" expanded="1">
-																														<entry name="FID" type="attribute" outkey="2389"/>
-																														<entry name="UGF" type="attribute" outkey="2390"/>
-																														<entry name="name" outkey="2391"/>
-																													</entry>
-																												</entry>
-																											</entry>
-																										</entry>
-																									</entry>
-																								</entry>
-																								<entry name="pointsOfInterest" expanded="1">
-																									<entry name="pointOfInterest" outkey="2392" expanded="1">
-																										<entry name="UGF" type="attribute" outkey="2393"/>
-																										<entry name="FID" type="attribute" outkey="2394"/>
-																										<entry name="name" outkey="2395"/>
-																										<entry name="citizens" expanded="1">
-																											<entry name="citizen" outkey="2396" expanded="1">
-																												<entry name="FID" type="attribute" outkey="2397"/>
-																												<entry name="pregenSheetID" type="attribute" outkey="2398"/>
-																												<entry name="characterName" outkey="2399"/>
-																											</entry>
-																										</entry>
-																										<entry name="subPoints" expanded="1">
-																											<entry name="subPoint" outkey="2400" expanded="1">
-																												<entry name="FID" type="attribute" outkey="2401"/>
-																												<entry name="UGF" type="attribute" outkey="2402"/>
-																												<entry name="name" outkey="2403"/>
-																											</entry>
-																										</entry>
-																									</entry>
-																								</entry>
-																							</entry>
-																						</entry>
-																						<entry name="pointsOfInterest" expanded="1">
-																							<entry name="pointOfInterest" outkey="2404" expanded="1">
-																								<entry name="UGF" type="attribute" outkey="2405"/>
-																								<entry name="FID" type="attribute" outkey="2406"/>
-																								<entry name="name" outkey="2407"/>
-																								<entry name="citizens" expanded="1">
-																									<entry name="citizen" outkey="2408" expanded="1">
-																										<entry name="FID" type="attribute" outkey="2409"/>
-																										<entry name="pregenSheetID" type="attribute" outkey="2410"/>
-																										<entry name="characterName" outkey="2411"/>
-																									</entry>
-																								</entry>
-																								<entry name="subPoints" expanded="1">
-																									<entry name="subPoint" outkey="2412" expanded="1">
-																										<entry name="FID" type="attribute" outkey="2413"/>
-																										<entry name="UGF" type="attribute" outkey="2414"/>
-																										<entry name="name" outkey="2415"/>
-																									</entry>
-																								</entry>
-																							</entry>
-																						</entry>
-																					</entry>
-																				</entry>
-																				<entry name="pointsOfInterest" expanded="1">
-																					<entry name="pointOfInterest" outkey="2416" expanded="1">
-																						<entry name="UGF" type="attribute" outkey="2417"/>
-																						<entry name="FID" type="attribute" outkey="2418"/>
-																						<entry name="name" outkey="2419"/>
-																						<entry name="citizens" expanded="1">
-																							<entry name="citizen" outkey="2420" expanded="1">
-																								<entry name="FID" type="attribute" outkey="2421"/>
-																								<entry name="pregenSheetID" type="attribute" outkey="2422"/>
-																								<entry name="characterName" outkey="2423"/>
-																							</entry>
-																						</entry>
-																						<entry name="subPoints" expanded="1">
-																							<entry name="subPoint" outkey="2424" expanded="1">
-																								<entry name="FID" type="attribute" outkey="2425"/>
-																								<entry name="UGF" type="attribute" outkey="2426"/>
-																								<entry name="name" outkey="2427"/>
-																							</entry>
-																						</entry>
-																					</entry>
-																				</entry>
-																			</entry>
-																		</entry>
-																		<entry name="pointsOfInterest" expanded="1">
-																			<entry name="pointOfInterest" outkey="2428" expanded="1">
-																				<entry name="UGF" type="attribute" outkey="2429"/>
-																				<entry name="FID" type="attribute" outkey="2430"/>
-																				<entry name="name" outkey="2431"/>
-																				<entry name="citizens" expanded="1">
-																					<entry name="citizen" outkey="2432" expanded="1">
-																						<entry name="FID" type="attribute" outkey="2433"/>
-																						<entry name="pregenSheetID" type="attribute" outkey="2434"/>
-																						<entry name="characterName" outkey="2435"/>
-																					</entry>
-																				</entry>
-																				<entry name="subPoints" expanded="1">
-																					<entry name="subPoint" outkey="2436" expanded="1">
-																						<entry name="FID" type="attribute" outkey="2437"/>
-																						<entry name="UGF" type="attribute" outkey="2438"/>
-																						<entry name="name" outkey="2439"/>
-																					</entry>
-																				</entry>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-																<entry name="pointsOfInterest" expanded="1">
-																	<entry name="pointOfInterest" outkey="2440" expanded="1">
-																		<entry name="UGF" type="attribute" outkey="2441"/>
-																		<entry name="FID" type="attribute" outkey="2442"/>
-																		<entry name="name" outkey="2443"/>
-																		<entry name="citizens" expanded="1">
-																			<entry name="citizen" outkey="2444" expanded="1">
-																				<entry name="FID" type="attribute" outkey="2445"/>
-																				<entry name="pregenSheetID" type="attribute" outkey="2446"/>
-																				<entry name="characterName" outkey="2447"/>
-																			</entry>
-																		</entry>
-																		<entry name="subPoints" expanded="1">
-																			<entry name="subPoint" outkey="2448" expanded="1">
-																				<entry name="FID" type="attribute" outkey="2449"/>
-																				<entry name="UGF" type="attribute" outkey="2450"/>
-																				<entry name="name" outkey="2451"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-														<entry name="pointsOfInterest" expanded="1">
-															<entry name="pointOfInterest" outkey="2452" expanded="1">
-																<entry name="UGF" type="attribute" outkey="2453"/>
-																<entry name="FID" type="attribute" outkey="2454"/>
-																<entry name="name" outkey="2455"/>
-																<entry name="citizens" expanded="1">
-																	<entry name="citizen" outkey="2456" expanded="1">
-																		<entry name="FID" type="attribute" outkey="2457"/>
-																		<entry name="pregenSheetID" type="attribute" outkey="2458"/>
-																		<entry name="characterName" outkey="2459"/>
-																	</entry>
-																</entry>
-																<entry name="subPoints" expanded="1">
-																	<entry name="subPoint" outkey="2460" expanded="1">
-																		<entry name="FID" type="attribute" outkey="2461"/>
-																		<entry name="UGF" type="attribute" outkey="2462"/>
-																		<entry name="name" outkey="2463"/>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="pregenSheetsChapter">
-												<entry name="pregenSheetsIntroduction" expanded="1">
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="939" expanded="1">
-															<entry name="FID" type="attribute" outkey="940"/>
-															<entry name="secID" type="attribute" outkey="941"/>
-															<entry name="heading1" outkey="942"/>
-															<entry name="section2" outkey="943" expanded="1">
-																<entry name="FID" type="attribute" outkey="944"/>
-																<entry name="sec2ID" type="attribute" outkey="945"/>
-																<entry name="heading2" outkey="946"/>
-																<entry name="section3" outkey="947" expanded="1">
-																	<entry name="FID" type="attribute" outkey="948"/>
-																	<entry name="sec3ID" type="attribute" outkey="949"/>
-																	<entry name="heading3" outkey="950"/>
-																	<entry name="section4" outkey="951" expanded="1">
-																		<entry name="FID" type="attribute" outkey="952"/>
-																		<entry name="sec4ID" type="attribute" outkey="953"/>
-																		<entry name="heading4" outkey="954"/>
-																		<entry name="section5" outkey="955" expanded="1">
-																			<entry name="FID" type="attribute" outkey="956"/>
-																			<entry name="sec5ID" type="attribute" outkey="957"/>
-																			<entry name="heading5" outkey="958"/>
-																			<entry name="section6" outkey="959" expanded="1">
-																				<entry name="FID" type="attribute" outkey="960"/>
-																				<entry name="sec6ID" type="attribute" outkey="961"/>
-																				<entry name="heading6" outkey="962"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="pregenSheets" expanded="1">
-													<entry name="pregenSheet" outkey="963" expanded="1">
-														<entry name="FID" type="attribute" outkey="964"/>
-														<entry name="pregenSheetID" type="attribute" outkey="965"/>
-														<entry name="characterName" outkey="966"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="racesChapter">
-												<entry name="racesIntroduction" expanded="1">
-													<entry name="sections">
-														<entry name="section1" outkey="1203" expanded="1">
-															<entry name="FID" type="attribute" outkey="1204"/>
-															<entry name="secID" type="attribute" outkey="1205"/>
-															<entry name="heading1" outkey="1206"/>
-															<entry name="section2" outkey="1207" expanded="1">
-																<entry name="FID" type="attribute" outkey="1208"/>
-																<entry name="sec2ID" type="attribute" outkey="1209"/>
-																<entry name="heading2" outkey="1210"/>
-																<entry name="section3" outkey="1211" expanded="1">
-																	<entry name="FID" type="attribute" outkey="1212"/>
-																	<entry name="sec3ID" type="attribute" outkey="1213"/>
-																	<entry name="heading3" outkey="1214"/>
-																	<entry name="section4" outkey="1215" expanded="1">
-																		<entry name="FID" type="attribute" outkey="1216"/>
-																		<entry name="sec4ID" type="attribute" outkey="1217"/>
-																		<entry name="heading4" outkey="1218"/>
-																		<entry name="section5" outkey="1219" expanded="1">
-																			<entry name="FID" type="attribute" outkey="1220"/>
-																			<entry name="sec5ID" type="attribute" outkey="1221"/>
-																			<entry name="heading5" outkey="1222"/>
-																			<entry name="section6" outkey="1223" expanded="1">
-																				<entry name="FID" type="attribute" outkey="1224"/>
-																				<entry name="sec6ID" type="attribute" outkey="1225"/>
-																				<entry name="heading6" outkey="1226"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="races" expanded="1">
-													<entry name="race" outkey="1227" expanded="1">
-														<entry name="FID" type="attribute" outkey="1228"/>
-														<entry name="raceID" type="attribute" outkey="1229"/>
-														<entry name="raceName" outkey="1230"/>
-														<entry name="raceSuggestedCharacteristics" expanded="1">
-															<entry name="racePersonality" outkey="2054">
-																<entry name="tableID" type="attribute" outkey="2055"/>
-																<entry name="FID" type="attribute" outkey="2056"/>
-															</entry>
-															<entry name="raceBond" outkey="2057">
-																<entry name="tableID" type="attribute" outkey="2058"/>
-																<entry name="FID" type="attribute" outkey="2059"/>
-															</entry>
-															<entry name="raceIdeal" outkey="2060">
-																<entry name="tableID" type="attribute" outkey="2061"/>
-																<entry name="FID" type="attribute" outkey="2062"/>
-															</entry>
-															<entry name="raceFlaw" outkey="2063" expanded="1">
-																<entry name="tableID" type="attribute" outkey="2064"/>
-																<entry name="FID" type="attribute" outkey="2065"/>
-															</entry>
-														</entry>
-														<entry name="raceTraits">
-															<entry name="raceTrait" outkey="1231" expanded="1">
-																<entry name="FID" type="attribute" outkey="1232"/>
-																<entry name="raceTraitID" type="attribute" outkey="1233"/>
-																<entry name="raceTraitName" outkey="1234"/>
-															</entry>
-														</entry>
-														<entry name="subraces" expanded="1">
-															<entry name="subrace" outkey="1235" expanded="1">
-																<entry name="FID" type="attribute" outkey="1236"/>
-																<entry name="subraceID" type="attribute" outkey="1237"/>
-																<entry name="subraceName" outkey="1238"/>
-																<entry name="subraceTraits" expanded="1">
-																	<entry name="subraceTrait" outkey="1239" expanded="1">
-																		<entry name="FID" type="attribute" outkey="1240"/>
-																		<entry name="subraceTraitID" type="attribute" outkey="1241"/>
-																		<entry name="subraceTraitName" outkey="1242"/>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="riddlesChapter">
-												<entry name="riddlesIntroduction" expanded="1">
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="1243" expanded="1">
-															<entry name="FID" type="attribute" outkey="1244"/>
-															<entry name="secID" type="attribute" outkey="1245"/>
-															<entry name="heading1" outkey="1246"/>
-															<entry name="section2" outkey="1247" expanded="1">
-																<entry name="FID" type="attribute" outkey="1248"/>
-																<entry name="sec2ID" type="attribute" outkey="1249"/>
-																<entry name="heading2" outkey="1250"/>
-																<entry name="section3" outkey="1251" expanded="1">
-																	<entry name="FID" type="attribute" outkey="1252"/>
-																	<entry name="sec3ID" type="attribute" outkey="1253"/>
-																	<entry name="heading3" outkey="1254"/>
-																	<entry name="section4" outkey="1255" expanded="1">
-																		<entry name="FID" type="attribute" outkey="1256"/>
-																		<entry name="sec4ID" type="attribute" outkey="1257"/>
-																		<entry name="heading4" outkey="1258"/>
-																		<entry name="section5" outkey="1259" expanded="1">
-																			<entry name="FID" type="attribute" outkey="1260"/>
-																			<entry name="sec5ID" type="attribute" outkey="1261"/>
-																			<entry name="heading5" outkey="1262"/>
-																			<entry name="section6" outkey="1263" expanded="1">
-																				<entry name="FID" type="attribute" outkey="1264"/>
-																				<entry name="sec6ID" type="attribute" outkey="1265"/>
-																				<entry name="heading6" outkey="1266"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="riddles" expanded="1">
-													<entry name="riddle" outkey="1267" expanded="1">
-														<entry name="FID" type="attribute" outkey="1268"/>
-														<entry name="riddleID" type="attribute" outkey="1269"/>
-														<entry name="riddleName" outkey="1270"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="skillsChapter">
-												<entry name="skillsIntroduction" expanded="1">
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="1271" expanded="1">
-															<entry name="FID" type="attribute" outkey="1272"/>
-															<entry name="secID" type="attribute" outkey="1273"/>
-															<entry name="heading1" outkey="1274"/>
-															<entry name="section2" outkey="1275" expanded="1">
-																<entry name="FID" type="attribute" outkey="1276"/>
-																<entry name="sec2ID" type="attribute" outkey="1277"/>
-																<entry name="heading2" outkey="1278"/>
-																<entry name="section3" outkey="1279" expanded="1">
-																	<entry name="FID" type="attribute" outkey="1280"/>
-																	<entry name="sec3ID" type="attribute" outkey="1281"/>
-																	<entry name="heading3" outkey="1282"/>
-																	<entry name="section4" outkey="1283" expanded="1">
-																		<entry name="FID" type="attribute" outkey="1284"/>
-																		<entry name="sec4ID" type="attribute" outkey="1285"/>
-																		<entry name="heading4" outkey="1286"/>
-																		<entry name="section5" outkey="1287" expanded="1">
-																			<entry name="FID" type="attribute" outkey="1288"/>
-																			<entry name="sec5ID" type="attribute" outkey="1289"/>
-																			<entry name="heading5" outkey="1290"/>
-																			<entry name="section6" outkey="1291" expanded="1">
-																				<entry name="FID" type="attribute" outkey="1292"/>
-																				<entry name="sec6ID" type="attribute" outkey="1293"/>
-																				<entry name="heading6" outkey="1294"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="skills" expanded="1">
-													<entry name="skill" outkey="1295" expanded="1">
-														<entry name="FID" type="attribute" outkey="1296"/>
-														<entry name="skillID" type="attribute" outkey="1297"/>
-														<entry name="skillName" outkey="1298"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="spellsChapter">
-												<entry name="spellsIntroduction" expanded="1">
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="1299" expanded="1">
-															<entry name="FID" type="attribute" outkey="1300"/>
-															<entry name="secID" type="attribute" outkey="1301"/>
-															<entry name="heading1" outkey="1302"/>
-															<entry name="section2" outkey="1303" expanded="1">
-																<entry name="FID" type="attribute" outkey="1304"/>
-																<entry name="sec2ID" type="attribute" outkey="1305"/>
-																<entry name="heading2" outkey="1306"/>
-																<entry name="section3" outkey="1307" expanded="1">
-																	<entry name="FID" type="attribute" outkey="1308"/>
-																	<entry name="sec3ID" type="attribute" outkey="1309"/>
-																	<entry name="heading3" outkey="1310"/>
-																	<entry name="section4" outkey="1311" expanded="1">
-																		<entry name="FID" type="attribute" outkey="1312"/>
-																		<entry name="sec4ID" type="attribute" outkey="1313"/>
-																		<entry name="heading4" outkey="1314"/>
-																		<entry name="section5" outkey="1315" expanded="1">
-																			<entry name="FID" type="attribute" outkey="1316"/>
-																			<entry name="sec5ID" type="attribute" outkey="1317"/>
-																			<entry name="heading5" outkey="1318"/>
-																			<entry name="section6" outkey="1319" expanded="1">
-																				<entry name="FID" type="attribute" outkey="1320"/>
-																				<entry name="sec6ID" type="attribute" outkey="1321"/>
-																				<entry name="heading6" outkey="1322"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="spells" expanded="1">
-													<entry name="spell" outkey="1323" expanded="1">
-														<entry name="FID" type="attribute" outkey="1324"/>
-														<entry name="spellID" type="attribute" outkey="1325"/>
-														<entry name="spellName" outkey="1326"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="tables">
-												<entry name="tableChapterIntroduction" expanded="1">
-													<entry name="sections" expanded="1">
-														<entry name="section1" outkey="1327" expanded="1">
-															<entry name="FID" type="attribute" outkey="1328"/>
-															<entry name="secID" type="attribute" outkey="1329"/>
-															<entry name="heading1" outkey="1330"/>
-															<entry name="section2" outkey="1331">
-																<entry name="FID" type="attribute" outkey="1332"/>
-																<entry name="sec2ID" type="attribute" outkey="1333"/>
-																<entry name="heading2" outkey="1334"/>
-																<entry name="section3" outkey="1335" expanded="1">
-																	<entry name="FID" type="attribute" outkey="1336"/>
-																	<entry name="sec3ID" type="attribute" outkey="1337"/>
-																	<entry name="heading3" outkey="1338"/>
-																	<entry name="section4" outkey="1339" expanded="1">
-																		<entry name="FID" type="attribute" outkey="1340"/>
-																		<entry name="sec4ID" type="attribute" outkey="1341"/>
-																		<entry name="heading4" outkey="1342"/>
-																		<entry name="section5" outkey="1343" expanded="1">
-																			<entry name="FID" type="attribute" outkey="1344"/>
-																			<entry name="sec5ID" type="attribute" outkey="1345"/>
-																			<entry name="heading5" outkey="1346"/>
-																			<entry name="section6" outkey="1347" expanded="1">
-																				<entry name="FID" type="attribute" outkey="1348"/>
-																				<entry name="sec6ID" type="attribute" outkey="1349"/>
-																				<entry name="heading6" outkey="1350"/>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="tableChapter" expanded="1">
-													<entry name="chapterTables">
-														<entry name="chapterTable" outkey="1351" expanded="1">
-															<entry name="tableID" type="attribute" outkey="1352"/>
-															<entry name="FID" type="attribute" outkey="1353"/>
-															<entry name="title" outkey="1354"/>
-														</entry>
-													</entry>
-													<entry name="tableChapterIntroduction" expanded="1">
-														<entry name="sections">
-															<entry name="section1" outkey="1355" expanded="1">
-																<entry name="FID" type="attribute" outkey="1356"/>
-																<entry name="secID" type="attribute" outkey="1357"/>
-																<entry name="heading1" outkey="1358"/>
-																<entry name="section2" outkey="1359" expanded="1">
-																	<entry name="FID" type="attribute" outkey="1360"/>
-																	<entry name="sec2ID" type="attribute" outkey="1361"/>
-																	<entry name="heading2" outkey="1362"/>
-																	<entry name="section3" outkey="1363" expanded="1">
-																		<entry name="FID" type="attribute" outkey="1364"/>
-																		<entry name="sec3ID" type="attribute" outkey="1365"/>
-																		<entry name="heading3" outkey="1366"/>
-																		<entry name="section4" outkey="1367" expanded="1">
-																			<entry name="FID" type="attribute" outkey="1368"/>
-																			<entry name="sec4ID" type="attribute" outkey="1369"/>
-																			<entry name="heading4" outkey="1370"/>
-																			<entry name="section5" outkey="1371" expanded="1">
-																				<entry name="FID" type="attribute" outkey="1372"/>
-																				<entry name="sec5ID" type="attribute" outkey="1373"/>
-																				<entry name="heading5" outkey="1374"/>
-																				<entry name="section6" outkey="1375" expanded="1">
-																					<entry name="FID" type="attribute" outkey="1376"/>
-																					<entry name="sec6ID" type="attribute" outkey="1377"/>
-																					<entry name="heading6" outkey="1378"/>
-																				</entry>
-																			</entry>
-																		</entry>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="UGFDraft15.xsd" inputinstance="Incarnate-System2019_07_05.xml" outputinstance="Incarnate-System2019_07_05.xml" instanceroot="{}root"/>
-					</data>
-				</component>
 				<component name="ID list" library="text" uid="3" kind="16">
 					<properties XSLTDefaultOutput="1"/>
 					<view ltx="680" lty="1084" rbx="819" rby="1549"/>
 					<data>
-						<root scrollposition="8552">
+						<root scrollposition="4873">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2093,6 +736,8 @@
 										<entry name="Name" inpkey="19"/>
 										<entry name="FID" inpkey="20"/>
 										<entry name="UGFID" inpkey="21"/>
+										<entry name="FID-parent" inpkey="2472"/>
+										<entry name="UGF-parent" inpkey="2473"/>
 									</entry>
 									<entry name="Rows" inpkey="22" expanded="1" clone="1">
 										<entry name="Name" inpkey="23"/>
@@ -3455,6 +2100,1365 @@
 						</text>
 					</data>
 				</component>
+				<component name="UGFDraft15" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-9" lty="1084" rbx="264" rby="1549"/>
+					<data>
+						<root scrollposition="436">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="chapters" expanded="1">
+											<entry name="frontMatter">
+												<entry name="credits" outkey="1429" expanded="1">
+													<entry name="FID" type="attribute" outkey="1965"/>
+													<entry name="UGF" type="attribute" outkey="1966"/>
+													<entry name="team" outkey="1967" expanded="1">
+														<entry name="FID" type="attribute" outkey="1968"/>
+														<entry name="name" type="attribute" outkey="1969"/>
+														<entry name="UGF" type="attribute" outkey="1970"/>
+														<entry name="position" outkey="1971" expanded="1">
+															<entry name="FID" type="attribute" outkey="1972"/>
+															<entry name="name" type="attribute" outkey="1973"/>
+															<entry name="UGF" type="attribute" outkey="1974"/>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="legal" outkey="269">
+													<entry name="FID" type="attribute" outkey="270"/>
+													<entry name="UGF" type="attribute" outkey="1975"/>
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="271" expanded="1">
+															<entry name="FID" type="attribute" outkey="272"/>
+															<entry name="secID" type="attribute" outkey="273"/>
+															<entry name="heading1" outkey="274"/>
+															<entry name="section2" outkey="275" expanded="1">
+																<entry name="FID" type="attribute" outkey="276"/>
+																<entry name="sec2ID" type="attribute" outkey="277"/>
+																<entry name="heading2" outkey="278"/>
+																<entry name="section3" outkey="279" expanded="1">
+																	<entry name="FID" type="attribute" outkey="280"/>
+																	<entry name="sec3ID" type="attribute" outkey="281"/>
+																	<entry name="heading3" outkey="282"/>
+																	<entry name="section4" outkey="283" expanded="1">
+																		<entry name="FID" type="attribute" outkey="284"/>
+																		<entry name="sec4ID" type="attribute" outkey="285"/>
+																		<entry name="heading4" outkey="286"/>
+																		<entry name="section5" outkey="287" expanded="1">
+																			<entry name="FID" type="attribute" outkey="288"/>
+																			<entry name="sec5ID" type="attribute" outkey="289"/>
+																			<entry name="heading5" outkey="290"/>
+																			<entry name="section6" outkey="291" expanded="1">
+																				<entry name="FID" type="attribute" outkey="292"/>
+																				<entry name="sec6ID" type="attribute" outkey="293"/>
+																				<entry name="heading6" outkey="294"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="introduction" outkey="295" expanded="1">
+													<entry name="FID" type="attribute" outkey="296"/>
+													<entry name="UGF" type="attribute" outkey="1976"/>
+													<entry name="sections">
+														<entry name="section1" outkey="297" expanded="1">
+															<entry name="FID" type="attribute" outkey="298"/>
+															<entry name="secID" type="attribute" outkey="299"/>
+															<entry name="heading1" outkey="300"/>
+															<entry name="section2" outkey="301" expanded="1">
+																<entry name="FID" type="attribute" outkey="302"/>
+																<entry name="sec2ID" type="attribute" outkey="303"/>
+																<entry name="heading2" outkey="304"/>
+																<entry name="section3" outkey="305" expanded="1">
+																	<entry name="FID" type="attribute" outkey="306"/>
+																	<entry name="sec3ID" type="attribute" outkey="307"/>
+																	<entry name="heading3" outkey="308"/>
+																	<entry name="section4" outkey="309" expanded="1">
+																		<entry name="FID" type="attribute" outkey="310"/>
+																		<entry name="sec4ID" type="attribute" outkey="311"/>
+																		<entry name="heading4" outkey="312"/>
+																		<entry name="section5" outkey="313" expanded="1">
+																			<entry name="FID" type="attribute" outkey="314"/>
+																			<entry name="sec5ID" type="attribute" outkey="315"/>
+																			<entry name="heading5" outkey="316"/>
+																			<entry name="section6" outkey="317" expanded="1">
+																				<entry name="FID" type="attribute" outkey="318"/>
+																				<entry name="sec6ID" type="attribute" outkey="319"/>
+																				<entry name="heading6" outkey="320"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="GMsBlind" outkey="321">
+												<entry name="FID" type="attribute" outkey="322"/>
+												<entry name="miscellaneousChapterID" type="attribute" outkey="323"/>
+												<entry name="sections">
+													<entry name="section1" outkey="324" expanded="1">
+														<entry name="FID" type="attribute" outkey="325"/>
+														<entry name="secID" type="attribute" outkey="326"/>
+														<entry name="heading1" outkey="327"/>
+														<entry name="section2" outkey="328" expanded="1">
+															<entry name="FID" type="attribute" outkey="329"/>
+															<entry name="sec2ID" type="attribute" outkey="330"/>
+															<entry name="heading2" outkey="331"/>
+															<entry name="section3" outkey="332" expanded="1">
+																<entry name="FID" type="attribute" outkey="333"/>
+																<entry name="sec3ID" type="attribute" outkey="334"/>
+																<entry name="heading3" outkey="335"/>
+																<entry name="section4" outkey="336" expanded="1">
+																	<entry name="FID" type="attribute" outkey="337"/>
+																	<entry name="sec4ID" type="attribute" outkey="338"/>
+																	<entry name="heading4" outkey="339"/>
+																	<entry name="section5" outkey="340" expanded="1">
+																		<entry name="FID" type="attribute" outkey="341"/>
+																		<entry name="sec5ID" type="attribute" outkey="342"/>
+																		<entry name="heading5" outkey="343"/>
+																		<entry name="section6" outkey="344" expanded="1">
+																			<entry name="FID" type="attribute" outkey="345"/>
+																			<entry name="sec6ID" type="attribute" outkey="346"/>
+																			<entry name="heading6" outkey="347"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="PlayerQuickSheet" outkey="348">
+												<entry name="FID" type="attribute" outkey="349"/>
+												<entry name="miscellaneousChapterID" type="attribute" outkey="350"/>
+												<entry name="sections">
+													<entry name="section1" outkey="351" expanded="1">
+														<entry name="FID" type="attribute" outkey="352"/>
+														<entry name="secID" type="attribute" outkey="353"/>
+														<entry name="heading1" outkey="354"/>
+														<entry name="section2" outkey="355" expanded="1">
+															<entry name="FID" type="attribute" outkey="356"/>
+															<entry name="sec2ID" type="attribute" outkey="357"/>
+															<entry name="heading2" outkey="358"/>
+															<entry name="section3" outkey="359" expanded="1">
+																<entry name="FID" type="attribute" outkey="360"/>
+																<entry name="sec3ID" type="attribute" outkey="361"/>
+																<entry name="heading3" outkey="362"/>
+																<entry name="section4" outkey="363" expanded="1">
+																	<entry name="FID" type="attribute" outkey="364"/>
+																	<entry name="sec4ID" type="attribute" outkey="365"/>
+																	<entry name="heading4" outkey="366"/>
+																	<entry name="section5" outkey="367" expanded="1">
+																		<entry name="FID" type="attribute" outkey="368"/>
+																		<entry name="sec5ID" type="attribute" outkey="369"/>
+																		<entry name="heading5" outkey="370"/>
+																		<entry name="section6" outkey="371" expanded="1">
+																			<entry name="FID" type="attribute" outkey="372"/>
+																			<entry name="sec6ID" type="attribute" outkey="373"/>
+																			<entry name="heading6" outkey="374"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="backgroundChapter">
+												<entry name="backgroundsIntroduction">
+													<entry name="sections">
+														<entry name="section1" outkey="375" expanded="1">
+															<entry name="FID" type="attribute" outkey="376"/>
+															<entry name="secID" type="attribute" outkey="377"/>
+															<entry name="heading1" outkey="378"/>
+															<entry name="section2" outkey="379" expanded="1">
+																<entry name="FID" type="attribute" outkey="380"/>
+																<entry name="sec2ID" type="attribute" outkey="381"/>
+																<entry name="heading2" outkey="382"/>
+																<entry name="section3" outkey="383" expanded="1">
+																	<entry name="FID" type="attribute" outkey="384"/>
+																	<entry name="sec3ID" type="attribute" outkey="385"/>
+																	<entry name="heading3" outkey="386"/>
+																	<entry name="section4" outkey="387" expanded="1">
+																		<entry name="FID" type="attribute" outkey="388"/>
+																		<entry name="sec4ID" type="attribute" outkey="389"/>
+																		<entry name="heading4" outkey="390"/>
+																		<entry name="section5" outkey="391" expanded="1">
+																			<entry name="FID" type="attribute" outkey="392"/>
+																			<entry name="sec5ID" type="attribute" outkey="393"/>
+																			<entry name="heading5" outkey="394"/>
+																			<entry name="section6" outkey="395" expanded="1">
+																				<entry name="FID" type="attribute" outkey="396"/>
+																				<entry name="sec6ID" type="attribute" outkey="397"/>
+																				<entry name="heading6" outkey="398"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="backgrounds">
+													<entry name="background" outkey="399" expanded="1">
+														<entry name="backgroundID" type="attribute" outkey="400"/>
+														<entry name="FID" type="attribute" outkey="401"/>
+														<entry name="backgroundFeature" outkey="402">
+															<entry name="backgroundFeatureID" type="attribute" outkey="403"/>
+															<entry name="FID" type="attribute" outkey="404"/>
+															<entry name="backgroundFeatureName" outkey="405"/>
+														</entry>
+														<entry name="backgroundName" outkey="406"/>
+														<entry name="backgroundSuggestedCharacteristics">
+															<entry name="backgroundPersonality" outkey="407">
+																<entry name="tableID" type="attribute" outkey="408"/>
+																<entry name="FID" type="attribute" outkey="409"/>
+															</entry>
+															<entry name="backgroundIdeal" outkey="410">
+																<entry name="tableID" type="attribute" outkey="411"/>
+																<entry name="FID" type="attribute" outkey="412"/>
+															</entry>
+															<entry name="backgroundBond" outkey="413">
+																<entry name="tableID" type="attribute" outkey="414"/>
+																<entry name="FID" type="attribute" outkey="415"/>
+															</entry>
+															<entry name="backgroundFlaw" outkey="416">
+																<entry name="tableID" type="attribute" outkey="417"/>
+																<entry name="FID" type="attribute" outkey="418"/>
+															</entry>
+															<entry name="backgroundMiscellaneous" outkey="2277">
+																<entry name="tableID" type="attribute" outkey="2278"/>
+																<entry name="FID" type="attribute" outkey="2279"/>
+																<entry name="title" outkey="2280"/>
+															</entry>
+														</entry>
+														<entry name="moods" outkey="2281">
+															<entry name="FID" type="attribute" outkey="2282"/>
+															<entry name="UGF" type="attribute" outkey="2283"/>
+															<entry name="mood" outkey="2284" expanded="1">
+																<entry name="FID" type="attribute" outkey="2285"/>
+																<entry name="UGF" type="attribute" outkey="2286"/>
+																<entry name="name" outkey="2287"/>
+															</entry>
+														</entry>
+														<entry name="questRecommendations" expanded="1">
+															<entry name="tier1" outkey="2288">
+																<entry name="tableID" type="attribute" outkey="2289"/>
+																<entry name="FID" type="attribute" outkey="2290"/>
+																<entry name="title" outkey="2291"/>
+															</entry>
+															<entry name="tier2" outkey="2292">
+																<entry name="tableID" type="attribute" outkey="2293"/>
+																<entry name="FID" type="attribute" outkey="2294"/>
+																<entry name="title" outkey="2295"/>
+															</entry>
+															<entry name="tier3" outkey="2296">
+																<entry name="tableID" type="attribute" outkey="2297"/>
+																<entry name="FID" type="attribute" outkey="2298"/>
+																<entry name="title" outkey="2299"/>
+															</entry>
+															<entry name="tier4" outkey="2300" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2301"/>
+																<entry name="FID" type="attribute" outkey="2302"/>
+																<entry name="title" outkey="2303"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="dreams" expanded="1">
+													<entry name="dream" outkey="2304">
+														<entry name="FID" type="attribute" outkey="2305"/>
+														<entry name="UGF" type="attribute" outkey="2306"/>
+														<entry name="name" type="attribute" outkey="2307"/>
+													</entry>
+												</entry>
+												<entry name="personalities" expanded="1">
+													<entry name="personality" outkey="2308">
+														<entry name="FID" type="attribute" outkey="2309"/>
+														<entry name="UGF" type="attribute" outkey="2310"/>
+														<entry name="name" type="attribute" outkey="2311"/>
+													</entry>
+												</entry>
+												<entry name="needs" expanded="1">
+													<entry name="need" outkey="2312">
+														<entry name="FID" type="attribute" outkey="2313"/>
+														<entry name="UGF" type="attribute" outkey="2314"/>
+														<entry name="name" type="attribute" outkey="2315"/>
+													</entry>
+												</entry>
+												<entry name="moods" expanded="1">
+													<entry name="mood" outkey="2316">
+														<entry name="FID" type="attribute" outkey="2317"/>
+														<entry name="UGF" type="attribute" outkey="2318"/>
+														<entry name="name" type="attribute" outkey="2319"/>
+													</entry>
+												</entry>
+												<entry name="wants" expanded="1">
+													<entry name="want" outkey="2320">
+														<entry name="FID" type="attribute" outkey="2321"/>
+														<entry name="UGF" type="attribute" outkey="2322"/>
+														<entry name="name" type="attribute" outkey="2323"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="classChapter" expanded="1">
+												<entry name="classIntroduction" expanded="1">
+													<entry name="sections">
+														<entry name="section1" outkey="419" expanded="1">
+															<entry name="FID" type="attribute" outkey="420"/>
+															<entry name="secID" type="attribute" outkey="421"/>
+															<entry name="heading1" outkey="422"/>
+															<entry name="section2" outkey="423" expanded="1">
+																<entry name="FID" type="attribute" outkey="424"/>
+																<entry name="sec2ID" type="attribute" outkey="425"/>
+																<entry name="heading2" outkey="426"/>
+																<entry name="section3" outkey="427" expanded="1">
+																	<entry name="FID" type="attribute" outkey="428"/>
+																	<entry name="sec3ID" type="attribute" outkey="429"/>
+																	<entry name="heading3" outkey="430"/>
+																	<entry name="section4" outkey="431" expanded="1">
+																		<entry name="FID" type="attribute" outkey="432"/>
+																		<entry name="sec4ID" type="attribute" outkey="433"/>
+																		<entry name="heading4" outkey="434"/>
+																		<entry name="section5" outkey="435" expanded="1">
+																			<entry name="FID" type="attribute" outkey="436"/>
+																			<entry name="sec5ID" type="attribute" outkey="437"/>
+																			<entry name="heading5" outkey="438"/>
+																			<entry name="section6" outkey="439" expanded="1">
+																				<entry name="FID" type="attribute" outkey="440"/>
+																				<entry name="sec6ID" type="attribute" outkey="441"/>
+																				<entry name="heading6" outkey="442"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="classes" expanded="1">
+													<entry name="class" outkey="443" expanded="1">
+														<entry name="classID" type="attribute" outkey="444"/>
+														<entry name="FID" type="attribute" outkey="445"/>
+														<entry name="classAmmendments" outkey="446">
+															<entry name="cLaMID" type="attribute" outkey="447"/>
+															<entry name="FID" type="attribute" outkey="1977"/>
+														</entry>
+														<entry name="classArchetypes" expanded="1">
+															<entry name="classArchetype" outkey="520" expanded="1">
+																<entry name="classArchtypeID" type="attribute" outkey="521"/>
+																<entry name="FID" type="attribute" outkey="522"/>
+																<entry name="classArchetypeName" outkey="523"/>
+																<entry name="classArchetypeTraits" expanded="1">
+																	<entry name="classArchetypeTrait" outkey="2474" expanded="1">
+																		<entry name="classArchtypeTraitID" type="attribute" outkey="2475"/>
+																		<entry name="FID" type="attribute" outkey="2476"/>
+																		<entry name="classTraitName" outkey="2477"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+														<entry name="className" outkey="448"/>
+														<entry name="classTable" outkey="528" expanded="1">
+															<entry name="tableID" type="attribute" outkey="529"/>
+															<entry name="FID" type="attribute" outkey="530"/>
+														</entry>
+														<entry name="classTraits">
+															<entry name="classTrait" outkey="531" expanded="1">
+																<entry name="classTraitID" type="attribute" outkey="532"/>
+																<entry name="FID" type="attribute" outkey="533"/>
+																<entry name="classTraitName" outkey="534"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="encounterChapter">
+												<entry name="encountersIntroduction">
+													<entry name="sections">
+														<entry name="section1" outkey="535" expanded="1">
+															<entry name="FID" type="attribute" outkey="536"/>
+															<entry name="secID" type="attribute" outkey="537"/>
+															<entry name="heading1" outkey="538"/>
+															<entry name="section2" outkey="539" expanded="1">
+																<entry name="FID" type="attribute" outkey="540"/>
+																<entry name="sec2ID" type="attribute" outkey="541"/>
+																<entry name="heading2" outkey="542"/>
+																<entry name="section3" outkey="543" expanded="1">
+																	<entry name="FID" type="attribute" outkey="544"/>
+																	<entry name="sec3ID" type="attribute" outkey="545"/>
+																	<entry name="heading3" outkey="546"/>
+																	<entry name="section4" outkey="547" expanded="1">
+																		<entry name="FID" type="attribute" outkey="548"/>
+																		<entry name="sec4ID" type="attribute" outkey="549"/>
+																		<entry name="heading4" outkey="550"/>
+																		<entry name="section5" outkey="551" expanded="1">
+																			<entry name="FID" type="attribute" outkey="552"/>
+																			<entry name="sec5ID" type="attribute" outkey="553"/>
+																			<entry name="heading5" outkey="554"/>
+																			<entry name="section6" outkey="555" expanded="1">
+																				<entry name="FID" type="attribute" outkey="556"/>
+																				<entry name="sec6ID" type="attribute" outkey="557"/>
+																				<entry name="heading6" outkey="558"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="variables" expanded="1">
+														<entry name="encounterCRs" expanded="1">
+															<entry name="encounterCR" outkey="1736" expanded="1">
+																<entry name="FID" type="attribute" outkey="1978"/>
+																<entry name="UGF" type="attribute" outkey="1979"/>
+															</entry>
+														</entry>
+														<entry name="encounterTerrains" expanded="1">
+															<entry name="encounterTerrain" outkey="1980" expanded="1">
+																<entry name="FID" type="attribute" outkey="1981"/>
+																<entry name="UGF" type="attribute" outkey="1982"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="encounters">
+													<entry name="encounter" outkey="559" expanded="1">
+														<entry name="encounterID" type="attribute" outkey="560"/>
+														<entry name="FID" type="attribute" outkey="561"/>
+														<entry name="encounterName" outkey="562"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="featChapter">
+												<entry name="featsIntroduction" expanded="1">
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="795" expanded="1">
+															<entry name="FID" type="attribute" outkey="796"/>
+															<entry name="secID" type="attribute" outkey="797"/>
+															<entry name="heading1" outkey="798"/>
+															<entry name="section2" outkey="799" expanded="1">
+																<entry name="FID" type="attribute" outkey="800"/>
+																<entry name="sec2ID" type="attribute" outkey="801"/>
+																<entry name="heading2" outkey="802"/>
+																<entry name="section3" outkey="803" expanded="1">
+																	<entry name="FID" type="attribute" outkey="804"/>
+																	<entry name="sec3ID" type="attribute" outkey="805"/>
+																	<entry name="heading3" outkey="806"/>
+																	<entry name="section4" outkey="807" expanded="1">
+																		<entry name="FID" type="attribute" outkey="808"/>
+																		<entry name="sec4ID" type="attribute" outkey="809"/>
+																		<entry name="heading4" outkey="810"/>
+																		<entry name="section5" outkey="811" expanded="1">
+																			<entry name="FID" type="attribute" outkey="812"/>
+																			<entry name="sec5ID" type="attribute" outkey="813"/>
+																			<entry name="heading5" outkey="814"/>
+																			<entry name="section6" outkey="815" expanded="1">
+																				<entry name="FID" type="attribute" outkey="816"/>
+																				<entry name="sec6ID" type="attribute" outkey="817"/>
+																				<entry name="heading6" outkey="818"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="feats" expanded="1">
+													<entry name="feat" outkey="819">
+														<entry name="featID" type="attribute" outkey="820"/>
+														<entry name="FID" type="attribute" outkey="821"/>
+														<entry name="featname" outkey="822"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="itemChapter">
+												<entry name="itemsIntroduction">
+													<entry name="sections">
+														<entry name="section1" outkey="823" expanded="1">
+															<entry name="FID" type="attribute" outkey="824"/>
+															<entry name="secID" type="attribute" outkey="825"/>
+															<entry name="heading1" outkey="826"/>
+															<entry name="section2" outkey="827" expanded="1">
+																<entry name="FID" type="attribute" outkey="828"/>
+																<entry name="sec2ID" type="attribute" outkey="829"/>
+																<entry name="heading2" outkey="830"/>
+																<entry name="section3" outkey="831" expanded="1">
+																	<entry name="FID" type="attribute" outkey="832"/>
+																	<entry name="sec3ID" type="attribute" outkey="833"/>
+																	<entry name="heading3" outkey="834"/>
+																	<entry name="section4" outkey="835" expanded="1">
+																		<entry name="FID" type="attribute" outkey="836"/>
+																		<entry name="sec4ID" type="attribute" outkey="837"/>
+																		<entry name="heading4" outkey="838"/>
+																		<entry name="section5" outkey="839" expanded="1">
+																			<entry name="FID" type="attribute" outkey="840"/>
+																			<entry name="sec5ID" type="attribute" outkey="841"/>
+																			<entry name="heading5" outkey="842"/>
+																			<entry name="section6" outkey="843" expanded="1">
+																				<entry name="FID" type="attribute" outkey="844"/>
+																				<entry name="sec6ID" type="attribute" outkey="845"/>
+																				<entry name="heading6" outkey="846"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="variables" expanded="1">
+														<entry name="itemTypes" outkey="1983" expanded="1">
+															<entry name="FID" type="attribute" outkey="1984"/>
+															<entry name="type" type="attribute" outkey="1985"/>
+															<entry name="UGFReference" type="attribute" outkey="1986"/>
+															<entry name="itemType" outkey="1987" expanded="1">
+																<entry name="UGFReference" type="attribute" outkey="1988"/>
+																<entry name="FID" type="attribute" outkey="1989"/>
+																<entry name="type" type="attribute" outkey="1990"/>
+																<entry name="itemSubtypes" expanded="1">
+																	<entry name="itemSubtype" outkey="1991" expanded="1">
+																		<entry name="UGFReference" type="attribute" outkey="1992"/>
+																		<entry name="FID" type="attribute" outkey="1993"/>
+																		<entry name="type" type="attribute" outkey="1994"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="items" expanded="1">
+													<entry name="item" outkey="847">
+														<entry name="itemID" type="attribute" outkey="848"/>
+														<entry name="FID" type="attribute" outkey="849"/>
+														<entry name="itemName" outkey="850"/>
+													</entry>
+												</entry>
+												<entry name="itemPacks" expanded="1">
+													<entry name="itemPack" outkey="851" expanded="1">
+														<entry name="FID" type="attribute" outkey="852"/>
+														<entry name="itemPackID" type="attribute" outkey="853"/>
+														<entry name="itemPackName" outkey="854"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="magicitemTemplatesChapter">
+												<entry name="magicItemTemplatesIntroduction" expanded="1">
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="855">
+															<entry name="FID" type="attribute" outkey="856"/>
+															<entry name="secID" type="attribute" outkey="857"/>
+															<entry name="heading1" outkey="858"/>
+															<entry name="section2" outkey="859" expanded="1">
+																<entry name="FID" type="attribute" outkey="860"/>
+																<entry name="sec2ID" type="attribute" outkey="861"/>
+																<entry name="heading2" outkey="862"/>
+																<entry name="section3" outkey="863" expanded="1">
+																	<entry name="FID" type="attribute" outkey="864"/>
+																	<entry name="sec3ID" type="attribute" outkey="865"/>
+																	<entry name="heading3" outkey="866"/>
+																	<entry name="section4" outkey="867" expanded="1">
+																		<entry name="FID" type="attribute" outkey="868"/>
+																		<entry name="sec4ID" type="attribute" outkey="869"/>
+																		<entry name="heading4" outkey="870"/>
+																		<entry name="section5" outkey="871" expanded="1">
+																			<entry name="FID" type="attribute" outkey="872"/>
+																			<entry name="sec5ID" type="attribute" outkey="873"/>
+																			<entry name="heading5" outkey="874"/>
+																			<entry name="section6" outkey="875" expanded="1">
+																				<entry name="FID" type="attribute" outkey="876"/>
+																				<entry name="sec6ID" type="attribute" outkey="877"/>
+																				<entry name="heading6" outkey="878"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="magicItemTemplates">
+													<entry name="magicItemTemplate" outkey="879" expanded="1">
+														<entry name="magicItemTemplateID" type="attribute" outkey="880"/>
+														<entry name="FID" type="attribute" outkey="881"/>
+														<entry name="templateName" outkey="882"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="miscellaneousChapters">
+												<entry name="miscellaneousChapter" outkey="883" expanded="1">
+													<entry name="FID" type="attribute" outkey="884"/>
+													<entry name="miscellaneousChapterID" type="attribute" outkey="885"/>
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="886" expanded="1">
+															<entry name="FID" type="attribute" outkey="887"/>
+															<entry name="secID" type="attribute" outkey="888"/>
+															<entry name="heading1" expanded="1">
+																<entry name="#text" outkey="2464"/>
+															</entry>
+															<entry name="section2" outkey="890" expanded="1">
+																<entry name="FID" type="attribute" outkey="891"/>
+																<entry name="sec2ID" type="attribute" outkey="892"/>
+																<entry name="heading2" expanded="1">
+																	<entry name="#text" outkey="2465"/>
+																</entry>
+																<entry name="section3" outkey="894" expanded="1">
+																	<entry name="FID" type="attribute" outkey="895"/>
+																	<entry name="sec3ID" type="attribute" outkey="896"/>
+																	<entry name="heading3" expanded="1">
+																		<entry name="#text" outkey="2466"/>
+																	</entry>
+																	<entry name="section4" outkey="898" expanded="1">
+																		<entry name="FID" type="attribute" outkey="899"/>
+																		<entry name="sec4ID" type="attribute" outkey="900"/>
+																		<entry name="heading4" expanded="1">
+																			<entry name="#text" outkey="2467"/>
+																		</entry>
+																		<entry name="section5" outkey="902" expanded="1">
+																			<entry name="FID" type="attribute" outkey="903"/>
+																			<entry name="sec5ID" type="attribute" outkey="904"/>
+																			<entry name="heading5" expanded="1">
+																				<entry name="#text" outkey="2468"/>
+																			</entry>
+																			<entry name="section6" outkey="906" expanded="1">
+																				<entry name="FID" type="attribute" outkey="907"/>
+																				<entry name="sec6ID" type="attribute" outkey="908"/>
+																				<entry name="heading6" expanded="1">
+																					<entry name="#text" outkey="2469"/>
+																				</entry>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="chapterName" outkey="910"/>
+												</entry>
+											</entry>
+											<entry name="npcChapter">
+												<entry name="npcsIntroduction" expanded="1">
+													<entry name="sections">
+														<entry name="section1" outkey="911" expanded="1">
+															<entry name="FID" type="attribute" outkey="912"/>
+															<entry name="secID" type="attribute" outkey="913"/>
+															<entry name="heading1" outkey="914"/>
+															<entry name="section2" outkey="915" expanded="1">
+																<entry name="FID" type="attribute" outkey="916"/>
+																<entry name="sec2ID" type="attribute" outkey="917"/>
+																<entry name="heading2" outkey="918"/>
+																<entry name="section3" outkey="919" expanded="1">
+																	<entry name="FID" type="attribute" outkey="920"/>
+																	<entry name="sec3ID" type="attribute" outkey="921"/>
+																	<entry name="heading3" outkey="922"/>
+																	<entry name="section4" outkey="923" expanded="1">
+																		<entry name="FID" type="attribute" outkey="924"/>
+																		<entry name="sec4ID" type="attribute" outkey="925"/>
+																		<entry name="heading4" outkey="926"/>
+																		<entry name="section5" outkey="927" expanded="1">
+																			<entry name="FID" type="attribute" outkey="928"/>
+																			<entry name="sec5ID" type="attribute" outkey="929"/>
+																			<entry name="heading5" outkey="930"/>
+																			<entry name="section6" outkey="931" expanded="1">
+																				<entry name="FID" type="attribute" outkey="932"/>
+																				<entry name="sec6ID" type="attribute" outkey="933"/>
+																				<entry name="heading6" outkey="934"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="variables" outkey="1995" expanded="1">
+														<entry name="FID" type="attribute" outkey="1996"/>
+														<entry name="UGFReference" type="attribute" outkey="1997"/>
+														<entry name="alphabetically" outkey="1998" expanded="1">
+															<entry name="FID" type="attribute" outkey="1999"/>
+															<entry name="UGFReference" type="attribute" outkey="2000"/>
+														</entry>
+														<entry name="attackSaves" outkey="2001" expanded="1">
+															<entry name="FID" type="attribute" outkey="2002"/>
+															<entry name="UGFReference" type="attribute" outkey="2003"/>
+															<entry name="attackSave" outkey="1756" expanded="1">
+																<entry name="FID" type="attribute" outkey="2004"/>
+																<entry name="UGFReference" type="attribute" outkey="2005"/>
+															</entry>
+														</entry>
+														<entry name="authors" outkey="2006" expanded="1">
+															<entry name="FID" type="attribute" outkey="2007"/>
+															<entry name="UGFReference" type="attribute" outkey="2008"/>
+															<entry name="author" outkey="1766" expanded="1">
+																<entry name="FID" type="attribute" outkey="2009"/>
+																<entry name="UGFReference" type="attribute" outkey="2010"/>
+															</entry>
+														</entry>
+														<entry name="CRs" outkey="2011" expanded="1">
+															<entry name="FID" type="attribute" outkey="2012"/>
+															<entry name="UGFReference" type="attribute" outkey="2013"/>
+															<entry name="CR" outkey="2014" expanded="1">
+																<entry name="FID" type="attribute" outkey="2015"/>
+																<entry name="string" type="attribute" outkey="2016"/>
+																<entry name="UGFReference" type="attribute" outkey="2017"/>
+															</entry>
+														</entry>
+														<entry name="functions" outkey="2018" expanded="1">
+															<entry name="FID" type="attribute" outkey="2019"/>
+															<entry name="UGFReference" type="attribute" outkey="2020"/>
+															<entry name="function" outkey="1783" expanded="1">
+																<entry name="FID" type="attribute" outkey="2021"/>
+																<entry name="UGFReference" type="attribute" outkey="2022"/>
+															</entry>
+														</entry>
+														<entry name="immunities" outkey="2023" expanded="1">
+															<entry name="FID" type="attribute" outkey="2024"/>
+															<entry name="UGFReference" type="attribute" outkey="2025"/>
+															<entry name="immunity" outkey="1788" expanded="1">
+																<entry name="FID" type="attribute" outkey="2026"/>
+																<entry name="UGFReference" type="attribute" outkey="2027"/>
+															</entry>
+														</entry>
+														<entry name="lores" outkey="2028" expanded="1">
+															<entry name="FID" type="attribute" outkey="2029"/>
+															<entry name="UGFReference" type="attribute" outkey="2030"/>
+															<entry name="lore" outkey="2031" expanded="1">
+																<entry name="FID" type="attribute" outkey="2032"/>
+																<entry name="UGFReference" type="attribute" outkey="2033"/>
+															</entry>
+														</entry>
+														<entry name="resistances" outkey="2034" expanded="1">
+															<entry name="FID" type="attribute" outkey="2035"/>
+															<entry name="UGFReference" type="attribute" outkey="2036"/>
+															<entry name="resistance" outkey="1803" expanded="1">
+																<entry name="FID" type="attribute" outkey="2037"/>
+																<entry name="UGFReference" type="attribute" outkey="2038"/>
+															</entry>
+														</entry>
+														<entry name="terrains" outkey="2039" expanded="1">
+															<entry name="FID" type="attribute" outkey="2040"/>
+															<entry name="UGFReference" type="attribute" outkey="2041"/>
+															<entry name="terrain" outkey="1811" expanded="1">
+																<entry name="FID" type="attribute" outkey="2042"/>
+																<entry name="UGFReference" type="attribute" outkey="2043"/>
+															</entry>
+														</entry>
+														<entry name="types" outkey="2044" expanded="1">
+															<entry name="FID" type="attribute" outkey="2045"/>
+															<entry name="UGFReference" type="attribute" outkey="2046"/>
+															<entry name="type" outkey="1821" expanded="1">
+																<entry name="FID" type="attribute" outkey="2047"/>
+																<entry name="UGFReference" type="attribute" outkey="2048"/>
+															</entry>
+														</entry>
+														<entry name="vulnerabilities" outkey="2049" expanded="1">
+															<entry name="FID" type="attribute" outkey="2050"/>
+															<entry name="UGFReference" type="attribute" outkey="2051"/>
+															<entry name="vulnerability" outkey="1826" expanded="1">
+																<entry name="FID" type="attribute" outkey="2052"/>
+																<entry name="UGFReference" type="attribute" outkey="2053"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="npcs">
+													<entry name="npc" outkey="935" expanded="1">
+														<entry name="FID" type="attribute" outkey="936"/>
+														<entry name="npcID" type="attribute" outkey="937"/>
+														<entry name="npcName" outkey="938"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="planeChapter">
+												<entry name="planesIntroduction" expanded="1">
+													<entry name="sections">
+														<entry name="section1" outkey="2324" expanded="1">
+															<entry name="FID" type="attribute" outkey="2325"/>
+															<entry name="secID" type="attribute" outkey="2326"/>
+															<entry name="heading1" outkey="2327"/>
+															<entry name="section2" outkey="2328" expanded="1">
+																<entry name="FID" type="attribute" outkey="2329"/>
+																<entry name="sec2ID" type="attribute" outkey="2330"/>
+																<entry name="heading2" outkey="2331"/>
+																<entry name="section3" outkey="2332" expanded="1">
+																	<entry name="FID" type="attribute" outkey="2333"/>
+																	<entry name="sec3ID" type="attribute" outkey="2334"/>
+																	<entry name="heading3" outkey="2335"/>
+																	<entry name="section4" outkey="2336" expanded="1">
+																		<entry name="FID" type="attribute" outkey="2337"/>
+																		<entry name="sec4ID" type="attribute" outkey="2338"/>
+																		<entry name="heading4" outkey="2339"/>
+																		<entry name="section5" outkey="2340" expanded="1">
+																			<entry name="FID" type="attribute" outkey="2341"/>
+																			<entry name="sec5ID" type="attribute" outkey="2342"/>
+																			<entry name="heading5" outkey="2343"/>
+																			<entry name="section6" outkey="2344" expanded="1">
+																				<entry name="FID" type="attribute" outkey="2345"/>
+																				<entry name="sec6ID" type="attribute" outkey="2346"/>
+																				<entry name="heading6" outkey="2347"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="planes" expanded="1">
+													<entry name="plane" outkey="2348" expanded="1">
+														<entry name="FID" type="attribute" outkey="2349"/>
+														<entry name="UGF" type="attribute" outkey="2350"/>
+														<entry name="name" outkey="2351"/>
+														<entry name="planets" expanded="1">
+															<entry name="planet" outkey="2352" expanded="1">
+																<entry name="FID" type="attribute" outkey="2353"/>
+																<entry name="UGF" type="attribute" outkey="2354"/>
+																<entry name="name" outkey="2355"/>
+																<entry name="countries" expanded="1">
+																	<entry name="country" outkey="2356" expanded="1">
+																		<entry name="FID" type="attribute" outkey="2357"/>
+																		<entry name="UGF" type="attribute" outkey="2358"/>
+																		<entry name="name" outkey="2359"/>
+																		<entry name="states" expanded="1">
+																			<entry name="state" outkey="2360" expanded="1">
+																				<entry name="FID" type="attribute" outkey="2361"/>
+																				<entry name="UGF" type="attribute" outkey="2362"/>
+																				<entry name="name" outkey="2363"/>
+																				<entry name="cities" expanded="1">
+																					<entry name="city" outkey="2364" expanded="1">
+																						<entry name="FID" type="attribute" outkey="2365"/>
+																						<entry name="UGF" type="attribute" outkey="2366"/>
+																						<entry name="name" outkey="2367"/>
+																						<entry name="districts" expanded="1">
+																							<entry name="district" outkey="2368" expanded="1">
+																								<entry name="FID" type="attribute" outkey="2369"/>
+																								<entry name="UGF" type="attribute" outkey="2370"/>
+																								<entry name="name" outkey="2371"/>
+																								<entry name="buildings" expanded="1">
+																									<entry name="building" outkey="2372" expanded="1">
+																										<entry name="FID" type="attribute" outkey="2373"/>
+																										<entry name="UGF" type="attribute" outkey="2374"/>
+																										<entry name="name" outkey="2375"/>
+																										<entry name="citizens" expanded="1">
+																											<entry name="citizen" outkey="2376" expanded="1">
+																												<entry name="FID" type="attribute" outkey="2377"/>
+																												<entry name="pregenSheetID" type="attribute" outkey="2378"/>
+																												<entry name="characterName" outkey="2379"/>
+																											</entry>
+																										</entry>
+																										<entry name="pointsOfInterest" expanded="1">
+																											<entry name="pointOfInterest" outkey="2380" expanded="1">
+																												<entry name="UGF" type="attribute" outkey="2381"/>
+																												<entry name="FID" type="attribute" outkey="2382"/>
+																												<entry name="name" outkey="2383"/>
+																												<entry name="citizens" expanded="1">
+																													<entry name="citizen" outkey="2384" expanded="1">
+																														<entry name="FID" type="attribute" outkey="2385"/>
+																														<entry name="pregenSheetID" type="attribute" outkey="2386"/>
+																														<entry name="characterName" outkey="2387"/>
+																													</entry>
+																												</entry>
+																												<entry name="subPoints" expanded="1">
+																													<entry name="subPoint" outkey="2388" expanded="1">
+																														<entry name="FID" type="attribute" outkey="2389"/>
+																														<entry name="UGF" type="attribute" outkey="2390"/>
+																														<entry name="name" outkey="2391"/>
+																													</entry>
+																												</entry>
+																											</entry>
+																										</entry>
+																									</entry>
+																								</entry>
+																								<entry name="pointsOfInterest" expanded="1">
+																									<entry name="pointOfInterest" outkey="2392" expanded="1">
+																										<entry name="UGF" type="attribute" outkey="2393"/>
+																										<entry name="FID" type="attribute" outkey="2394"/>
+																										<entry name="name" outkey="2395"/>
+																										<entry name="citizens" expanded="1">
+																											<entry name="citizen" outkey="2396" expanded="1">
+																												<entry name="FID" type="attribute" outkey="2397"/>
+																												<entry name="pregenSheetID" type="attribute" outkey="2398"/>
+																												<entry name="characterName" outkey="2399"/>
+																											</entry>
+																										</entry>
+																										<entry name="subPoints" expanded="1">
+																											<entry name="subPoint" outkey="2400" expanded="1">
+																												<entry name="FID" type="attribute" outkey="2401"/>
+																												<entry name="UGF" type="attribute" outkey="2402"/>
+																												<entry name="name" outkey="2403"/>
+																											</entry>
+																										</entry>
+																									</entry>
+																								</entry>
+																							</entry>
+																						</entry>
+																						<entry name="pointsOfInterest" expanded="1">
+																							<entry name="pointOfInterest" outkey="2404" expanded="1">
+																								<entry name="UGF" type="attribute" outkey="2405"/>
+																								<entry name="FID" type="attribute" outkey="2406"/>
+																								<entry name="name" outkey="2407"/>
+																								<entry name="citizens" expanded="1">
+																									<entry name="citizen" outkey="2408" expanded="1">
+																										<entry name="FID" type="attribute" outkey="2409"/>
+																										<entry name="pregenSheetID" type="attribute" outkey="2410"/>
+																										<entry name="characterName" outkey="2411"/>
+																									</entry>
+																								</entry>
+																								<entry name="subPoints" expanded="1">
+																									<entry name="subPoint" outkey="2412" expanded="1">
+																										<entry name="FID" type="attribute" outkey="2413"/>
+																										<entry name="UGF" type="attribute" outkey="2414"/>
+																										<entry name="name" outkey="2415"/>
+																									</entry>
+																								</entry>
+																							</entry>
+																						</entry>
+																					</entry>
+																				</entry>
+																				<entry name="pointsOfInterest" expanded="1">
+																					<entry name="pointOfInterest" outkey="2416" expanded="1">
+																						<entry name="UGF" type="attribute" outkey="2417"/>
+																						<entry name="FID" type="attribute" outkey="2418"/>
+																						<entry name="name" outkey="2419"/>
+																						<entry name="citizens" expanded="1">
+																							<entry name="citizen" outkey="2420" expanded="1">
+																								<entry name="FID" type="attribute" outkey="2421"/>
+																								<entry name="pregenSheetID" type="attribute" outkey="2422"/>
+																								<entry name="characterName" outkey="2423"/>
+																							</entry>
+																						</entry>
+																						<entry name="subPoints" expanded="1">
+																							<entry name="subPoint" outkey="2424" expanded="1">
+																								<entry name="FID" type="attribute" outkey="2425"/>
+																								<entry name="UGF" type="attribute" outkey="2426"/>
+																								<entry name="name" outkey="2427"/>
+																							</entry>
+																						</entry>
+																					</entry>
+																				</entry>
+																			</entry>
+																		</entry>
+																		<entry name="pointsOfInterest" expanded="1">
+																			<entry name="pointOfInterest" outkey="2428" expanded="1">
+																				<entry name="UGF" type="attribute" outkey="2429"/>
+																				<entry name="FID" type="attribute" outkey="2430"/>
+																				<entry name="name" outkey="2431"/>
+																				<entry name="citizens" expanded="1">
+																					<entry name="citizen" outkey="2432" expanded="1">
+																						<entry name="FID" type="attribute" outkey="2433"/>
+																						<entry name="pregenSheetID" type="attribute" outkey="2434"/>
+																						<entry name="characterName" outkey="2435"/>
+																					</entry>
+																				</entry>
+																				<entry name="subPoints" expanded="1">
+																					<entry name="subPoint" outkey="2436" expanded="1">
+																						<entry name="FID" type="attribute" outkey="2437"/>
+																						<entry name="UGF" type="attribute" outkey="2438"/>
+																						<entry name="name" outkey="2439"/>
+																					</entry>
+																				</entry>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+																<entry name="pointsOfInterest" expanded="1">
+																	<entry name="pointOfInterest" outkey="2440" expanded="1">
+																		<entry name="UGF" type="attribute" outkey="2441"/>
+																		<entry name="FID" type="attribute" outkey="2442"/>
+																		<entry name="name" outkey="2443"/>
+																		<entry name="citizens" expanded="1">
+																			<entry name="citizen" outkey="2444" expanded="1">
+																				<entry name="FID" type="attribute" outkey="2445"/>
+																				<entry name="pregenSheetID" type="attribute" outkey="2446"/>
+																				<entry name="characterName" outkey="2447"/>
+																			</entry>
+																		</entry>
+																		<entry name="subPoints" expanded="1">
+																			<entry name="subPoint" outkey="2448" expanded="1">
+																				<entry name="FID" type="attribute" outkey="2449"/>
+																				<entry name="UGF" type="attribute" outkey="2450"/>
+																				<entry name="name" outkey="2451"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+														<entry name="pointsOfInterest" expanded="1">
+															<entry name="pointOfInterest" outkey="2452" expanded="1">
+																<entry name="UGF" type="attribute" outkey="2453"/>
+																<entry name="FID" type="attribute" outkey="2454"/>
+																<entry name="name" outkey="2455"/>
+																<entry name="citizens" expanded="1">
+																	<entry name="citizen" outkey="2456" expanded="1">
+																		<entry name="FID" type="attribute" outkey="2457"/>
+																		<entry name="pregenSheetID" type="attribute" outkey="2458"/>
+																		<entry name="characterName" outkey="2459"/>
+																	</entry>
+																</entry>
+																<entry name="subPoints" expanded="1">
+																	<entry name="subPoint" outkey="2460" expanded="1">
+																		<entry name="FID" type="attribute" outkey="2461"/>
+																		<entry name="UGF" type="attribute" outkey="2462"/>
+																		<entry name="name" outkey="2463"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="pregenSheetsChapter">
+												<entry name="pregenSheetsIntroduction" expanded="1">
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="939" expanded="1">
+															<entry name="FID" type="attribute" outkey="940"/>
+															<entry name="secID" type="attribute" outkey="941"/>
+															<entry name="heading1" outkey="942"/>
+															<entry name="section2" outkey="943" expanded="1">
+																<entry name="FID" type="attribute" outkey="944"/>
+																<entry name="sec2ID" type="attribute" outkey="945"/>
+																<entry name="heading2" outkey="946"/>
+																<entry name="section3" outkey="947" expanded="1">
+																	<entry name="FID" type="attribute" outkey="948"/>
+																	<entry name="sec3ID" type="attribute" outkey="949"/>
+																	<entry name="heading3" outkey="950"/>
+																	<entry name="section4" outkey="951" expanded="1">
+																		<entry name="FID" type="attribute" outkey="952"/>
+																		<entry name="sec4ID" type="attribute" outkey="953"/>
+																		<entry name="heading4" outkey="954"/>
+																		<entry name="section5" outkey="955" expanded="1">
+																			<entry name="FID" type="attribute" outkey="956"/>
+																			<entry name="sec5ID" type="attribute" outkey="957"/>
+																			<entry name="heading5" outkey="958"/>
+																			<entry name="section6" outkey="959" expanded="1">
+																				<entry name="FID" type="attribute" outkey="960"/>
+																				<entry name="sec6ID" type="attribute" outkey="961"/>
+																				<entry name="heading6" outkey="962"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="pregenSheets" expanded="1">
+													<entry name="pregenSheet" outkey="963" expanded="1">
+														<entry name="FID" type="attribute" outkey="964"/>
+														<entry name="pregenSheetID" type="attribute" outkey="965"/>
+														<entry name="characterName" outkey="966"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="racesChapter">
+												<entry name="racesIntroduction" expanded="1">
+													<entry name="sections">
+														<entry name="section1" outkey="1203" expanded="1">
+															<entry name="FID" type="attribute" outkey="1204"/>
+															<entry name="secID" type="attribute" outkey="1205"/>
+															<entry name="heading1" outkey="1206"/>
+															<entry name="section2" outkey="1207" expanded="1">
+																<entry name="FID" type="attribute" outkey="1208"/>
+																<entry name="sec2ID" type="attribute" outkey="1209"/>
+																<entry name="heading2" outkey="1210"/>
+																<entry name="section3" outkey="1211" expanded="1">
+																	<entry name="FID" type="attribute" outkey="1212"/>
+																	<entry name="sec3ID" type="attribute" outkey="1213"/>
+																	<entry name="heading3" outkey="1214"/>
+																	<entry name="section4" outkey="1215" expanded="1">
+																		<entry name="FID" type="attribute" outkey="1216"/>
+																		<entry name="sec4ID" type="attribute" outkey="1217"/>
+																		<entry name="heading4" outkey="1218"/>
+																		<entry name="section5" outkey="1219" expanded="1">
+																			<entry name="FID" type="attribute" outkey="1220"/>
+																			<entry name="sec5ID" type="attribute" outkey="1221"/>
+																			<entry name="heading5" outkey="1222"/>
+																			<entry name="section6" outkey="1223" expanded="1">
+																				<entry name="FID" type="attribute" outkey="1224"/>
+																				<entry name="sec6ID" type="attribute" outkey="1225"/>
+																				<entry name="heading6" outkey="1226"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="races" expanded="1">
+													<entry name="race" outkey="1227" expanded="1">
+														<entry name="FID" type="attribute" outkey="1228"/>
+														<entry name="raceID" type="attribute" outkey="1229"/>
+														<entry name="raceName" outkey="1230"/>
+														<entry name="raceSuggestedCharacteristics" expanded="1">
+															<entry name="racePersonality" outkey="2054">
+																<entry name="tableID" type="attribute" outkey="2055"/>
+																<entry name="FID" type="attribute" outkey="2056"/>
+															</entry>
+															<entry name="raceBond" outkey="2057">
+																<entry name="tableID" type="attribute" outkey="2058"/>
+																<entry name="FID" type="attribute" outkey="2059"/>
+															</entry>
+															<entry name="raceIdeal" outkey="2060">
+																<entry name="tableID" type="attribute" outkey="2061"/>
+																<entry name="FID" type="attribute" outkey="2062"/>
+															</entry>
+															<entry name="raceFlaw" outkey="2063" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2064"/>
+																<entry name="FID" type="attribute" outkey="2065"/>
+															</entry>
+														</entry>
+														<entry name="raceTraits">
+															<entry name="raceTrait" outkey="1231" expanded="1">
+																<entry name="FID" type="attribute" outkey="1232"/>
+																<entry name="raceTraitID" type="attribute" outkey="1233"/>
+																<entry name="raceTraitName" outkey="1234"/>
+															</entry>
+														</entry>
+														<entry name="subraces" expanded="1">
+															<entry name="subrace" outkey="1235" expanded="1">
+																<entry name="FID" type="attribute" outkey="1236"/>
+																<entry name="subraceID" type="attribute" outkey="1237"/>
+																<entry name="subraceName" outkey="1238"/>
+																<entry name="subraceTraits" expanded="1">
+																	<entry name="subraceTrait" outkey="1239" expanded="1">
+																		<entry name="FID" type="attribute" outkey="1240"/>
+																		<entry name="subraceTraitID" type="attribute" outkey="1241"/>
+																		<entry name="subraceTraitName" outkey="1242"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="riddlesChapter">
+												<entry name="riddlesIntroduction" expanded="1">
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="1243" expanded="1">
+															<entry name="FID" type="attribute" outkey="1244"/>
+															<entry name="secID" type="attribute" outkey="1245"/>
+															<entry name="heading1" outkey="1246"/>
+															<entry name="section2" outkey="1247" expanded="1">
+																<entry name="FID" type="attribute" outkey="1248"/>
+																<entry name="sec2ID" type="attribute" outkey="1249"/>
+																<entry name="heading2" outkey="1250"/>
+																<entry name="section3" outkey="1251" expanded="1">
+																	<entry name="FID" type="attribute" outkey="1252"/>
+																	<entry name="sec3ID" type="attribute" outkey="1253"/>
+																	<entry name="heading3" outkey="1254"/>
+																	<entry name="section4" outkey="1255" expanded="1">
+																		<entry name="FID" type="attribute" outkey="1256"/>
+																		<entry name="sec4ID" type="attribute" outkey="1257"/>
+																		<entry name="heading4" outkey="1258"/>
+																		<entry name="section5" outkey="1259" expanded="1">
+																			<entry name="FID" type="attribute" outkey="1260"/>
+																			<entry name="sec5ID" type="attribute" outkey="1261"/>
+																			<entry name="heading5" outkey="1262"/>
+																			<entry name="section6" outkey="1263" expanded="1">
+																				<entry name="FID" type="attribute" outkey="1264"/>
+																				<entry name="sec6ID" type="attribute" outkey="1265"/>
+																				<entry name="heading6" outkey="1266"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="riddles" expanded="1">
+													<entry name="riddle" outkey="1267" expanded="1">
+														<entry name="FID" type="attribute" outkey="1268"/>
+														<entry name="riddleID" type="attribute" outkey="1269"/>
+														<entry name="riddleName" outkey="1270"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="skillsChapter">
+												<entry name="skillsIntroduction" expanded="1">
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="1271" expanded="1">
+															<entry name="FID" type="attribute" outkey="1272"/>
+															<entry name="secID" type="attribute" outkey="1273"/>
+															<entry name="heading1" outkey="1274"/>
+															<entry name="section2" outkey="1275" expanded="1">
+																<entry name="FID" type="attribute" outkey="1276"/>
+																<entry name="sec2ID" type="attribute" outkey="1277"/>
+																<entry name="heading2" outkey="1278"/>
+																<entry name="section3" outkey="1279" expanded="1">
+																	<entry name="FID" type="attribute" outkey="1280"/>
+																	<entry name="sec3ID" type="attribute" outkey="1281"/>
+																	<entry name="heading3" outkey="1282"/>
+																	<entry name="section4" outkey="1283" expanded="1">
+																		<entry name="FID" type="attribute" outkey="1284"/>
+																		<entry name="sec4ID" type="attribute" outkey="1285"/>
+																		<entry name="heading4" outkey="1286"/>
+																		<entry name="section5" outkey="1287" expanded="1">
+																			<entry name="FID" type="attribute" outkey="1288"/>
+																			<entry name="sec5ID" type="attribute" outkey="1289"/>
+																			<entry name="heading5" outkey="1290"/>
+																			<entry name="section6" outkey="1291" expanded="1">
+																				<entry name="FID" type="attribute" outkey="1292"/>
+																				<entry name="sec6ID" type="attribute" outkey="1293"/>
+																				<entry name="heading6" outkey="1294"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="skills" expanded="1">
+													<entry name="skill" outkey="1295" expanded="1">
+														<entry name="FID" type="attribute" outkey="1296"/>
+														<entry name="skillID" type="attribute" outkey="1297"/>
+														<entry name="skillName" outkey="1298"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="spellsChapter">
+												<entry name="spellsIntroduction" expanded="1">
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="1299" expanded="1">
+															<entry name="FID" type="attribute" outkey="1300"/>
+															<entry name="secID" type="attribute" outkey="1301"/>
+															<entry name="heading1" outkey="1302"/>
+															<entry name="section2" outkey="1303" expanded="1">
+																<entry name="FID" type="attribute" outkey="1304"/>
+																<entry name="sec2ID" type="attribute" outkey="1305"/>
+																<entry name="heading2" outkey="1306"/>
+																<entry name="section3" outkey="1307" expanded="1">
+																	<entry name="FID" type="attribute" outkey="1308"/>
+																	<entry name="sec3ID" type="attribute" outkey="1309"/>
+																	<entry name="heading3" outkey="1310"/>
+																	<entry name="section4" outkey="1311" expanded="1">
+																		<entry name="FID" type="attribute" outkey="1312"/>
+																		<entry name="sec4ID" type="attribute" outkey="1313"/>
+																		<entry name="heading4" outkey="1314"/>
+																		<entry name="section5" outkey="1315" expanded="1">
+																			<entry name="FID" type="attribute" outkey="1316"/>
+																			<entry name="sec5ID" type="attribute" outkey="1317"/>
+																			<entry name="heading5" outkey="1318"/>
+																			<entry name="section6" outkey="1319" expanded="1">
+																				<entry name="FID" type="attribute" outkey="1320"/>
+																				<entry name="sec6ID" type="attribute" outkey="1321"/>
+																				<entry name="heading6" outkey="1322"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="spells" expanded="1">
+													<entry name="spell" outkey="1323" expanded="1">
+														<entry name="FID" type="attribute" outkey="1324"/>
+														<entry name="spellID" type="attribute" outkey="1325"/>
+														<entry name="spellName" outkey="1326"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="tables">
+												<entry name="tableChapterIntroduction" expanded="1">
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="1327" expanded="1">
+															<entry name="FID" type="attribute" outkey="1328"/>
+															<entry name="secID" type="attribute" outkey="1329"/>
+															<entry name="heading1" outkey="1330"/>
+															<entry name="section2" outkey="1331">
+																<entry name="FID" type="attribute" outkey="1332"/>
+																<entry name="sec2ID" type="attribute" outkey="1333"/>
+																<entry name="heading2" outkey="1334"/>
+																<entry name="section3" outkey="1335" expanded="1">
+																	<entry name="FID" type="attribute" outkey="1336"/>
+																	<entry name="sec3ID" type="attribute" outkey="1337"/>
+																	<entry name="heading3" outkey="1338"/>
+																	<entry name="section4" outkey="1339" expanded="1">
+																		<entry name="FID" type="attribute" outkey="1340"/>
+																		<entry name="sec4ID" type="attribute" outkey="1341"/>
+																		<entry name="heading4" outkey="1342"/>
+																		<entry name="section5" outkey="1343" expanded="1">
+																			<entry name="FID" type="attribute" outkey="1344"/>
+																			<entry name="sec5ID" type="attribute" outkey="1345"/>
+																			<entry name="heading5" outkey="1346"/>
+																			<entry name="section6" outkey="1347" expanded="1">
+																				<entry name="FID" type="attribute" outkey="1348"/>
+																				<entry name="sec6ID" type="attribute" outkey="1349"/>
+																				<entry name="heading6" outkey="1350"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="tableChapter" expanded="1">
+													<entry name="chapterTables">
+														<entry name="chapterTable" outkey="1351" expanded="1">
+															<entry name="tableID" type="attribute" outkey="1352"/>
+															<entry name="FID" type="attribute" outkey="1353"/>
+															<entry name="title" outkey="1354"/>
+														</entry>
+													</entry>
+													<entry name="tableChapterIntroduction" expanded="1">
+														<entry name="sections">
+															<entry name="section1" outkey="1355" expanded="1">
+																<entry name="FID" type="attribute" outkey="1356"/>
+																<entry name="secID" type="attribute" outkey="1357"/>
+																<entry name="heading1" outkey="1358"/>
+																<entry name="section2" outkey="1359" expanded="1">
+																	<entry name="FID" type="attribute" outkey="1360"/>
+																	<entry name="sec2ID" type="attribute" outkey="1361"/>
+																	<entry name="heading2" outkey="1362"/>
+																	<entry name="section3" outkey="1363" expanded="1">
+																		<entry name="FID" type="attribute" outkey="1364"/>
+																		<entry name="sec3ID" type="attribute" outkey="1365"/>
+																		<entry name="heading3" outkey="1366"/>
+																		<entry name="section4" outkey="1367" expanded="1">
+																			<entry name="FID" type="attribute" outkey="1368"/>
+																			<entry name="sec4ID" type="attribute" outkey="1369"/>
+																			<entry name="heading4" outkey="1370"/>
+																			<entry name="section5" outkey="1371" expanded="1">
+																				<entry name="FID" type="attribute" outkey="1372"/>
+																				<entry name="sec5ID" type="attribute" outkey="1373"/>
+																				<entry name="heading5" outkey="1374"/>
+																				<entry name="section6" outkey="1375" expanded="1">
+																					<entry name="FID" type="attribute" outkey="1376"/>
+																					<entry name="sec6ID" type="attribute" outkey="1377"/>
+																					<entry name="heading6" outkey="1378"/>
+																				</entry>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="UGFDraft15.xsd" inputinstance="Incarnate-System2019_07_05.xml" outputinstance="Incarnate-System2019_07_05.xml" instanceroot="{}root"/>
+					</data>
+				</component>
 			</children>
 			<graph directed="1">
 				<edges/>
@@ -3502,6 +3506,12 @@
 					<vertex vertexkey="270">
 						<edges>
 							<edge vertexkey="17"/>
+							<edge vertexkey="26"/>
+							<edge vertexkey="32"/>
+							<edge vertexkey="38"/>
+							<edge vertexkey="44"/>
+							<edge vertexkey="50"/>
+							<edge vertexkey="2472"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="271">
@@ -3517,21 +3527,11 @@
 					<vertex vertexkey="272">
 						<edges>
 							<edge vertexkey="20"/>
-							<edge vertexkey="26"/>
-							<edge vertexkey="32"/>
-							<edge vertexkey="38"/>
-							<edge vertexkey="44"/>
-							<edge vertexkey="50"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="273">
 						<edges>
 							<edge vertexkey="21"/>
-							<edge vertexkey="27"/>
-							<edge vertexkey="33"/>
-							<edge vertexkey="39"/>
-							<edge vertexkey="45"/>
-							<edge vertexkey="51"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="275">
@@ -3552,6 +3552,17 @@
 					<vertex vertexkey="277">
 						<edges>
 							<edge vertexkey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="1975">
+						<edges>
+							<edge vertexkey="27"/>
+							<edge vertexkey="33"/>
+							<edge vertexkey="39"/>
+							<edge vertexkey="45"/>
+							<edge vertexkey="51"/>
+							<edge vertexkey="1844"/>
+							<edge vertexkey="2473"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="279">
@@ -4514,22 +4525,22 @@
 							<edge vertexkey="467"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="524">
+					<vertex vertexkey="2474">
 						<edges>
 							<edge vertexkey="468"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="527">
+					<vertex vertexkey="2477">
 						<edges>
 							<edge vertexkey="469"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="526">
+					<vertex vertexkey="2476">
 						<edges>
 							<edge vertexkey="470"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="525">
+					<vertex vertexkey="2475">
 						<edges>
 							<edge vertexkey="471"/>
 						</edges>
@@ -6884,11 +6895,6 @@
 					<vertex vertexkey="1795">
 						<edges>
 							<edge vertexkey="1841"/>
-						</edges>
-					</vertex>
-					<vertex vertexkey="1975">
-						<edges>
-							<edge vertexkey="1844"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="1976">

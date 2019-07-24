@@ -207,6 +207,9 @@
 																					<calltemplate subtype="named" match="a00SubraceTemplate">
 																						<parameters/>
 																					</calltemplate>
+																					<calltemplate subtype="named" match="a00SubraceTemplate">
+																						<parameters/>
+																					</calltemplate>
 																					<template subtype="element" match="subraceTraits">
 																						<children>
 																							<template subtype="element" match="subraceTrait">
@@ -420,6 +423,25 @@
 							<template subtype="element" match="tr">
 								<children>
 									<text fixtext="&lt;tr&gt;\n"/>
+									<template subtype="element" match="th">
+										<children>
+											<text fixtext="&lt;th"/>
+											<template subtype="attribute" match="colspan">
+												<children>
+													<text fixtext=" colspan=\&quot;"/>
+													<content subtype="regular">
+														<format basic-type="xsd" datatype="int"/>
+													</content>
+													<text fixtext="\&quot;"/>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext="&gt;"/>
+											<content subtype="regular"/>
+											<text fixtext="&lt;/th&gt;\n"/>
+										</children>
+										<variables/>
+									</template>
 									<template subtype="element" match="td">
 										<children>
 											<text fixtext="&lt;td"/>
@@ -501,7 +523,7 @@
 				<children>
 					<template subtype="element" match="crossReference">
 						<children>
-							<text fixtext="&lt;crossReference fid=\&quot;"/>
+							<text fixtext="&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 							<template subtype="attribute" match="FID">
 								<children>
 									<content subtype="regular"/>
@@ -613,7 +635,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							</template>
 							<text fixtext="\&quot; draggable=\&quot;true\&quot; ondragstart=\&quot;IncarnateReference.onDragStart(event)\&quot;&gt;"/>
 							<content subtype="regular"/>
-							<text fixtext="&lt;/crossReference&gt;"/>
+							<text fixtext="&lt;/span&gt;"/>
 						</children>
 						<variables/>
 					</template>
@@ -1565,7 +1587,7 @@ else &quot;&quot;"/>
 												<children>
 													<template subtype="element" match="heading1">
 														<children>
-															<text fixtext="&lt;p&gt;&lt;crossReference fid=\&quot;"/>
+															<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 															<template subtype="userdefined" match="..">
 																<children>
 																	<template subtype="attribute" match="FID">
@@ -1590,7 +1612,7 @@ else &quot;&quot;"/>
 															</template>
 															<text fixtext="\&quot; &gt;"/>
 															<content subtype="regular"/>
-															<text fixtext="&lt;/crossReference&gt;&lt;/p&gt;\n"/>
+															<text fixtext="&lt;/span&gt;&lt;/p&gt;\n"/>
 														</children>
 														<variables/>
 													</template>
@@ -1617,7 +1639,7 @@ else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
-											<text fixtext="\&quot;&gt;&lt;crossReference fid=\&quot;"/>
+											<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 											<template subtype="userdefined" match="..">
 												<children>
 													<template subtype="userdefined" match="..">
@@ -1645,7 +1667,7 @@ else &quot;&quot;"/>
 											</calltemplate>
 											<text fixtext="\&quot; &gt;"/>
 											<content subtype="regular"/>
-											<text fixtext="&lt;/crossReference&gt;&lt;/h1&gt;\n"/>
+											<text fixtext="&lt;/span&gt;&lt;/h1&gt;\n"/>
 										</children>
 										<variables/>
 									</template>
@@ -1657,7 +1679,7 @@ else &quot;&quot;"/>
 														<children>
 															<template subtype="element" match="heading2">
 																<children>
-																	<text fixtext="&lt;p&gt;&lt;crossReference fid=\&quot;"/>
+																	<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																	<template subtype="userdefined" match="..">
 																		<children>
 																			<template subtype="attribute" match="FID">
@@ -1682,7 +1704,7 @@ else &quot;&quot;"/>
 																	</template>
 																	<text fixtext="\&quot; &gt;"/>
 																	<content subtype="regular"/>
-																	<text fixtext="&lt;/crossReference&gt;&lt;/p&gt;\n"/>
+																	<text fixtext="&lt;/span&gt;&lt;/p&gt;\n"/>
 																</children>
 																<variables/>
 															</template>
@@ -1715,7 +1737,7 @@ else &quot;&quot;"/>
 														</children>
 														<variables/>
 													</template>
-													<text fixtext="\&quot;&gt;&lt;crossReference fid=\&quot;"/>
+													<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 													<template subtype="userdefined" match="..">
 														<children>
 															<template subtype="userdefined" match="..">
@@ -1745,7 +1767,7 @@ else &quot;&quot;"/>
 													</template>
 													<text fixtext="\&quot; &gt;"/>
 													<content subtype="regular"/>
-													<text fixtext="&lt;/crossReference&gt;&lt;/h2&gt;\n"/>
+													<text fixtext="&lt;/span&gt;&lt;/h2&gt;\n"/>
 												</children>
 												<variables/>
 											</template>
@@ -1757,7 +1779,7 @@ else &quot;&quot;"/>
 																<children>
 																	<template subtype="element" match="heading3">
 																		<children>
-																			<text fixtext="&lt;p&gt;&lt;crossReference fid=\&quot;"/>
+																			<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																			<template subtype="userdefined" match="..">
 																				<children>
 																					<template subtype="attribute" match="FID">
@@ -1782,7 +1804,7 @@ else &quot;&quot;"/>
 																			</template>
 																			<text fixtext="\&quot; &gt;"/>
 																			<content subtype="regular"/>
-																			<text fixtext="&lt;/crossReference&gt;&lt;/p&gt;\n"/>
+																			<text fixtext="&lt;/span&gt;&lt;/p&gt;\n"/>
 																		</children>
 																		<variables/>
 																	</template>
@@ -1815,7 +1837,7 @@ else &quot;&quot;"/>
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="\&quot;&gt;&lt;crossReference fid=\&quot;"/>
+															<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 															<template subtype="userdefined" match="..">
 																<children>
 																	<template subtype="userdefined" match="..">
@@ -1845,7 +1867,7 @@ else &quot;&quot;"/>
 															</template>
 															<text fixtext="\&quot; &gt;"/>
 															<content subtype="regular"/>
-															<text fixtext="&lt;/crossReference&gt;&lt;/h3&gt;\n"/>
+															<text fixtext="&lt;/span&gt;&lt;/h3&gt;\n"/>
 														</children>
 														<variables/>
 													</template>
@@ -1857,7 +1879,7 @@ else &quot;&quot;"/>
 																		<children>
 																			<template subtype="element" match="heading4">
 																				<children>
-																					<text fixtext="&lt;p&gt;&lt;crossReference fid=\&quot;"/>
+																					<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																					<template subtype="userdefined" match="..">
 																						<children>
 																							<template subtype="attribute" match="FID">
@@ -1882,7 +1904,7 @@ else &quot;&quot;"/>
 																					</template>
 																					<text fixtext="\&quot; &gt;"/>
 																					<content subtype="regular"/>
-																					<text fixtext="&lt;/crossReference&gt;&lt;/p&gt;\n"/>
+																					<text fixtext="&lt;/span&gt;&lt;/p&gt;\n"/>
 																				</children>
 																				<variables/>
 																			</template>
@@ -1915,7 +1937,7 @@ else &quot;&quot;"/>
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="\&quot;&gt;&lt;crossReference fid=\&quot;"/>
+																	<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																	<template subtype="userdefined" match="..">
 																		<children>
 																			<template subtype="userdefined" match="..">
@@ -1945,7 +1967,7 @@ else &quot;&quot;"/>
 																	</template>
 																	<text fixtext="\&quot; &gt;"/>
 																	<content subtype="regular"/>
-																	<text fixtext="&lt;/crossReference&gt;&lt;/h4&gt;"/>
+																	<text fixtext="&lt;/span&gt;&lt;/h4&gt;"/>
 																</children>
 																<variables/>
 															</template>
@@ -1957,7 +1979,7 @@ else &quot;&quot;"/>
 																				<children>
 																					<template subtype="element" match="heading5">
 																						<children>
-																							<text fixtext="&lt;p&gt;&lt;crossReference fid=\&quot;"/>
+																							<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																							<template subtype="userdefined" match="..">
 																								<children>
 																									<template subtype="attribute" match="FID">
@@ -1982,7 +2004,7 @@ else &quot;&quot;"/>
 																							</template>
 																							<text fixtext="\&quot; &gt;"/>
 																							<content subtype="regular"/>
-																							<text fixtext="&lt;/crossReference&gt;&lt;/p&gt;\n"/>
+																							<text fixtext="&lt;/span&gt;&lt;/p&gt;\n"/>
 																						</children>
 																						<variables/>
 																					</template>
@@ -2015,7 +2037,7 @@ else &quot;&quot;"/>
 																				</children>
 																				<variables/>
 																			</template>
-																			<text fixtext="\&quot;&gt;&lt;crossReference fid=\&quot;"/>
+																			<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																			<template subtype="userdefined" match="..">
 																				<children>
 																					<template subtype="userdefined" match="..">
@@ -2045,7 +2067,7 @@ else &quot;&quot;"/>
 																			</template>
 																			<text fixtext="\&quot; &gt;"/>
 																			<content subtype="regular"/>
-																			<text fixtext="&lt;/crossReference&gt;&lt;/h5&gt;\n"/>
+																			<text fixtext="&lt;/span&gt;&lt;/h5&gt;\n"/>
 																		</children>
 																		<variables/>
 																	</template>
@@ -2057,7 +2079,7 @@ else &quot;&quot;"/>
 																						<children>
 																							<template subtype="element" match="heading6">
 																								<children>
-																									<text fixtext="&lt;p&gt;&lt;crossReference fid=\&quot;"/>
+																									<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																									<template subtype="userdefined" match="..">
 																										<children>
 																											<template subtype="attribute" match="FID">
@@ -2082,7 +2104,7 @@ else &quot;&quot;"/>
 																									</template>
 																									<text fixtext="\&quot; &gt;"/>
 																									<content subtype="regular"/>
-																									<text fixtext="&lt;/crossReference&gt;&lt;/p&gt;\n"/>
+																									<text fixtext="&lt;/span&gt;&lt;/p&gt;\n"/>
 																								</children>
 																								<variables/>
 																							</template>
@@ -2115,7 +2137,7 @@ else &quot;&quot;"/>
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="\&quot;&gt;&lt;crossReference fid=\&quot;"/>
+																					<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
 																					<template subtype="userdefined" match="..">
 																						<children>
 																							<template subtype="userdefined" match="..">
@@ -2145,7 +2167,7 @@ else &quot;&quot;"/>
 																					</template>
 																					<text fixtext="\&quot; &gt;"/>
 																					<content subtype="regular"/>
-																					<text fixtext="&lt;/crossReference&gt;&lt;/h6&gt;\n"/>
+																					<text fixtext="&lt;/span&gt;&lt;/h6&gt;\n"/>
 																				</children>
 																				<variables/>
 																			</template>
@@ -2944,7 +2966,7 @@ else &quot;&quot;"/>
 					<text fixtext=",&quot;languages&quot;:["/>
 					<template subtype="element" match="raceLanguages">
 						<children>
-							<template subtype="element" filter="1" match="raceLanguages">
+							<template subtype="element" filter="1" match="raceLanguage">
 								<children>
 									<text fixtext="&quot;"/>
 									<content subtype="regular"/>
@@ -2952,7 +2974,7 @@ else &quot;&quot;"/>
 								</children>
 								<variables/>
 							</template>
-							<template subtype="element" filter="position()&gt;1" match="raceLanguages">
+							<template subtype="element" filter="position()&gt;1" match="raceLanguage">
 								<children>
 									<text fixtext=",&quot;"/>
 									<content subtype="regular"/>
@@ -3326,7 +3348,7 @@ else &quot;&quot;"/>
 								<children>
 									<template subtype="element" match="raceLanguages">
 										<children>
-											<template subtype="element" filter="1" match="raceLanguages">
+											<template subtype="element" filter="1" match="raceLanguage">
 												<children>
 													<text fixtext="&quot;"/>
 													<content subtype="regular"/>
@@ -3334,7 +3356,7 @@ else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
-											<template subtype="element" filter="position()&gt;1" match="raceLanguages">
+											<template subtype="element" filter="position()&gt;1" match="raceLanguage">
 												<children>
 													<text fixtext=",&quot;"/>
 													<content subtype="regular"/>
@@ -3353,7 +3375,7 @@ else &quot;&quot;"/>
 					</template>
 					<template subtype="element" match="subraceLanguages">
 						<children>
-							<template subtype="element" match="subraceLanguages">
+							<template subtype="element" match="subraceLanguage">
 								<children>
 									<text fixtext=",&quot;"/>
 									<content subtype="regular"/>
@@ -5486,6 +5508,13 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 										</children>
 										<variables/>
 									</template>
+									<template subtype="element" match="classArchetypeLegal">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
+										</children>
+										<variables/>
+									</template>
 								</children>
 								<variables/>
 							</template>
@@ -5910,6 +5939,23 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 							</conditionbranch>
 						</children>
 					</condition>
+					<template subtype="userdefined" match="..">
+						<children>
+							<template subtype="userdefined" match="..">
+								<children>
+									<template subtype="element" match="classLegal">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
 					<template subtype="element" match="classArchetypeLegal">
 						<children>
 							<content subtype="regular"/>
@@ -6053,6 +6099,13 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
+										</children>
+										<variables/>
+									</template>
+									<template subtype="element" match="subraceLegal">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
 										</children>
 										<variables/>
 									</template>
@@ -6204,6 +6257,13 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
+										</children>
+										<variables/>
+									</template>
+									<template subtype="element" match="raceLegal">
+										<children>
+											<content subtype="regular"/>
+											<text fixtext="\n"/>
 										</children>
 										<variables/>
 									</template>

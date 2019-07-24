@@ -280,6 +280,13 @@
 																						</children>
 																						<variables/>
 																					</template>
+																					<template subtype="element" match="classArchetypeLegal">
+																						<children>
+																							<content subtype="regular"/>
+																							<text fixtext="\n"/>
+																						</children>
+																						<variables/>
+																					</template>
 																				</children>
 																				<variables/>
 																			</template>
@@ -954,6 +961,23 @@
 																							</conditionbranch>
 																						</children>
 																					</condition>
+																					<template subtype="userdefined" match="..">
+																						<children>
+																							<template subtype="userdefined" match="..">
+																								<children>
+																									<template subtype="element" match="classLegal">
+																										<children>
+																											<content subtype="regular"/>
+																											<text fixtext="\n"/>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
 																					<template subtype="element" match="classArchetypeLegal">
 																						<children>
 																							<content subtype="regular"/>
