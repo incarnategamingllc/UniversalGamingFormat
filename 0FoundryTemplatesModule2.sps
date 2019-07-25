@@ -4594,21 +4594,26 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 					<text fixtext="&quot;},&quot;parents&quot;:[{"/>
 					<template subtype="userdefined" match="..">
 						<children>
-							<text fixtext="&quot;_id&quot;:&quot;"/>
-							<template subtype="attribute" match="FID">
+							<template subtype="userdefined" match="..">
 								<children>
-									<content subtype="regular" restofcontents="1"/>
+									<text fixtext="&quot;_id&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
+									<template subtype="element" match="classArchetypeName">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
 								</children>
 								<variables/>
 							</template>
-							<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
-							<template subtype="element" match="classArchetypeName">
-								<children>
-									<content subtype="regular"/>
-								</children>
-								<variables/>
-							</template>
-							<text fixtext="&quot;"/>
 						</children>
 						<variables/>
 					</template>
