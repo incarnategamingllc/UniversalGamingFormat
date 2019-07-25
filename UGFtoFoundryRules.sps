@@ -65,7 +65,18 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="&quot;,&quot;name&quot;:&quot;Credits&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="&quot;,&quot;name&quot;:&quot;Credits&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;Credits&quot;,&quot;pack&quot;:&quot;"/>
+															<calltemplate subtype="named" match="compendium">
+																<parameters/>
+															</calltemplate>
+															<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<template subtype="element" match="team">
 																<children>
 																	<template subtype="attribute" match="name">
@@ -120,7 +131,18 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="&quot;,&quot;name&quot;:&quot;Legal&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="&quot;,&quot;name&quot;:&quot;Legal&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;Legal&quot;,&quot;pack&quot;:&quot;"/>
+															<calltemplate subtype="named" match="compendium">
+																<parameters/>
+															</calltemplate>
+															<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<calltemplate subtype="named" match="sections">
 																<parameters/>
 															</calltemplate>
@@ -138,7 +160,18 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="&quot;,&quot;name&quot;:&quot;Introduction&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="&quot;,&quot;name&quot;:&quot;Introduction&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;Introduction&quot;,&quot;pack&quot;:&quot;"/>
+															<calltemplate subtype="named" match="compendium">
+																<parameters/>
+															</calltemplate>
+															<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<calltemplate subtype="named" match="sections">
 																<parameters/>
 															</calltemplate>
@@ -159,7 +192,18 @@
 														</children>
 														<variables/>
 													</template>
-													<text fixtext="&quot;,&quot;name&quot;:&quot;GMs Blind&quot;,&quot;permission&quot;:{&quot;default&quot;:0},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+													<text fixtext="&quot;,&quot;name&quot;:&quot;GMs Blind&quot;,&quot;permission&quot;:{&quot;default&quot;:0},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;GMs Blind&quot;,&quot;pack&quot;:&quot;"/>
+													<calltemplate subtype="named" match="compendium">
+														<parameters/>
+													</calltemplate>
+													<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 													<calltemplate subtype="named" match="sections">
 														<parameters/>
 													</calltemplate>
@@ -177,7 +221,18 @@
 														</children>
 														<variables/>
 													</template>
-													<text fixtext="&quot;,&quot;name&quot;:&quot;Player Quick Sheet&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+													<text fixtext="&quot;,&quot;name&quot;:&quot;Player Quick Sheet&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;Player Quick Sheet&quot;,&quot;pack&quot;:&quot;"/>
+													<calltemplate subtype="named" match="compendium">
+														<parameters/>
+													</calltemplate>
+													<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 													<calltemplate subtype="named" match="sections">
 														<parameters/>
 													</calltemplate>
@@ -206,7 +261,25 @@
 															</template>
 															<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:"/>
 															<autocalc xpath="if ( GMOnly = false() ) then &quot;2&quot; else &quot;0&quot;"/>
-															<text fixtext="},&quot;folder&quot;:&quot;rulesAndLoreFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="},&quot;folder&quot;:&quot;rulesAndLoreFolder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;"/>
+															<template subtype="element" match="chapterName">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;,&quot;pack&quot;:&quot;"/>
+															<calltemplate subtype="named" match="compendium">
+																<parameters/>
+															</calltemplate>
+															<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<calltemplate subtype="named" match="sections">
 																<parameters/>
 															</calltemplate>
@@ -238,7 +311,25 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;rulesAndLoreFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;&lt;p&gt;Skill is based off of &lt;strong&gt;"/>
+																	<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;rulesAndLoreFolder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;"/>
+																	<template subtype="element" match="skillName">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;pack&quot;:&quot;"/>
+																	<calltemplate subtype="named" match="compendium">
+																		<parameters/>
+																	</calltemplate>
+																	<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;&lt;p&gt;Skill is based off of &lt;strong&gt;"/>
 																	<template subtype="element" match="skillStat">
 																		<children>
 																			<content subtype="regular"/>

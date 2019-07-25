@@ -4541,9 +4541,14 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 								<children>
 									<template subtype="userdefined" match="..">
 										<children>
-											<template subtype="element" match="className">
+											<template subtype="userdefined" match="..">
 												<children>
-													<content subtype="regular"/>
+													<template subtype="element" match="className">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
 												</children>
 												<variables/>
 											</template>
@@ -4559,9 +4564,14 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 					<text fixtext="&quot;,&quot;classType&quot;:&quot;archetypeTrait&quot;,&quot;official&quot;:&quot;"/>
 					<template subtype="userdefined" match="..">
 						<children>
-							<template subtype="element" match="officialContent">
+							<template subtype="userdefined" match="..">
 								<children>
-									<content subtype="regular"/>
+									<template subtype="element" match="officialContent">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
 								</children>
 								<variables/>
 							</template>
@@ -8386,7 +8396,21 @@ else ."/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="],&quot;type&quot;:&quot;character&quot;,&quot;flags&quot;:{&quot;core&quot;:{&quot;sheetClass&quot;:&quot;dnd5e.IncarnateItemParcelSheet&quot;}},&quot;token&quot;:{&quot;flags&quot;:{},&quot;name&quot;:&quot;"/>
+					<text fixtext="],&quot;type&quot;:&quot;character&quot;,&quot;flags&quot;:{&quot;core&quot;:{&quot;sheetClass&quot;:&quot;dnd5e.IncarnateItemParcelSheet&quot;},&quot;origin&quot;:{&quot;name&quot;:&quot;"/>
+					<template subtype="element" match="itemPackName">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateItemPacks&quot;,&quot;type&quot;:&quot;actor&quot;,&quot;_id&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;}},&quot;token&quot;:{&quot;flags&quot;:{},&quot;name&quot;:&quot;"/>
 					<template subtype="element" match="itemPackName">
 						<children>
 							<content subtype="regular"/>

@@ -225,7 +225,21 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="},&quot;spells&quot;:{&quot;spell0&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Cantrip&quot;},&quot;spell1&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;1st Level&quot;},&quot;spell2&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;2nd Level&quot;},&quot;spell3&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;3rd Level&quot;},&quot;spell4&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;4th Level&quot;},&quot;spell5&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;5th Level&quot;},&quot;spell6&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;6th Level&quot;},&quot;spell7&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;7th Level&quot;},&quot;spell8&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;8th Level&quot;},&quot;spell9&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;9th Level&quot;}},&quot;resources&quot;:{&quot;primary&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Primary Resource&quot;,&quot;sr&quot;:false,&quot;lr&quot;:false,&quot;value&quot;:0,&quot;max&quot;:0},&quot;secondary&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Secondary Resource&quot;,&quot;sr&quot;:false,&quot;lr&quot;:false,&quot;value&quot;:0,&quot;max&quot;:0}}},&quot;flags&quot;:{&quot;core&quot;:{&quot;sheetClass&quot;:&quot;dnd5e.IncarnateItemParcelSheet&quot;}}"/>
+																	<text fixtext="},&quot;spells&quot;:{&quot;spell0&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Cantrip&quot;},&quot;spell1&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;1st Level&quot;},&quot;spell2&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;2nd Level&quot;},&quot;spell3&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;3rd Level&quot;},&quot;spell4&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;4th Level&quot;},&quot;spell5&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;5th Level&quot;},&quot;spell6&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;6th Level&quot;},&quot;spell7&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;7th Level&quot;},&quot;spell8&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;8th Level&quot;},&quot;spell9&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;9th Level&quot;}},&quot;resources&quot;:{&quot;primary&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Primary Resource&quot;,&quot;sr&quot;:false,&quot;lr&quot;:false,&quot;value&quot;:0,&quot;max&quot;:0},&quot;secondary&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Secondary Resource&quot;,&quot;sr&quot;:false,&quot;lr&quot;:false,&quot;value&quot;:0,&quot;max&quot;:0}}},&quot;flags&quot;:{&quot;core&quot;:{&quot;sheetClass&quot;:&quot;dnd5e.IncarnateItemParcelSheet&quot;},&quot;origin&quot;:{&quot;name&quot;:&quot;"/>
+																	<template subtype="element" match="itemPackName">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateItemPacks&quot;,&quot;type&quot;:&quot;actor&quot;,&quot;_id&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;}}"/>
 																	<calltemplate subtype="named" match="imgMysteryMan">
 																		<parameters/>
 																	</calltemplate>

@@ -74,7 +74,25 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;IrzkuiEJajzjb4LO&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+																	<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;folder&quot;:&quot;IrzkuiEJajzjb4LO&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;name&quot;:&quot;"/>
+																	<template subtype="element" match="riddleName">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;pack&quot;:&quot;"/>
+																	<calltemplate subtype="named" match="compendium">
+																		<parameters/>
+																	</calltemplate>
+																	<text fixtext="&quot;,&quot;type&quot;:&quot;journalEntry&quot;,&quot;_id&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 																	<template subtype="element" match="riddleDescription">
 																		<children>
 																			<content subtype="regular"/>
