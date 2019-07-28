@@ -1646,10 +1646,59 @@ else 0"/>
 																																																						<variables/>
 																																																					</template>
 																																																					<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																																																					<template subtype="element" match="classArchetypeName">
+																																																						<children>
+																																																							<text fixtext="&lt;h2&gt;"/>
+																																																							<content subtype="regular"/>
+																																																							<text fixtext="&lt;/h2&gt;\n"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<template subtype="element" match="classArchetypeTraits">
+																																																						<children>
+																																																							<template subtype="element" match="classArchetypeTrait">
+																																																								<children>
+																																																									<text fixtext="&lt;h3&gt;"/>
+																																																									<template subtype="element" match="classTraitLevel">
+																																																										<children>
+																																																											<content subtype="regular">
+																																																												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																																																											</content>
+																																																											<text fixtext=" "/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<template subtype="element" match="classTraitName">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext="&lt;/h3&gt;\n"/>
+																																																									<template subtype="element" match="classTraitDescription">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																											<text fixtext="\n"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
 																																																					<template subtype="userdefined" match="..">
 																																																						<children>
 																																																							<template subtype="userdefined" match="..">
 																																																								<children>
+																																																									<template subtype="element" match="classDescription">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																											<text fixtext="\n"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
 																																																									<template subtype="element" match="classHitPoints">
 																																																										<children>
 																																																											<text fixtext="&lt;h2&gt;Hit Points&lt;/h2&gt;\n"/>
@@ -1801,66 +1850,6 @@ else 0"/>
 																																																										</children>
 																																																										<variables/>
 																																																									</template>
-																																																									<template subtype="element" match="classArchetypes">
-																																																										<children>
-																																																											<text fixtext="&lt;h1&gt;Archetypes&lt;/h1&gt;\n"/>
-																																																										</children>
-																																																										<variables/>
-																																																									</template>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<template subtype="element" match="classArchetypeName">
-																																																						<children>
-																																																							<text fixtext="&lt;h2&gt;"/>
-																																																							<content subtype="regular"/>
-																																																							<text fixtext="&lt;/h2&gt;\n"/>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<template subtype="element" match="classArchetypeTraits">
-																																																						<children>
-																																																							<text fixtext="&lt;h3&gt;"/>
-																																																							<template subtype="element" match="classTraitLevel">
-																																																								<children>
-																																																									<content subtype="regular">
-																																																										<format basic-type="xsd" datatype="nonNegativeInteger"/>
-																																																									</content>
-																																																									<text fixtext=" "/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<template subtype="element" match="classTraitName">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<text fixtext="&lt;/h3&gt;\n"/>
-																																																							<template subtype="element" match="classTraitDescription">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																									<text fixtext="\n"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<template subtype="userdefined" match="..">
-																																																						<children>
-																																																							<template subtype="userdefined" match="..">
-																																																								<children>
-																																																									<template subtype="element" match="classDescription">
-																																																										<children>
-																																																											<content subtype="regular"/>
-																																																											<text fixtext="\n"/>
-																																																										</children>
-																																																										<variables/>
-																																																									</template>
 																																																								</children>
 																																																								<variables/>
 																																																							</template>
@@ -1965,14 +1954,31 @@ else 0"/>
 																																																							</conditionbranch>
 																																																						</children>
 																																																					</condition>
-																																																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:"/>
-																																																					<template subtype="uservariable" match="$class1Level">
+																																																					<template subtype="userdefined" match="..">
 																																																						<children>
-																																																							<content subtype="regular"/>
+																																																							<template subtype="userdefined" match="..">
+																																																								<children>
+																																																									<template subtype="element" match="classLegal">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																											<text fixtext="\n"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
 																																																						</children>
 																																																						<variables/>
 																																																					</template>
-																																																					<text fixtext="},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;"/>
+																																																					<template subtype="element" match="classArchetypeLegal">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																							<text fixtext="\n"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;"/>
 																																																					<template subtype="element" match="classArchetypeName">
 																																																						<children>
 																																																							<content subtype="regular"/>
@@ -1986,124 +1992,7 @@ else 0"/>
 																																																						</children>
 																																																						<variables/>
 																																																					</template>
-																																																					<text fixtext="Folder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;level&quot;:0,&quot;name&quot;:&quot;"/>
-																																																					<template subtype="userdefined" match="..">
-																																																						<children>
-																																																							<template subtype="userdefined" match="..">
-																																																								<children>
-																																																									<template subtype="element" match="className">
-																																																										<children>
-																																																											<content subtype="regular"/>
-																																																											<text fixtext=" - "/>
-																																																										</children>
-																																																										<variables/>
-																																																									</template>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<template subtype="element" match="classArchetypeName">
-																																																						<children>
-																																																							<content subtype="regular"/>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateMod.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
-																																																					<template subtype="attribute" match="FID">
-																																																						<children>
-																																																							<content subtype="regular"/>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<text fixtext="&quot;},&quot;children&quot;:[{}"/>
-																																																					<template subtype="element" match="classArchetypeTraits">
-																																																						<children>
-																																																							<text fixtext=",{&quot;_id&quot;:&quot;"/>
-																																																							<template subtype="attribute" match="FID">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<text fixtext="&quot;,&quot;level&quot;:"/>
-																																																							<template subtype="element" match="classTraitLevel">
-																																																								<children>
-																																																									<content subtype="regular">
-																																																										<format basic-type="xsd" datatype="nonNegativeInteger"/>
-																																																									</content>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<text fixtext=",&quot;name&quot;:&quot;"/>
-																																																							<template subtype="element" match="classTraitName">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateMod.incarnateClass&quot;}"/>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<template subtype="userdefined" match="..">
-																																																						<children>
-																																																							<template subtype="userdefined" match="..">
-																																																								<children>
-																																																									<template subtype="element" match="classTraits">
-																																																										<children>
-																																																											<template subtype="element" match="classTrait">
-																																																												<children>
-																																																													<text fixtext=",{&quot;_id&quot;:&quot;"/>
-																																																													<template subtype="attribute" match="FID">
-																																																														<children>
-																																																															<content subtype="regular"/>
-																																																														</children>
-																																																														<variables/>
-																																																													</template>
-																																																													<text fixtext="&quot;,&quot;level&quot;:"/>
-																																																													<template subtype="element" match="classTraitLevel">
-																																																														<children>
-																																																															<content subtype="regular">
-																																																																<format basic-type="xsd" datatype="nonNegativeInteger"/>
-																																																															</content>
-																																																														</children>
-																																																														<variables/>
-																																																													</template>
-																																																													<text fixtext=",&quot;name&quot;:&quot;"/>
-																																																													<template subtype="element" match="classTraitName">
-																																																														<children>
-																																																															<content subtype="regular"/>
-																																																														</children>
-																																																														<variables/>
-																																																													</template>
-																																																													<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateMod.incarnateClass&quot;}"/>
-																																																												</children>
-																																																												<variables/>
-																																																											</template>
-																																																										</children>
-																																																										<variables/>
-																																																									</template>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<text fixtext="],&quot;resources&quot;:["/>
-																																																					<template subtype="userdefined" match="..">
-																																																						<children>
-																																																							<template subtype="userdefined" match="..">
-																																																								<children>
-																																																									<calltemplate subtype="element" match="classResources"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<text fixtext="],&quot;casting&quot;:{"/>
+																																																					<text fixtext="Folder&quot;,&quot;flags&quot;:{&quot;casting&quot;:{"/>
 																																																					<condition>
 																																																						<children>
 																																																							<conditionbranch xpath="classArchetypeSpellcasting/Spellcasting or ../../classSpellcasting/Spellcasting">
@@ -2177,41 +2066,218 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																							</conditionbranch>
 																																																						</children>
 																																																					</condition>
-																																																					<text fixtext="},&quot;family&quot;:&quot;class&quot;},&quot;type&quot;:&quot;class&quot;"/>
+																																																					<text fixtext="},&quot;children&quot;:["/>
+																																																					<template subtype="element" match="classArchetypeTraits">
+																																																						<children>
+																																																							<template subtype="element" filter="1" match="classArchetypeTrait">
+																																																								<children>
+																																																									<text fixtext="{&quot;_id&quot;:&quot;"/>
+																																																									<template subtype="attribute" match="FID">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext="&quot;,&quot;level&quot;:"/>
+																																																									<template subtype="element" match="classTraitLevel">
+																																																										<children>
+																																																											<content subtype="regular">
+																																																												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																																																											</content>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext=",&quot;name&quot;:&quot;"/>
+																																																									<template subtype="element" match="classTraitName">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																							<template subtype="element" filter="position()&gt;1" match="classArchetypeTrait">
+																																																								<children>
+																																																									<text fixtext=",{&quot;_id&quot;:&quot;"/>
+																																																									<template subtype="attribute" match="FID">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext="&quot;,&quot;level&quot;:"/>
+																																																									<template subtype="element" match="classTraitLevel">
+																																																										<children>
+																																																											<content subtype="regular">
+																																																												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																																																											</content>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext=",&quot;name&quot;:&quot;"/>
+																																																									<template subtype="element" match="classTraitName">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<template subtype="userdefined" match="..">
+																																																						<children>
+																																																							<template subtype="userdefined" match="..">
+																																																								<children>
+																																																									<template subtype="element" match="classTraits">
+																																																										<children>
+																																																											<template subtype="element" match="classTrait">
+																																																												<children>
+																																																													<text fixtext=",{&quot;_id&quot;:&quot;"/>
+																																																													<template subtype="attribute" match="FID">
+																																																														<children>
+																																																															<content subtype="regular"/>
+																																																														</children>
+																																																														<variables/>
+																																																													</template>
+																																																													<text fixtext="&quot;,&quot;level&quot;:"/>
+																																																													<template subtype="element" match="classTraitLevel">
+																																																														<children>
+																																																															<content subtype="regular">
+																																																																<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																																																															</content>
+																																																														</children>
+																																																														<variables/>
+																																																													</template>
+																																																													<text fixtext=",&quot;name&quot;:&quot;"/>
+																																																													<template subtype="element" match="classTraitName">
+																																																														<children>
+																																																															<content subtype="regular"/>
+																																																														</children>
+																																																														<variables/>
+																																																													</template>
+																																																													<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																																																												</children>
+																																																												<variables/>
+																																																											</template>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="],&quot;class&quot;:&quot;"/>
+																																																					<template subtype="userdefined" match="..">
+																																																						<children>
+																																																							<template subtype="userdefined" match="..">
+																																																								<children>
+																																																									<template subtype="element" match="className">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;"/>
+																																																					<template subtype="userdefined" match="..">
+																																																						<children>
+																																																							<template subtype="userdefined" match="..">
+																																																								<children>
+																																																									<template subtype="element" match="classStatPriority">
+																																																										<children>
+																																																											<text fixtext=",&quot;classStat1&quot;:&quot;"/>
+																																																											<template subtype="element" match="stat1">
+																																																												<children>
+																																																													<content subtype="regular"/>
+																																																												</children>
+																																																												<variables/>
+																																																											</template>
+																																																											<text fixtext="&quot;,&quot;classStat2&quot;:&quot;"/>
+																																																											<template subtype="element" match="stat2">
+																																																												<children>
+																																																													<content subtype="regular"/>
+																																																												</children>
+																																																												<variables/>
+																																																											</template>
+																																																											<text fixtext="&quot;"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext=",&quot;classType&quot;:&quot;archetype&quot;,&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+																																																					<template subtype="element" match="officialContent">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;origin&quot;:{&quot;level&quot;:0,&quot;name&quot;:&quot;"/>
+																																																					<template subtype="userdefined" match="..">
+																																																						<children>
+																																																							<template subtype="userdefined" match="..">
+																																																								<children>
+																																																									<template subtype="element" match="className">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																											<text fixtext=" - "/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<template subtype="element" match="classArchetypeName">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
+																																																					<template subtype="attribute" match="FID">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;},&quot;resources&quot;:["/>
+																																																					<template subtype="userdefined" match="..">
+																																																						<children>
+																																																							<template subtype="userdefined" match="..">
+																																																								<children>
+																																																									<calltemplate subtype="element" match="classResources"/>
+																																																								</children>
+																																																								<variables/>
+																																																							</template>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="]},&quot;type&quot;:&quot;class&quot;"/>
 																																																					<calltemplate subtype="named" match="img">
 																																																						<parameters/>
 																																																					</calltemplate>
-																																																					<text fixtext="},"/>
 																																																					<template subtype="element" filter="classTraitLevel &lt;= $templateLevel" match="classArchetypeTraits">
 																																																						<children>
-																																																							<text fixtext="{&quot;id&quot;:13"/>
-																																																							<autocalc xpath="replace(@classArchtypeTraitID,&quot;cLaRtR&quot;,&quot;&quot;)"/>
-																																																							<text fixtext=",&quot;name&quot;:&quot;"/>
-																																																							<template subtype="element" match="classTraitName">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<text fixtext="&quot;,&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
-																																																							<template subtype="element" match="classTraitDescription">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
-																																																							<calltemplate subtype="named" match="abilityFeatType">
-																																																								<parameters/>
-																																																							</calltemplate>
-																																																							<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;&quot;}"/>
-																																																							<calltemplate subtype="named" match="featMiscCode">
-																																																								<parameters/>
-																																																							</calltemplate>
-																																																							<text fixtext="},&quot;type&quot;:&quot;feat&quot;"/>
-																																																							<calltemplate subtype="named" match="img">
-																																																								<parameters/>
-																																																							</calltemplate>
 																																																							<text fixtext="},"/>
 																																																						</children>
 																																																						<variables/>
@@ -2236,6 +2302,13 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																		<variables/>
 																																																	</template>
 																																																	<text fixtext="&quot;,&quot;permission&quot;:{&quot;default&quot;:2},&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																																																	<template subtype="element" match="classDescription">
+																																																		<children>
+																																																			<content subtype="regular"/>
+																																																			<text fixtext="\n"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
 																																																	<template subtype="element" match="classHitPoints">
 																																																		<children>
 																																																			<text fixtext="&lt;h2&gt;Hit Points&lt;/h2&gt;\n"/>
@@ -2402,43 +2475,48 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																					</template>
 																																																					<template subtype="element" match="classArchetypeTraits">
 																																																						<children>
-																																																							<text fixtext="&lt;h3&gt;"/>
-																																																							<template subtype="element" match="classTraitLevel">
+																																																							<template subtype="element" match="classArchetypeTrait">
 																																																								<children>
-																																																									<content subtype="regular">
-																																																										<format basic-type="xsd" datatype="nonNegativeInteger"/>
-																																																									</content>
-																																																									<text fixtext=" "/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<template subtype="element" match="classTraitName">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																								</children>
-																																																								<variables/>
-																																																							</template>
-																																																							<text fixtext="&lt;/h3&gt;\n"/>
-																																																							<template subtype="element" match="classTraitDescription">
-																																																								<children>
-																																																									<content subtype="regular"/>
-																																																									<text fixtext="\n"/>
+																																																									<text fixtext="&lt;h3&gt;"/>
+																																																									<template subtype="element" match="classTraitLevel">
+																																																										<children>
+																																																											<content subtype="regular">
+																																																												<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																																																											</content>
+																																																											<text fixtext=" "/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<template subtype="element" match="classTraitName">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
+																																																									<text fixtext="&lt;/h3&gt;\n"/>
+																																																									<template subtype="element" match="classTraitDescription">
+																																																										<children>
+																																																											<content subtype="regular"/>
+																																																											<text fixtext="\n"/>
+																																																										</children>
+																																																										<variables/>
+																																																									</template>
 																																																								</children>
 																																																								<variables/>
 																																																							</template>
 																																																						</children>
 																																																						<variables/>
 																																																					</template>
+																																																					<template subtype="element" match="classArchetypeLegal">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																							<text fixtext="\n"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
 																																																				</children>
 																																																				<variables/>
 																																																			</template>
-																																																		</children>
-																																																		<variables/>
-																																																	</template>
-																																																	<template subtype="element" match="classDescription">
-																																																		<children>
-																																																			<content subtype="regular"/>
-																																																			<text fixtext="\n"/>
 																																																		</children>
 																																																		<variables/>
 																																																	</template>
@@ -2540,6 +2618,13 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																			</conditionbranch>
 																																																		</children>
 																																																	</condition>
+																																																	<template subtype="element" match="classLegal">
+																																																		<children>
+																																																			<content subtype="regular"/>
+																																																			<text fixtext="\n"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
 																																																	<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;&quot;}},&quot;folder&quot;:&quot;"/>
 																																																	<template subtype="attribute" match="FID">
 																																																		<children>
@@ -2547,60 +2632,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																		</children>
 																																																		<variables/>
 																																																	</template>
-																																																	<text fixtext="Folder&quot;,&quot;flags&quot;:{&quot;origin&quot;:{&quot;level&quot;:0,&quot;name&quot;:&quot;"/>
-																																																	<template subtype="element" match="className">
-																																																		<children>
-																																																			<content subtype="regular"/>
-																																																		</children>
-																																																		<variables/>
-																																																	</template>
-																																																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateMod.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
-																																																	<template subtype="attribute" match="FID">
-																																																		<children>
-																																																			<content subtype="regular"/>
-																																																		</children>
-																																																		<variables/>
-																																																	</template>
-																																																	<text fixtext="&quot;},&quot;children&quot;:[{}"/>
-																																																	<template subtype="element" match="classTraits">
-																																																		<children>
-																																																			<template subtype="element" match="classTrait">
-																																																				<children>
-																																																					<text fixtext=",{&quot;_id&quot;:&quot;"/>
-																																																					<template subtype="attribute" match="FID">
-																																																						<children>
-																																																							<content subtype="regular"/>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<text fixtext="&quot;,&quot;level&quot;:0,&quot;name&quot;:&quot;"/>
-																																																					<template subtype="element" match="classTraitName">
-																																																						<children>
-																																																							<content subtype="regular"/>
-																																																						</children>
-																																																						<variables/>
-																																																					</template>
-																																																					<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateMod.incarnateClass&quot;}"/>
-																																																				</children>
-																																																				<variables/>
-																																																			</template>
-																																																		</children>
-																																																		<variables/>
-																																																	</template>
-																																																	<text fixtext="],&quot;resources&quot;:["/>
-																																																	<calltemplate subtype="element" match="classResources"/>
-																																																	<text fixtext="]"/>
-																																																	<template subtype="element" match="classSpellcasting">
-																																																		<children>
-																																																			<text fixtext=",&quot;casting&quot;:{"/>
-																																																			<calltemplate subtype="named" match="spellPotency">
-																																																				<parameters/>
-																																																			</calltemplate>
-																																																			<text fixtext="}"/>
-																																																		</children>
-																																																		<variables/>
-																																																	</template>
-																																																	<text fixtext=",&quot;family&quot;:&quot;class&quot;,&quot;choice&quot;:["/>
+																																																	<text fixtext="Folder&quot;,&quot;flags&quot;:{&quot;choice&quot;:["/>
 																																																	<template subtype="element" match="classArchetypes">
 																																																		<children>
 																																																			<text fixtext="{&quot;name&quot;:&quot;Archetype&quot;,&quot;level&quot;:"/>
@@ -2612,8 +2644,28 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																				</children>
 																																																				<variables/>
 																																																			</template>
-																																																			<text fixtext=",&quot;choices&quot;:[{}"/>
-																																																			<template subtype="element" match="classArchetype">
+																																																			<text fixtext=",&quot;choices&quot;:["/>
+																																																			<template subtype="element" filter="1" match="classArchetype">
+																																																				<children>
+																																																					<text fixtext="{&quot;name&quot;:&quot;"/>
+																																																					<template subtype="element" match="classArchetypeName">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;_id&quot;:&quot;"/>
+																																																					<template subtype="attribute" match="FID">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																																																				</children>
+																																																				<variables/>
+																																																			</template>
+																																																			<template subtype="element" filter="position()&gt;1" match="classArchetype">
 																																																				<children>
 																																																					<text fixtext=",{&quot;name&quot;:&quot;"/>
 																																																					<template subtype="element" match="classArchetypeName">
@@ -2629,7 +2681,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																						</children>
 																																																						<variables/>
 																																																					</template>
-																																																					<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateMod.incarnateClass&quot;}"/>
+																																																					<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
 																																																				</children>
 																																																				<variables/>
 																																																			</template>
@@ -2637,6 +2689,132 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																																		</children>
 																																																		<variables/>
 																																																	</template>
+																																																	<text fixtext="]"/>
+																																																	<template subtype="element" match="classSpellcasting">
+																																																		<children>
+																																																			<text fixtext=",&quot;casting&quot;:{"/>
+																																																			<calltemplate subtype="named" match="spellPotency">
+																																																				<parameters/>
+																																																			</calltemplate>
+																																																			<text fixtext="}"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
+																																																	<text fixtext=",&quot;children&quot;:["/>
+																																																	<template subtype="element" match="classTraits">
+																																																		<children>
+																																																			<template subtype="element" filter="1" match="classTrait">
+																																																				<children>
+																																																					<text fixtext="{&quot;_id&quot;:&quot;"/>
+																																																					<template subtype="attribute" match="FID">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;level&quot;:"/>
+																																																					<template subtype="element" match="classTraitLevel">
+																																																						<children>
+																																																							<content subtype="regular">
+																																																								<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																																																							</content>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext=",&quot;name&quot;:&quot;"/>
+																																																					<template subtype="element" match="classTraitName">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																																																				</children>
+																																																				<variables/>
+																																																			</template>
+																																																			<template subtype="element" filter="position()&gt;1" match="classTrait">
+																																																				<children>
+																																																					<text fixtext=",{&quot;_id&quot;:&quot;"/>
+																																																					<template subtype="attribute" match="FID">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;level&quot;:"/>
+																																																					<template subtype="element" match="classTraitLevel">
+																																																						<children>
+																																																							<content subtype="regular">
+																																																								<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																																																							</content>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext=",&quot;name&quot;:&quot;"/>
+																																																					<template subtype="element" match="classTraitName">
+																																																						<children>
+																																																							<content subtype="regular"/>
+																																																						</children>
+																																																						<variables/>
+																																																					</template>
+																																																					<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																																																				</children>
+																																																				<variables/>
+																																																			</template>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
+																																																	<text fixtext="],&quot;class&quot;:&quot;"/>
+																																																	<template subtype="element" match="className">
+																																																		<children>
+																																																			<content subtype="regular"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
+																																																	<text fixtext="&quot;"/>
+																																																	<template subtype="element" match="classStatPriority">
+																																																		<children>
+																																																			<text fixtext=",&quot;classStat1&quot;:&quot;"/>
+																																																			<template subtype="element" match="stat1">
+																																																				<children>
+																																																					<content subtype="regular"/>
+																																																				</children>
+																																																				<variables/>
+																																																			</template>
+																																																			<text fixtext="&quot;,&quot;classStat2&quot;:&quot;"/>
+																																																			<template subtype="element" match="stat2">
+																																																				<children>
+																																																					<content subtype="regular"/>
+																																																				</children>
+																																																				<variables/>
+																																																			</template>
+																																																			<text fixtext="&quot;"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
+																																																	<text fixtext=",&quot;classType&quot;:&quot;class&quot;,&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+																																																	<template subtype="element" match="officialContent">
+																																																		<children>
+																																																			<content subtype="regular"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
+																																																	<text fixtext="&quot;,&quot;origin&quot;:{&quot;level&quot;:0,&quot;name&quot;:&quot;"/>
+																																																	<template subtype="element" match="className">
+																																																		<children>
+																																																			<content subtype="regular"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
+																																																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
+																																																	<template subtype="attribute" match="FID">
+																																																		<children>
+																																																			<content subtype="regular"/>
+																																																		</children>
+																																																		<variables/>
+																																																	</template>
+																																																	<text fixtext="&quot;},&quot;resources&quot;:["/>
+																																																	<calltemplate subtype="element" match="classResources"/>
 																																																	<text fixtext="]},&quot;type&quot;:&quot;class&quot;"/>
 																																																	<calltemplate subtype="named" match="img">
 																																																		<parameters/>
