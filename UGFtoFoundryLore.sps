@@ -133,7 +133,14 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;},&quot;parents&quot;:["/>
+																	<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;parents&quot;:["/>
 																	<calltemplate subtype="named" match="loreReference">
 																		<parameters/>
 																	</calltemplate>
@@ -428,7 +435,14 @@
 																																														</children>
 																																														<variables/>
 																																													</template>
-																																													<text fixtext="&quot;},&quot;parents&quot;:["/>
+																																													<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+																																													<template subtype="attribute" match="FID">
+																																														<children>
+																																															<content subtype="regular"/>
+																																														</children>
+																																														<variables/>
+																																													</template>
+																																													<text fixtext="&quot;,&quot;parents&quot;:["/>
 																																													<template subtype="userdefined" match="..">
 																																														<children>
 																																															<template subtype="userdefined" match="..">
@@ -957,7 +971,14 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;parents&quot;:["/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;parents&quot;:["/>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">

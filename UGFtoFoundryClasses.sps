@@ -586,7 +586,14 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;},&quot;resources&quot;:["/>
+																	<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;resources&quot;:["/>
 																	<calltemplate subtype="element" match="classResources"/>
 																	<text fixtext="]},&quot;type&quot;:&quot;class&quot;"/>
 																	<calltemplate subtype="named" match="img">
@@ -1267,7 +1274,14 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="&quot;},&quot;resources&quot;:["/>
+																					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+																					<template subtype="attribute" match="FID">
+																						<children>
+																							<content subtype="regular"/>
+																						</children>
+																						<variables/>
+																					</template>
+																					<text fixtext="&quot;,&quot;resources&quot;:["/>
 																					<template subtype="userdefined" match="..">
 																						<children>
 																							<template subtype="userdefined" match="..">

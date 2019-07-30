@@ -1466,7 +1466,14 @@ if ( . = &quot;Undercommon&quot; ) then &quot;undercommon&quot; else &quot;&quot
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;},&quot;official&quot;:&quot;"/>
+																	<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;official&quot;:&quot;"/>
 																	<template subtype="element" match="officialContent">
 																		<children>
 																			<content subtype="regular"/>

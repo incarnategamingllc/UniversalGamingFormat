@@ -425,7 +425,7 @@
 									<text fixtext="&lt;tr&gt;\n"/>
 									<template subtype="element" match="th">
 										<children>
-											<text fixtext="&lt;th"/>
+											<text fixtext="&lt;tr"/>
 											<template subtype="attribute" match="colspan">
 												<children>
 													<text fixtext=" colspan=\&quot;"/>
@@ -436,9 +436,9 @@
 												</children>
 												<variables/>
 											</template>
-											<text fixtext="&gt;"/>
+											<text fixtext=" class=\&quot;table-header\&quot;&gt;"/>
 											<content subtype="regular"/>
-											<text fixtext="&lt;/th&gt;\n"/>
+											<text fixtext="&lt;/tr&gt;\n"/>
 										</children>
 										<variables/>
 									</template>
@@ -523,14 +523,14 @@
 				<children>
 					<template subtype="element" match="crossReference">
 						<children>
-							<text fixtext="&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+							<text fixtext="&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 							<template subtype="attribute" match="FID">
 								<children>
 									<content subtype="regular"/>
 								</children>
 								<variables/>
 							</template>
-							<text fixtext="\&quot; type=\&quot;"/>
+							<text fixtext="\&quot; data-type=\&quot;"/>
 							<autocalc xpath="if ( contains(@UGFLinkReference,&quot;bKbK&quot;) ) then &quot;Item&quot; else 
 if ( contains(@UGFLinkReference,&quot;bKbO&quot;) ) then &quot;Table&quot; else 
 if ( contains(@UGFLinkReference,&quot;bKfE&quot;) ) then &quot;Item&quot; else 
@@ -578,7 +578,7 @@ if ( contains(@UGFLinkReference,&quot;sKsK&quot;) ) then &quot;JournalEntry&quot
 if ( contains(@UGFLinkReference,&quot;sPsP&quot;) ) then &quot;Item&quot; else 
 if ( contains(@UGFLinkReference,&quot;tAtA&quot;) ) then &quot;Table&quot;
 else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
-							<text fixtext="\&quot; pack=\&quot;incarnateCompendia."/>
+							<text fixtext="\&quot; data-pack=\&quot;incarnateCompendia."/>
 							<autocalc xpath="if ( contains(@UGFLinkReference,&quot;bKbK&quot;) ) then &quot;incarnateBackground&quot; else 
 if ( contains(@UGFLinkReference,&quot;bKbO&quot;) ) then &quot;&quot; else 
 if ( contains(@UGFLinkReference,&quot;bKfE&quot;) ) then &quot;incarnateBackground&quot; else 
@@ -626,7 +626,7 @@ if ( contains(@UGFLinkReference,&quot;sKsK&quot;) ) then &quot;incarnateRules&qu
 if ( contains(@UGFLinkReference,&quot;sPsP&quot;) ) then &quot;incarnateSpells&quot; else 
 if ( contains(@UGFLinkReference,&quot;tAtA&quot;) ) then &quot;&quot; 
 else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
-							<text fixtext="\&quot; parent=\&quot;"/>
+							<text fixtext="\&quot; data-parent=\&quot;"/>
 							<template subtype="attribute" match="FIDparent">
 								<children>
 									<content subtype="regular"/>
@@ -662,7 +662,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 				<children>
 					<template subtype="element" match="genLink">
 						<children>
-							<text fixtext="&lt;genLink FID=\&quot;"/>
+							<text fixtext="&lt;span class=\&quot;genLink\&quot; data-fid=\&quot;"/>
 							<template subtype="attribute" match="FID">
 								<children>
 									<content subtype="regular"/>
@@ -671,7 +671,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							</template>
 							<text fixtext="\&quot;&gt;"/>
 							<content subtype="regular"/>
-							<text fixtext="&lt;/genLink&gt;"/>
+							<text fixtext="&lt;/span&gt;"/>
 						</children>
 						<variables/>
 					</template>
@@ -700,7 +700,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 				<children>
 					<template subtype="element" match="populate">
 						<children>
-							<text fixtext="&lt;populate FID=\&quot;"/>
+							<text fixtext="&lt;span class=\&quot;populate\&quot; data-fid=\&quot;"/>
 							<template subtype="attribute" match="FID">
 								<children>
 									<content subtype="regular"/>
@@ -710,7 +710,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							<text fixtext="\&quot;"/>
 							<template subtype="attribute" match="quantity">
 								<children>
-									<text fixtext=" quantity=\&quot;"/>
+									<text fixtext=" data-quantity=\&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="\&quot;"/>
 								</children>
@@ -718,7 +718,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							</template>
 							<template subtype="attribute" match="recurrance">
 								<children>
-									<text fixtext=" recurrance=\&quot;"/>
+									<text fixtext=" data-recurrance=\&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="\&quot;"/>
 								</children>
@@ -726,7 +726,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							</template>
 							<text fixtext="&gt;"/>
 							<content subtype="regular"/>
-							<text fixtext="&lt;/populate&gt;"/>
+							<text fixtext="&lt;/span&gt;"/>
 						</children>
 						<variables/>
 					</template>
@@ -736,7 +736,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 				<children>
 					<template subtype="element" match="generate">
 						<children>
-							<text fixtext="&lt;generate FID=\&quot;"/>
+							<text fixtext="&lt;span class=\&quot;generate\&quot; data-fid=\&quot;"/>
 							<template subtype="attribute" match="FID">
 								<children>
 									<content subtype="regular"/>
@@ -746,7 +746,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							<text fixtext="\&quot;"/>
 							<template subtype="attribute" match="quantity">
 								<children>
-									<text fixtext=" quantity=\&quot;"/>
+									<text fixtext=" data-quantity=\&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="\&quot;"/>
 								</children>
@@ -754,7 +754,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							</template>
 							<template subtype="attribute" match="recurrance">
 								<children>
-									<text fixtext=" recurrance=\&quot;"/>
+									<text fixtext=" data-recurrance=\&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="\&quot;"/>
 								</children>
@@ -762,7 +762,7 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							</template>
 							<text fixtext="&gt;"/>
 							<content subtype="regular"/>
-							<text fixtext="&lt;/generate&gt;"/>
+							<text fixtext="&lt;/span&gt;"/>
 						</children>
 						<variables/>
 					</template>
@@ -3006,7 +3006,14 @@ else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;raceBoosts&quot;:["/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;raceBoosts&quot;:["/>
 					<template subtype="element" match="statChanges">
 						<children>
 							<template subtype="element" filter="1" match="statChange">
@@ -3141,7 +3148,14 @@ else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;parents&quot;:[{"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;parents&quot;:[{"/>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
@@ -3424,7 +3438,14 @@ else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;raceBoosts&quot;:["/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;raceBoosts&quot;:["/>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
@@ -3603,7 +3624,14 @@ else&quot;0&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;parents&quot;:[{"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;parents&quot;:[{"/>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
@@ -3797,7 +3825,14 @@ else&quot;0&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;resources&quot;:[{}"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;resources&quot;:[{}"/>
 					<calltemplate subtype="named" match="resourcesVTTconsumption">
 						<parameters/>
 					</calltemplate>
@@ -3924,7 +3959,14 @@ else&quot;0&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;children&quot;:["/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;children&quot;:["/>
 					<calltemplate subtype="named" match="childrenVTT">
 						<parameters/>
 					</calltemplate>
@@ -4060,7 +4102,14 @@ else&quot;0&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;parents&quot;:[{"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;parents&quot;:[{"/>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
@@ -4473,7 +4522,14 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;resources&quot;:["/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;resources&quot;:["/>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
@@ -4601,7 +4657,14 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;parents&quot;:[{"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;parents&quot;:[{"/>
 					<template subtype="userdefined" match="..">
 						<children>
 							<template subtype="userdefined" match="..">
@@ -4725,7 +4788,14 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;family&quot;:&quot;feat&quot;},&quot;type&quot;:&quot;feat&quot;"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;family&quot;:&quot;feat&quot;},&quot;type&quot;:&quot;feat&quot;"/>
 					<calltemplate subtype="named" match="img">
 						<parameters/>
 					</calltemplate>
@@ -4887,7 +4957,14 @@ else 21"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;family&quot;:&quot;spell&quot;,&quot;school&quot;:&quot;"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;family&quot;:&quot;spell&quot;,&quot;school&quot;:&quot;"/>
 					<template subtype="element" match="spellSchool">
 						<children>
 							<content subtype="regular"/>
@@ -5307,7 +5384,14 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;resources&quot;:["/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;resources&quot;:["/>
 					<calltemplate subtype="element" match="classResources"/>
 					<text fixtext="]},&quot;type&quot;:&quot;class&quot;"/>
 					<calltemplate subtype="named" match="img">
@@ -7964,7 +8048,14 @@ if ( ability =&quot;charisma&quot; ) then &quot;cha&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;},&quot;family&quot;:&quot;equipment&quot;,&quot;itemType&quot;:&quot;"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;family&quot;:&quot;equipment&quot;,&quot;itemType&quot;:&quot;"/>
 					<template subtype="element" match="itemType">
 						<children>
 							<content subtype="regular"/>
@@ -8410,7 +8501,14 @@ else ."/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;}},&quot;token&quot;:{&quot;flags&quot;:{},&quot;name&quot;:&quot;"/>
+					<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;},&quot;token&quot;:{&quot;flags&quot;:{},&quot;name&quot;:&quot;"/>
 					<template subtype="element" match="itemPackName">
 						<children>
 							<content subtype="regular"/>

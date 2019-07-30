@@ -76,7 +76,14 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<template subtype="element" match="team">
 																<children>
 																	<template subtype="attribute" match="name">
@@ -142,7 +149,14 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<calltemplate subtype="named" match="sections">
 																<parameters/>
 															</calltemplate>
@@ -171,7 +185,14 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<calltemplate subtype="named" match="sections">
 																<parameters/>
 															</calltemplate>
@@ -203,7 +224,14 @@
 														</children>
 														<variables/>
 													</template>
-													<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+													<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 													<calltemplate subtype="named" match="sections">
 														<parameters/>
 													</calltemplate>
@@ -232,7 +260,14 @@
 														</children>
 														<variables/>
 													</template>
-													<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+													<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 													<calltemplate subtype="named" match="sections">
 														<parameters/>
 													</calltemplate>
@@ -279,7 +314,14 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+															<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 															<calltemplate subtype="named" match="sections">
 																<parameters/>
 															</calltemplate>
@@ -329,7 +371,14 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;&lt;p&gt;Skill is based off of &lt;strong&gt;"/>
+																	<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;&lt;p&gt;Skill is based off of &lt;strong&gt;"/>
 																	<template subtype="element" match="skillStat">
 																		<children>
 																			<content subtype="regular"/>

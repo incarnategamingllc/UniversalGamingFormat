@@ -92,7 +92,14 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;}},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
+																	<text fixtext="&quot;},&quot;originId&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
 																	<template subtype="element" match="riddleDescription">
 																		<children>
 																			<content subtype="regular"/>
