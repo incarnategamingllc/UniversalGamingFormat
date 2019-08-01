@@ -643,19 +643,12 @@
 																									<template subtype="element" match="className">
 																										<children>
 																											<content subtype="regular"/>
-																											<text fixtext=" - "/>
 																										</children>
 																										<variables/>
 																									</template>
 																								</children>
 																								<variables/>
 																							</template>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="classArchetypeName">
-																						<children>
-																							<content subtype="regular"/>
 																						</children>
 																						<variables/>
 																					</template>

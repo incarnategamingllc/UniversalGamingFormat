@@ -912,7 +912,15 @@ if ( . = &quot;Undercommon&quot; ) then &quot;undercommon&quot; else &quot;&quot
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="]}},&quot;currency&quot;:{&quot;pp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Platinum&quot;,&quot;value&quot;:0},&quot;gp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Gold&quot;,&quot;value&quot;:0},&quot;sp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Silver&quot;,&quot;value&quot;:0},&quot;cp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Copper&quot;,&quot;value&quot;:0}}"/>
+																	<text fixtext="]}},&quot;currency&quot;:{&quot;pp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Platinum&quot;,&quot;value&quot;:"/>
+																	<autocalc xpath="if (npcItems/includedMonies/includedMoney/moneyType = &quot;PP&quot;) then npcItems/includedMonies/includedMoney[moneyType = &quot;PP&quot;] else &quot;0&quot;"/>
+																	<text fixtext="},&quot;gp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Gold&quot;,&quot;value&quot;:"/>
+																	<autocalc xpath="if (npcItems/includedMonies/includedMoney/moneyType = &quot;GP&quot;) then npcItems/includedMonies/includedMoney[moneyType = &quot;GP&quot;] else &quot;0&quot;"/>
+																	<text fixtext="},&quot;sp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Silver&quot;,&quot;value&quot;:"/>
+																	<autocalc xpath="if (npcItems/includedMonies/includedMoney/moneyType = &quot;SP&quot;) then npcItems/includedMonies/includedMoney[moneyType = &quot;SP&quot;] else &quot;0&quot;"/>
+																	<text fixtext="},&quot;cp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Copper&quot;,&quot;value&quot;:"/>
+																	<autocalc xpath="if (npcItems/includedMonies/includedMoney/moneyType = &quot;CP&quot;) then npcItems/includedMonies/includedMoney[moneyType = &quot;CP&quot;] else &quot;0&quot;"/>
+																	<text fixtext="}}"/>
 																	<condition>
 																		<children>
 																			<conditionbranch xpath="npcSpellcasting/spellcasting">
@@ -1452,6 +1460,35 @@ if ( . = &quot;Undercommon&quot; ) then &quot;undercommon&quot; else &quot;&quot
 																		</children>
 																		<variables/>
 																	</template>
+																	<template subtype="element" match="npcType">
+																		<children>
+																			<text fixtext="&quot;npcType&quot;:&quot;"/>
+																			<content subtype="regular"/>
+																			<text fixtext="&quot;,"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<template subtype="element" match="npcTypeSubType">
+																		<children>
+																			<template subtype="element" match="npcPrimarySubtype">
+																				<children>
+																					<text fixtext="&quot;npcSubtype&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;,"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="npcSecondarySubtypes">
+																				<children>
+																					<text fixtext="&quot;npcSubtype2&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;,"/>
+																				</children>
+																				<variables/>
+																			</template>
+																		</children>
+																		<variables/>
+																	</template>
 																	<text fixtext="&quot;origin&quot;:{&quot;name&quot;:&quot;"/>
 																	<template subtype="element" match="npcName">
 																		<children>
@@ -1693,13 +1730,13 @@ else &quot;1&quot;"/>
 																																								<variables/>
 																																							</template>
 																																							<text fixtext="&quot;}"/>
-																																							<calltemplate subtype="named" match="damage">
+																																							<calltemplate subtype="named" match="damageItem1">
 																																								<parameters/>
 																																							</calltemplate>
 																																							<calltemplate subtype="named" match="damageType">
 																																								<parameters/>
 																																							</calltemplate>
-																																							<calltemplate subtype="named" match="damage2">
+																																							<calltemplate subtype="named" match="damageItem2">
 																																								<parameters/>
 																																							</calltemplate>
 																																							<calltemplate subtype="named" match="damage2Type">

@@ -207,9 +207,6 @@
 																					<calltemplate subtype="named" match="a00SubraceTemplate">
 																						<parameters/>
 																					</calltemplate>
-																					<calltemplate subtype="named" match="a00SubraceTemplate">
-																						<parameters/>
-																					</calltemplate>
 																					<template subtype="element" match="subraceTraits">
 																						<children>
 																							<template subtype="element" match="subraceTrait">
@@ -3238,19 +3235,12 @@ else &quot;&quot;"/>
 									<template subtype="element" match="raceName">
 										<children>
 											<content subtype="regular"/>
-											<text fixtext=" - "/>
 										</children>
 										<variables/>
 									</template>
 								</children>
 								<variables/>
 							</template>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="element" match="subraceName">
-						<children>
-							<content subtype="regular"/>
 						</children>
 						<variables/>
 					</template>
@@ -4220,19 +4210,12 @@ else&quot;0&quot;"/>
 									<template subtype="element" match="className">
 										<children>
 											<content subtype="regular"/>
-											<text fixtext=" - "/>
 										</children>
 										<variables/>
 									</template>
 								</children>
 								<variables/>
 							</template>
-						</children>
-						<variables/>
-					</template>
-					<template subtype="element" match="classArchetypeName">
-						<children>
-							<content subtype="regular"/>
 						</children>
 						<variables/>
 					</template>
