@@ -3729,7 +3729,18 @@
 			<xs:element name="itemArmorClassBonus" type="xs:nonNegativeInteger" minOccurs="0"/>
 			<xs:element name="itemCapacityCarrying" type="itemCarryingCapacity" minOccurs="0"/>
 			<xs:element name="itemCapacityHolding" type="xs:token" minOccurs="0"/>
-			<xs:element name="itemCost" type="itemCost"/>
+			<xs:element name="itemCost">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="itemCost"/>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="itemCostSortable" type="xs:float">
+				<xs:annotation>
+					<xs:documentation>1GP = 1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="itemDamageStrings" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
@@ -3747,6 +3758,37 @@
 			</xs:element>
 			<xs:element name="itemDescription" type="paragraphType" minOccurs="0"/>
 			<xs:element name="itemName" type="xs:token"/>
+			<xs:element name="itemRecommendedLevel" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="21"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="itemRecommendedGenres" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="itemRecommendedGenre" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="melee"/>
+									<xs:enumeration value="range"/>
+									<xs:enumeration value="mage"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="itemLifespan" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="longterm"/>
+						<xs:enumeration value="shortterm"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element name="itemOffenseBonus" type="xs:nonNegativeInteger" minOccurs="0"/>
 			<xs:element name="itemProperties" minOccurs="0">
 				<xs:complexType mixed="true">
