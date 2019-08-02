@@ -145,6 +145,9 @@
 														<children>
 															<template subtype="element" match="item">
 																<children>
+																	<calltemplate subtype="named" match="a00EquipmentTemplateContents">
+																		<parameters/>
+																	</calltemplate>
 																	<calltemplate subtype="named" match="a00EquipmentTemplate">
 																		<parameters/>
 																	</calltemplate>
@@ -8015,7 +8018,49 @@ if ( ability =&quot;charisma&quot; ) then &quot;cha&quot; else &quot;&quot;"/>
 							</conditionbranch>
 						</children>
 					</condition>
-					<text fixtext="},&quot;flags&quot;:{&quot;origin&quot;:{&quot;level&quot;:0,&quot;name&quot;:&quot;"/>
+					<text fixtext="},&quot;flags&quot;:{"/>
+					<template subtype="element" match="itemRecommendedLevel">
+						<children>
+							<text fixtext="&quot;itemRecommendedLevel&quot;:"/>
+							<content subtype="regular">
+								<format basic-type="xsd" datatype="int"/>
+							</content>
+							<text fixtext=","/>
+						</children>
+						<variables/>
+					</template>
+					<template subtype="element" match="itemRecommendedGenres">
+						<children>
+							<text fixtext="&quot;itemRecommendedGenre&quot;:["/>
+							<template subtype="element" filter="1" match="itemRecommendedGenre">
+								<children>
+									<text fixtext="&quot;"/>
+									<content subtype="regular"/>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<template subtype="element" filter="position()&gt;1" match="itemRecommendedGenre">
+								<children>
+									<text fixtext=",&quot;"/>
+									<content subtype="regular"/>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="],"/>
+						</children>
+						<variables/>
+					</template>
+					<template subtype="element" match="itemLifespan">
+						<children>
+							<text fixtext="&quot;itemLifespan&quot;:&quot;"/>
+							<content subtype="regular"/>
+							<text fixtext="&quot;,"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;origin&quot;:{&quot;level&quot;:0,&quot;name&quot;:&quot;"/>
 					<template subtype="element" match="itemName">
 						<children>
 							<content subtype="regular"/>
