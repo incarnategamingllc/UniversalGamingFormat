@@ -1471,6 +1471,7 @@
 															<xs:complexType>
 																<xs:sequence>
 																	<xs:element name="featDescription" type="paragraphType"/>
+																	<xs:element name="featLegal" type="paragraphType" minOccurs="0"/>
 																	<xs:element name="featname">
 																		<xs:complexType mixed="true">
 																			<xs:sequence>
@@ -1482,6 +1483,13 @@
 																		<xs:complexType mixed="true">
 																			<xs:sequence>
 																				<xs:element ref="crossReference" minOccurs="0" maxOccurs="unbounded"/>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																	<xs:element name="featRecommendedClasses" minOccurs="0">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element name="featRecommendedClass" type="class"/>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
@@ -3772,6 +3780,7 @@
 						<xs:element name="itemRecommendedGenre" maxOccurs="unbounded">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
+									<xs:enumeration value="all"/>
 									<xs:enumeration value="melee"/>
 									<xs:enumeration value="range"/>
 									<xs:enumeration value="mage"/>
@@ -3781,11 +3790,11 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="itemLifespan" minOccurs="0">
+			<xs:element name="itemConsumable" minOccurs="0">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="longterm"/>
-						<xs:enumeration value="shortterm"/>
+						<xs:enumeration value="false"/>
+						<xs:enumeration value="true"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -4377,23 +4386,15 @@
 			<xs:enumeration value="Adventuring Gear"/>
 			<xs:enumeration value="Armor"/>
 			<xs:enumeration value="Class Ability"/>
-			<xs:enumeration value="Container"/>
 			<xs:enumeration value="Food, Drink, and Lodging"/>
 			<xs:enumeration value="Ingredient"/>
-			<xs:enumeration value="Lifestyle Expense"/>
 			<xs:enumeration value="Mounts and Other Animals"/>
 			<xs:enumeration value="Monstrous Drop"/>
-			<xs:enumeration value="Pet"/>
 			<xs:enumeration value="Potion"/>
-			<xs:enumeration value="Ring"/>
-			<xs:enumeration value="Rod"/>
 			<xs:enumeration value="Scroll"/>
-			<xs:enumeration value="Service"/>
-			<xs:enumeration value="Tack, Harness, and Drawn Vehicles"/>
 			<xs:enumeration value="Tool"/>
 			<xs:enumeration value="Trade Good"/>
-			<xs:enumeration value="Wand"/>
-			<xs:enumeration value="Waterborne Vehicles"/>
+			<xs:enumeration value="Vehicle"/>
 			<xs:enumeration value="Weapon"/>
 			<xs:enumeration value="Wondrous Item"/>
 		</xs:restriction>
@@ -4418,7 +4419,6 @@
 			<xs:enumeration value="Dragon"/>
 			<xs:enumeration value="Druidic Focus"/>
 			<xs:enumeration value="Equipment Kits"/>
-			<xs:enumeration value="Flavor"/>
 			<xs:enumeration value="Gaming Set"/>
 			<xs:enumeration value="Hireling"/>
 			<xs:enumeration value="Holy Symbol"/>
@@ -4430,15 +4430,15 @@
 			<xs:enumeration value="Meals (per day)"/>
 			<xs:enumeration value="Mount"/>
 			<xs:enumeration value="Musical Instrument"/>
-			<xs:enumeration value="Norse"/>
 			<xs:enumeration value="Pedestal of Attraction"/>
 			<xs:enumeration value="Pet"/>
 			<xs:enumeration value="Poisons"/>
-			<xs:enumeration value="Roman"/>
+			<xs:enumeration value="Ring"/>
+			<xs:enumeration value="Spoof"/>
 			<xs:enumeration value="Standard"/>
 			<xs:enumeration value="Status Juice"/>
-			<xs:enumeration value="Tack"/>
 			<xs:enumeration value="Tool"/>
+			<xs:enumeration value="Waterborne Vehicle"/>
 			<xs:enumeration value="Z Effect Coding"/>
 		</xs:restriction>
 	</xs:simpleType>

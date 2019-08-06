@@ -8052,9 +8052,9 @@ if ( ability =&quot;charisma&quot; ) then &quot;cha&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<template subtype="element" match="itemLifespan">
+					<template subtype="element" match="itemConsumable">
 						<children>
-							<text fixtext="&quot;itemLifespan&quot;:&quot;"/>
+							<text fixtext="&quot;itemConsumable&quot;:&quot;"/>
 							<content subtype="regular"/>
 							<text fixtext="&quot;,"/>
 						</children>
@@ -8175,7 +8175,6 @@ else if ( . = &quot;fO7GrjuKvwB2JmTe&quot; ) then &quot;Finesse&quot;
 else if ( . = &quot;fNS0VbvbP7l81jxl&quot; ) then &quot;Heavy&quot;
 else if ( . = &quot;fNDk6nU0oIcyeris&quot; ) then &quot;Light&quot;
 else if ( . = &quot;fMfj9jFG6mXnMZD6&quot; ) then &quot;Loading&quot;
-else if ( ../../../itemRange ) then &quot;Range&quot;
 else if ( . = &quot;fKVzHhRsGOulrUhU&quot; ) then &quot;Reach&quot;
 else if ( . = &quot;fKALwcjcERsVJ052&quot; ) then &quot;Special&quot;
 else if ( . = &quot;fK6FfzG9G28ygcQg&quot; ) then &quot;Thrown&quot;
@@ -8199,7 +8198,6 @@ else if ( . = &quot;fO7GrjuKvwB2JmTe&quot; ) then &quot;Finesse&quot;
 else if ( . = &quot;fNS0VbvbP7l81jxl&quot; ) then &quot;Heavy&quot;
 else if ( . = &quot;fNDk6nU0oIcyeris&quot; ) then &quot;Light&quot;
 else if ( . = &quot;fMfj9jFG6mXnMZD6&quot; ) then &quot;Loading&quot;
-else if ( ../../../itemRange ) then &quot;Range&quot;
 else if ( . = &quot;fKVzHhRsGOulrUhU&quot; ) then &quot;Reach&quot;
 else if ( . = &quot;fKALwcjcERsVJ052&quot; ) then &quot;Special&quot;
 else if ( . = &quot;fK6FfzG9G28ygcQg&quot; ) then &quot;Thrown&quot;
@@ -8213,6 +8211,12 @@ else ."/>
 								</children>
 								<variables/>
 							</template>
+						</children>
+						<variables/>
+					</template>
+					<template subtype="element" match="itemRange">
+						<children>
+							<text fixtext=",&quot;Range&quot;"/>
 						</children>
 						<variables/>
 					</template>
