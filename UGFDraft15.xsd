@@ -4906,12 +4906,23 @@
 	</xs:simpleType>
 	<xs:simpleType name="spellCastingTime">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="1 ((action)|(bonus action))"/>
-			<xs:pattern value="\d+,?\d* (((minute)s?)|((hour)s?)|((day)s?)|((year)s?))"/>
-			<xs:pattern value="instantaneous"/>
-			<xs:pattern value="1 reaction(, which you take when you are hit by an attack or targeted by the magic missile spell)?(, which you take when you or a creature within 60 feet of you falls)?(, which you take in response to being damaged by a creature within 60 feet of you that you can see)?(, which you take when you see a creature within 60 feet of you casting a spell)?"/>
-			<xs:pattern value="1 action or 8 hours"/>
-			<xs:pattern value="[2-9] actions"/>
+			<xs:enumeration value="1 bonus action"/>
+			<xs:enumeration value="1 reaction"/>
+			<xs:enumeration value="1 reaction, which you take when you see a creature within 60 feet of you casting a spell"/>
+			<xs:enumeration value="1 reaction, which you take in response to being damaged by a creature within 60 feet of you that you can see"/>
+			<xs:enumeration value="1 reaction, which you take when you or a creature within 60 feet of you falls"/>
+			<xs:enumeration value="1 reaction, which you take when you are hit by an attack or targeted by the magic missile spell"/>
+			<xs:enumeration value="1 action"/>
+			<xs:enumeration value="1 action or 8 hours"/>
+			<xs:enumeration value="2 actions"/>
+			<xs:enumeration value="1 minute"/>
+			<xs:enumeration value="10 minutes"/>
+			<xs:enumeration value="1 hour"/>
+			<xs:enumeration value="8 hours"/>
+			<xs:enumeration value="10 hours"/>
+			<xs:enumeration value="12 hours"/>
+			<xs:enumeration value="24 hours"/>
+			<xs:enumeration value="1 year"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="spellComponents">
