@@ -5436,6 +5436,14 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 								</children>
 								<variables/>
 							</template>
+							<template subtype="element" match="weapons">
+								<children>
+									<text fixtext="&lt;p&gt;&lt;b&gt;Weapons:&lt;/b&gt; "/>
+									<content subtype="regular"/>
+									<text fixtext="&lt;/p&gt;\n"/>
+								</children>
+								<variables/>
+							</template>
 							<template subtype="element" match="tools">
 								<children>
 									<text fixtext="&lt;p&gt;&lt;b&gt;Tools:&lt;/b&gt; "/>
@@ -5805,6 +5813,14 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 											<template subtype="element" match="armor">
 												<children>
 													<text fixtext="&lt;p&gt;&lt;b&gt;Armor:&lt;/b&gt; "/>
+													<content subtype="regular"/>
+													<text fixtext="&lt;/p&gt;\n"/>
+												</children>
+												<variables/>
+											</template>
+											<template subtype="element" match="weapons">
+												<children>
+													<text fixtext="&lt;p&gt;&lt;b&gt;Weapons:&lt;/b&gt; "/>
 													<content subtype="regular"/>
 													<text fixtext="&lt;/p&gt;\n"/>
 												</children>

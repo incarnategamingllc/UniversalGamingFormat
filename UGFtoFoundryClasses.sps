@@ -6,7 +6,7 @@
 			<nspair prefix="vc" uri="http://www.w3.org/2007/XMLSchema-versioning"/>
 		</namespaces>
 		<schemasources>
-			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_07_05.xml"/>
+			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_08_01.xml"/>
 		</schemasources>
 	</schemasources>
 	<modules>
@@ -118,6 +118,14 @@
 																			<template subtype="element" match="armor">
 																				<children>
 																					<text fixtext="&lt;p&gt;&lt;b&gt;Armor:&lt;/b&gt; "/>
+																					<content subtype="regular"/>
+																					<text fixtext="&lt;/p&gt;\n"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="weapons">
+																				<children>
+																					<text fixtext="&lt;p&gt;&lt;b&gt;Weapons:&lt;/b&gt; "/>
 																					<content subtype="regular"/>
 																					<text fixtext="&lt;/p&gt;\n"/>
 																				</children>
@@ -742,6 +750,14 @@
 																											<template subtype="element" match="armor">
 																												<children>
 																													<text fixtext="&lt;p&gt;&lt;b&gt;Armor:&lt;/b&gt; "/>
+																													<content subtype="regular"/>
+																													<text fixtext="&lt;/p&gt;\n"/>
+																												</children>
+																												<variables/>
+																											</template>
+																											<template subtype="element" match="weapons">
+																												<children>
+																													<text fixtext="&lt;p&gt;&lt;b&gt;Weapons:&lt;/b&gt; "/>
 																													<content subtype="regular"/>
 																													<text fixtext="&lt;/p&gt;\n"/>
 																												</children>
