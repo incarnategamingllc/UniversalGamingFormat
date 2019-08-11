@@ -497,14 +497,7 @@ else &quot;&quot;"/>
 																		<variables/>
 																	</template>
 																	<text fixtext="&quot;},&quot;cr&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Challenge Rating&quot;,&quot;value&quot;:"/>
-																	<template subtype="element" match="npcCR">
-																		<children>
-																			<content subtype="regular">
-																				<format basic-type="xsd" datatype="float"/>
-																			</content>
-																		</children>
-																		<variables/>
-																	</template>
+																	<autocalc xpath="if ( npcCR = 0.0625 ) then 0 else npcCR"/>
 																	<text fixtext=",&quot;min&quot;:0},&quot;xp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Kill Experience&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;Source&quot;,&quot;label&quot;:&quot;Source Location&quot;,&quot;value&quot;:&quot;"/>
 																	<template subtype="element" match="npcAuthor">
 																		<children>

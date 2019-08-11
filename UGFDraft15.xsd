@@ -2299,7 +2299,7 @@
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:element name="npcAlignment" type="xs:token" minOccurs="0"/>
+																	<xs:element name="npcAlignment" type="npcAlignment" minOccurs="0"/>
 																	<xs:element name="npcArmorClass">
 																		<xs:complexType>
 																			<xs:simpleContent>
@@ -4480,7 +4480,26 @@
 	</xs:simpleType>
 	<xs:simpleType name="npcAlignment">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="((lawful)|(neutral)|(chaotic)) ((good)|(neutral)|(evil))"/>
+			<xs:enumeration value="any alignment"/>
+			<xs:enumeration value="any chaotic alignment"/>
+			<xs:enumeration value="any non-chaotic alignment"/>
+			<xs:enumeration value="any evil alignment"/>
+			<xs:enumeration value="any non-evil alignment"/>
+			<xs:enumeration value="any good alignment"/>
+			<xs:enumeration value="any non-good alignment"/>
+			<xs:enumeration value="any lawful alignment"/>
+			<xs:enumeration value="any non-lawful alignment"/>
+			<xs:enumeration value="lawful good"/>
+			<xs:enumeration value="lawful neutral"/>
+			<xs:enumeration value="lawful evil"/>
+			<xs:enumeration value="neutral good"/>
+			<xs:enumeration value="neutral"/>
+			<xs:enumeration value="neutral evil"/>
+			<xs:enumeration value="chaotic good"/>
+			<xs:enumeration value="chaotic neutral"/>
+			<xs:enumeration value="chaotic evil"/>
+			<xs:enumeration value="unaligned"/>
+			<xs:enumeration value="usually lawful good"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="npcAuthor">
