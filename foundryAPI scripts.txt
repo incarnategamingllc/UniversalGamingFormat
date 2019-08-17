@@ -46,3 +46,22 @@ async function populateCompendiumFromJSON(src) {
     await pack.importEntity(actor);
   }
 }
+
+// Initialize the Amazon Cognito credentials provider
+AWS.config.region = 'us-east-2'; // Region
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: 'us-east-2:4212ea95-52cd-4364-ade6-f202914fbc1f',
+});
+var s3 = new AWS.S3({apiVersion: '2006-03-01'});
+var params = {
+	Bucket: "incarnatefoundry",
+	Prefix: "006-hUDMFVg0Im2oBw7E/public"
+}
+s3.listObjectsV2(params, console.log);
+
+ game.socket.emit("getFiles", "modules", {}, resp => {
+    for (var file of resp.files)
+    {
+    //process each file with fetch()
+    }
+});

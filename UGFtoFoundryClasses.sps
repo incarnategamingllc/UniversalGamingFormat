@@ -442,7 +442,7 @@
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																					<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;}"/>
 																				</children>
 																				<variables/>
 																			</template>
@@ -462,7 +462,7 @@
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																					<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;}"/>
 																				</children>
 																				<variables/>
 																			</template>
@@ -509,7 +509,7 @@
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																					<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;}"/>
 																				</children>
 																				<variables/>
 																			</template>
@@ -538,7 +538,7 @@
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																					<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;}"/>
 																				</children>
 																				<variables/>
 																			</template>
@@ -587,7 +587,7 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
+																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
 																	<template subtype="attribute" match="FID">
 																		<children>
 																			<content subtype="regular"/>
@@ -1117,7 +1117,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																										</children>
 																										<variables/>
 																									</template>
-																									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;}"/>
 																								</children>
 																								<variables/>
 																							</template>
@@ -1146,7 +1146,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																										</children>
 																										<variables/>
 																									</template>
-																									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																									<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;}"/>
 																								</children>
 																								<variables/>
 																							</template>
@@ -1184,7 +1184,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																														</children>
 																														<variables/>
 																													</template>
-																													<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;}"/>
+																													<text fixtext="&quot;,&quot;type&quot;:&quot;feat&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;}"/>
 																												</children>
 																												<variables/>
 																											</template>
@@ -1276,7 +1276,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
+																					<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateClass&quot;,&quot;type&quot;:&quot;class&quot;,&quot;_id&quot;:&quot;"/>
 																					<template subtype="attribute" match="FID">
 																						<children>
 																							<content subtype="regular"/>

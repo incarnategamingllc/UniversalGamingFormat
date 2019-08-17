@@ -232,7 +232,7 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateCompendia.incarnateItemPacks&quot;,&quot;type&quot;:&quot;actor&quot;,&quot;_id&quot;:&quot;"/>
+																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateItemPacks&quot;,&quot;type&quot;:&quot;actor&quot;,&quot;_id&quot;:&quot;"/>
 																	<template subtype="attribute" match="FID">
 																		<children>
 																			<content subtype="regular"/>
