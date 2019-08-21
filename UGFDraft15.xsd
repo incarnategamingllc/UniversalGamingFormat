@@ -5195,7 +5195,7 @@
 			</xs:element>
 			<xs:element name="raceLegal" type="paragraphType" minOccurs="0"/>
 			<xs:element name="raceName" type="xs:token"/>
-			<xs:element name="raceSuggestedCharacteristics" minOccurs="0">
+			<xs:element name="raceSuggestedCharacteristics">
 				<xs:complexType>
 					<xs:sequence minOccurs="0">
 						<xs:element name="raceCharacteristicsDescription" type="paragraphType" minOccurs="0"/>

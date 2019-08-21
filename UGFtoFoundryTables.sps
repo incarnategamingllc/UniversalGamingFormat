@@ -6,7 +6,7 @@
 			<nspair prefix="vc" uri="http://www.w3.org/2007/XMLSchema-versioning"/>
 		</namespaces>
 		<schemasources>
-			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_07_05.xml"/>
+			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_08_01.xml"/>
 		</schemasources>
 	</schemasources>
 	<modules>
@@ -193,6 +193,60 @@
 																				<variables/>
 																			</template>
 																			<template subtype="element" match="raceFlaw">
+																				<children>
+																					<text fixtext=","/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="raceDescriptionFemale">
+																				<children>
+																					<text fixtext=","/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="raceDescriptionMale">
+																				<children>
+																					<text fixtext=","/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="raceImageFemale">
+																				<children>
+																					<text fixtext=","/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="raceImageMale">
+																				<children>
+																					<text fixtext=","/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="raceNameFemale">
+																				<children>
+																					<text fixtext=","/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="raceNameMale">
 																				<children>
 																					<text fixtext=","/>
 																					<calltemplate subtype="named" match="rollableTableFoundry">

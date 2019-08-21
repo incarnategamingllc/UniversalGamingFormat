@@ -21,7 +21,7 @@
 					<targets>
 						<datapoint pos="0" key="5"/>
 					</targets>
-					<view ltx="362" lty="32" rbx="450" rby="49"/>
+					<view ltx="362" lty="32" rbx="449" rby="49"/>
 					<data>
 						<constant value="GM Blind" datatype="string"/>
 					</data>
@@ -51,7 +51,7 @@
 					<targets>
 						<datapoint pos="0" key="451"/>
 					</targets>
-					<view ltx="362" lty="144" rbx="431" rby="161"/>
+					<view ltx="362" lty="144" rbx="432" rby="161"/>
 					<data>
 						<constant value=" Table" datatype="string"/>
 					</data>
@@ -93,7 +93,7 @@
 					<targets>
 						<datapoint pos="0" key="13"/>
 					</targets>
-					<view ltx="362" lty="96" rbx="440" rby="113"/>
+					<view ltx="362" lty="96" rbx="439" rby="113"/>
 					<data>
 						<constant value=" - Bond" datatype="string"/>
 					</data>
@@ -229,7 +229,7 @@
 					<targets>
 						<datapoint pos="0" key="1741"/>
 					</targets>
-					<view ltx="340" lty="647" rbx="429" rby="664"/>
+					<view ltx="340" lty="647" rbx="430" rby="664"/>
 					<data>
 						<constant value="NPCs TOC" datatype="string"/>
 					</data>
@@ -499,7 +499,7 @@
 					<targets>
 						<datapoint pos="0" key="1808"/>
 					</targets>
-					<view ltx="321" lty="1250" rbx="439" rby="1267"/>
+					<view ltx="321" lty="1250" rbx="440" rby="1267"/>
 					<data>
 						<constant value="NPCs by Terrain" datatype="string"/>
 					</data>
@@ -519,7 +519,7 @@
 					<targets>
 						<datapoint pos="0" key="1809"/>
 					</targets>
-					<view ltx="319" lty="1305" rbx="425" rby="1322"/>
+					<view ltx="319" lty="1305" rbx="426" rby="1322"/>
 					<data>
 						<constant value="NPCs by Type" datatype="string"/>
 					</data>
@@ -612,7 +612,7 @@
 					<targets>
 						<datapoint pos="0" key="1836"/>
 					</targets>
-					<view ltx="320" lty="1555" rbx="398" rby="1572"/>
+					<view ltx="320" lty="1555" rbx="397" rby="1572"/>
 					<data>
 						<constant value=" - Bond" datatype="string"/>
 					</data>
@@ -718,7 +718,7 @@
 					<properties XSLTDefaultOutput="1"/>
 					<view ltx="680" lty="1084" rbx="819" rby="1549"/>
 					<data>
-						<root scrollposition="4873">
+						<root scrollposition="24032">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -1837,6 +1837,36 @@
 										<entry name="FID" inpkey="1963"/>
 										<entry name="UGFID" inpkey="1964"/>
 									</entry>
+									<entry name="Rows" inpkey="2478" expanded="1" clone="1">
+										<entry name="Name" inpkey="2479"/>
+										<entry name="FID" inpkey="2480"/>
+										<entry name="UGFID" inpkey="2481"/>
+									</entry>
+									<entry name="Rows" inpkey="2482" expanded="1" clone="1">
+										<entry name="Name" inpkey="2483"/>
+										<entry name="FID" inpkey="2484"/>
+										<entry name="UGFID" inpkey="2485"/>
+									</entry>
+									<entry name="Rows" inpkey="2486" expanded="1" clone="1">
+										<entry name="Name" inpkey="2487"/>
+										<entry name="FID" inpkey="2488"/>
+										<entry name="UGFID" inpkey="2489"/>
+									</entry>
+									<entry name="Rows" inpkey="2490" expanded="1" clone="1">
+										<entry name="Name" inpkey="2491"/>
+										<entry name="FID" inpkey="2492"/>
+										<entry name="UGFID" inpkey="2493"/>
+									</entry>
+									<entry name="Rows" inpkey="2494" expanded="1" clone="1">
+										<entry name="Name" inpkey="2495"/>
+										<entry name="FID" inpkey="2496"/>
+										<entry name="UGFID" inpkey="2497"/>
+									</entry>
+									<entry name="Rows" inpkey="2498" expanded="1" clone="1">
+										<entry name="Name" inpkey="2499"/>
+										<entry name="FID" inpkey="2500"/>
+										<entry name="UGFID" inpkey="2501"/>
+									</entry>
 									<entry name="Rows" inpkey="2078" expanded="1" clone="1">
 										<entry name="Name" inpkey="2079"/>
 										<entry name="FID" inpkey="2080"/>
@@ -2084,6 +2114,41 @@
 										<entry name="FID" inpkey="2275"/>
 										<entry name="UGFID" inpkey="2276"/>
 									</entry>
+									<entry name="Rows" inpkey="2502" expanded="1" clone="1">
+										<entry name="Name" inpkey="2503"/>
+										<entry name="FID" inpkey="2504"/>
+										<entry name="UGFID" inpkey="2505"/>
+									</entry>
+									<entry name="Rows" inpkey="2506" expanded="1" clone="1">
+										<entry name="Name" inpkey="2507"/>
+										<entry name="FID" inpkey="2508"/>
+										<entry name="UGFID" inpkey="2509"/>
+									</entry>
+									<entry name="Rows" inpkey="2510" expanded="1" clone="1">
+										<entry name="Name" inpkey="2511"/>
+										<entry name="FID" inpkey="2512"/>
+										<entry name="UGFID" inpkey="2513"/>
+									</entry>
+									<entry name="Rows" inpkey="2514" expanded="1" clone="1">
+										<entry name="Name" inpkey="2515"/>
+										<entry name="FID" inpkey="2516"/>
+										<entry name="UGFID" inpkey="2517"/>
+									</entry>
+									<entry name="Rows" inpkey="2518" expanded="1" clone="1">
+										<entry name="Name" inpkey="2519"/>
+										<entry name="FID" inpkey="2520"/>
+										<entry name="UGFID" inpkey="2521"/>
+									</entry>
+									<entry name="Rows" inpkey="2522" expanded="1" clone="1">
+										<entry name="Name" inpkey="2523"/>
+										<entry name="FID" inpkey="2524"/>
+										<entry name="UGFID" inpkey="2525"/>
+									</entry>
+									<entry name="Rows" inpkey="2526" expanded="1" clone="1">
+										<entry name="Name" inpkey="2527"/>
+										<entry name="FID" inpkey="2528"/>
+										<entry name="UGFID" inpkey="2529"/>
+									</entry>
 								</entry>
 							</entry>
 						</root>
@@ -2104,7 +2169,7 @@
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-9" lty="1084" rbx="264" rby="1549"/>
 					<data>
-						<root scrollposition="436">
+						<root scrollposition="2629">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2310,7 +2375,7 @@
 														</entry>
 													</entry>
 												</entry>
-												<entry name="backgrounds">
+												<entry name="backgrounds" expanded="1">
 													<entry name="background" outkey="399" expanded="1">
 														<entry name="backgroundID" type="attribute" outkey="400"/>
 														<entry name="FID" type="attribute" outkey="401"/>
@@ -2320,7 +2385,7 @@
 															<entry name="backgroundFeatureName" outkey="405"/>
 														</entry>
 														<entry name="backgroundName" outkey="406"/>
-														<entry name="backgroundSuggestedCharacteristics">
+														<entry name="backgroundSuggestedCharacteristics" expanded="1">
 															<entry name="backgroundPersonality" outkey="407">
 																<entry name="tableID" type="attribute" outkey="408"/>
 																<entry name="FID" type="attribute" outkey="409"/>
@@ -2412,7 +2477,7 @@
 													</entry>
 												</entry>
 											</entry>
-											<entry name="classChapter" expanded="1">
+											<entry name="classChapter">
 												<entry name="classIntroduction" expanded="1">
 													<entry name="sections">
 														<entry name="section1" outkey="419" expanded="1">
@@ -3161,7 +3226,7 @@
 													</entry>
 												</entry>
 											</entry>
-											<entry name="racesChapter">
+											<entry name="racesChapter" expanded="1">
 												<entry name="racesIntroduction" expanded="1">
 													<entry name="sections">
 														<entry name="section1" outkey="1203" expanded="1">
@@ -3214,9 +3279,39 @@
 																<entry name="tableID" type="attribute" outkey="2061"/>
 																<entry name="FID" type="attribute" outkey="2062"/>
 															</entry>
-															<entry name="raceFlaw" outkey="2063" expanded="1">
+															<entry name="raceFlaw" outkey="2063">
 																<entry name="tableID" type="attribute" outkey="2064"/>
 																<entry name="FID" type="attribute" outkey="2065"/>
+															</entry>
+															<entry name="raceDescriptionFemale" outkey="2530" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2531"/>
+																<entry name="FID" type="attribute" outkey="2532"/>
+																<entry name="title" outkey="2533"/>
+															</entry>
+															<entry name="raceDescriptionMale" outkey="2534" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2535"/>
+																<entry name="FID" type="attribute" outkey="2536"/>
+																<entry name="title" outkey="2537"/>
+															</entry>
+															<entry name="raceImageFemale" outkey="2538" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2539"/>
+																<entry name="FID" type="attribute" outkey="2540"/>
+																<entry name="title" outkey="2541"/>
+															</entry>
+															<entry name="raceImageMale" outkey="2542" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2543"/>
+																<entry name="FID" type="attribute" outkey="2544"/>
+																<entry name="title" outkey="2545"/>
+															</entry>
+															<entry name="raceNameFemale" outkey="2546" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2547"/>
+																<entry name="FID" type="attribute" outkey="2548"/>
+																<entry name="title" outkey="2549"/>
+															</entry>
+															<entry name="raceNameMale" outkey="2550" expanded="1">
+																<entry name="tableID" type="attribute" outkey="2551"/>
+																<entry name="FID" type="attribute" outkey="2552"/>
+																<entry name="title" outkey="2553"/>
 															</entry>
 														</entry>
 														<entry name="raceTraits">
@@ -3451,12 +3546,51 @@
 													</entry>
 												</entry>
 											</entry>
+											<entry name="templateChapters" expanded="1">
+												<entry name="templateChapter" outkey="2554" expanded="1">
+													<entry name="FID" type="attribute" outkey="2555"/>
+													<entry name="miscellaneousChapterID" type="attribute" outkey="2556"/>
+													<entry name="sections" expanded="1">
+														<entry name="section1" outkey="2557" expanded="1">
+															<entry name="FID" type="attribute" outkey="2558"/>
+															<entry name="secID" type="attribute" outkey="2559"/>
+															<entry name="heading1" outkey="2560"/>
+															<entry name="section2" outkey="2561" expanded="1">
+																<entry name="FID" type="attribute" outkey="2562"/>
+																<entry name="sec2ID" type="attribute" outkey="2563"/>
+																<entry name="heading2" outkey="2564"/>
+																<entry name="section3" outkey="2565" expanded="1">
+																	<entry name="FID" type="attribute" outkey="2566"/>
+																	<entry name="sec3ID" type="attribute" outkey="2567"/>
+																	<entry name="heading3" outkey="2568"/>
+																	<entry name="section4" outkey="2569" expanded="1">
+																		<entry name="FID" type="attribute" outkey="2570"/>
+																		<entry name="sec4ID" type="attribute" outkey="2571"/>
+																		<entry name="heading4" outkey="2572"/>
+																		<entry name="section5" outkey="2573" expanded="1">
+																			<entry name="FID" type="attribute" outkey="2574"/>
+																			<entry name="sec5ID" type="attribute" outkey="2575"/>
+																			<entry name="heading5" outkey="2576"/>
+																			<entry name="section6" outkey="2577" expanded="1">
+																				<entry name="FID" type="attribute" outkey="2578"/>
+																				<entry name="sec6ID" type="attribute" outkey="2579"/>
+																				<entry name="heading6" outkey="2580"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="chapterName" outkey="2581"/>
+												</entry>
+											</entry>
 										</entry>
 									</entry>
 								</entry>
 							</entry>
 						</root>
-						<document schema="UGFDraft15.xsd" inputinstance="Incarnate-System2019_07_05.xml" outputinstance="Incarnate-System2019_07_05.xml" instanceroot="{}root"/>
+						<document schema="UGFDraft15.xsd" inputinstance="Incarnate-System2019_08_01.xml" outputinstance="Incarnate-System2019_08_01.xml" instanceroot="{}root"/>
 					</data>
 				</component>
 			</children>
@@ -8391,6 +8525,266 @@
 					<vertex vertexkey="2301">
 						<edges>
 							<edge vertexkey="2276"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2530">
+						<edges>
+							<edge vertexkey="2478"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2533">
+						<edges>
+							<edge vertexkey="2479"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2532">
+						<edges>
+							<edge vertexkey="2480"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2531">
+						<edges>
+							<edge vertexkey="2481"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2534">
+						<edges>
+							<edge vertexkey="2482"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2537">
+						<edges>
+							<edge vertexkey="2483"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2536">
+						<edges>
+							<edge vertexkey="2484"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2535">
+						<edges>
+							<edge vertexkey="2485"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2538">
+						<edges>
+							<edge vertexkey="2486"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2541">
+						<edges>
+							<edge vertexkey="2487"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2540">
+						<edges>
+							<edge vertexkey="2488"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2539">
+						<edges>
+							<edge vertexkey="2489"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2542">
+						<edges>
+							<edge vertexkey="2490"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2545">
+						<edges>
+							<edge vertexkey="2491"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2544">
+						<edges>
+							<edge vertexkey="2492"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2543">
+						<edges>
+							<edge vertexkey="2493"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2546">
+						<edges>
+							<edge vertexkey="2494"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2549">
+						<edges>
+							<edge vertexkey="2495"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2548">
+						<edges>
+							<edge vertexkey="2496"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2547">
+						<edges>
+							<edge vertexkey="2497"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2550">
+						<edges>
+							<edge vertexkey="2498"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2553">
+						<edges>
+							<edge vertexkey="2499"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2552">
+						<edges>
+							<edge vertexkey="2500"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2551">
+						<edges>
+							<edge vertexkey="2501"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2554">
+						<edges>
+							<edge vertexkey="2502"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2581">
+						<edges>
+							<edge vertexkey="2503"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2555">
+						<edges>
+							<edge vertexkey="2504"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2556">
+						<edges>
+							<edge vertexkey="2505"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2557">
+						<edges>
+							<edge vertexkey="2506"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2560">
+						<edges>
+							<edge vertexkey="2507"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2558">
+						<edges>
+							<edge vertexkey="2508"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2559">
+						<edges>
+							<edge vertexkey="2509"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2561">
+						<edges>
+							<edge vertexkey="2510"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2564">
+						<edges>
+							<edge vertexkey="2511"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2562">
+						<edges>
+							<edge vertexkey="2512"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2563">
+						<edges>
+							<edge vertexkey="2513"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2565">
+						<edges>
+							<edge vertexkey="2514"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2568">
+						<edges>
+							<edge vertexkey="2515"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2566">
+						<edges>
+							<edge vertexkey="2516"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2567">
+						<edges>
+							<edge vertexkey="2517"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2569">
+						<edges>
+							<edge vertexkey="2518"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2572">
+						<edges>
+							<edge vertexkey="2519"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2570">
+						<edges>
+							<edge vertexkey="2520"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2571">
+						<edges>
+							<edge vertexkey="2521"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2573">
+						<edges>
+							<edge vertexkey="2522"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2576">
+						<edges>
+							<edge vertexkey="2523"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2574">
+						<edges>
+							<edge vertexkey="2524"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2575">
+						<edges>
+							<edge vertexkey="2525"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2577">
+						<edges>
+							<edge vertexkey="2526"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2580">
+						<edges>
+							<edge vertexkey="2527"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2578">
+						<edges>
+							<edge vertexkey="2528"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2579">
+						<edges>
+							<edge vertexkey="2529"/>
 						</edges>
 					</vertex>
 				</vertices>
