@@ -2551,7 +2551,8 @@
 																								</xs:simpleType>
 																							</xs:element>
 																							<xs:element name="spellSaveDC" type="xs:nonNegativeInteger"/>
-																							<xs:element name="firstSpellSlots" type="spellSlotType"/>
+																							<xs:element name="cantrips" type="spellSlotType" minOccurs="0"/>
+																							<xs:element name="firstSpellSlots" type="spellSlotType" minOccurs="0"/>
 																							<xs:element name="secondSpellSlots" type="spellSlotType" minOccurs="0"/>
 																							<xs:element name="thirdSpellSlots" type="spellSlotType" minOccurs="0"/>
 																							<xs:element name="fourthSpellSlots" type="spellSlotType" minOccurs="0"/>
@@ -5197,11 +5198,33 @@
 			<xs:element name="raceSuggestedCharacteristics" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence minOccurs="0">
-						<xs:element name="raceCharacteristicsDescription" type="paragraphType"/>
-						<xs:element name="racePersonality" type="rollableTableType"/>
-						<xs:element name="raceBond" type="rollableTableType"/>
-						<xs:element name="raceIdeal" type="rollableTableType"/>
-						<xs:element name="raceFlaw" type="rollableTableType"/>
+						<xs:element name="raceCharacteristicsDescription" type="paragraphType" minOccurs="0"/>
+						<xs:element name="racePersonality" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceBond" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceIdeal" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceFlaw" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceDescriptionFemale" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceDescriptionMale" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceImageFemale" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceImageMale" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceNameFemale" minOccurs="0">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="rollableTableType">
+										<xs:attribute name="origin" type="xs:string"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="raceNameMale" minOccurs="0">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="rollableTableType">
+										<xs:attribute name="origin" type="xs:string"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

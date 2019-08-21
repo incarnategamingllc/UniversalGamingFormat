@@ -1567,10 +1567,70 @@ else &quot;1&quot;"/>
 																		<children>
 																			<template subtype="element" match="includedItems">
 																				<children>
-																					<template subtype="element" match="includedItem">
+																					<template subtype="element" filter="position()=1" match="includedItem">
 																						<children>
-																							<text fixtext="{&quot;id&quot;:99"/>
-																							<autocalc xpath="replace(@UGFLinkReference, &quot;iTiT&quot;, &quot;&quot;)"/>
+																							<text fixtext="{&quot;id&quot;:"/>
+																							<autocalc xpath="position()"/>
+																							<text fixtext=",&quot;name&quot;:&quot;"/>
+																							<template subtype="element" match="inculdedItemName">
+																								<children>
+																									<content subtype="regular"/>
+																								</children>
+																								<variables/>
+																							</template>
+																							<text fixtext="&quot;,&quot;data&quot;:{&quot;quantity&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Quantity&quot;,&quot;value&quot;:"/>
+																							<template subtype="element" match="inculdedItemQuantity">
+																								<children>
+																									<content subtype="regular">
+																										<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																									</content>
+																								</children>
+																								<variables/>
+																							</template>
+																							<text fixtext="}"/>
+																							<template subtype="source" match="XML">
+																								<children>
+																									<template subtype="element" match="root">
+																										<children>
+																											<template subtype="element" match="chapters">
+																												<children>
+																													<template subtype="element" match="itemChapter">
+																														<children>
+																															<template subtype="element" match="items">
+																																<children>
+																																	<template subtype="element" filter="$includedItem = @itemID" match="item">
+																																		<children>
+																																			<calltemplate subtype="named" match="a00EquipmentTemplateContents">
+																																				<parameters/>
+																																			</calltemplate>
+																																		</children>
+																																		<variables/>
+																																	</template>
+																																</children>
+																																<variables/>
+																															</template>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																							<text fixtext="}"/>
+																						</children>
+																						<variables>
+																							<variable name="includedItem" value="@UGFLinkReference" valuetype="&lt;auto&gt;"/>
+																						</variables>
+																					</template>
+																					<template subtype="element" filter="position() &gt; 1" match="includedItem">
+																						<children>
+																							<text fixtext=",{&quot;id&quot;:"/>
+																							<autocalc xpath="position() + 1"/>
 																							<text fixtext=",&quot;name&quot;:&quot;"/>
 																							<template subtype="element" match="inculdedItemName">
 																								<children>
@@ -1633,292 +1693,43 @@ else &quot;1&quot;"/>
 																		</children>
 																		<variables/>
 																	</template>
-																	<template subtype="element" match="npcTraits">
+																	<condition>
 																		<children>
-																			<template subtype="element" match="npcTrait">
+																			<conditionbranch xpath="npcItems/includedItems/includedItem">
 																				<children>
-																					<text fixtext="{&quot;id&quot;:98"/>
-																					<autocalc xpath="replace( @npcTraitID ,  &quot;nPtR&quot; ,  &quot;&quot; )"/>
-																					<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;trait&quot;}}},&quot;name&quot;:&quot;"/>
-																					<template subtype="element" match="npcTraitName">
+																					<template subtype="element" match="npcTraits">
 																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext=" - Trait&quot;,&quot;type&quot;:&quot;feat&quot;"/>
-																					<calltemplate subtype="named" match="imgMysteryMan">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="npcTraitDescription">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
-																					<calltemplate subtype="named" match="abilityFeatType">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
-																					<calltemplate subtype="named" match="featMiscCode">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext="}},"/>
-																				</children>
-																				<variables/>
-																			</template>
-																		</children>
-																		<variables/>
-																	</template>
-																	<template subtype="element" match="npcActions">
-																		<children>
-																			<template subtype="element" match="npcAction">
-																				<children>
-																					<text fixtext="{&quot;id&quot;:96"/>
-																					<autocalc xpath="replace( @npcActionID ,  &quot;nPaC&quot; ,  &quot;&quot; )"/>
-																					<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;action&quot;}}},&quot;name&quot;:&quot;"/>
-																					<template subtype="element" match="npcActionName">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext=" - Action&quot;,&quot;type&quot;:&quot;feat&quot;"/>
-																					<calltemplate subtype="named" match="imgMysteryMan">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="npcActionDescription">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
-																					<calltemplate subtype="named" match="abilityFeatType">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
-																					<calltemplate subtype="named" match="featMiscCode">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext="}},"/>
-																				</children>
-																				<variables/>
-																			</template>
-																		</children>
-																		<variables/>
-																	</template>
-																	<template subtype="element" match="npcLairActions">
-																		<children>
-																			<template subtype="element" match="npcLairAction">
-																				<children>
-																					<text fixtext="{&quot;id&quot;:95"/>
-																					<autocalc xpath="replace( @npcLairActionID ,  &quot;nPiA&quot; ,  &quot;&quot; )"/>
-																					<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;lair&quot;}}},&quot;name&quot;:&quot;"/>
-																					<template subtype="attribute" match="npcLairActionID">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext=" - Lair&quot;,&quot;type&quot;:&quot;feat&quot;"/>
-																					<calltemplate subtype="named" match="imgMysteryMan">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="npcLairActionDescription">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
-																					<calltemplate subtype="named" match="abilityFeatType">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
-																					<calltemplate subtype="named" match="featMiscCode">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext="}},"/>
-																				</children>
-																				<variables/>
-																			</template>
-																		</children>
-																		<variables/>
-																	</template>
-																	<template subtype="element" match="npcLegendaryActions">
-																		<children>
-																			<template subtype="element" match="npcLegendaryAction">
-																				<children>
-																					<text fixtext="{&quot;id&quot;:94"/>
-																					<autocalc xpath="replace( @npcLegendaryActionID ,  &quot;nPiE&quot; ,  &quot;&quot; )"/>
-																					<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;legendary&quot;}}},&quot;name&quot;:&quot;"/>
-																					<template subtype="element" match="npcLegendaryActionName">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext=" - Legendary&quot;,&quot;type&quot;:&quot;feat&quot;"/>
-																					<calltemplate subtype="named" match="imgMysteryMan">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="npcLegendaryActionDescription">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
-																					<calltemplate subtype="named" match="abilityFeatType">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
-																					<calltemplate subtype="named" match="featMiscCode">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext="}},"/>
-																				</children>
-																				<variables/>
-																			</template>
-																		</children>
-																		<variables/>
-																	</template>
-																	<template subtype="element" match="npcReactions">
-																		<children>
-																			<template subtype="element" match="npcReaction">
-																				<children>
-																					<text fixtext="{&quot;id&quot;:93"/>
-																					<autocalc xpath="replace( @npcReactionID ,  &quot;nPrE&quot; ,  &quot;&quot; )"/>
-																					<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;reaction&quot;}}},&quot;name&quot;:&quot;"/>
-																					<template subtype="element" match="npcReactionName">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext=" - Reaction&quot;,&quot;type&quot;:&quot;feat&quot;"/>
-																					<calltemplate subtype="named" match="imgMysteryMan">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="npcReactionDescription">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
-																					<calltemplate subtype="named" match="abilityFeatType">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
-																					<calltemplate subtype="named" match="featMiscCode">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext="}},"/>
-																				</children>
-																				<variables/>
-																			</template>
-																		</children>
-																		<variables/>
-																	</template>
-																	<template subtype="element" match="npcSpellcasting">
-																		<children>
-																			<template subtype="element" match="spellcasting">
-																				<children>
-																					<calltemplate subtype="named" match="spellcastingSlots">
-																						<parameters/>
-																					</calltemplate>
-																				</children>
-																				<variables/>
-																			</template>
-																			<template subtype="element" match="innate">
-																				<children>
-																					<calltemplate subtype="named" match="spellcastingSlots">
-																						<parameters/>
-																					</calltemplate>
-																				</children>
-																				<variables/>
-																			</template>
-																			<template subtype="element" match="pact">
-																				<children>
-																					<template subtype="element" match="firstSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="secondSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="thirdSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="fourthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="fifthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="mysticArcanam">
-																						<children>
-																							<template subtype="element" match="sixth">
+																							<template subtype="element" match="npcTrait">
 																								<children>
-																									<calltemplate subtype="named" match="spellcastingSpell">
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="count(../../npcItems/includedItems/includedItem) + position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;trait&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcTraitName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Trait&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
 																										<parameters/>
 																									</calltemplate>
-																								</children>
-																								<variables/>
-																							</template>
-																							<template subtype="element" match="seventh">
-																								<children>
-																									<calltemplate subtype="named" match="spellcastingSpell">
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcTraitDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
 																										<parameters/>
 																									</calltemplate>
-																								</children>
-																								<variables/>
-																							</template>
-																							<template subtype="element" match="eighth">
-																								<children>
-																									<calltemplate subtype="named" match="spellcastingSpell">
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
 																										<parameters/>
 																									</calltemplate>
-																								</children>
-																								<variables/>
-																							</template>
-																							<template subtype="element" match="nineth">
-																								<children>
-																									<calltemplate subtype="named" match="spellcastingSpell">
-																										<parameters/>
-																									</calltemplate>
+																									<text fixtext="}}"/>
 																								</children>
 																								<variables/>
 																							</template>
@@ -1926,20 +1737,2053 @@ else &quot;1&quot;"/>
 																						<variables/>
 																					</template>
 																				</children>
-																				<variables/>
-																			</template>
-																			<template subtype="element" match="runecrafting">
+																			</conditionbranch>
+																			<conditionbranch xpath=".">
 																				<children>
-																					<calltemplate subtype="named" match="spellcastingSlots">
-																						<parameters/>
-																					</calltemplate>
+																					<template subtype="element" match="npcTraits">
+																						<children>
+																							<template subtype="element" filter="position() = 1" match="npcTrait">
+																								<children>
+																									<text fixtext="{&quot;id&quot;:"/>
+																									<autocalc xpath="position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;trait&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcTraitName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Trait&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcTraitDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" filter="position() &gt; 1" match="npcTrait">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="position() + 1"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;trait&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcTraitName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Trait&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcTraitDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
 																				</children>
-																				<variables/>
-																			</template>
+																			</conditionbranch>
 																		</children>
-																		<variables/>
-																	</template>
-																	<text fixtext="{&quot;id&quot;:92,&quot;ignore&quot;:&quot;ignore&quot;}]}"/>
+																	</condition>
+																	<condition>
+																		<children>
+																			<conditionbranch xpath="exists(npcItems/includedItems/includedItem) or exists(npcTraits/npcTrait)">
+																				<children>
+																					<template subtype="element" match="npcActions">
+																						<children>
+																							<template subtype="element" match="npcAction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="count(../../npcItems/includedItems/includedItem) + count(../../npcTraits/npcTrait) + position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;action&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcActionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Action&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																			<conditionbranch xpath=".">
+																				<children>
+																					<template subtype="element" match="npcActions">
+																						<children>
+																							<template subtype="element" filter="position() = 1" match="npcAction">
+																								<children>
+																									<text fixtext="{&quot;id&quot;:"/>
+																									<autocalc xpath="position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;action&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcActionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Action&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" filter="position() &gt; 1" match="npcAction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="position() + 1"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;action&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcActionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Action&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																		</children>
+																	</condition>
+																	<condition>
+																		<children>
+																			<conditionbranch xpath="exists(npcItems/includedItems/includedItem) or exists(npcTraits/npcTrait) or exists(npcActions/npcAction)">
+																				<children>
+																					<template subtype="element" match="npcLairActions">
+																						<children>
+																							<template subtype="element" match="npcLairAction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="count(../../npcItems/includedItems/includedItem) + count(../../npcTraits/npcTrait) + count(../../npcActions/npcAction) + position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;lair&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="attribute" match="npcLairActionID">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Lair&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcLairActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																			<conditionbranch xpath=".">
+																				<children>
+																					<template subtype="element" match="npcLairActions">
+																						<children>
+																							<template subtype="element" filter="position() = 1" match="npcLairAction">
+																								<children>
+																									<text fixtext="{&quot;id&quot;:"/>
+																									<autocalc xpath="position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;lair&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="attribute" match="npcLairActionID">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Lair&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcLairActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" filter="position() &gt; 1" match="npcLairAction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="position() + 1"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;lair&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="attribute" match="npcLairActionID">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Lair&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcLairActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																		</children>
+																	</condition>
+																	<condition>
+																		<children>
+																			<conditionbranch xpath="exists(npcItems/includedItems/includedItem) or exists(npcTraits/npcTrait) or exists(npcActions/npcAction) or exists(npcLairActions/npcLairAction)">
+																				<children>
+																					<template subtype="element" match="npcLegendaryActions">
+																						<children>
+																							<template subtype="element" match="npcLegendaryAction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="count(../../npcItems/includedItems/includedItem) + count(../../npcTraits/npcTrait) + count(../../npcActions/npcAction) + count(../../npcLairActions/npcLairAction) + position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;legendary&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcLegendaryActionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Legendary&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcLegendaryActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																			<conditionbranch xpath=".">
+																				<children>
+																					<template subtype="element" match="npcLegendaryActions">
+																						<children>
+																							<template subtype="element" filter="position() = 1" match="npcLegendaryAction">
+																								<children>
+																									<text fixtext="{&quot;id&quot;:"/>
+																									<autocalc xpath="position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;legendary&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcLegendaryActionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Legendary&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcLegendaryActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" filter="position() &gt; 1" match="npcLegendaryAction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="position() + 1"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;legendary&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcLegendaryActionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Legendary&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcLegendaryActionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																		</children>
+																	</condition>
+																	<condition>
+																		<children>
+																			<conditionbranch xpath="exists(npcItems/includedItems/includedItem) or exists(npcTraits/npcTrait) or exists(npcActions/npcAction) or exists(npcLairActions/npcLairAction) or exists(npcLegendaryActions/npcLegendaryAction)">
+																				<children>
+																					<template subtype="element" match="npcReactions">
+																						<children>
+																							<template subtype="element" match="npcReaction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="count(../../npcItems/includedItems/includedItem) + count(../../npcTraits/npcTrait) + count(../../npcActions/npcAction) + count(../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;reaction&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcReactionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Reaction&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcReactionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																			<conditionbranch xpath=".">
+																				<children>
+																					<template subtype="element" match="npcReactions">
+																						<children>
+																							<template subtype="element" filter="position() = 1" match="npcReaction">
+																								<children>
+																									<text fixtext="{&quot;id&quot;:"/>
+																									<autocalc xpath="position()"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;reaction&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcReactionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Reaction&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcReactionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="npcReaction">
+																								<children>
+																									<text fixtext=",{&quot;id&quot;:"/>
+																									<autocalc xpath="position() + 1"/>
+																									<text fixtext=",&quot;flags&quot;:{&quot;adnd5e&quot;:{&quot;itemInfo&quot;:{&quot;type&quot;:&quot;reaction&quot;}}},&quot;name&quot;:&quot;"/>
+																									<template subtype="element" match="npcReactionName">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext=" - Reaction&quot;,&quot;type&quot;:&quot;feat&quot;"/>
+																									<calltemplate subtype="named" match="imgMysteryMan">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																									<template subtype="element" match="npcReactionDescription">
+																										<children>
+																											<content subtype="regular"/>
+																										</children>
+																										<variables/>
+																									</template>
+																									<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;}"/>
+																									<calltemplate subtype="named" match="abilityFeatType">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext=",&quot;requirements&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Requirements&quot;,&quot;value&quot;:&quot;requirement&quot;}"/>
+																									<calltemplate subtype="named" match="featMiscCode">
+																										<parameters/>
+																									</calltemplate>
+																									<text fixtext="}}"/>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																		</children>
+																	</condition>
+																	<condition>
+																		<children>
+																			<conditionbranch xpath=".">
+																				<children>
+																					<template subtype="element" match="npcSpellcasting">
+																						<children>
+																							<template subtype="element" match="spellcasting">
+																								<children>
+																									<template subtype="element" match="cantrips">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="firstSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
++ count(../../../cantrips/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="secondSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
++ count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="thirdSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
++ count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fourthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fifthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="sixthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="seventhSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="eighthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="ninethSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="tenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="eleventhSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="twelthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="thirteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fourteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fifteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="sixteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference) + count(../../../fifteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="seventeenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference) + count(../../../fifteenthSpellSlots/spells/spellReference) + count(../../../sixteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="innate">
+																								<children>
+																									<template subtype="element" match="cantrips">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="firstSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="secondSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="thirdSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fourthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fifthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="sixthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="seventhSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="eighthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="ninethSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="tenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="eleventhSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="twelthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="thirteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fourteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fifteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="sixteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference) + count(../../../fifteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="seventeenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference) + count(../../../fifteenthSpellSlots/spells/spellReference) + count(../../../sixteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="pact">
+																								<children>
+																									<template subtype="element" match="cantrips">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="firstSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="secondSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="thirdSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fourthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fifthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="mysticArcanam">
+																										<children>
+																											<template subtype="element" match="sixth">
+																												<children>
+																													<template subtype="element" match="spells">
+																														<children>
+																															<template subtype="element" match="spellReference">
+																																<children>
+																																	<text fixtext=",{&quot;id&quot;:"/>
+																																	<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../cantrips/spells/spellReference) + count(../../../../firstSpellSlots/spells/spellReference) + count(../../../../secondSpellSlots/spells/spellReference) + count(../../../../thirdSpellSlots/spells/spellReference) + count(../../../../fourthSpellSlots/spells/spellReference) + count(../../../../fifthSpellSlots/spells/spellReference)"/>
+																																	<calltemplate subtype="named" match="linkedSpell">
+																																		<parameters/>
+																																	</calltemplate>
+																																</children>
+																																<variables/>
+																															</template>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																											<template subtype="element" match="seventh">
+																												<children>
+																													<template subtype="element" match="spells">
+																														<children>
+																															<template subtype="element" match="spellReference">
+																																<children>
+																																	<text fixtext=",{&quot;id&quot;:"/>
+																																	<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../cantrips/spells/spellReference) + count(../../../../firstSpellSlots/spells/spellReference) + count(../../../../secondSpellSlots/spells/spellReference) + count(../../../../thirdSpellSlots/spells/spellReference) + count(../../../../fourthSpellSlots/spells/spellReference) + count(../../../../fifthSpellSlots/spells/spellReference) + count(../../../sixth/spells/spellReference)"/>
+																																	<calltemplate subtype="named" match="linkedSpell">
+																																		<parameters/>
+																																	</calltemplate>
+																																</children>
+																																<variables/>
+																															</template>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																											<template subtype="element" match="eighth">
+																												<children>
+																													<template subtype="element" match="spells">
+																														<children>
+																															<template subtype="element" match="spellReference">
+																																<children>
+																																	<text fixtext=",{&quot;id&quot;:"/>
+																																	<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../cantrips/spells/spellReference) + count(../../../../firstSpellSlots/spells/spellReference) + count(../../../../secondSpellSlots/spells/spellReference) + count(../../../../thirdSpellSlots/spells/spellReference) + count(../../../../fourthSpellSlots/spells/spellReference) + count(../../../../fifthSpellSlots/spells/spellReference) + count(../../../sixth/spells/spellReference) + count(../../../seventh/spells/spellReference)"/>
+																																	<calltemplate subtype="named" match="linkedSpell">
+																																		<parameters/>
+																																	</calltemplate>
+																																</children>
+																																<variables/>
+																															</template>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																											<template subtype="element" match="nineth">
+																												<children>
+																													<template subtype="element" match="spells">
+																														<children>
+																															<template subtype="element" match="spellReference">
+																																<children>
+																																	<text fixtext=",{&quot;id&quot;:"/>
+																																	<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../cantrips/spells/spellReference) + count(../../../../firstSpellSlots/spells/spellReference) + count(../../../../secondSpellSlots/spells/spellReference) + count(../../../../thirdSpellSlots/spells/spellReference) + count(../../../../fourthSpellSlots/spells/spellReference) + count(../../../../fifthSpellSlots/spells/spellReference) + count(../../../sixth/spells/spellReference) + count(../../../seventh/spells/spellReference) + count(../../../eighth/spells/spellReference)"/>
+																																	<calltemplate subtype="named" match="linkedSpell">
+																																		<parameters/>
+																																	</calltemplate>
+																																</children>
+																																<variables/>
+																															</template>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="runecrafting">
+																								<children>
+																									<template subtype="element" match="cantrips">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="firstSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="secondSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="thirdSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fourthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fifthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="sixthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="seventhSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="eighthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="ninethSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="tenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="eleventhSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="twelthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="thirteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fourteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="fifteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="sixteenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference) + count(../../../fifteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																									<template subtype="element" match="seventeenthSpellSlots">
+																										<children>
+																											<template subtype="element" match="spells">
+																												<children>
+																													<template subtype="element" match="spellReference">
+																														<children>
+																															<text fixtext=",{&quot;id&quot;:"/>
+																															<autocalc xpath="position() + count(../../../../../npcItems/includedItems/includedItem) + count(../../../../../npcTraits/npcTrait) + count(../../../../../npcActions/npcAction) + count(../../../../../npcLairActions/npcLairAction) + count(../../npcLegendaryActions/npcLegendaryAction) + count(../../../../../npcReactions/npcReaction)
+ + count(../../../../spellcasting/firstSpellSlots/spells/spellReference) + count(../../../../spellcasting/secondSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirdSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/eighthSpellSlots/spells/spellReference) + count(../../../../spellcasting/ninethSpellSlots/spells/spellReference) + count(../../../../spellcasting/tenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/eleventhSpellSlots/spells/spellReference) + count(../../../../spellcasting/twelthSpellSlots/spells/spellReference) + count(../../../../spellcasting/thirteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fourteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/fifteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/sixteenthSpellSlots/spells/spellReference) + count(../../../../spellcasting/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../innate/cantrips/spells/spellReference) + count(../../../../innate/firstSpellSlots/spells/spellReference) + count(../../../../innate/secondSpellSlots/spells/spellReference) + count(../../../../innate/thirdSpellSlots/spells/spellReference) + count(../../../../innate/fourthSpellSlots/spells/spellReference) + count(../../../../innate/fifthSpellSlots/spells/spellReference) + count(../../../../innate/sixthSpellSlots/spells/spellReference) + count(../../../../innate/seventhSpellSlots/spells/spellReference) + count(../../../../innate/eighthSpellSlots/spells/spellReference) + count(../../../../innate/ninethSpellSlots/spells/spellReference) + count(../../../../innate/tenthSpellSlots/spells/spellReference) + count(../../../../innate/eleventhSpellSlots/spells/spellReference) + count(../../../../innate/twelthSpellSlots/spells/spellReference) + count(../../../../innate/thirteenthSpellSlots/spells/spellReference) + count(../../../../innate/fourteenthSpellSlots/spells/spellReference) + count(../../../../innate/fifteenthSpellSlots/spells/spellReference) + count(../../../../innate/sixteenthSpellSlots/spells/spellReference) + count(../../../../innate/seventeenthSpellSlots/spells/spellReference)
+ + count(../../../../pact/cantrips/spells/spellReference) + count(../../../../pact/firstSpellSlots/spells/spellReference) + count(../../../../pact/secondSpellSlots/spells/spellReference) + count(../../../../pact/thirdSpellSlots/spells/spellReference) + count(../../../../pact/fourthSpellSlots/spells/spellReference) + count(../../../../pact/fifthSpellSlots/spells/spellReference) + count(../../../../pact/mysticArcanam/sixth/spells/spellReference) + count(../../../../pact/mysticArcanam/seventh/spells/spellReference) + count(../../../../pact/mysticArcanam/eighth/spells/spellReference) + count(../../../../pact/mysticArcanam/nineth/spells/spellReference)
+ + count(../../../cantrips/spells/spellReference) + count(../../../firstSpellSlots/spells/spellReference) + count(../../../secondSpellSlots/spells/spellReference) + count(../../../thirdSpellSlots/spells/spellReference) + count(../../../fourthSpellSlots/spells/spellReference) + count(../../../fifthSpellSlots/spells/spellReference) + count(../../../sixthSpellSlots/spells/spellReference) + count(../../../seventhSpellSlots/spells/spellReference) + count(../../../eighthSpellSlots/spells/spellReference) + count(../../../ninethSpellSlots/spells/spellReference) + count(../../../tenthSpellSlots/spells/spellReference) + count(../../../eleventhSpellSlots/spells/spellReference) + count(../../../twelthSpellSlots/spells/spellReference) + count(../../../thirteenthSpellSlots/spells/spellReference) + count(../../../fourteenthSpellSlots/spells/spellReference) + count(../../../fifteenthSpellSlots/spells/spellReference) + count(../../../sixteenthSpellSlots/spells/spellReference)"/>
+																															<calltemplate subtype="named" match="linkedSpell">
+																																<parameters/>
+																															</calltemplate>
+																														</children>
+																														<variables/>
+																													</template>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																			</conditionbranch>
+																		</children>
+																	</condition>
+																	<text fixtext="]}"/>
 																	<newline/>
 																</children>
 																<variables/>

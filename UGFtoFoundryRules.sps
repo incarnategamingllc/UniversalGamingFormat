@@ -6,7 +6,7 @@
 			<nspair prefix="vc" uri="http://www.w3.org/2007/XMLSchema-versioning"/>
 		</namespaces>
 		<schemasources>
-			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_07_05.xml"/>
+			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_08_01.xml"/>
 		</schemasources>
 	</schemasources>
 	<modules>
@@ -392,7 +392,7 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="\n&lt;p&gt;&lt;strong&gt;Official Rules:&lt;/strong&gt; &lt;crossReference fid=\&quot;LdjYJQmCmLygUMn9\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;incarnateRules\&quot; parent=\&quot;KwJ1TgTcdrhyKOiD\&quot;&gt;Using Each Ability&lt;/crossReference&gt;&lt;/p&gt;\n&quot;}"/>
+																	<text fixtext="\n&lt;p&gt;&lt;strong&gt;Official Rules:&lt;/strong&gt; &lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;LdjYJQmCmLygUMn9\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;incarnateRules\&quot; data-parent=\&quot;KwJ1TgTcdrhyKOiD\&quot;&gt;Using Each Ability&lt;/span&gt;&lt;/p&gt;\n&quot;}"/>
 																	<newline/>
 																</children>
 																<variables/>

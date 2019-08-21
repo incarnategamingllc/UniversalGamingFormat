@@ -270,6 +270,170 @@
 												</children>
 												<variables/>
 											</template>
+											<template subtype="element" match="npcChapter">
+												<children>
+													<template subtype="element" match="npcs">
+														<children>
+															<template subtype="element" match="npc">
+																<children>
+																	<template subtype="element" match="npcSpellcasting">
+																		<children>
+																			<template subtype="element" match="innate">
+																				<children>
+																					<template subtype="element" match="firstSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="secondSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="thirdSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="fourthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="fifthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="sixthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="seventhSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="eighthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="ninethSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="tenthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="eleventhSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="twelthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="thirteenthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="fourteenthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="fifteenthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="sixteenthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<template subtype="element" match="seventeenthSpellSlots">
+																						<children>
+																							<calltemplate subtype="named" match="spellcastingSpell">
+																								<parameters/>
+																							</calltemplate>
+																						</children>
+																						<variables/>
+																					</template>
+																					<calltemplate subtype="named" match="spellcastingSlots">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																		</children>
+																		<variables/>
+																	</template>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
 										</children>
 										<variables/>
 									</template>
@@ -1587,7 +1751,7 @@ else &quot;&quot;"/>
 												<children>
 													<template subtype="element" match="heading1">
 														<children>
-															<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+															<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 															<template subtype="userdefined" match="..">
 																<children>
 																	<template subtype="attribute" match="FID">
@@ -1599,11 +1763,11 @@ else &quot;&quot;"/>
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+															<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 															<calltemplate subtype="named" match="compendium">
 																<parameters/>
 															</calltemplate>
-															<text fixtext="\&quot; parent=\&quot;"/>
+															<text fixtext="\&quot; data-parent=\&quot;"/>
 															<template subtype="uservariable" match="$parentRef">
 																<children>
 																	<content subtype="regular"/>
@@ -1639,7 +1803,7 @@ else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
-											<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+											<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 											<template subtype="userdefined" match="..">
 												<children>
 													<template subtype="userdefined" match="..">
@@ -1661,7 +1825,7 @@ else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
-											<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+											<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 											<calltemplate subtype="named" match="compendium">
 												<parameters/>
 											</calltemplate>
@@ -1679,7 +1843,7 @@ else &quot;&quot;"/>
 														<children>
 															<template subtype="element" match="heading2">
 																<children>
-																	<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																	<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																	<template subtype="userdefined" match="..">
 																		<children>
 																			<template subtype="attribute" match="FID">
@@ -1691,11 +1855,11 @@ else &quot;&quot;"/>
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																	<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																	<calltemplate subtype="named" match="compendium">
 																		<parameters/>
 																	</calltemplate>
-																	<text fixtext="\&quot; parent=\&quot;"/>
+																	<text fixtext="\&quot; data-parent=\&quot;"/>
 																	<template subtype="uservariable" match="$parentRef">
 																		<children>
 																			<content subtype="regular"/>
@@ -1737,7 +1901,7 @@ else &quot;&quot;"/>
 														</children>
 														<variables/>
 													</template>
-													<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+													<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 													<template subtype="userdefined" match="..">
 														<children>
 															<template subtype="userdefined" match="..">
@@ -1754,11 +1918,11 @@ else &quot;&quot;"/>
 														</children>
 														<variables/>
 													</template>
-													<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+													<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 													<calltemplate subtype="named" match="compendium">
 														<parameters/>
 													</calltemplate>
-													<text fixtext="\&quot; parent=\&quot;"/>
+													<text fixtext="\&quot; data-parent=\&quot;"/>
 													<template subtype="uservariable" match="$parentRef">
 														<children>
 															<content subtype="regular"/>
@@ -1779,7 +1943,7 @@ else &quot;&quot;"/>
 																<children>
 																	<template subtype="element" match="heading3">
 																		<children>
-																			<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																			<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																			<template subtype="userdefined" match="..">
 																				<children>
 																					<template subtype="attribute" match="FID">
@@ -1791,11 +1955,11 @@ else &quot;&quot;"/>
 																				</children>
 																				<variables/>
 																			</template>
-																			<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																			<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																			<calltemplate subtype="named" match="compendium">
 																				<parameters/>
 																			</calltemplate>
-																			<text fixtext="\&quot; parent=\&quot;"/>
+																			<text fixtext="\&quot; data-parent=\&quot;"/>
 																			<template subtype="uservariable" match="$parentRef">
 																				<children>
 																					<content subtype="regular"/>
@@ -1837,7 +2001,7 @@ else &quot;&quot;"/>
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+															<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 															<template subtype="userdefined" match="..">
 																<children>
 																	<template subtype="userdefined" match="..">
@@ -1854,11 +2018,11 @@ else &quot;&quot;"/>
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+															<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 															<calltemplate subtype="named" match="compendium">
 																<parameters/>
 															</calltemplate>
-															<text fixtext="\&quot; parent=\&quot;"/>
+															<text fixtext="\&quot; data-parent=\&quot;"/>
 															<template subtype="uservariable" match="$parentRef">
 																<children>
 																	<content subtype="regular"/>
@@ -1879,7 +2043,7 @@ else &quot;&quot;"/>
 																		<children>
 																			<template subtype="element" match="heading4">
 																				<children>
-																					<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																					<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																					<template subtype="userdefined" match="..">
 																						<children>
 																							<template subtype="attribute" match="FID">
@@ -1891,11 +2055,11 @@ else &quot;&quot;"/>
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																					<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																					<calltemplate subtype="named" match="compendium">
 																						<parameters/>
 																					</calltemplate>
-																					<text fixtext="\&quot; parent=\&quot;"/>
+																					<text fixtext="\&quot; data-parent=\&quot;"/>
 																					<template subtype="uservariable" match="$parentRef">
 																						<children>
 																							<content subtype="regular"/>
@@ -1937,7 +2101,7 @@ else &quot;&quot;"/>
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																	<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																	<template subtype="userdefined" match="..">
 																		<children>
 																			<template subtype="userdefined" match="..">
@@ -1954,11 +2118,11 @@ else &quot;&quot;"/>
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																	<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																	<calltemplate subtype="named" match="compendium">
 																		<parameters/>
 																	</calltemplate>
-																	<text fixtext="\&quot; parent=\&quot;"/>
+																	<text fixtext="\&quot; data-parent=\&quot;"/>
 																	<template subtype="uservariable" match="$parentRef">
 																		<children>
 																			<content subtype="regular"/>
@@ -1979,7 +2143,7 @@ else &quot;&quot;"/>
 																				<children>
 																					<template subtype="element" match="heading5">
 																						<children>
-																							<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																							<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																							<template subtype="userdefined" match="..">
 																								<children>
 																									<template subtype="attribute" match="FID">
@@ -1991,11 +2155,11 @@ else &quot;&quot;"/>
 																								</children>
 																								<variables/>
 																							</template>
-																							<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																							<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																							<calltemplate subtype="named" match="compendium">
 																								<parameters/>
 																							</calltemplate>
-																							<text fixtext="\&quot; parent=\&quot;"/>
+																							<text fixtext="\&quot; data-parent=\&quot;"/>
 																							<template subtype="uservariable" match="$parentRef">
 																								<children>
 																									<content subtype="regular"/>
@@ -2037,7 +2201,7 @@ else &quot;&quot;"/>
 																				</children>
 																				<variables/>
 																			</template>
-																			<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																			<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																			<template subtype="userdefined" match="..">
 																				<children>
 																					<template subtype="userdefined" match="..">
@@ -2054,11 +2218,11 @@ else &quot;&quot;"/>
 																				</children>
 																				<variables/>
 																			</template>
-																			<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																			<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																			<calltemplate subtype="named" match="compendium">
 																				<parameters/>
 																			</calltemplate>
-																			<text fixtext="\&quot; parent=\&quot;"/>
+																			<text fixtext="\&quot; data-parent=\&quot;"/>
 																			<template subtype="uservariable" match="$parentRef">
 																				<children>
 																					<content subtype="regular"/>
@@ -2079,7 +2243,7 @@ else &quot;&quot;"/>
 																						<children>
 																							<template subtype="element" match="heading6">
 																								<children>
-																									<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																									<text fixtext="&lt;p&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																									<template subtype="userdefined" match="..">
 																										<children>
 																											<template subtype="attribute" match="FID">
@@ -2091,11 +2255,11 @@ else &quot;&quot;"/>
 																										</children>
 																										<variables/>
 																									</template>
-																									<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																									<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																									<calltemplate subtype="named" match="compendium">
 																										<parameters/>
 																									</calltemplate>
-																									<text fixtext="\&quot; parent=\&quot;"/>
+																									<text fixtext="\&quot; data-parent=\&quot;"/>
 																									<template subtype="uservariable" match="$parentRef">
 																										<children>
 																											<content subtype="regular"/>
@@ -2137,7 +2301,7 @@ else &quot;&quot;"/>
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; fid=\&quot;"/>
+																					<text fixtext="\&quot;&gt;&lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;"/>
 																					<template subtype="userdefined" match="..">
 																						<children>
 																							<template subtype="userdefined" match="..">
@@ -2154,11 +2318,11 @@ else &quot;&quot;"/>
 																						</children>
 																						<variables/>
 																					</template>
-																					<text fixtext="\&quot; type=\&quot;JournalEntry\&quot; pack=\&quot;"/>
+																					<text fixtext="\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;"/>
 																					<calltemplate subtype="named" match="compendium">
 																						<parameters/>
 																					</calltemplate>
-																					<text fixtext="\&quot; parent=\&quot;"/>
+																					<text fixtext="\&quot; data-parent=\&quot;"/>
 																					<template subtype="uservariable" match="$parentRef">
 																						<children>
 																							<content subtype="regular"/>
@@ -2335,136 +2499,13 @@ else &quot;&quot;"/>
 						<children>
 							<template subtype="element" match="spellReference">
 								<children>
-									<template subtype="source" match="XML">
-										<children>
-											<template subtype="element" match="root">
-												<children>
-													<template subtype="element" match="chapters">
-														<children>
-															<template subtype="element" match="spellsChapter">
-																<children>
-																	<template subtype="element" match="spells">
-																		<children>
-																			<template subtype="element" filter="$spellReferenceCall = @spellID" match="spell">
-																				<children>
-																					<text fixtext="{&quot;id&quot;:"/>
-																					<autocalc xpath="concat( 888 , replace(@spellID,&quot;sPsP&quot;,&quot;&quot;) )"/>
-																					<text fixtext=",&quot;name&quot;:&quot;"/>
-																					<template subtype="element" match="spellName">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;,&quot;type&quot;:&quot;spell&quot;"/>
-																					<calltemplate subtype="named" match="imgMysteryMan">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="spellDescription">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;spellType&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spell Type&quot;,&quot;value&quot;:&quot;"/>
-																					<autocalc xpath="if ( VTTcode/UGFStandard/attacks ) then &quot;attack&quot; else if ( VTTcode/UGFStandard/saves ) then &quot;save&quot; else if ( VTTcode/UGFStandard/heals ) then &quot;heal&quot; else &quot;utility&quot;"/>
-																					<text fixtext="&quot;},&quot;level&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Spell Level&quot;,&quot;value&quot;:"/>
-																					<template subtype="element" match="spellLevel">
-																						<children>
-																							<content subtype="regular">
-																								<format basic-type="xsd" datatype="int"/>
-																							</content>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="},&quot;school&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spell School&quot;,&quot;value&quot;:&quot;"/>
-																					<autocalc xpath="if ( spellSchool = &quot;Abjuration&quot; ) then &quot;abj&quot; else if ( spellSchool = &quot;Conjuration&quot; ) then &quot;con&quot; else if ( spellSchool = &quot;Divination&quot; ) then &quot;div&quot; else if ( spellSchool = &quot;Enchantment&quot; ) then &quot;enc&quot; else if ( spellSchool = &quot;Evocation&quot; ) then &quot;evo&quot; else if ( spellSchool = &quot;Illusion&quot; ) then &quot;ill&quot; else if ( spellSchool = &quot;Necromancy&quot; ) then &quot;nec&quot; else &quot;trs&quot;"/>
-																					<text fixtext="&quot;},&quot;components&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spell Components&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="spellComponents">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;},&quot;materials&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Materials&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="spellComponents">
-																						<children>
-																							<template subtype="attribute" match="components">
-																								<children>
-																									<content subtype="regular"/>
-																								</children>
-																								<variables/>
-																							</template>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;}"/>
-																					<calltemplate subtype="named" match="target">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;range&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Range&quot;"/>
-																					<template subtype="element" match="spellRange">
-																						<children>
-																							<text fixtext=",&quot;value&quot;:&quot;"/>
-																							<content subtype="regular"/>
-																							<text fixtext="&quot;"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="},&quot;time&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Casting Time&quot;"/>
-																					<template subtype="element" match="spellCastingTime">
-																						<children>
-																							<text fixtext=",&quot;value&quot;:&quot;"/>
-																							<content subtype="regular"/>
-																							<text fixtext="&quot;"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="},&quot;duration&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Duration&quot;,&quot;value&quot;:&quot;"/>
-																					<template subtype="element" match="spellDuration">
-																						<children>
-																							<content subtype="regular"/>
-																						</children>
-																						<variables/>
-																					</template>
-																					<text fixtext="&quot;}"/>
-																					<calltemplate subtype="named" match="damage">
-																						<parameters/>
-																					</calltemplate>
-																					<calltemplate subtype="named" match="damageType">
-																						<parameters/>
-																					</calltemplate>
-																					<calltemplate subtype="named" match="save">
-																						<parameters/>
-																					</calltemplate>
-																					<text fixtext=",&quot;concentration&quot;:{&quot;type&quot;:&quot;Boolean&quot;,&quot;label&quot;:&quot;Requires Concentration&quot;,&quot;value&quot;:"/>
-																					<autocalc xpath="if ( spellDuration/@concentration = true() ) then &quot;true&quot; else &quot;false&quot;"/>
-																					<text fixtext="},&quot;ritual&quot;:{&quot;type&quot;:&quot;Boolean&quot;,&quot;label&quot;:&quot;Cast as Ritual&quot;,&quot;value&quot;:"/>
-																					<autocalc xpath="if ( spellRitual = true() ) then &quot;true&quot; else &quot;false&quot;"/>
-																					<text fixtext="},&quot;ability&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spellcasting Ability&quot;},&quot;prepared&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Prepared Spell&quot;,&quot;value&quot;:true}}},"/>
-																				</children>
-																				<variables/>
-																			</template>
-																		</children>
-																		<variables/>
-																	</template>
-																</children>
-																<variables/>
-															</template>
-														</children>
-														<variables/>
-													</template>
-												</children>
-												<variables/>
-											</template>
-										</children>
-										<variables/>
-									</template>
+									<text fixtext=",{&quot;id&quot;:"/>
+									<autocalc xpath="concat( 888 , replace(@spellID,&quot;sPsP&quot;,&quot;&quot;) )"/>
+									<calltemplate subtype="named" match="linkedSpell">
+										<parameters/>
+									</calltemplate>
 								</children>
-								<variables>
-									<variable name="spellReferenceCall" value="spellID" valuetype="&lt;auto&gt;"/>
-								</variables>
+								<variables/>
 							</template>
 						</children>
 						<variables/>
@@ -2474,6 +2515,14 @@ else &quot;&quot;"/>
 			<globaltemplate subtype="named" match="spellcastingSlots">
 				<parameters/>
 				<children>
+					<template subtype="element" match="cantrips">
+						<children>
+							<calltemplate subtype="named" match="spellcastingSpell">
+								<parameters/>
+							</calltemplate>
+						</children>
+						<variables/>
+					</template>
 					<template subtype="element" match="firstSpellSlots">
 						<children>
 							<calltemplate subtype="named" match="spellcastingSpell">
@@ -8586,6 +8635,142 @@ else ."/>
 				<parameters/>
 				<children>
 					<text fixtext=",&quot;abilities&quot;:{&quot;str&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Strength&quot;,&quot;value&quot;:10,&quot;min&quot;:3,&quot;mod&quot;:0,&quot;proficient&quot;:0,&quot;save&quot;:0},&quot;dex&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Dexterity&quot;,&quot;value&quot;:10,&quot;min&quot;:3,&quot;mod&quot;:0,&quot;proficient&quot;:0,&quot;save&quot;:0},&quot;con&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Constitution&quot;,&quot;value&quot;:10,&quot;min&quot;:3,&quot;mod&quot;:0,&quot;proficient&quot;:0,&quot;save&quot;:0},&quot;int&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Intelligence&quot;,&quot;value&quot;:10,&quot;min&quot;:3,&quot;mod&quot;:0,&quot;proficient&quot;:0,&quot;save&quot;:0},&quot;wis&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Wisdom&quot;,&quot;value&quot;:10,&quot;min&quot;:3,&quot;mod&quot;:0,&quot;proficient&quot;:0,&quot;save&quot;:0},&quot;cha&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Charisma&quot;,&quot;value&quot;:10,&quot;min&quot;:3,&quot;mod&quot;:0,&quot;proficient&quot;:0,&quot;save&quot;:0}},&quot;attributes&quot;:{&quot;ac&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Armor Class&quot;,&quot;min&quot;:10,&quot;value&quot;:0},&quot;hp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Hit Points&quot;,&quot;value&quot;:10,&quot;min&quot;:0,&quot;max&quot;:10,&quot;temp&quot;:0,&quot;tempmax&quot;:0},&quot;init&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Initiative Modifier&quot;,&quot;mod&quot;:0,&quot;value&quot;:0},&quot;prof&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Proficiency&quot;,&quot;value&quot;:2},&quot;speed&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Movement Speed&quot;,&quot;value&quot;:&quot;30 ft&quot;,&quot;special&quot;:&quot;&quot;},&quot;spellcasting&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spellcasting Ability&quot;,&quot;value&quot;:&quot;&quot;},&quot;spelldc&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spell DC&quot;,&quot;value&quot;:10},&quot;hd&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Hit Dice&quot;,&quot;value&quot;:1,&quot;min&quot;:0},&quot;death&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Death Saves&quot;,&quot;success&quot;:0,&quot;failure&quot;:0},&quot;exhaustion&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Exhaustion Level&quot;,&quot;value&quot;:0},&quot;inspiration&quot;:{&quot;type&quot;:&quot;Boolean&quot;,&quot;label&quot;:&quot;Inspiration&quot;,&quot;value&quot;:false}},&quot;details&quot;:{&quot;alignment&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Alignment&quot;,&quot;value&quot;:&quot;&quot;},&quot;biography&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Biography&quot;},&quot;class&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class&quot;},&quot;race&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Race&quot;,&quot;value&quot;:&quot;&quot;},&quot;background&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Background&quot;,&quot;value&quot;:&quot;&quot;},&quot;level&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Character Level&quot;,&quot;value&quot;:1,&quot;min&quot;:1},&quot;xp&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Experience Points&quot;,&quot;value&quot;:0,&quot;min&quot;:0,&quot;pct&quot;:0,&quot;max&quot;:300},&quot;trait&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Trait&quot;},&quot;ideal&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Ideal&quot;},&quot;bond&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Bond&quot;},&quot;flaw&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Flaw&quot;}},&quot;skills&quot;:{&quot;acr&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Acrobatics&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;dex&quot;},&quot;ani&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Animal Handling&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;wis&quot;},&quot;arc&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Arcana&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;int&quot;},&quot;ath&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Athletics&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;str&quot;},&quot;dec&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Deception&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;cha&quot;},&quot;his&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;History&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;int&quot;},&quot;ins&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Insight&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;wis&quot;},&quot;itm&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Intimidation&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;cha&quot;},&quot;inv&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Investigation&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;int&quot;},&quot;med&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Medicine&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;wis&quot;},&quot;nat&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Nature&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;int&quot;},&quot;prc&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Perception&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;wis&quot;},&quot;prf&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Performance&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;cha&quot;},&quot;per&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Persuasion&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;cha&quot;},&quot;rel&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Religion&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;int&quot;},&quot;slt&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Sleight of Hand&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;dex&quot;},&quot;ste&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Stealth&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;dex&quot;},&quot;sur&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Survival&quot;,&quot;mod&quot;:0,&quot;value&quot;:0,&quot;ability&quot;:&quot;wis&quot;}},&quot;traits&quot;:{&quot;size&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Size&quot;,&quot;value&quot;:&quot;med&quot;},&quot;senses&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Senses&quot;,&quot;value&quot;:&quot;&quot;},&quot;perception&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Passive Perception&quot;,&quot;value&quot;:0},&quot;languages&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Known Languages&quot;,&quot;value&quot;:[]},&quot;di&quot;:{&quot;type&quot;:&quot;Array&quot;,&quot;label&quot;:&quot;Damage Immunities&quot;,&quot;value&quot;:[]},&quot;dr&quot;:{&quot;type&quot;:&quot;Array&quot;,&quot;label&quot;:&quot;Damage Resistances&quot;,&quot;value&quot;:[]},&quot;dv&quot;:{&quot;type&quot;:&quot;Array&quot;,&quot;label&quot;:&quot;Damage Vulnerabilities&quot;,&quot;value&quot;:[]},&quot;ci&quot;:{&quot;type&quot;:&quot;Array&quot;,&quot;label&quot;:&quot;Condition Immunities&quot;,&quot;value&quot;:[]}},&quot;spells&quot;:{&quot;spell0&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Cantrip&quot;},&quot;spell1&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;1st Level&quot;},&quot;spell2&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;2nd Level&quot;},&quot;spell3&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;3rd Level&quot;},&quot;spell4&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;4th Level&quot;},&quot;spell5&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;5th Level&quot;},&quot;spell6&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;6th Level&quot;},&quot;spell7&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;7th Level&quot;},&quot;spell8&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;8th Level&quot;},&quot;spell9&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;9th Level&quot;}},&quot;resources&quot;:{&quot;primary&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Primary Resource&quot;,&quot;sr&quot;:false,&quot;lr&quot;:false,&quot;value&quot;:0,&quot;max&quot;:0},&quot;secondary&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Secondary Resource&quot;,&quot;sr&quot;:false,&quot;lr&quot;:false,&quot;value&quot;:0,&quot;max&quot;:0}}"/>
+				</children>
+			</globaltemplate>
+			<globaltemplate subtype="named" match="linkedSpell">
+				<parameters/>
+				<children>
+					<template subtype="element" match="spellID">
+						<children>
+							<template subtype="source" match="XML">
+								<children>
+									<template subtype="element" match="root">
+										<children>
+											<template subtype="element" match="chapters">
+												<children>
+													<template subtype="element" match="spellsChapter">
+														<children>
+															<template subtype="element" match="spells">
+																<children>
+																	<template subtype="element" filter="$spellReferenceCall = @spellID" match="spell">
+																		<children>
+																			<text fixtext=",&quot;name&quot;:&quot;"/>
+																			<template subtype="element" match="spellName">
+																				<children>
+																					<content subtype="regular"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="&quot;,&quot;type&quot;:&quot;spell&quot;"/>
+																			<calltemplate subtype="named" match="imgMysteryMan">
+																				<parameters/>
+																			</calltemplate>
+																			<text fixtext=",&quot;data&quot;:{&quot;description&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Description&quot;,&quot;value&quot;:&quot;"/>
+																			<template subtype="element" match="spellDescription">
+																				<children>
+																					<content subtype="regular"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;spellType&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spell Type&quot;,&quot;value&quot;:&quot;"/>
+																			<autocalc xpath="if ( VTTcode/UGFStandard/attacks ) then &quot;attack&quot; else if ( VTTcode/UGFStandard/saves ) then &quot;save&quot; else if ( VTTcode/UGFStandard/heals ) then &quot;heal&quot; else &quot;utility&quot;"/>
+																			<text fixtext="&quot;},&quot;level&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Spell Level&quot;,&quot;value&quot;:"/>
+																			<template subtype="element" match="spellLevel">
+																				<children>
+																					<content subtype="regular">
+																						<format basic-type="xsd" datatype="int"/>
+																					</content>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="},&quot;school&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spell School&quot;,&quot;value&quot;:&quot;"/>
+																			<autocalc xpath="if ( spellSchool = &quot;Abjuration&quot; ) then &quot;abj&quot; else if ( spellSchool = &quot;Conjuration&quot; ) then &quot;con&quot; else if ( spellSchool = &quot;Divination&quot; ) then &quot;div&quot; else if ( spellSchool = &quot;Enchantment&quot; ) then &quot;enc&quot; else if ( spellSchool = &quot;Evocation&quot; ) then &quot;evo&quot; else if ( spellSchool = &quot;Illusion&quot; ) then &quot;ill&quot; else if ( spellSchool = &quot;Necromancy&quot; ) then &quot;nec&quot; else &quot;trs&quot;"/>
+																			<text fixtext="&quot;},&quot;components&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spell Components&quot;,&quot;value&quot;:&quot;"/>
+																			<template subtype="element" match="spellComponents">
+																				<children>
+																					<content subtype="regular"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="&quot;},&quot;materials&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Materials&quot;,&quot;value&quot;:&quot;"/>
+																			<template subtype="element" match="spellComponents">
+																				<children>
+																					<template subtype="attribute" match="components">
+																						<children>
+																							<content subtype="regular"/>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="&quot;}"/>
+																			<calltemplate subtype="named" match="target">
+																				<parameters/>
+																			</calltemplate>
+																			<text fixtext=",&quot;range&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Range&quot;"/>
+																			<template subtype="element" match="spellRange">
+																				<children>
+																					<text fixtext=",&quot;value&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="},&quot;time&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Casting Time&quot;"/>
+																			<template subtype="element" match="spellCastingTime">
+																				<children>
+																					<text fixtext=",&quot;value&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="},&quot;duration&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Duration&quot;,&quot;value&quot;:&quot;"/>
+																			<template subtype="element" match="spellDuration">
+																				<children>
+																					<content subtype="regular"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="&quot;}"/>
+																			<calltemplate subtype="named" match="damage">
+																				<parameters/>
+																			</calltemplate>
+																			<calltemplate subtype="named" match="damageType">
+																				<parameters/>
+																			</calltemplate>
+																			<calltemplate subtype="named" match="save">
+																				<parameters/>
+																			</calltemplate>
+																			<text fixtext=",&quot;concentration&quot;:{&quot;type&quot;:&quot;Boolean&quot;,&quot;label&quot;:&quot;Requires Concentration&quot;,&quot;value&quot;:"/>
+																			<autocalc xpath="if ( spellDuration/@concentration = true() ) then &quot;true&quot; else &quot;false&quot;"/>
+																			<text fixtext="},&quot;ritual&quot;:{&quot;type&quot;:&quot;Boolean&quot;,&quot;label&quot;:&quot;Cast as Ritual&quot;,&quot;value&quot;:"/>
+																			<autocalc xpath="if ( spellRitual = true() ) then &quot;true&quot; else &quot;false&quot;"/>
+																			<text fixtext="},&quot;ability&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Spellcasting Ability&quot;},&quot;prepared&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Prepared Spell&quot;,&quot;value&quot;:true}}}"/>
+																		</children>
+																		<variables/>
+																	</template>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables>
+							<variable name="spellReferenceCall" value="." valuetype="&lt;auto&gt;"/>
+						</variables>
+					</template>
 				</children>
 			</globaltemplate>
 		</children>
