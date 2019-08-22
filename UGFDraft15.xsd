@@ -913,6 +913,14 @@
 																					<xs:complexType>
 																						<xs:sequence>
 																							<xs:element name="classArchetypeDescription" type="paragraphType"/>
+																							<xs:element name="classArchetypeEquipment" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="defaultChoices" type="classEquipmentDefaultChoicesType" minOccurs="0"/>
+																										<xs:element name="options" type="classEquipmentOptionsType" minOccurs="0"/>
+																									</xs:sequence>
+																								</xs:complexType>
+																							</xs:element>
 																							<xs:element name="classArchetypeLegal" type="paragraphType" minOccurs="0"/>
 																							<xs:element name="classArchetypeName" type="xs:token"/>
 																							<xs:element name="classArchetypeSpellcasting" minOccurs="0">
@@ -964,6 +972,7 @@
 																									</xs:sequence>
 																								</xs:complexType>
 																							</xs:element>
+																							<xs:element name="classArchetypeStatPriority" type="classStatPriorityType" minOccurs="0"/>
 																							<xs:element name="classArchetypeTraits">
 																								<xs:complexType>
 																									<xs:sequence>
@@ -1017,26 +1026,8 @@
 																	<xs:element name="classEquipment" minOccurs="0">
 																		<xs:complexType>
 																			<xs:sequence>
-																				<xs:element name="defaultChoices" minOccurs="0">
-																					<xs:complexType>
-																						<xs:sequence>
-																							<xs:element ref="includedItem" maxOccurs="unbounded"/>
-																						</xs:sequence>
-																					</xs:complexType>
-																				</xs:element>
-																				<xs:element name="options">
-																					<xs:complexType>
-																						<xs:sequence>
-																							<xs:element name="optionDescription" maxOccurs="unbounded">
-																								<xs:complexType mixed="true">
-																									<xs:sequence>
-																										<xs:element ref="crossReference" minOccurs="0" maxOccurs="unbounded"/>
-																									</xs:sequence>
-																								</xs:complexType>
-																							</xs:element>
-																						</xs:sequence>
-																					</xs:complexType>
-																				</xs:element>
+																				<xs:element name="defaultChoices" type="classEquipmentDefaultChoicesType" minOccurs="0"/>
+																				<xs:element name="options" type="classEquipmentOptionsType"/>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
@@ -1252,18 +1243,7 @@
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:element name="classStatPriority" minOccurs="0">
-																		<xs:complexType>
-																			<xs:sequence>
-																				<xs:element name="stat1" type="ability"/>
-																				<xs:element name="stat2" type="ability"/>
-																				<xs:element name="stat3" type="ability"/>
-																				<xs:element name="stat4" type="ability"/>
-																				<xs:element name="stat5" type="ability"/>
-																				<xs:element name="stat6" type="ability"/>
-																			</xs:sequence>
-																		</xs:complexType>
-																	</xs:element>
+																	<xs:element name="classStatPriority" type="classStatPriorityType" minOccurs="0"/>
 																	<xs:element name="classTable">
 																		<xs:complexType>
 																			<xs:complexContent>
@@ -5207,6 +5187,16 @@
 						<xs:element name="raceDescriptionMale" type="rollableTableType" minOccurs="0"/>
 						<xs:element name="raceImageFemale" type="rollableTableType" minOccurs="0"/>
 						<xs:element name="raceImageMale" type="rollableTableType" minOccurs="0"/>
+						<xs:element name="raceNameClan" minOccurs="0">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="rollableTableType">
+										<xs:attribute name="origin" type="xs:string"/>
+										<xs:attribute name="descriptor" type="xs:string"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
 						<xs:element name="raceNameFemale" minOccurs="0">
 							<xs:complexType>
 								<xs:complexContent>
@@ -5283,6 +5273,44 @@
 									</xs:element>
 									<xs:element name="subraceLegal" type="paragraphType" minOccurs="0"/>
 									<xs:element name="subraceName" type="xs:token"/>
+									<xs:element name="subraceSuggestedCharactersitics" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="raceDescriptionFemale" type="rollableTableType" minOccurs="0"/>
+												<xs:element name="raceDescriptionMale" type="rollableTableType" minOccurs="0"/>
+												<xs:element name="raceImageFemale" type="rollableTableType" minOccurs="0"/>
+												<xs:element name="raceImageMale" type="rollableTableType" minOccurs="0"/>
+												<xs:element name="raceNameClan" minOccurs="0">
+													<xs:complexType>
+														<xs:complexContent>
+															<xs:extension base="rollableTableType">
+																<xs:attribute name="origin" type="xs:string"/>
+																<xs:attribute name="descriptor" type="xs:string"/>
+															</xs:extension>
+														</xs:complexContent>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="raceNameFemale" minOccurs="0">
+													<xs:complexType>
+														<xs:complexContent>
+															<xs:extension base="rollableTableType">
+																<xs:attribute name="origin" type="xs:string"/>
+															</xs:extension>
+														</xs:complexContent>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="raceNameMale" minOccurs="0">
+													<xs:complexType>
+														<xs:complexContent>
+															<xs:extension base="rollableTableType">
+																<xs:attribute name="origin" type="xs:string"/>
+															</xs:extension>
+														</xs:complexContent>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 									<xs:element name="subraceTraits">
 										<xs:complexType>
 											<xs:sequence>
@@ -7238,6 +7266,32 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="classStatPriorityType">
+		<xs:sequence>
+			<xs:element name="stat1" type="ability"/>
+			<xs:element name="stat2" type="ability"/>
+			<xs:element name="stat3" type="ability"/>
+			<xs:element name="stat4" type="ability"/>
+			<xs:element name="stat5" type="ability"/>
+			<xs:element name="stat6" type="ability"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="classEquipmentDefaultChoicesType">
+		<xs:sequence>
+			<xs:element ref="includedItem" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="classEquipmentOptionsType">
+		<xs:sequence>
+			<xs:element name="optionDescription" maxOccurs="unbounded">
+				<xs:complexType mixed="true">
+					<xs:sequence>
+						<xs:element ref="crossReference" minOccurs="0" maxOccurs="unbounded"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

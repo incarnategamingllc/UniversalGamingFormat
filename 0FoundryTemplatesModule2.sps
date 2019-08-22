@@ -2909,7 +2909,7 @@ else &quot;&quot;"/>
 					<calltemplate subtype="named" match="a00RaceDescriptionTemplate">
 						<parameters/>
 					</calltemplate>
-					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;Subclass&quot;}},&quot;folder&quot;:&quot;"/>
+					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;&quot;}},&quot;folder&quot;:&quot;"/>
 					<template subtype="attribute" match="FID">
 						<children>
 							<content subtype="regular"/>
@@ -3010,7 +3010,7 @@ else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="],&quot;innateSpellcasting&quot;:"/>
+					<text fixtext="],&quot;family&quot;:&quot;race&quot;,&quot;innateSpellcasting&quot;:"/>
 					<autocalc xpath="if ( raceTraits/raceTrait/VTTcode/UGFStandard/Spells ) then &quot;true&quot; else &quot;false&quot;"/>
 					<text fixtext=",&quot;languages&quot;:["/>
 					<template subtype="element" match="raceLanguages">
@@ -3114,7 +3114,158 @@ else &quot;&quot;"/>
 					</template>
 					<text fixtext="],&quot;raceDarkvision&quot;:"/>
 					<autocalc xpath="if ( raceTraits/darkvision ) then raceTraits/darkvision else &quot;0&quot;"/>
-					<text fixtext=",&quot;raceType&quot;:&quot;race&quot;,&quot;resources&quot;:[],&quot;family&quot;:&quot;race&quot;},&quot;type&quot;:&quot;class&quot;"/>
+					<text fixtext=",&quot;raceType&quot;:&quot;race&quot;,&quot;resources&quot;:[],&quot;tables&quot;:{"/>
+					<template subtype="element" match="raceSuggestedCharacteristics">
+						<children>
+							<template subtype="element" match="raceDescriptionFemale">
+								<children>
+									<text fixtext="&quot;raceDescriptionFemale&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<template subtype="element" match="raceDescriptionMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(../raceDescriptionFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<text fixtext="&quot;raceDescriptionMale&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<template subtype="element" match="raceImageFemale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(../raceDescriptionFemale) or exists(../raceDescriptionMale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<text fixtext="&quot;raceImageFemale&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<template subtype="element" match="raceImageMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(../raceDescriptionFemale) or exists(../raceDescriptionMale) or exists(../raceImageFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<text fixtext="&quot;raceImageMale&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<template subtype="element" match="raceNameClan">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(../raceDescriptionFemale) or exists(../raceDescriptionMale) or exists(../raceImageFemale) or exists(../raceImageMale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<text fixtext="&quot;raceNameClan&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<template subtype="element" match="raceNameFemale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(../raceDescriptionFemale) or exists(../raceDescriptionMale) or exists(../raceImageFemale) or exists(../raceImageMale) or exists(../raceNameClan)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<text fixtext="&quot;raceNameFemale&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+							<template subtype="element" match="raceNameMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(../raceDescriptionFemale) or exists(../raceDescriptionMale) or exists(../raceImageFemale) or exists(../raceImageMale) or exists(../raceNameClan) or exists(../raceNameFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<text fixtext="&quot;raceNameMale&quot;:&quot;"/>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="&quot;"/>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="}},&quot;type&quot;:&quot;class&quot;"/>
 					<calltemplate subtype="named" match="img">
 						<parameters/>
 					</calltemplate>
@@ -3583,7 +3734,522 @@ else&quot;0&quot;"/>
 					<calltemplate subtype="named" match="resourcesVTTconsumption">
 						<parameters/>
 					</calltemplate>
-					<text fixtext="],&quot;family&quot;:&quot;race&quot;},&quot;type&quot;:&quot;class&quot;"/>
+					<text fixtext="],&quot;family&quot;:&quot;race&quot;,&quot;tables&quot;:{"/>
+					<condition>
+						<children>
+							<conditionbranch xpath="subraceSuggestedCharactersitics/raceDescriptionFemale">
+								<children>
+									<template subtype="element" match="subraceSuggestedCharactersitics">
+										<children>
+											<template subtype="element" match="raceDescriptionFemale">
+												<children>
+													<text fixtext="&quot;raceDescriptionFemale&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../raceSuggestedCharacteristics/raceDescriptionFemale">
+								<children>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="raceSuggestedCharacteristics">
+														<children>
+															<template subtype="element" match="raceDescriptionFemale">
+																<children>
+																	<text fixtext="&quot;raceDescriptionFemale&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<condition>
+						<children>
+							<conditionbranch xpath="subraceSuggestedCharactersitics/raceDescriptionMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="element" match="subraceSuggestedCharactersitics">
+										<children>
+											<template subtype="element" match="raceDescriptionMale">
+												<children>
+													<text fixtext="&quot;raceDescriptionMale&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../raceSuggestedCharacteristics/raceDescriptionMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="raceSuggestedCharacteristics">
+														<children>
+															<template subtype="element" match="raceDescriptionMale">
+																<children>
+																	<text fixtext="&quot;raceDescriptionMale&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<condition>
+						<children>
+							<conditionbranch xpath="subraceSuggestedCharactersitics/raceImageFemale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="element" match="subraceSuggestedCharactersitics">
+										<children>
+											<template subtype="element" match="raceImageFemale">
+												<children>
+													<text fixtext="&quot;raceImageFemale&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../raceSuggestedCharacteristics/raceImageFemale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="raceSuggestedCharacteristics">
+														<children>
+															<template subtype="element" match="raceImageFemale">
+																<children>
+																	<text fixtext="&quot;raceImageFemale&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<condition>
+						<children>
+							<conditionbranch xpath="subraceSuggestedCharactersitics/raceImageMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="element" match="subraceSuggestedCharactersitics">
+										<children>
+											<template subtype="element" match="raceImageMale">
+												<children>
+													<text fixtext="&quot;raceImageMale&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../raceSuggestedCharacteristics/raceImageMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="raceSuggestedCharacteristics">
+														<children>
+															<template subtype="element" match="raceImageMale">
+																<children>
+																	<text fixtext="&quot;raceImageMale&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<condition>
+						<children>
+							<conditionbranch xpath="subraceSuggestedCharactersitics/raceNameClan">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale) or exists(subraceSuggestedCharactersitics/raceImageMale) or exists(../../raceSuggestedCharacteristics/raceImageMale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="element" match="subraceSuggestedCharactersitics">
+										<children>
+											<template subtype="element" match="raceNameClan">
+												<children>
+													<text fixtext="&quot;raceNameClan&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../raceSuggestedCharacteristics/raceNameClan">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale) or exists(subraceSuggestedCharactersitics/raceImageMale) or exists(../../raceSuggestedCharacteristics/raceImageMale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="raceSuggestedCharacteristics">
+														<children>
+															<template subtype="element" match="raceNameClan">
+																<children>
+																	<text fixtext="&quot;raceNameClan&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<condition>
+						<children>
+							<conditionbranch xpath="subraceSuggestedCharactersitics/raceNameFemale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale) or exists(subraceSuggestedCharactersitics/raceImageMale) or exists(../../raceSuggestedCharacteristics/raceImageMale) or exists(subraceSuggestedCharactersitics/raceNameClan) or exists(../../raceSuggestedCharacteristics/raceNameClan)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="element" match="subraceSuggestedCharactersitics">
+										<children>
+											<template subtype="element" match="raceNameFemale">
+												<children>
+													<text fixtext="&quot;raceNameFemale&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../raceSuggestedCharacteristics/raceNameFemale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale) or exists(subraceSuggestedCharactersitics/raceImageMale) or exists(../../raceSuggestedCharacteristics/raceImageMale) or exists(subraceSuggestedCharactersitics/raceNameClan) or exists(../../raceSuggestedCharacteristics/raceNameClan)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="raceSuggestedCharacteristics">
+														<children>
+															<template subtype="element" match="raceNameFemale">
+																<children>
+																	<text fixtext="&quot;raceNameFemale&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<condition>
+						<children>
+							<conditionbranch xpath="subraceSuggestedCharactersitics/raceNameMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale) or exists(subraceSuggestedCharactersitics/raceImageMale) or exists(../../raceSuggestedCharacteristics/raceImageMale) or exists(subraceSuggestedCharactersitics/raceNameClan) or exists(../../raceSuggestedCharacteristics/raceNameClan) or exists(subraceSuggestedCharactersitics/raceNameFemale) or exists(../../raceSuggestedCharacteristics/raceNameFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="element" match="subraceSuggestedCharactersitics">
+										<children>
+											<template subtype="element" match="raceNameMale">
+												<children>
+													<text fixtext="&quot;raceNameMale&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../raceSuggestedCharacteristics/raceNameMale">
+								<children>
+									<condition>
+										<children>
+											<conditionbranch xpath="exists(subraceSuggestedCharactersitics/raceDescriptionFemale) or exists(../../raceSuggestedCharacteristics/raceDescriptionFemale) or exists(subraceSuggestedCharactersitics/raceDescriptionMale) or exists(../../raceSuggestedCharacteristics/raceDescriptionMale) or exists(subraceSuggestedCharactersitics/raceImageFemale) or exists(../../raceSuggestedCharacteristics/raceImageFemale) or exists(subraceSuggestedCharactersitics/raceImageMale) or exists(../../raceSuggestedCharacteristics/raceImageMale) or exists(subraceSuggestedCharactersitics/raceNameClan) or exists(../../raceSuggestedCharacteristics/raceNameClan) or exists(subraceSuggestedCharactersitics/raceNameFemale) or exists(../../raceSuggestedCharacteristics/raceNameFemale)">
+												<children>
+													<text fixtext=","/>
+												</children>
+											</conditionbranch>
+										</children>
+									</condition>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="raceSuggestedCharacteristics">
+														<children>
+															<template subtype="element" match="raceNameMale">
+																<children>
+																	<text fixtext="&quot;raceNameMale&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<text fixtext="}},&quot;type&quot;:&quot;class&quot;"/>
 					<calltemplate subtype="named" match="img">
 						<parameters/>
 					</calltemplate>
@@ -4489,11 +5155,11 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 						<variables/>
 					</template>
 					<text fixtext="&quot;"/>
-					<template subtype="userdefined" match="..">
+					<condition>
 						<children>
-							<template subtype="userdefined" match="..">
+							<conditionbranch xpath="classArchetypeStatPriority">
 								<children>
-									<template subtype="element" match="classStatPriority">
+									<template subtype="element" match="classArchetypeStatPriority">
 										<children>
 											<text fixtext=",&quot;classStat1&quot;:&quot;"/>
 											<template subtype="element" match="stat1">
@@ -4509,17 +5175,451 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 												</children>
 												<variables/>
 											</template>
+											<text fixtext="&quot;,&quot;classStat3&quot;:&quot;"/>
+											<template subtype="element" match="stat3">
+												<children>
+													<content subtype="regular"/>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext="&quot;,&quot;classStat4&quot;:&quot;"/>
+											<template subtype="element" match="stat4">
+												<children>
+													<content subtype="regular"/>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext="&quot;,&quot;classStat5&quot;:&quot;"/>
+											<template subtype="element" match="stat5">
+												<children>
+													<content subtype="regular"/>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext="&quot;,&quot;classStat6&quot;:&quot;"/>
+											<template subtype="element" match="stat6">
+												<children>
+													<content subtype="regular"/>
+												</children>
+												<variables/>
+											</template>
 											<text fixtext="&quot;"/>
 										</children>
 										<variables/>
 									</template>
 								</children>
-								<variables/>
-							</template>
+							</conditionbranch>
+							<conditionbranch xpath="../../classStatPriority">
+								<children>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="classStatPriority">
+														<children>
+															<text fixtext=",&quot;classStat1&quot;:&quot;"/>
+															<template subtype="element" match="stat1">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;,&quot;classStat2&quot;:&quot;"/>
+															<template subtype="element" match="stat2">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;,&quot;classStat3&quot;:&quot;"/>
+															<template subtype="element" match="stat3">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;,&quot;classStat4&quot;:&quot;"/>
+															<template subtype="element" match="stat4">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;,&quot;classStat5&quot;:&quot;"/>
+															<template subtype="element" match="stat5">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;,&quot;classStat6&quot;:&quot;"/>
+															<template subtype="element" match="stat6">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;"/>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
 						</children>
-						<variables/>
-					</template>
-					<text fixtext=",&quot;classType&quot;:&quot;archetype&quot;,&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+					</condition>
+					<text fixtext=",&quot;classType&quot;:&quot;archetype&quot;,&quot;defaults&quot;:{&quot;startingEquipment&quot;:["/>
+					<condition>
+						<children>
+							<conditionbranch xpath="classArchetypeEquipment">
+								<children>
+									<template subtype="element" match="classArchetypeEquipment">
+										<children>
+											<template subtype="element" match="defaultChoices">
+												<children>
+													<template subtype="element" filter="position() = 1" match="includedItem">
+														<children>
+															<text fixtext="{"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<text fixtext="&quot;_id&quot;:&quot;"/>
+																	<content subtype="regular"/>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+															<template subtype="element" match="inculdedItemName">
+																<children>
+																	<text fixtext=",&quot;name&quot;:&quot;"/>
+																	<content subtype="regular"/>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+															<template subtype="element" match="inculdedItemQuantity">
+																<children>
+																	<text fixtext=",&quot;quantity&quot;:"/>
+																	<content subtype="regular">
+																		<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																	</content>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="}"/>
+														</children>
+														<variables/>
+													</template>
+													<template subtype="element" filter="position() &gt; 1" match="includedItem">
+														<children>
+															<text fixtext=",{"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<text fixtext="&quot;_id&quot;:&quot;"/>
+																	<content subtype="regular"/>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+															<template subtype="element" match="inculdedItemName">
+																<children>
+																	<text fixtext=",&quot;name&quot;:&quot;"/>
+																	<content subtype="regular"/>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+															<template subtype="element" match="inculdedItemQuantity">
+																<children>
+																	<text fixtext=",&quot;quantity&quot;:"/>
+																	<content subtype="regular">
+																		<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																	</content>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="}"/>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath=".">
+								<children>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="classEquipment">
+														<children>
+															<template subtype="element" match="defaultChoices">
+																<children>
+																	<template subtype="element" filter="position() = 1" match="includedItem">
+																		<children>
+																			<text fixtext="{"/>
+																			<template subtype="attribute" match="FID">
+																				<children>
+																					<text fixtext="&quot;_id&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="inculdedItemName">
+																				<children>
+																					<text fixtext=",&quot;name&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																			<template subtype="element" match="inculdedItemQuantity">
+																				<children>
+																					<text fixtext=",&quot;quantity&quot;:"/>
+																					<content subtype="regular">
+																						<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																					</content>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="}"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<template subtype="element" filter="position() &gt; 1" match="includedItem">
+																		<children>
+																			<text fixtext=",{"/>
+																			<template subtype="attribute" match="FID">
+																				<children>
+																					<text fixtext="&quot;_id&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="inculdedItemName">
+																				<children>
+																					<text fixtext=",&quot;name&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																			<template subtype="element" match="inculdedItemQuantity">
+																				<children>
+																					<text fixtext=",&quot;quantity&quot;:"/>
+																					<content subtype="regular">
+																						<format basic-type="xsd" datatype="nonNegativeInteger"/>
+																					</content>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext="}"/>
+																		</children>
+																		<variables/>
+																	</template>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<text fixtext="]"/>
+					<condition>
+						<children>
+							<conditionbranch xpath="classArchetypeSpellcasting/defaultSpells">
+								<children>
+									<template subtype="element" match="classArchetypeSpellcasting">
+										<children>
+											<template subtype="element" match="defaultSpells">
+												<children>
+													<text fixtext=",&quot;spells&quot;:["/>
+													<template subtype="element" filter="position() = 1" match="defaultSpell">
+														<children>
+															<text fixtext="{"/>
+															<template subtype="element" match="Name">
+																<children>
+																	<text fixtext="&quot;_id&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
+																	<content subtype="regular"/>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+															<template subtype="element" match="levelLearned">
+																<children>
+																	<text fixtext=",&quot;level&quot;:"/>
+																	<content subtype="regular">
+																		<format basic-type="xsd" datatype="int"/>
+																	</content>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateSpells&quot;}"/>
+														</children>
+														<variables/>
+													</template>
+													<template subtype="element" filter="position() &gt; 1" match="defaultSpell">
+														<children>
+															<text fixtext=",{"/>
+															<template subtype="element" match="Name">
+																<children>
+																	<text fixtext="&quot;_id&quot;:&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
+																	<content subtype="regular"/>
+																	<text fixtext="&quot;"/>
+																</children>
+																<variables/>
+															</template>
+															<template subtype="element" match="levelLearned">
+																<children>
+																	<text fixtext=",&quot;level&quot;:"/>
+																	<content subtype="regular">
+																		<format basic-type="xsd" datatype="int"/>
+																	</content>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateSpells&quot;}"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="]"/>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+							<conditionbranch xpath="../../classSpellcasting/defaultSpells">
+								<children>
+									<template subtype="userdefined" match="..">
+										<children>
+											<template subtype="userdefined" match="..">
+												<children>
+													<template subtype="element" match="classSpellcasting">
+														<children>
+															<template subtype="element" match="defaultSpells">
+																<children>
+																	<text fixtext=",&quot;spells&quot;:["/>
+																	<template subtype="element" filter="position() = 1" match="defaultSpell">
+																		<children>
+																			<text fixtext="{"/>
+																			<template subtype="element" match="Name">
+																				<children>
+																					<text fixtext="&quot;_id&quot;:&quot;"/>
+																					<template subtype="attribute" match="FID">
+																						<children>
+																							<content subtype="regular"/>
+																						</children>
+																						<variables/>
+																					</template>
+																					<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="levelLearned">
+																				<children>
+																					<text fixtext=",&quot;level&quot;:"/>
+																					<content subtype="regular">
+																						<format basic-type="xsd" datatype="int"/>
+																					</content>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateSpells&quot;}"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<template subtype="element" filter="position() &gt; 1" match="defaultSpell">
+																		<children>
+																			<text fixtext=",{"/>
+																			<template subtype="element" match="Name">
+																				<children>
+																					<text fixtext="&quot;_id&quot;:&quot;"/>
+																					<template subtype="attribute" match="FID">
+																						<children>
+																							<content subtype="regular"/>
+																						</children>
+																						<variables/>
+																					</template>
+																					<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
+																					<content subtype="regular"/>
+																					<text fixtext="&quot;"/>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="levelLearned">
+																				<children>
+																					<text fixtext=",&quot;level&quot;:"/>
+																					<content subtype="regular">
+																						<format basic-type="xsd" datatype="int"/>
+																					</content>
+																				</children>
+																				<variables/>
+																			</template>
+																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateSpells&quot;}"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="]"/>
+																</children>
+																<variables/>
+															</template>
+														</children>
+														<variables/>
+													</template>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+							</conditionbranch>
+						</children>
+					</condition>
+					<text fixtext="},&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
 					<template subtype="element" match="officialContent">
 						<children>
 							<content subtype="regular"/>
@@ -5394,11 +6494,191 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 								</children>
 								<variables/>
 							</template>
+							<text fixtext="&quot;,&quot;classStat3&quot;:&quot;"/>
+							<template subtype="element" match="stat3">
+								<children>
+									<content subtype="regular"/>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="&quot;,&quot;classStat4&quot;:&quot;"/>
+							<template subtype="element" match="stat4">
+								<children>
+									<content subtype="regular"/>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="&quot;,&quot;classStat5&quot;:&quot;"/>
+							<template subtype="element" match="stat5">
+								<children>
+									<content subtype="regular"/>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="&quot;,&quot;classStat6&quot;:&quot;"/>
+							<template subtype="element" match="stat6">
+								<children>
+									<content subtype="regular"/>
+								</children>
+								<variables/>
+							</template>
 							<text fixtext="&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext=",&quot;classType&quot;:&quot;class&quot;,&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+					<text fixtext=",&quot;classType&quot;:&quot;class&quot;,&quot;defaults&quot;:{&quot;startingEquipment&quot;:["/>
+					<template subtype="element" match="classEquipment">
+						<children>
+							<template subtype="element" match="defaultChoices">
+								<children>
+									<template subtype="element" filter="position() = 1" match="includedItem">
+										<children>
+											<text fixtext="{"/>
+											<template subtype="attribute" match="FID">
+												<children>
+													<text fixtext="&quot;_id&quot;:&quot;"/>
+													<content subtype="regular"/>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+											<template subtype="element" match="inculdedItemName">
+												<children>
+													<text fixtext=",&quot;name&quot;:&quot;"/>
+													<content subtype="regular"/>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+											<template subtype="element" match="inculdedItemQuantity">
+												<children>
+													<text fixtext=",&quot;quantity&quot;:"/>
+													<content subtype="regular">
+														<format basic-type="xsd" datatype="nonNegativeInteger"/>
+													</content>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext="}"/>
+										</children>
+										<variables/>
+									</template>
+									<template subtype="element" filter="position() &gt; 1" match="includedItem">
+										<children>
+											<text fixtext=",{"/>
+											<template subtype="attribute" match="FID">
+												<children>
+													<text fixtext="&quot;_id&quot;:&quot;"/>
+													<content subtype="regular"/>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+											<template subtype="element" match="inculdedItemName">
+												<children>
+													<text fixtext=",&quot;name&quot;:&quot;"/>
+													<content subtype="regular"/>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+											<template subtype="element" match="inculdedItemQuantity">
+												<children>
+													<text fixtext=",&quot;quantity&quot;:"/>
+													<content subtype="regular">
+														<format basic-type="xsd" datatype="nonNegativeInteger"/>
+													</content>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext="}"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="]"/>
+					<template subtype="element" match="classSpellcasting">
+						<children>
+							<template subtype="element" match="defaultSpells">
+								<children>
+									<text fixtext=",&quot;spells&quot;:["/>
+									<template subtype="element" filter="position() = 1" match="defaultSpell">
+										<children>
+											<text fixtext="{"/>
+											<template subtype="element" match="Name">
+												<children>
+													<text fixtext="&quot;_id&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
+													<content subtype="regular"/>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+											<template subtype="element" match="levelLearned">
+												<children>
+													<text fixtext=",&quot;level&quot;:"/>
+													<content subtype="regular">
+														<format basic-type="xsd" datatype="int"/>
+													</content>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateSpells&quot;}"/>
+										</children>
+										<variables/>
+									</template>
+									<template subtype="element" filter="position() &gt; 1" match="defaultSpell">
+										<children>
+											<text fixtext=",{"/>
+											<template subtype="element" match="Name">
+												<children>
+													<text fixtext="&quot;_id&quot;:&quot;"/>
+													<template subtype="attribute" match="FID">
+														<children>
+															<content subtype="regular"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="&quot;,&quot;name&quot;:&quot;"/>
+													<content subtype="regular"/>
+													<text fixtext="&quot;"/>
+												</children>
+												<variables/>
+											</template>
+											<template subtype="element" match="levelLearned">
+												<children>
+													<text fixtext=",&quot;level&quot;:"/>
+													<content subtype="regular">
+														<format basic-type="xsd" datatype="int"/>
+													</content>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateSpells&quot;}"/>
+										</children>
+										<variables/>
+									</template>
+									<text fixtext="]"/>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="},&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
 					<template subtype="element" match="officialContent">
 						<children>
 							<content subtype="regular"/>

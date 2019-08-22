@@ -258,6 +258,75 @@
 																		</children>
 																		<variables/>
 																	</template>
+																	<template subtype="element" match="subraces">
+																		<children>
+																			<template subtype="element" match="subrace">
+																				<children>
+																					<template subtype="element" match="subraceSuggestedCharactersitics">
+																						<children>
+																							<template subtype="element" match="raceDescriptionFemale">
+																								<children>
+																									<text fixtext=","/>
+																									<calltemplate subtype="named" match="rollableTableFoundry">
+																										<parameters/>
+																									</calltemplate>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="raceDescriptionMale">
+																								<children>
+																									<text fixtext=","/>
+																									<calltemplate subtype="named" match="rollableTableFoundry">
+																										<parameters/>
+																									</calltemplate>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="raceImageFemale">
+																								<children>
+																									<text fixtext=","/>
+																									<calltemplate subtype="named" match="rollableTableFoundry">
+																										<parameters/>
+																									</calltemplate>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="raceImageMale">
+																								<children>
+																									<text fixtext=","/>
+																									<calltemplate subtype="named" match="rollableTableFoundry">
+																										<parameters/>
+																									</calltemplate>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="raceNameFemale">
+																								<children>
+																									<text fixtext=","/>
+																									<calltemplate subtype="named" match="rollableTableFoundry">
+																										<parameters/>
+																									</calltemplate>
+																								</children>
+																								<variables/>
+																							</template>
+																							<template subtype="element" match="raceNameMale">
+																								<children>
+																									<text fixtext=","/>
+																									<calltemplate subtype="named" match="rollableTableFoundry">
+																										<parameters/>
+																									</calltemplate>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																				</children>
+																				<variables/>
+																			</template>
+																		</children>
+																		<variables/>
+																	</template>
 																</children>
 																<variables/>
 															</template>
