@@ -625,7 +625,7 @@
 																								</children>
 																								<variables/>
 																							</template>
-																							<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																							<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																							<template subtype="element" match="inculdedItemQuantity">
 																								<children>
 																									<text fixtext=",&quot;quantity&quot;:"/>
@@ -658,7 +658,7 @@
 																								</children>
 																								<variables/>
 																							</template>
-																							<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																							<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																							<template subtype="element" match="inculdedItemQuantity">
 																								<children>
 																									<text fixtext=",&quot;quantity&quot;:"/>
@@ -753,7 +753,21 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="},&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+																	<text fixtext="},&quot;dieSize&quot;:"/>
+																	<template subtype="element" match="classHitPoints">
+																		<children>
+																			<template subtype="element" match="dieSize">
+																				<children>
+																					<content subtype="regular">
+																						<format basic-type="xsd" datatype="positiveInteger"/>
+																					</content>
+																				</children>
+																				<variables/>
+																			</template>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext=",&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
 																	<template subtype="element" match="officialContent">
 																		<children>
 																			<content subtype="regular"/>
@@ -1541,7 +1555,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																</children>
 																																<variables/>
 																															</template>
-																															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																															<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																															<template subtype="element" match="inculdedItemQuantity">
 																																<children>
 																																	<text fixtext=",&quot;quantity&quot;:"/>
@@ -1574,7 +1588,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																</children>
 																																<variables/>
 																															</template>
-																															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																															<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																															<template subtype="element" match="inculdedItemQuantity">
 																																<children>
 																																	<text fixtext=",&quot;quantity&quot;:"/>
@@ -1625,7 +1639,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																				</children>
 																																				<variables/>
 																																			</template>
-																																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																																			<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																																			<template subtype="element" match="inculdedItemQuantity">
 																																				<children>
 																																					<text fixtext=",&quot;quantity&quot;:"/>
@@ -1658,7 +1672,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																																				</children>
 																																				<variables/>
 																																			</template>
-																																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																																			<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																																			<template subtype="element" match="inculdedItemQuantity">
 																																				<children>
 																																					<text fixtext=",&quot;quantity&quot;:"/>
@@ -1859,7 +1873,31 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																							</conditionbranch>
 																						</children>
 																					</condition>
-																					<text fixtext="},&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+																					<text fixtext="},&quot;dieSize&quot;:"/>
+																					<template subtype="userdefined" match="..">
+																						<children>
+																							<template subtype="userdefined" match="..">
+																								<children>
+																									<template subtype="element" match="classHitPoints">
+																										<children>
+																											<template subtype="element" match="dieSize">
+																												<children>
+																													<content subtype="regular">
+																														<format basic-type="xsd" datatype="positiveInteger"/>
+																													</content>
+																												</children>
+																												<variables/>
+																											</template>
+																										</children>
+																										<variables/>
+																									</template>
+																								</children>
+																								<variables/>
+																							</template>
+																						</children>
+																						<variables/>
+																					</template>
+																					<text fixtext=",&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
 																					<template subtype="element" match="officialContent">
 																						<children>
 																							<content subtype="regular"/>

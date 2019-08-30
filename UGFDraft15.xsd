@@ -1037,6 +1037,17 @@
 																				<xs:element name="hitDice" type="xs:token"/>
 																				<xs:element name="hitPointsAt1stlevel" type="xs:token"/>
 																				<xs:element name="hitPointsAtHigherLevels" type="xs:token"/>
+																				<xs:element name="dieSize">
+																					<xs:simpleType>
+																						<xs:restriction base="xs:positiveInteger">
+																							<xs:enumeration value="6"/>
+																							<xs:enumeration value="8"/>
+																							<xs:enumeration value="10"/>
+																							<xs:enumeration value="12"/>
+																							<xs:enumeration value="20"/>
+																						</xs:restriction>
+																					</xs:simpleType>
+																				</xs:element>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
@@ -3690,6 +3701,7 @@
 			<xs:element ref="hyperlink"/>
 			<xs:element name="i" type="iType"/>
 			<xs:element ref="populate"/>
+			<xs:element name="span" type="xs:string"/>
 			<xs:element name="u" type="uType"/>
 			<xs:element ref="quoMark"/>
 		</xs:choice>
@@ -5471,6 +5483,58 @@
 			<xs:element name="UGFStandard" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
+						<xs:element name="ac" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="formula" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="base" type="xs:int"/>
+												<xs:element name="abilities" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="ability" maxOccurs="unbounded">
+																<xs:complexType>
+																	<xs:simpleContent>
+																		<xs:extension base="ability">
+																			<xs:attribute name="max" type="xs:int"/>
+																			<xs:attribute name="min" type="xs:int"/>
+																		</xs:extension>
+																	</xs:simpleContent>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="boost" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="base" type="xs:int"/>
+												<xs:element name="abilities" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="ability" maxOccurs="unbounded">
+																<xs:complexType>
+																	<xs:simpleContent>
+																		<xs:extension base="ability">
+																			<xs:attribute name="max" type="xs:int"/>
+																			<xs:attribute name="min" type="xs:int"/>
+																		</xs:extension>
+																	</xs:simpleContent>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
 						<xs:element name="artwork" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
@@ -6024,6 +6088,21 @@
 												<xs:element name="proficiency" type="xs:boolean" minOccurs="0"/>
 												<xs:element name="temporary" type="xs:boolean" minOccurs="0"/>
 											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="hp" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="boostPerLevel">
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="xs:int">
+													<xs:attribute name="class" type="class"/>
+												</xs:extension>
+											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
 								</xs:sequence>

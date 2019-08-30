@@ -65,3 +65,12 @@ s3.listObjectsV2(params, console.log);
     //process each file with fetch()
     }
 });
+
+      game.socket.emit("getFiles", "IncarnateAssets/Characters/dragonborn/male/*.png", {wildcard: true}, images => {
+        if (images.error) reject(images.error);
+		console.log(images.files);
+		return(images.files);
+      });
+
+
+npcGeneration({name:""})

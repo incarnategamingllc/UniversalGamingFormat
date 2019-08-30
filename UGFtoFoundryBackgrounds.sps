@@ -6,7 +6,7 @@
 			<nspair prefix="vc" uri="http://www.w3.org/2007/XMLSchema-versioning"/>
 		</namespaces>
 		<schemasources>
-			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_07_05.xml"/>
+			<xsdschemasource name="XML" main="1" schemafile="UGFDraft15.xsd" workingxmlfile="Incarnate-System2019_08_01.xml"/>
 		</schemasources>
 	</schemasources>
 	<modules>

@@ -270,170 +270,6 @@
 												</children>
 												<variables/>
 											</template>
-											<template subtype="element" match="npcChapter">
-												<children>
-													<template subtype="element" match="npcs">
-														<children>
-															<template subtype="element" match="npc">
-																<children>
-																	<template subtype="element" match="npcSpellcasting">
-																		<children>
-																			<template subtype="element" match="innate">
-																				<children>
-																					<template subtype="element" match="firstSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="secondSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="thirdSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="fourthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="fifthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="sixthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="seventhSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="eighthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="ninethSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="tenthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="eleventhSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="twelthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="thirteenthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="fourteenthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="fifteenthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="sixteenthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<template subtype="element" match="seventeenthSpellSlots">
-																						<children>
-																							<calltemplate subtype="named" match="spellcastingSpell">
-																								<parameters/>
-																							</calltemplate>
-																						</children>
-																						<variables/>
-																					</template>
-																					<calltemplate subtype="named" match="spellcastingSlots">
-																						<parameters/>
-																					</calltemplate>
-																				</children>
-																				<variables/>
-																			</template>
-																		</children>
-																		<variables/>
-																	</template>
-																</children>
-																<variables/>
-															</template>
-														</children>
-														<variables/>
-													</template>
-												</children>
-												<variables/>
-											</template>
 										</children>
 										<variables/>
 									</template>
@@ -818,6 +654,18 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 			<globaltemplate subtype="element" match="sound" schema-tree-path="$XML/root/chapters/GMsBlind/sections/section1/paragraph/sound">
 				<children>
 					<template subtype="element" match="sound">
+						<children>
+							<text fixtext="&lt;a href=\&quot;"/>
+							<template subtype="attribute" match="path">
+								<children>
+									<content subtype="regular"/>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="\&quot;&gt;"/>
+							<content subtype="regular"/>
+							<text fixtext="&lt;/a&gt;"/>
+						</children>
 						<variables/>
 					</template>
 				</children>
@@ -1218,6 +1066,18 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 								</children>
 								<variables/>
 							</template>
+						</children>
+						<variables/>
+					</template>
+				</children>
+			</globaltemplate>
+			<globaltemplate subtype="element" match="span" schema-tree-path="$XML/root/chapters/backgroundChapter/backgrounds/background/backgroundDescription/p/span">
+				<children>
+					<template subtype="element" match="span">
+						<children>
+							<text fixtext="&lt;span&gt;"/>
+							<content subtype="regular"/>
+							<text fixtext="&lt;/span&gt;"/>
 						</children>
 						<variables/>
 					</template>
@@ -3002,7 +2862,7 @@ else &quot;&quot;"/>
 										</children>
 										<variables/>
 									</template>
-									<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;}"/>
+									<text fixtext="&quot;,&quot;type&quot;:&quot;class&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateRaces&quot;}"/>
 								</children>
 								<variables/>
 							</template>
@@ -4389,7 +4249,7 @@ else&quot;0&quot;"/>
 					<calltemplate subtype="named" match="a00BackgroundDescriptionTemplate">
 						<parameters/>
 					</calltemplate>
-					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;Subclass&quot;}},&quot;folder&quot;:&quot;"/>
+					<text fixtext="&quot;},&quot;source&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Source&quot;},&quot;levels&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Class Levels&quot;,&quot;value&quot;:0},&quot;subclass&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Subclass&quot;,&quot;value&quot;:&quot;&quot;}},&quot;folder&quot;:&quot;"/>
 					<template subtype="attribute" match="FID">
 						<children>
 							<content subtype="regular"/>
@@ -4571,7 +4431,62 @@ else&quot;0&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="],&quot;tools&quot;:["/>
+					<text fixtext="],&quot;tables&quot;:{"/>
+					<template subtype="element" match="backgroundSuggestedCharacteristics">
+						<children>
+							<text fixtext="&quot;personality&quot;:&quot;"/>
+							<template subtype="element" match="backgroundPersonality">
+								<children>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="&quot;,&quot;bond&quot;:&quot;"/>
+							<template subtype="element" match="backgroundBond">
+								<children>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="&quot;,&quot;flaw&quot;:&quot;"/>
+							<template subtype="element" match="backgroundFlaw">
+								<children>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="&quot;,&quot;ideal&quot;:&quot;"/>
+							<template subtype="element" match="backgroundIdeal">
+								<children>
+									<template subtype="attribute" match="FID">
+										<children>
+											<content subtype="regular"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+							<text fixtext="&quot;"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="},&quot;tools&quot;:["/>
 					<template subtype="element" match="backgroundToolProficiencies">
 						<children>
 							<template subtype="element" match="description">
@@ -4749,7 +4664,11 @@ else&quot;0&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="AbilitiesFolder&quot;,&quot;flags&quot;:{&quot;children&quot;:["/>
+					<text fixtext="AbilitiesFolder&quot;,&quot;flags&quot;:{"/>
+					<calltemplate subtype="named" match="acFlag">
+						<parameters/>
+					</calltemplate>
+					<text fixtext="&quot;children&quot;:["/>
 					<calltemplate subtype="named" match="childrenVTT">
 						<parameters/>
 					</calltemplate>
@@ -5301,7 +5220,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																</children>
 																<variables/>
 															</template>
-															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+															<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 															<template subtype="element" match="inculdedItemQuantity">
 																<children>
 																	<text fixtext=",&quot;quantity&quot;:"/>
@@ -5334,7 +5253,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																</children>
 																<variables/>
 															</template>
-															<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+															<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 															<template subtype="element" match="inculdedItemQuantity">
 																<children>
 																	<text fixtext=",&quot;quantity&quot;:"/>
@@ -5385,7 +5304,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																				</children>
 																				<variables/>
 																			</template>
-																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																			<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																			<template subtype="element" match="inculdedItemQuantity">
 																				<children>
 																					<text fixtext=",&quot;quantity&quot;:"/>
@@ -5418,7 +5337,7 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 																				</children>
 																				<variables/>
 																			</template>
-																			<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+																			<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 																			<template subtype="element" match="inculdedItemQuantity">
 																				<children>
 																					<text fixtext=",&quot;quantity&quot;:"/>
@@ -5619,7 +5538,31 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 							</conditionbranch>
 						</children>
 					</condition>
-					<text fixtext="},&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+					<text fixtext="},&quot;dieSize&quot;:"/>
+					<template subtype="userdefined" match="..">
+						<children>
+							<template subtype="userdefined" match="..">
+								<children>
+									<template subtype="element" match="classHitPoints">
+										<children>
+											<template subtype="element" match="dieSize">
+												<children>
+													<content subtype="regular">
+														<format basic-type="xsd" datatype="positiveInteger"/>
+													</content>
+												</children>
+												<variables/>
+											</template>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext=",&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
 					<template subtype="element" match="officialContent">
 						<children>
 							<content subtype="regular"/>
@@ -5721,7 +5664,11 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="Folder&quot;,&quot;flags&quot;:{&quot;children&quot;:["/>
+					<text fixtext="Folder&quot;,&quot;flags&quot;:{"/>
+					<calltemplate subtype="named" match="acFlag">
+						<parameters/>
+					</calltemplate>
+					<text fixtext="&quot;children&quot;:["/>
 					<calltemplate subtype="named" match="childrenVTT">
 						<parameters/>
 					</calltemplate>
@@ -6550,7 +6497,7 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
-											<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+											<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 											<template subtype="element" match="inculdedItemQuantity">
 												<children>
 													<text fixtext=",&quot;quantity&quot;:"/>
@@ -6583,7 +6530,7 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 												</children>
 												<variables/>
 											</template>
-											<text fixtext=",&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
+											<text fixtext=",&quot;level&quot;:1,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateEquipment&quot;"/>
 											<template subtype="element" match="inculdedItemQuantity">
 												<children>
 													<text fixtext=",&quot;quantity&quot;:"/>
@@ -6678,7 +6625,21 @@ if ( ability = &quot;null&quot; ) then &quot;&quot; else &quot;&quot;"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="},&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
+					<text fixtext="},&quot;dieSize&quot;:"/>
+					<template subtype="element" match="classHitPoints">
+						<children>
+							<template subtype="element" match="dieSize">
+								<children>
+									<content subtype="regular">
+										<format basic-type="xsd" datatype="positiveInteger"/>
+									</content>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext=",&quot;family&quot;:&quot;class&quot;,&quot;official&quot;:&quot;"/>
 					<template subtype="element" match="officialContent">
 						<children>
 							<content subtype="regular"/>
@@ -9179,7 +9140,7 @@ if ( ability =&quot;charisma&quot; ) then &quot;cha&quot; else &quot;&quot;"/>
 							<conditionbranch xpath="(itemArmorClass)or(itemArmorClassBonus)">
 								<children>
 									<text fixtext=",&quot;armor&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Armor Value&quot;,&quot;value&quot;:"/>
-									<autocalc xpath="if ( itemArmorClass and itemArmorClassBonus ) then (itemArmorClass + itemArmorClassBonus) else if ( itemArmorClass ) then itemArmorClass else if ( itemArmorClassBonus ) then itemArmorClassBonus else &quot;0&quot;"/>
+									<autocalc xpath="if ( VTTcode/UGFStandard/ac/formula and VTTcode/UGFStandard/ac/boost ) then (VTTcode/UGFStandard/ac/formula/base + VTTcode/UGFStandard/ac/boost/base) else if ( VTTcode/UGFStandard/ac/formula ) then VTTcode/UGFStandard/ac/formula/base else if ( VTTcode/UGFStandard/ac/boost ) then VTTcode/UGFStandard/ac/boost/base else &quot;0&quot;"/>
 									<text fixtext="},&quot;armorType&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Armor Type&quot;,&quot;value&quot;:&quot;"/>
 									<autocalc xpath="if ( itemTypeSubtype = &quot;Light Armor&quot; ) then &quot;light&quot; else if ( itemTypeSubtype = &quot;Medium Armor&quot; ) then &quot;medium&quot; else if ( itemTypeSubtype = &quot;Heavy Armor&quot; ) then &quot;heavy&quot; else if ( itemTypeSubtype = &quot;Shield&quot; ) then &quot;shield&quot; else &quot;bonus&quot;"/>
 									<text fixtext="&quot;},&quot;strength&quot;:{&quot;type&quot;:&quot;String&quot;,&quot;label&quot;:&quot;Required Strength&quot;"/>
@@ -9364,6 +9325,9 @@ if ( ability =&quot;charisma&quot; ) then &quot;cha&quot; else &quot;&quot;"/>
 						</children>
 					</condition>
 					<text fixtext="},&quot;flags&quot;:{"/>
+					<calltemplate subtype="named" match="acFlag">
+						<parameters/>
+					</calltemplate>
 					<template subtype="element" match="itemRecommendedLevel">
 						<children>
 							<text fixtext="&quot;itemRecommendedLevel&quot;:"/>
@@ -10050,6 +10014,209 @@ else ."/>
 						<variables>
 							<variable name="spellReferenceCall" value="." valuetype="&lt;auto&gt;"/>
 						</variables>
+					</template>
+				</children>
+			</globaltemplate>
+			<globaltemplate subtype="named" match="acFlag">
+				<parameters/>
+				<children>
+					<template subtype="element" match="VTTcode">
+						<children>
+							<template subtype="element" match="UGFStandard">
+								<children>
+									<template subtype="element" match="ac">
+										<children>
+											<text fixtext="&quot;ac&quot;:{"/>
+											<template subtype="element" match="formula">
+												<children>
+													<text fixtext="&quot;formula&quot;:{"/>
+													<template subtype="element" match="base">
+														<children>
+															<text fixtext="&quot;base&quot;:"/>
+															<content subtype="regular">
+																<format basic-type="xsd" datatype="int"/>
+															</content>
+														</children>
+														<variables/>
+													</template>
+													<template subtype="element" match="abilities">
+														<children>
+															<condition>
+																<children>
+																	<conditionbranch xpath="../base">
+																		<children>
+																			<text fixtext=","/>
+																		</children>
+																	</conditionbranch>
+																</children>
+															</condition>
+															<text fixtext="&quot;abilities&quot;:["/>
+															<template subtype="element" filter="position() = 1" match="ability">
+																<children>
+																	<text fixtext="{&quot;ability&quot;:&quot;"/>
+																	<autocalc xpath="substring(.,1,3)"/>
+																	<text fixtext="&quot;"/>
+																	<template subtype="attribute" match="max">
+																		<children>
+																			<text fixtext=",&quot;max&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<template subtype="attribute" match="min">
+																		<children>
+																			<text fixtext=",&quot;min&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="}"/>
+																</children>
+																<variables/>
+															</template>
+															<template subtype="element" filter="position() &gt; 1" match="ability">
+																<children>
+																	<text fixtext=",{&quot;ability&quot;:&quot;"/>
+																	<autocalc xpath="substring(.,1,3)"/>
+																	<text fixtext="&quot;"/>
+																	<template subtype="attribute" match="max">
+																		<children>
+																			<text fixtext=",&quot;max&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<template subtype="attribute" match="min">
+																		<children>
+																			<text fixtext=",&quot;min&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="}"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="]"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="}"/>
+												</children>
+												<variables/>
+											</template>
+											<condition>
+												<children>
+													<conditionbranch xpath="formula and boost">
+														<children>
+															<text fixtext=","/>
+														</children>
+													</conditionbranch>
+												</children>
+											</condition>
+											<template subtype="element" match="boost">
+												<children>
+													<text fixtext="&quot;boost&quot;:{"/>
+													<template subtype="element" match="base">
+														<children>
+															<text fixtext="&quot;base&quot;:"/>
+															<content subtype="regular">
+																<format basic-type="xsd" datatype="int"/>
+															</content>
+														</children>
+														<variables/>
+													</template>
+													<template subtype="element" match="abilities">
+														<children>
+															<condition>
+																<children>
+																	<conditionbranch xpath="../base">
+																		<children>
+																			<text fixtext=","/>
+																		</children>
+																	</conditionbranch>
+																</children>
+															</condition>
+															<text fixtext="&quot;abilities&quot;:["/>
+															<template subtype="element" filter="position() = 1" match="ability">
+																<children>
+																	<text fixtext="{&quot;ability&quot;:&quot;"/>
+																	<autocalc xpath="substring(.,1,3)"/>
+																	<text fixtext="&quot;"/>
+																	<template subtype="attribute" match="max">
+																		<children>
+																			<text fixtext=",&quot;max&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<template subtype="attribute" match="min">
+																		<children>
+																			<text fixtext=",&quot;min&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="}"/>
+																</children>
+																<variables/>
+															</template>
+															<template subtype="element" filter="position() &gt; 1" match="ability">
+																<children>
+																	<text fixtext=",{&quot;ability&quot;:&quot;"/>
+																	<autocalc xpath="substring(.,1,3)"/>
+																	<text fixtext="&quot;"/>
+																	<template subtype="attribute" match="max">
+																		<children>
+																			<text fixtext=",&quot;max&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<template subtype="attribute" match="min">
+																		<children>
+																			<text fixtext=",&quot;min&quot;:"/>
+																			<content subtype="regular">
+																				<format basic-type="xsd" datatype="int"/>
+																			</content>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="}"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="]"/>
+														</children>
+														<variables/>
+													</template>
+													<text fixtext="}"/>
+												</children>
+												<variables/>
+											</template>
+											<text fixtext="},"/>
+										</children>
+										<variables/>
+									</template>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
 					</template>
 				</children>
 			</globaltemplate>
