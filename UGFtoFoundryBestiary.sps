@@ -1681,7 +1681,7 @@ else &quot;1&quot;"/>
 																								</children>
 																								<variables/>
 																							</template>
-																							<text fixtext="},"/>
+																							<text fixtext="}"/>
 																						</children>
 																						<variables>
 																							<variable name="includedItem" value="@UGFLinkReference" valuetype="&lt;auto&gt;"/>

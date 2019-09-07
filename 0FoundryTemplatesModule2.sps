@@ -5886,7 +5886,14 @@ if ( ../../classSpellcasting/ability =&quot;charisma&quot; ) then &quot;cha&quot
 			<globaltemplate subtype="named" match="a00EquipmentTemplate">
 				<parameters/>
 				<children>
-					<text fixtext=",&quot;data&quot;:{&quot;quantity&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Quantity&quot;,&quot;value&quot;:1}"/>
+					<text fixtext=",&quot;name&quot;:&quot;"/>
+					<template subtype="element" match="itemName">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;data&quot;:{&quot;quantity&quot;:{&quot;type&quot;:&quot;Number&quot;,&quot;label&quot;:&quot;Quantity&quot;,&quot;value&quot;:1}"/>
 					<calltemplate subtype="named" match="a00EquipmentTemplateContents">
 						<parameters/>
 					</calltemplate>
@@ -9529,14 +9536,7 @@ else ."/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="]},&quot;name&quot;:&quot;"/>
-					<template subtype="element" match="itemName">
-						<children>
-							<content subtype="regular"/>
-						</children>
-						<variables/>
-					</template>
-					<text fixtext="&quot;,&quot;type&quot;:&quot;"/>
+					<text fixtext="]},&quot;type&quot;:&quot;"/>
 					<autocalc xpath="if ( itemType = &quot;Weapon&quot; ) then &quot;weapon&quot; else if ( itemType = &quot;Armor&quot; ) then &quot;equipment&quot; else if ( VTTcode/UGFStandard/consumption ) then &quot;consumable&quot; else if ( VTTcode/UGFStandard/skill/ability ) then &quot;tool&quot; else &quot;backpack&quot;"/>
 					<text fixtext="&quot;"/>
 					<calltemplate subtype="named" match="img">

@@ -2519,7 +2519,16 @@
 																	<xs:element name="npcSkills">
 																		<xs:complexType mixed="true">
 																			<xs:sequence>
-																				<xs:element ref="crossReference" minOccurs="0" maxOccurs="unbounded"/>
+																				<xs:element name="crossReference" minOccurs="0" maxOccurs="unbounded">
+																					<xs:complexType>
+																						<xs:simpleContent>
+																							<xs:extension base="xs:token">
+																								<xs:attributeGroup ref="UGFLinkReference"/>
+																								<xs:attribute name="proficiency" type="skillProficiency"/>
+																							</xs:extension>
+																						</xs:simpleContent>
+																					</xs:complexType>
+																				</xs:element>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
