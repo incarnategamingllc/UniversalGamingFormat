@@ -356,7 +356,7 @@
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="\n&lt;p&gt;&lt;strong&gt;Official Rules:&lt;/strong&gt; &lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;LdjYJQmCmLygUMn9\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;incarnateRules\&quot; data-parent=\&quot;KwJ1TgTcdrhyKOiD\&quot;&gt;Using Each Ability&lt;/span&gt;&lt;/p&gt;\n&quot;}"/>
+																	<text fixtext="\n&lt;p&gt;&lt;strong&gt;Official Rules:&lt;/strong&gt; &lt;span class=\&quot;crossReference\&quot; data-fid=\&quot;LdjYJQmCmLygUMn9\&quot; data-type=\&quot;JournalEntry\&quot; data-pack=\&quot;world.incarnateRules\&quot; data-parent=\&quot;KwJ1TgTcdrhyKOiD\&quot;&gt;Using Each Ability&lt;/span&gt;&lt;/p&gt;\n&quot;}"/>
 																	<newline/>
 																</children>
 																<variables/>

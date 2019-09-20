@@ -578,7 +578,7 @@ if ( contains(@UGFLinkReference,&quot;sKsK&quot;) ) then &quot;JournalEntry&quot
 if ( contains(@UGFLinkReference,&quot;sPsP&quot;) ) then &quot;Item&quot; else 
 if ( contains(@UGFLinkReference,&quot;tAtA&quot;) ) then &quot;Table&quot;
 else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
-							<text fixtext="\&quot; data-pack=\&quot;incarnateFiveECompendia."/>
+							<text fixtext="\&quot; data-pack=\&quot;world."/>
 							<autocalc xpath="if ( contains(@UGFLinkReference,&quot;bKbK&quot;) ) then &quot;incarnateBackground&quot; else 
 if ( contains(@UGFLinkReference,&quot;bKbO&quot;) ) then &quot;&quot; else 
 if ( contains(@UGFLinkReference,&quot;bKfE&quot;) ) then &quot;incarnateBackground&quot; else 
