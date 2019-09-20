@@ -2303,7 +2303,7 @@ else &quot;&quot;"/>
 												<children>
 													<template subtype="element" match="artwork">
 														<children>
-															<autocalc xpath="if ( contains(token,&quot;png&quot;) ) then replace(token,&quot;https://s3.us-east-2.amazonaws.com/incarnategamingassets&quot;,&quot;IncarnateAssets&quot;) else token"/>
+															<content subtype="regular"/>
 														</children>
 														<variables/>
 													</template>

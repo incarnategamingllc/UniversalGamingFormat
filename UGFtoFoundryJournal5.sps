@@ -150,24 +150,6 @@
 												</children>
 												<variables/>
 											</template>
-											<template subtype="element" match="GMsBlind">
-												<children>
-													<text fixtext="{&quot;_id&quot;:&quot;"/>
-													<template subtype="attribute" match="FID">
-														<children>
-															<content subtype="regular"/>
-														</children>
-														<variables/>
-													</template>
-													<text fixtext="&quot;,&quot;name&quot;:&quot;GMs Blind&quot;,&quot;permission&quot;:{&quot;default&quot;:0},&quot;folder&quot;:&quot;frontMatterFolder&quot;,&quot;flags&quot;:{},&quot;type&quot;:&quot;text&quot;,&quot;entryTime&quot;:1553218384828,&quot;content&quot;:&quot;"/>
-													<calltemplate subtype="named" match="sections">
-														<parameters/>
-													</calltemplate>
-													<text fixtext="&quot;}"/>
-													<newline/>
-												</children>
-												<variables/>
-											</template>
 											<template subtype="element" match="PlayerQuickSheet">
 												<children>
 													<text fixtext="{&quot;_id&quot;:&quot;"/>
