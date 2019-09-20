@@ -1489,7 +1489,7 @@ if ( . = &quot;Undercommon&quot; ) then &quot;undercommon&quot; else &quot;&quot
 																		</children>
 																		<variables/>
 																	</template>
-																	<text fixtext="&quot;,&quot;pack&quot;:&quot;incarnateFiveECompendia.incarnateBestiary&quot;,&quot;type&quot;:&quot;actor&quot;,&quot;_id&quot;:&quot;"/>
+																	<text fixtext="&quot;,&quot;pack&quot;:&quot;world.incarnateBestiary&quot;,&quot;type&quot;:&quot;actor&quot;,&quot;_id&quot;:&quot;"/>
 																	<template subtype="attribute" match="FID">
 																		<children>
 																			<content subtype="regular"/>
