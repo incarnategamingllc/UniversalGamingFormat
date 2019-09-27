@@ -74,3 +74,14 @@ s3.listObjectsV2(params, console.log);
 
 
 npcGeneration({name:""})
+
+game.actors.entities.find(actor => actor.data.name === "Rufan son of Yilon of clan Lutgehr")
+
+var actors = game.actors.entities
+actors.forEach(actor =>{
+	var token = JSON.parse(JSON.stringify(actor.data.token));
+	token.bar1.attribute = "attributes.hp";
+	token.bar2.attribute = "";
+	displayBars:40;
+	actor.update({token:token});
+});
