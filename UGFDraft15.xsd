@@ -3256,6 +3256,7 @@
 			<xs:element ref="genLink"/>
 			<xs:element ref="hyperlink"/>
 			<xs:element ref="populate"/>
+			<xs:element ref="roll"/>
 			<xs:element ref="quoMark"/>
 		</xs:choice>
 	</xs:complexType>
@@ -3682,6 +3683,7 @@
 			<xs:element ref="genLink"/>
 			<xs:element ref="hyperlink"/>
 			<xs:element ref="populate"/>
+			<xs:element ref="roll"/>
 			<xs:element name="u" type="uType"/>
 			<xs:element ref="quoMark"/>
 		</xs:choice>
@@ -3698,6 +3700,7 @@
 						<xs:element ref="genLink"/>
 						<xs:element ref="hyperlink"/>
 						<xs:element ref="populate"/>
+						<xs:element ref="roll"/>
 						<xs:element name="u" type="uType"/>
 						<xs:element ref="quoMark"/>
 					</xs:choice>
@@ -3710,6 +3713,7 @@
 			<xs:element ref="hyperlink"/>
 			<xs:element name="i" type="iType"/>
 			<xs:element ref="populate"/>
+			<xs:element ref="roll"/>
 			<xs:element name="span" type="xs:string"/>
 			<xs:element name="u" type="uType"/>
 			<xs:element ref="quoMark"/>
@@ -7385,4 +7389,11 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:element name="roll">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="calculate" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

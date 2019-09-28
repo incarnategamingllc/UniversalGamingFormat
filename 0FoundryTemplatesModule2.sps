@@ -407,9 +407,9 @@
 				<children>
 					<template subtype="element" match="speechBubble">
 						<children>
-							<text fixtext="&lt;p&gt;"/>
+							<text fixtext="&lt;section class=\&quot;secret\&quot;&gt;&lt;p&gt;"/>
 							<content subtype="regular"/>
-							<text fixtext="&lt;/p&gt;\n"/>
+							<text fixtext="&lt;/p&gt;&lt;/section&gt;\n"/>
 						</children>
 						<variables/>
 					</template>
@@ -1078,6 +1078,30 @@ else concat(@UGFLinkReference,&quot; type not found&quot;)"/>
 							<text fixtext="&lt;span&gt;"/>
 							<content subtype="regular"/>
 							<text fixtext="&lt;/span&gt;"/>
+						</children>
+						<variables/>
+					</template>
+				</children>
+			</globaltemplate>
+			<globaltemplate subtype="element" match="roll" schema-tree-path="roll">
+				<children>
+					<template subtype="element" match="roll">
+						<children>
+							<text fixtext="@Roll["/>
+							<content subtype="regular"/>
+							<text fixtext="]"/>
+						</children>
+						<variables/>
+					</template>
+				</children>
+			</globaltemplate>
+			<globaltemplate subtype="element" match="privateParagraph" schema-tree-path="element(*,paragraphType)/privateParagraph">
+				<children>
+					<template subtype="element" match="privateParagraph">
+						<children>
+							<text fixtext="&lt;section class=\&quot;secret\&quot;&gt;"/>
+							<content subtype="regular"/>
+							<text fixtext="&lt;/section&gt;"/>
 						</children>
 						<variables/>
 					</template>
