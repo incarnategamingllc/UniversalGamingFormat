@@ -1,3 +1,5 @@
+CONFIG.debug.hooks = true;
+
 canvas.walls.draw()
 
 $("#sidebar").hide();
