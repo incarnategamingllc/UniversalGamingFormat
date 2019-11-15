@@ -87,3 +87,11 @@ actors.forEach(actor =>{
 	displayBars:40;
 	actor.update({token:token});
 });
+
+
+var tempSpells = game.packs.find(p => p.metadata.name === "spells").getContent();
+tempSpells.then(spells =>{
+	spells.forEach(spell =>{
+		Item.create(spell.data);
+	});
+});

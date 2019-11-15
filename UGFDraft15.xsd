@@ -1004,6 +1004,15 @@
 																									</xs:sequence>
 																								</xs:complexType>
 																							</xs:element>
+																							<xs:element name="darkvision" minOccurs="0">
+																								<xs:complexType>
+																									<xs:simpleContent>
+																										<xs:extension base="darkvision">
+																											<xs:attribute name="magical" type="xs:boolean"/>
+																										</xs:extension>
+																									</xs:simpleContent>
+																								</xs:complexType>
+																							</xs:element>
 																							<xs:element ref="officialContent"/>
 																							<xs:element ref="publications" minOccurs="0"/>
 																							<xs:element ref="rulesets" minOccurs="0"/>
@@ -1292,6 +1301,15 @@
 																					</xs:complexType>
 																				</xs:element>
 																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																	<xs:element name="darkvision" minOccurs="0">
+																		<xs:complexType>
+																			<xs:simpleContent>
+																				<xs:extension base="darkvision">
+																					<xs:attribute name="magical" type="xs:boolean"/>
+																				</xs:extension>
+																			</xs:simpleContent>
 																		</xs:complexType>
 																	</xs:element>
 																	<xs:element ref="officialContent"/>
@@ -4244,11 +4262,13 @@
 			<xs:enumeration value="Exhaustion"/>
 			<xs:enumeration value="Frightened"/>
 			<xs:enumeration value="Grappled"/>
+			<xs:enumeration value="Incapacitated"/>
 			<xs:enumeration value="Paralyzed"/>
 			<xs:enumeration value="Petrified"/>
 			<xs:enumeration value="Poisoned"/>
 			<xs:enumeration value="Prone"/>
 			<xs:enumeration value="Restrained"/>
+			<xs:enumeration value="Stable"/>
 			<xs:enumeration value="Stunned"/>
 			<xs:enumeration value="Unconscious"/>
 		</xs:restriction>
@@ -4293,6 +4313,19 @@
 	<xs:simpleType name="damagediceType">
 		<xs:restriction base="xs:token">
 			<xs:pattern value="(\d+d(4|6|8|10|12|20) )(acid|bludgeoning|cold|fire|force|lightning|necrotic|piercing|poison|psychic|radiant|slashing|thunder)(, ?magic)?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="darkvision">
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="-240"/>
+			<xs:enumeration value="-180"/>
+			<xs:enumeration value="-120"/>
+			<xs:enumeration value="-60"/>
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="60"/>
+			<xs:enumeration value="120"/>
+			<xs:enumeration value="180"/>
+			<xs:enumeration value="240"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="diceType2">
@@ -5247,14 +5280,13 @@
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="darkvision">
-							<xs:simpleType>
-								<xs:restriction base="xs:integer">
-									<xs:enumeration value="0"/>
-									<xs:enumeration value="60"/>
-									<xs:enumeration value="120"/>
-									<xs:enumeration value="180"/>
-								</xs:restriction>
-							</xs:simpleType>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="darkvision">
+										<xs:attribute name="magical" type="xs:boolean"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="raceTrait" maxOccurs="unbounded">
 							<xs:complexType>
@@ -5340,17 +5372,13 @@
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element name="darkvision">
-													<xs:simpleType>
-														<xs:restriction base="xs:integer">
-															<xs:enumeration value="-180"/>
-															<xs:enumeration value="-120"/>
-															<xs:enumeration value="-60"/>
-															<xs:enumeration value="0"/>
-															<xs:enumeration value="60"/>
-															<xs:enumeration value="120"/>
-															<xs:enumeration value="180"/>
-														</xs:restriction>
-													</xs:simpleType>
+													<xs:complexType>
+														<xs:simpleContent>
+															<xs:extension base="darkvision">
+																<xs:attribute name="magical" type="xs:boolean"/>
+															</xs:extension>
+														</xs:simpleContent>
+													</xs:complexType>
 												</xs:element>
 												<xs:element name="subraceTrait" maxOccurs="unbounded">
 													<xs:complexType>
@@ -6179,6 +6207,21 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
+						<xs:element name="skillsLearned" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="skill" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="skill-pure">
+													<xs:attribute name="proficiency" type="skillProficiency"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
 						<xs:element name="Spells" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
@@ -6211,6 +6254,21 @@
 													</xs:simpleType>
 												</xs:element>
 											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="toolsLearned" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="tool" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="skill-tools">
+													<xs:attribute name="proficiency" type="skillProficiency"/>
+												</xs:extension>
+											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
