@@ -311,6 +311,7 @@
 														<xs:element name="background" maxOccurs="unbounded">
 															<xs:complexType>
 																<xs:sequence>
+																	<xs:element name="backgroundAuthor" type="author"/>
 																	<xs:element name="backgroundDescription" type="paragraphType"/>
 																	<xs:element name="backgroundFeature">
 																		<xs:complexType>
@@ -329,6 +330,7 @@
 																			<xs:attribute name="FID" type="FID" use="required"/>
 																		</xs:complexType>
 																	</xs:element>
+																	<xs:element name="backgroundGP" type="xs:int" default="15"/>
 																	<xs:element name="backgroundLanguages" minOccurs="0">
 																		<xs:complexType>
 																			<xs:sequence>
@@ -505,9 +507,9 @@
 																		<xs:complexType>
 																			<xs:sequence>
 																				<xs:element name="tier1" type="rollableTableType"/>
-																				<xs:element name="tier2" type="rollableTableType"/>
-																				<xs:element name="tier3" type="rollableTableType"/>
-																				<xs:element name="tier4" type="rollableTableType"/>
+																				<xs:element name="tier2" type="rollableTableType" minOccurs="0"/>
+																				<xs:element name="tier3" type="rollableTableType" minOccurs="0"/>
+																				<xs:element name="tier4" type="rollableTableType" minOccurs="0"/>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
@@ -1908,7 +1910,7 @@
 																						<xs:element name="author" maxOccurs="unbounded">
 																							<xs:complexType>
 																								<xs:simpleContent>
-																									<xs:extension base="npcAuthor">
+																									<xs:extension base="author">
 																										<xs:attribute name="FID" type="FID" use="required"/>
 																										<xs:attribute name="UGFReference" use="required">
 																											<xs:simpleType>
@@ -2325,7 +2327,7 @@
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:element name="npcAuthor" type="npcAuthor"/>
+																	<xs:element name="npcAuthor" type="author"/>
 																	<xs:element name="npcConditionImmunities" minOccurs="0">
 																		<xs:complexType mixed="true">
 																			<xs:sequence>
@@ -3422,7 +3424,6 @@
 					</xs:attribute>
 				</xs:complexType>
 			</xs:element>
-			<xs:element ref="hyperlink"/>
 			<xs:element name="image">
 				<xs:complexType>
 					<xs:simpleContent>
@@ -4044,6 +4045,16 @@
 			<xs:enumeration value="heal"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="author">
+		<xs:restriction base="xs:Name">
+			<xs:enumeration value="DanDWiki"/>
+			<xs:enumeration value="LeviFoxend"/>
+			<xs:enumeration value="ProNobis"/>
+			<xs:enumeration value="SRD"/>
+			<xs:enumeration value="Wolfe"/>
+			<xs:enumeration value="Yasuragi"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="background">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Acrobat"/>
@@ -4345,6 +4356,12 @@
 			<xs:pattern value="[0-9a-zA-Z]{16}"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="higherLevel">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="cantrip"/>
+			<xs:enumeration value="spell slot"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="itemCarryingCapacity">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="-"/>
@@ -4541,14 +4558,6 @@
 			<xs:enumeration value="usually lawful good"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="npcAuthor">
-		<xs:restriction base="xs:Name">
-			<xs:enumeration value="ProNobis"/>
-			<xs:enumeration value="SRD"/>
-			<xs:enumeration value="Wolfe"/>
-			<xs:enumeration value="Yasuragi"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="npcDamageType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="acid"/>
@@ -4594,7 +4603,7 @@
 			<xs:enumeration value="Aloii"/>
 			<xs:enumeration value="Abyssal"/>
 			<xs:enumeration value="Aquan"/>
-			<xs:enumeration value="Assassin's Cant"/>
+			<xs:enumeration value="Assassins' Cant"/>
 			<xs:enumeration value="Auran"/>
 			<xs:enumeration value="Choice"/>
 			<xs:enumeration value="Celestial"/>
@@ -4621,7 +4630,7 @@
 			<xs:enumeration value="Sphinx"/>
 			<xs:enumeration value="Sylvan"/>
 			<xs:enumeration value="Terran"/>
-			<xs:enumeration value="Thieve's Cant"/>
+			<xs:enumeration value="Thieves' Cant"/>
 			<xs:enumeration value="Undercommon"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -4983,6 +4992,19 @@
 			<xs:enumeration value="1 year"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="spellCastingTimeUnits">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="bonus action"/>
+			<xs:enumeration value="reaction"/>
+			<xs:enumeration value="action"/>
+			<xs:enumeration value="minute"/>
+			<xs:enumeration value="hour"/>
+			<xs:enumeration value="day"/>
+			<xs:enumeration value="year"/>
+			<xs:enumeration value="legendary"/>
+			<xs:enumeration value="lair"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="spellComponents">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="V, S, M"/>
@@ -5023,6 +5045,20 @@
 			<xs:enumeration value="Until dispelled or triggered"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="spellDurationTimeUnits">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="instantaneous"/>
+			<xs:enumeration value="turn"/>
+			<xs:enumeration value="round"/>
+			<xs:enumeration value="minute"/>
+			<xs:enumeration value="hour"/>
+			<xs:enumeration value="day"/>
+			<xs:enumeration value="month"/>
+			<xs:enumeration value="year"/>
+			<xs:enumeration value="permanent"/>
+			<xs:enumeration value="special"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="simpleEffectDuration">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="1 minute"/>
@@ -5061,6 +5097,38 @@
 			<xs:pattern value="Special"/>
 			<xs:pattern value="Touch"/>
 			<xs:pattern value="Unlimited"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="spellRangeShape">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Beast"/>
+			<xs:enumeration value="Circle"/>
+			<xs:enumeration value="Cone"/>
+			<xs:enumeration value="Creature"/>
+			<xs:enumeration value="Cube"/>
+			<xs:enumeration value="Cylinder"/>
+			<xs:enumeration value="Diameter"/>
+			<xs:enumeration value="Hemisphere"/>
+			<xs:enumeration value="Line"/>
+			<xs:enumeration value="Object"/>
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="Radius"/>
+			<xs:enumeration value="Self"/>
+			<xs:enumeration value="Space"/>
+			<xs:enumeration value="Sphere"/>
+			<xs:enumeration value="Wall"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="spellRangeUnit">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Any"/>
+			<xs:enumeration value="Foot"/>
+			<xs:enumeration value="Mile"/>
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="Self"/>
+			<xs:enumeration value="Same Plane"/>
+			<xs:enumeration value="Special"/>
+			<xs:enumeration value="Touch"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="spellSchool">
@@ -5428,15 +5496,28 @@
 	</xs:complexType>
 	<xs:complexType name="spellType">
 		<xs:sequence>
+			<xs:element name="author" type="author"/>
 			<xs:element ref="officialContent"/>
 			<xs:element ref="publications" minOccurs="0"/>
 			<xs:element ref="rulesets" minOccurs="0"/>
-			<xs:element name="spellCastingTime" type="spellCastingTime"/>
+			<xs:element name="spellCastingTime">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="spellCastingTime">
+							<xs:attribute name="condition" type="xs:token"/>
+							<xs:attribute name="number" type="xs:int"/>
+							<xs:attribute name="unit" type="spellCastingTimeUnits"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="spellComponents">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="spellComponents">
 							<xs:attribute name="components" type="xs:token"/>
+							<xs:attribute name="cost" type="xs:nonNegativeInteger"/>
+							<xs:attribute name="consumed" type="xs:boolean"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -5447,10 +5528,13 @@
 					<xs:simpleContent>
 						<xs:extension base="spellDuration">
 							<xs:attribute name="concentration" type="xs:boolean"/>
+							<xs:attribute name="number" type="xs:int"/>
+							<xs:attribute name="unit" type="spellDurationTimeUnits" use="required"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="spellLegal" type="paragraphType" minOccurs="0"/>
 			<xs:element name="spellLevel">
 				<xs:simpleType>
 					<xs:restriction base="xs:int">
@@ -5460,7 +5544,27 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="spellName" type="xs:token"/>
-			<xs:element name="spellRange" type="spellRange"/>
+			<xs:element name="spellRange">
+				<xs:complexType mixed="false">
+					<xs:sequence>
+						<xs:element name="text" type="spellRange" minOccurs="0"/>
+						<xs:element name="origin" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute name="number" type="xs:nonNegativeInteger"/>
+								<xs:attribute name="unit" type="spellRangeUnit"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="target" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute name="number" type="xs:nonNegativeInteger"/>
+								<xs:attribute name="shape" type="spellRangeShape"/>
+								<xs:attribute name="unit" type="spellRangeUnit"/>
+								<xs:attribute name="unoccupiedSpace" type="xs:boolean"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="spellRitual" type="xs:boolean" minOccurs="0"/>
 			<xs:element name="spellSchool" type="spellSchool"/>
 			<xs:element name="spellSource" type="spellSource"/>
@@ -5608,12 +5712,19 @@
 									</xs:element>
 									<xs:element name="irregularAttack" minOccurs="0" maxOccurs="unbounded">
 										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="diceType2">
-													<xs:attribute name="modifier" type="xs:int"/>
-													<xs:attribute name="ability" type="ability"/>
-												</xs:extension>
-											</xs:simpleContent>
+											<xs:sequence>
+												<xs:element name="dice">
+													<xs:complexType>
+														<xs:simpleContent>
+															<xs:extension base="diceType2">
+																<xs:attribute name="ability" type="ability"/>
+																<xs:attribute name="modifier" type="xs:int"/>
+															</xs:extension>
+														</xs:simpleContent>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="higherLevelDamage" type="higherLevelsType" minOccurs="0"/>
+											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
@@ -5858,15 +5969,9 @@
 															</xs:element>
 															<xs:element name="damageBuff" minOccurs="0" maxOccurs="unbounded">
 																<xs:complexType>
-																	<xs:sequence>
-																		<xs:element name="ability" type="ability" minOccurs="0"/>
-																		<xs:element name="criticalDice" type="xs:int" minOccurs="0"/>
-																		<xs:element name="damage" type="diceType2" minOccurs="0"/>
-																		<xs:element name="damageMaterial" type="itemDamageMaterial" minOccurs="0"/>
-																		<xs:element name="damageType" type="itemDamageType" minOccurs="0"/>
-																		<xs:element name="modifier" type="xs:int" minOccurs="0"/>
-																		<xs:element name="proficiency" type="xs:boolean" minOccurs="0"/>
-																	</xs:sequence>
+																	<xs:complexContent>
+																		<xs:extension base="damageType_1"/>
+																	</xs:complexContent>
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="damageMaterial" type="itemDamageMaterial" minOccurs="0"/>
@@ -6125,12 +6230,33 @@
 													</xs:complexType>
 												</xs:element>
 												<xs:element name="heal" type="diceType2" minOccurs="0"/>
+												<xs:element name="higherLevelDamage" type="higherLevelsType" minOccurs="0"/>
 												<xs:element name="modifier" type="xs:int" minOccurs="0"/>
 												<xs:element name="proficiency" type="xs:boolean" minOccurs="0"/>
 												<xs:element name="temporary" type="xs:boolean" minOccurs="0"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="higherLevels" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="duration" minOccurs="0">
+										<xs:complexType>
+											<xs:attribute name="number" type="xs:nonNegativeInteger" use="required"/>
+											<xs:attribute name="unit" type="spellDurationTimeUnits" use="required"/>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="target" minOccurs="0">
+										<xs:complexType>
+											<xs:attribute name="number" type="xs:nonNegativeInteger" use="required"/>
+											<xs:attribute name="shape" type="spellRangeShape" use="required"/>
+											<xs:attribute name="unit" type="spellRangeUnit"/>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="type" type="higherLevel" default="spell slot"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -6752,9 +6878,16 @@
 		<xs:sequence>
 			<xs:element name="ability" type="ability" minOccurs="0"/>
 			<xs:element name="criticalDice" type="xs:int" minOccurs="0"/>
-			<xs:element name="damage" type="diceType2"/>
+			<xs:element name="damage" type="diceType2" minOccurs="0"/>
 			<xs:element name="damageMaterial" type="itemDamageMaterial" minOccurs="0"/>
-			<xs:element name="damageType" type="itemDamageType"/>
+			<xs:element name="damageType" type="itemDamageType" minOccurs="0"/>
+			<xs:element name="higherLevelDamage" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="higherLevelsType"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="modifier" type="xs:int" minOccurs="0"/>
 			<xs:element name="proficiency" type="xs:boolean" minOccurs="0"/>
 		</xs:sequence>
@@ -6763,7 +6896,7 @@
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="xs:token">
-					<xs:attribute name="uri" type="xs:token"/>
+					<xs:attribute name="uri" type="xs:token" use="required"/>
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
@@ -7454,4 +7587,12 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<xs:complexType name="higherLevelsType">
+		<xs:sequence>
+			<xs:element name="ability" type="ability" minOccurs="0"/>
+			<xs:element name="type" type="higherLevel" default="spell slot"/>
+			<xs:element name="damage" type="diceType2"/>
+			<xs:element name="modifier" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
