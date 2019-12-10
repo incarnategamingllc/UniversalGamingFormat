@@ -884,6 +884,7 @@
 														<xs:element name="class" maxOccurs="unbounded">
 															<xs:complexType>
 																<xs:sequence>
+																	<xs:element name="author" type="author"/>
 																	<xs:element name="classAmmendments" minOccurs="0">
 																		<xs:complexType>
 																			<xs:complexContent>
@@ -903,6 +904,7 @@
 																	<xs:element name="classArchetypes">
 																		<xs:complexType>
 																			<xs:sequence>
+																				<xs:element name="archetypeDescription" type="paragraphType"/>
 																				<xs:element name="archetypeLevel">
 																					<xs:simpleType>
 																						<xs:restriction base="xs:int">
@@ -911,9 +913,19 @@
 																						</xs:restriction>
 																					</xs:simpleType>
 																				</xs:element>
+																				<xs:element name="archetypeName">
+																					<xs:complexType>
+																						<xs:simpleContent>
+																							<xs:extension base="xs:string">
+																								<xs:attribute name="plural" type="xs:string"/>
+																							</xs:extension>
+																						</xs:simpleContent>
+																					</xs:complexType>
+																				</xs:element>
 																				<xs:element name="classArchetype" maxOccurs="unbounded">
 																					<xs:complexType>
 																						<xs:sequence>
+																							<xs:element name="author" type="author"/>
 																							<xs:element name="classArchetypeDescription" type="paragraphType"/>
 																							<xs:element name="classArchetypeEquipment" minOccurs="0">
 																								<xs:complexType>
@@ -3245,6 +3257,130 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="artists">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="artist" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="birth" type="dateType"/>
+										<xs:element name="death" type="dateType"/>
+										<xs:element name="ethnicity">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="American"/>
+													<xs:enumeration value="British"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="name">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="firstName" type="xs:Name"/>
+														<xs:attribute name="lastName" type="xs:Name"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute ref="FID" use="required"/>
+									<xs:attribute ref="UGFReference" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="images" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="image" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="fileName" type="xs:token"/>
+										<xs:element name="artists">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="artist" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attributeGroup ref="UGFLinkReference"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="title" type="xs:string"/>
+										<xs:element name="date" type="dateType"/>
+										<xs:element name="medium">
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:enumeration value="oil on canvas"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="classification">
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:enumeration value="painting"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="credit">
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:enumeration value="Andrew W. Mellon Collection"/>
+													<xs:enumeration value="Gift of Mr. and Mrs. Richard Mellon Scaife in honor of Paul Mellon"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="accessionNo">
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:pattern value="\d{4}\.\d{1,3}\.\d{1,3}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="imageUse">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Open Access"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="sizes">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="size" maxOccurs="unbounded">
+														<xs:simpleType>
+															<xs:restriction base="xs:Name">
+																<xs:enumeration value="publication"/>
+																<xs:enumeration value="web"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="source">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="National Gallery of Art"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="link" type="xs:token"/>
+									</xs:sequence>
+									<xs:attribute ref="FID" use="required"/>
+									<xs:attribute ref="UGFReference" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -3283,9 +3419,6 @@
 	<xs:complexType name="heading1Type" mixed="true">
 		<xs:sequence>
 			<xs:element ref="generate" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="token" minOccurs="0">
-				<xs:complexType/>
-			</xs:element>
 			<xs:element ref="quoMark" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -3652,18 +3785,14 @@
 							<xs:element name="td" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:complexContent>
-										<xs:extension base="paragraphType">
-											<xs:attribute name="colspan" type="xs:int"/>
-										</xs:extension>
+										<xs:extension base="paragraphType"/>
 									</xs:complexContent>
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="th" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:complexContent>
-										<xs:extension base="paragraphType">
-											<xs:attribute name="colspan" type="xs:int"/>
-										</xs:extension>
+										<xs:extension base="paragraphType"/>
 									</xs:complexContent>
 								</xs:complexType>
 							</xs:element>
@@ -3740,6 +3869,7 @@
 	</xs:complexType>
 	<xs:complexType name="itemType">
 		<xs:sequence>
+			<xs:element name="author" type="author"/>
 			<xs:element ref="GMOnly"/>
 			<xs:element name="includeItemInMagicLists" type="xs:boolean"/>
 			<xs:element name="includeItemInMundaneLists" type="xs:boolean"/>
@@ -3815,14 +3945,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="itemConsumable" minOccurs="0">
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:enumeration value="false"/>
-						<xs:enumeration value="true"/>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
+			<xs:element name="itemConsumable" type="xs:boolean" minOccurs="0"/>
 			<xs:element name="itemOffenseBonus" type="xs:nonNegativeInteger" minOccurs="0"/>
 			<xs:element name="itemProperties" minOccurs="0">
 				<xs:complexType mixed="true">
@@ -3881,7 +4004,7 @@
 			<xs:element name="itemTypeSubtype" type="itemSubtype" minOccurs="0"/>
 			<xs:element name="itemUnidentifiedDescription" type="paragraphType" minOccurs="0"/>
 			<xs:element name="itemUnidentifiedName" type="xs:token" minOccurs="0"/>
-			<xs:element name="itemWeight" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="itemWeight" type="xs:float" minOccurs="0"/>
 			<xs:element ref="officialContent"/>
 			<xs:element ref="publications" minOccurs="0"/>
 			<xs:element ref="rulesets" minOccurs="0"/>
@@ -4047,6 +4170,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="author">
 		<xs:restriction base="xs:Name">
+			<xs:enumeration value="Arria"/>
 			<xs:enumeration value="DanDWiki"/>
 			<xs:enumeration value="LeviFoxend"/>
 			<xs:enumeration value="ProNobis"/>
@@ -4337,6 +4461,12 @@
 			<xs:enumeration value="120"/>
 			<xs:enumeration value="180"/>
 			<xs:enumeration value="240"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dateYear">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1000"/>
+			<xs:maxInclusive value="2019"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="diceType2">
@@ -5157,6 +5287,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="UGFReference">
 		<xs:restriction base="xs:string">
+			<xs:pattern value="aRtI\d+"/>
 			<xs:pattern value="bKbK\d+"/>
 			<xs:pattern value="bKbO\d+"/>
 			<xs:pattern value="bKfE\d+"/>
@@ -5173,6 +5304,7 @@
 			<xs:pattern value="cLtR\d+"/>
 			<xs:pattern value="eNeN\d+"/>
 			<xs:pattern value="fEfE\d+"/>
+			<xs:pattern value="iMaG\d+"/>
 			<xs:pattern value="iNrE\w+"/>
 			<xs:pattern value="iTiT\d+"/>
 			<xs:pattern value="iTpA\d+"/>
@@ -5979,7 +6111,7 @@
 																<xs:complexType>
 																	<xs:sequence>
 																		<xs:element name="ability" type="ability" minOccurs="0"/>
-																		<xs:element name="damage" type="diceType2" minOccurs="0"/>
+																		<xs:element name="formula" type="diceType2" minOccurs="0"/>
 																		<xs:element name="damageMaterial" type="itemDamageMaterial" minOccurs="0"/>
 																		<xs:element name="damageType" type="itemDamageType"/>
 																		<xs:element name="modifier" type="xs:int" minOccurs="0"/>
@@ -6878,7 +7010,7 @@
 		<xs:sequence>
 			<xs:element name="ability" type="ability" minOccurs="0"/>
 			<xs:element name="criticalDice" type="xs:int" minOccurs="0"/>
-			<xs:element name="damage" type="diceType2" minOccurs="0"/>
+			<xs:element name="formula" type="diceType2" minOccurs="0"/>
 			<xs:element name="damageMaterial" type="itemDamageMaterial" minOccurs="0"/>
 			<xs:element name="damageType" type="itemDamageType" minOccurs="0"/>
 			<xs:element name="higherLevelDamage" minOccurs="0">
@@ -7589,10 +7721,41 @@
 	</xs:element>
 	<xs:complexType name="higherLevelsType">
 		<xs:sequence>
-			<xs:element name="ability" type="ability" minOccurs="0"/>
-			<xs:element name="type" type="higherLevel" default="spell slot"/>
-			<xs:element name="damage" type="diceType2"/>
-			<xs:element name="modifier" type="xs:int" minOccurs="0"/>
+			<xs:element name="higherAbility" type="ability" minOccurs="0"/>
+			<xs:element name="higherType" type="higherLevel" default="spell slot"/>
+			<xs:element name="higherFormula" type="diceType2"/>
+			<xs:element name="higherModifier" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dateType">
+		<xs:sequence>
+			<xs:element name="day" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="1"/>
+						<xs:maxInclusive value="31"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="month" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:Name">
+						<xs:enumeration value="January"/>
+						<xs:enumeration value="February"/>
+						<xs:enumeration value="March"/>
+						<xs:enumeration value="April"/>
+						<xs:enumeration value="May"/>
+						<xs:enumeration value="June"/>
+						<xs:enumeration value="July"/>
+						<xs:enumeration value="August"/>
+						<xs:enumeration value="September"/>
+						<xs:enumeration value="October"/>
+						<xs:enumeration value="Novemeber"/>
+						<xs:enumeration value="December"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="year" type="dateYear"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
