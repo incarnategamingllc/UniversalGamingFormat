@@ -1493,6 +1493,7 @@
 														<xs:element name="feat" maxOccurs="unbounded">
 															<xs:complexType>
 																<xs:sequence>
+																	<xs:element name="author" type="author"/>
 																	<xs:element name="featDescription" type="paragraphType"/>
 																	<xs:element name="featLegal" type="paragraphType" minOccurs="0"/>
 																	<xs:element name="featname">
@@ -1512,7 +1513,7 @@
 																	<xs:element name="featRecommendedClasses" minOccurs="0">
 																		<xs:complexType>
 																			<xs:sequence>
-																				<xs:element name="featRecommendedClass" type="class"/>
+																				<xs:element name="featRecommendedClass" type="class" maxOccurs="unbounded"/>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
@@ -3011,6 +3012,7 @@
 														<xs:element name="riddle" maxOccurs="unbounded">
 															<xs:complexType>
 																<xs:sequence>
+																	<xs:element name="author" type="author"/>
 																	<xs:element name="riddleAnswer" type="paragraphType"/>
 																	<xs:element name="riddleDescription" type="paragraphType"/>
 																	<xs:element name="riddleDifficulty" minOccurs="0">
@@ -3999,7 +4001,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="itemStrength" type="xs:float" minOccurs="0"/>
+			<xs:element name="itemStrength" type="xs:int" minOccurs="0"/>
 			<xs:element name="itemType" type="itemtype"/>
 			<xs:element name="itemTypeSubtype" type="itemSubtype" minOccurs="0"/>
 			<xs:element name="itemUnidentifiedDescription" type="paragraphType" minOccurs="0"/>
@@ -4172,6 +4174,7 @@
 		<xs:restriction base="xs:Name">
 			<xs:enumeration value="Arria"/>
 			<xs:enumeration value="DanDWiki"/>
+			<xs:enumeration value="DeanRivers"/>
 			<xs:enumeration value="LeviFoxend"/>
 			<xs:enumeration value="ProNobis"/>
 			<xs:enumeration value="SRD"/>
@@ -5420,6 +5423,7 @@
 	</xs:element>
 	<xs:complexType name="raceType">
 		<xs:sequence>
+			<xs:element name="author" type="author"/>
 			<xs:element name="defaultSkills" type="defaultSkillsType" minOccurs="0"/>
 			<xs:element ref="officialContent"/>
 			<xs:element ref="publications" minOccurs="0"/>
@@ -5516,6 +5520,7 @@
 						<xs:element name="subrace" minOccurs="0" maxOccurs="unbounded">
 							<xs:complexType>
 								<xs:sequence>
+									<xs:element name="author" type="author"/>
 									<xs:element ref="officialContent"/>
 									<xs:element ref="publications" minOccurs="0"/>
 									<xs:element ref="rulesets" minOccurs="0"/>
@@ -5726,6 +5731,7 @@
 	</xs:element>
 	<xs:complexType name="skillType">
 		<xs:sequence>
+			<xs:element name="author" type="author"/>
 			<xs:element ref="officialContent"/>
 			<xs:element name="skillDescription" type="paragraphType"/>
 			<xs:element name="skillName" type="xs:token"/>
