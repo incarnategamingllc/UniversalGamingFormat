@@ -2694,6 +2694,7 @@
 														<xs:element name="plane" maxOccurs="unbounded">
 															<xs:complexType>
 																<xs:sequence>
+																	<xs:element name="author" type="author"/>
 																	<xs:element ref="additionalChildren" minOccurs="0"/>
 																	<xs:element ref="additionalParents" minOccurs="0"/>
 																	<xs:element name="description" type="paragraphType"/>
@@ -2707,6 +2708,7 @@
 																						<xs:sequence>
 																							<xs:element ref="additionalChildren" minOccurs="0"/>
 																							<xs:element ref="additionalParents" minOccurs="0"/>
+																							<xs:element name="author" type="author"/>
 																							<xs:element name="description" type="paragraphType"/>
 																							<xs:element name="name" type="xs:token"/>
 																							<xs:element ref="map"/>
@@ -2718,6 +2720,7 @@
 																												<xs:sequence>
 																													<xs:element ref="additionalChildren" minOccurs="0"/>
 																													<xs:element ref="additionalParents" minOccurs="0"/>
+																													<xs:element name="author" type="author"/>
 																													<xs:element name="description" type="paragraphType"/>
 																													<xs:element name="name" type="xs:token"/>
 																													<xs:element ref="map"/>
@@ -2729,6 +2732,7 @@
 																																		<xs:sequence>
 																																			<xs:element ref="additionalChildren" minOccurs="0"/>
 																																			<xs:element ref="additionalParents" minOccurs="0"/>
+																																			<xs:element name="author" type="author"/>
 																																			<xs:element name="description" type="paragraphType"/>
 																																			<xs:element name="name" type="xs:token"/>
 																																			<xs:element ref="map"/>
@@ -2740,6 +2744,7 @@
 																																								<xs:sequence>
 																																									<xs:element ref="additionalChildren" minOccurs="0"/>
 																																									<xs:element ref="additionalParents" minOccurs="0"/>
+																																									<xs:element name="author" type="author"/>
 																																									<xs:element name="description" type="paragraphType"/>
 																																									<xs:element name="name" type="xs:token"/>
 																																									<xs:element ref="map"/>
@@ -2751,6 +2756,7 @@
 																																														<xs:sequence>
 																																															<xs:element ref="additionalChildren" minOccurs="0"/>
 																																															<xs:element ref="additionalParents" minOccurs="0"/>
+																																															<xs:element name="author" type="author"/>
 																																															<xs:element name="description" type="paragraphType"/>
 																																															<xs:element name="name" type="xs:token"/>
 																																															<xs:element ref="map"/>
@@ -2762,6 +2768,7 @@
 																																																				<xs:sequence>
 																																																					<xs:element ref="additionalChildren" minOccurs="0"/>
 																																																					<xs:element ref="additionalParents" minOccurs="0"/>
+																																																					<xs:element name="author" type="author"/>
 																																																					<xs:element name="description" type="paragraphType"/>
 																																																					<xs:element name="name" type="xs:token"/>
 																																																					<xs:element ref="map"/>
@@ -3272,6 +3279,7 @@
 												<xs:restriction base="xs:string">
 													<xs:enumeration value="American"/>
 													<xs:enumeration value="British"/>
+													<xs:enumeration value="Netherlandish"/>
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
@@ -3321,6 +3329,7 @@
 											<xs:simpleType>
 												<xs:restriction base="xs:token">
 													<xs:enumeration value="oil on canvas"/>
+													<xs:enumeration value="oil on panel"/>
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
@@ -3335,14 +3344,17 @@
 											<xs:simpleType>
 												<xs:restriction base="xs:token">
 													<xs:enumeration value="Andrew W. Mellon Collection"/>
+													<xs:enumeration value="Ailsa Mellon Bruce Fund"/>
 													<xs:enumeration value="Gift of Mr. and Mrs. Richard Mellon Scaife in honor of Paul Mellon"/>
+													<xs:enumeration value="Paul Mellon Collection"/>
+													<xs:enumeration value="Samuel H Kress Collection"/>
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
 										<xs:element name="accessionNo">
 											<xs:simpleType>
 												<xs:restriction base="xs:token">
-													<xs:pattern value="\d{4}\.\d{1,3}\.\d{1,3}"/>
+													<xs:pattern value="\d{4}\.\d{1,3}\.\d{1,3}(\.\w)?"/>
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
@@ -4160,6 +4172,19 @@
 	<xs:simpleType name="actionTarget">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="self"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="alignment">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="lawful good"/>
+			<xs:enumeration value="lawful neutral"/>
+			<xs:enumeration value="lawful evil"/>
+			<xs:enumeration value="neutral good"/>
+			<xs:enumeration value="true neutral"/>
+			<xs:enumeration value="neutral evil"/>
+			<xs:enumeration value="chaotic good"/>
+			<xs:enumeration value="chaotic neutral"/>
+			<xs:enumeration value="chaotic evil"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="actionType">
@@ -7147,6 +7172,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="author" type="author"/>
 			<xs:element name="carryingCapacity" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
@@ -7266,8 +7292,8 @@
 			<xs:element name="lore">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="age" type="xs:token" minOccurs="0"/>
-						<xs:element name="alignment" type="xs:token" minOccurs="0"/>
+						<xs:element name="age" type="xs:nonNegativeInteger" minOccurs="0"/>
+						<xs:element name="alignment" type="alignment" minOccurs="0"/>
 						<xs:element name="background">
 							<xs:complexType>
 								<xs:sequence>
@@ -7450,6 +7476,7 @@
 						<xs:sequence>
 							<xs:element ref="additionalChildren" minOccurs="0"/>
 							<xs:element ref="additionalParents" minOccurs="0"/>
+							<xs:element name="author" type="author"/>
 							<xs:element name="description" type="paragraphType"/>
 							<xs:element name="name" type="xs:token"/>
 							<xs:element ref="map"/>
@@ -7466,6 +7493,7 @@
 										<xs:element name="subPoint" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
+													<xs:element name="author" type="author"/>
 													<xs:element ref="map"/>
 													<xs:element name="name" type="xs:token"/>
 													<xs:element name="description" type="paragraphType"/>
