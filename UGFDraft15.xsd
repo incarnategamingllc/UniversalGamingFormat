@@ -3003,7 +3003,7 @@
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
-													<xs:attribute ref="FID" use="required"/>
+													<xs:attribute name="FID" type="FID" use="required"/>
 													<xs:attribute name="raceTableId" use="required">
 														<xs:simpleType>
 															<xs:restriction base="xs:Name">
@@ -5543,7 +5543,7 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute ref="FID" use="required"/>
+					<xs:attribute name="FID" type="FID" use="required"/>
 					<xs:attribute name="raceTraitsTableId" use="required">
 						<xs:simpleType>
 							<xs:restriction base="xs:Name">
@@ -5644,7 +5644,7 @@
 													</xs:complexType>
 												</xs:element>
 											</xs:sequence>
-											<xs:attribute ref="FID" use="required"/>
+											<xs:attribute name="FID" type="FID" use="required"/>
 											<xs:attribute name="subraceTraitsTableId" use="required">
 												<xs:simpleType>
 													<xs:restriction base="xs:Name">
@@ -5667,7 +5667,7 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute ref="FID" use="required"/>
+					<xs:attribute name="FID" type="FID" use="required"/>
 					<xs:attribute name="subraceTableId" use="required">
 						<xs:simpleType>
 							<xs:restriction base="xs:Name">
