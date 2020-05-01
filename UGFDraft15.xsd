@@ -3003,6 +3003,14 @@
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
+													<xs:attribute ref="FID" use="required"/>
+													<xs:attribute name="raceTableId" use="required">
+														<xs:simpleType>
+															<xs:restriction base="xs:Name">
+																<xs:pattern value="tAtA\d+"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:attribute>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
