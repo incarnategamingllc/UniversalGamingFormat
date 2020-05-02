@@ -426,6 +426,7 @@
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
+																	<xs:element ref="commonality"/>
 																	<xs:element ref="genres" minOccurs="0"/>
 																	<xs:element name="moods" minOccurs="0">
 																		<xs:complexType>
@@ -865,6 +866,14 @@
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
+										<xs:attribute name="FID" type="FID" use="required"/>
+										<xs:attribute name="backgroundTable" use="required">
+											<xs:simpleType>
+												<xs:restriction base="xs:Name">
+													<xs:pattern value="tAtA\d+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="classChapter" minOccurs="0">
@@ -5457,6 +5466,7 @@
 	<xs:complexType name="raceType">
 		<xs:sequence>
 			<xs:element name="author" type="author"/>
+			<xs:element ref="commonality"/>
 			<xs:element name="defaultSkills" type="defaultSkillsType" minOccurs="0"/>
 			<xs:element ref="officialContent"/>
 			<xs:element ref="publications" minOccurs="0"/>
@@ -5558,10 +5568,11 @@
 			<xs:element name="subraces" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="subrace" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="subrace" maxOccurs="unbounded">
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element name="author" type="author"/>
+									<xs:element ref="commonality"/>
 									<xs:element ref="officialContent"/>
 									<xs:element ref="publications" minOccurs="0"/>
 									<xs:element ref="rulesets" minOccurs="0"/>
@@ -7824,4 +7835,5 @@
 			<xs:element name="year" type="dateYear"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:element name="commonality" type="xs:int"/>
 </xs:schema>

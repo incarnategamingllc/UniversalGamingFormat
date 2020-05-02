@@ -57,6 +57,8 @@
 															<text fixtext="  &quot;background&quot;:{&quot;table&quot;:&quot;&quot;,&quot;backgrounds&quot;:["/>
 															<template subtype="element" filter="position() = 1" match="background">
 																<children>
+																	<newline/>
+																	<text fixtext="    "/>
 																	<calltemplate subtype="named" match="backgroundTemplate">
 																		<parameters/>
 																	</calltemplate>
@@ -66,13 +68,16 @@
 															<template subtype="element" filter="position() &gt; 1" match="background">
 																<children>
 																	<text fixtext=","/>
+																	<newline/>
+																	<text fixtext="    "/>
 																	<calltemplate subtype="named" match="backgroundTemplate">
 																		<parameters/>
 																	</calltemplate>
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="]}"/>
+															<newline/>
+															<text fixtext="  ]}"/>
 														</children>
 														<variables/>
 													</template>
@@ -95,6 +100,8 @@
 															<text fixtext="&quot;,&quot;races&quot;:["/>
 															<template subtype="element" filter="position() = 1" match="race">
 																<children>
+																	<newline/>
+																	<text fixtext="    "/>
 																	<calltemplate subtype="named" match="raceTemplate">
 																		<parameters/>
 																	</calltemplate>
@@ -103,14 +110,17 @@
 															</template>
 															<template subtype="element" filter="position() &gt; 1" match="race">
 																<children>
-																	<text fixtext=", "/>
+																	<text fixtext=","/>
+																	<newline/>
+																	<text fixtext="    "/>
 																	<calltemplate subtype="named" match="raceTemplate">
 																		<parameters/>
 																	</calltemplate>
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="]}"/>
+															<newline/>
+															<text fixtext="  ]}"/>
 														</children>
 														<variables/>
 													</template>
@@ -128,6 +138,7 @@
 					</template>
 					<newline/>
 					<text fixtext="}"/>
+					<newline/>
 				</children>
 			</globaltemplate>
 		</children>
@@ -145,7 +156,7 @@
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;,&quot;fid&quot;:&quot;"/>
+					<text fixtext="&quot;,&quot;weight&quot;:1,&quot;fid&quot;:&quot;"/>
 					<template subtype="attribute" match="FID">
 						<children>
 							<content subtype="regular"/>
@@ -368,72 +379,30 @@
 						<children>
 							<template subtype="element" filter="position() = 1" match="subrace">
 								<children>
-									<text fixtext="{&quot;name&quot;:&quot;"/>
-									<template subtype="element" match="subraceName">
-										<children>
-											<content subtype="regular"/>
-										</children>
-										<variables/>
-									</template>
-									<text fixtext="&quot;,&quot;fid&quot;:&quot;"/>
-									<template subtype="attribute" match="FID">
-										<children>
-											<content subtype="regular"/>
-										</children>
-										<variables/>
-									</template>
-									<text fixtext="&quot;,&quot;traits&quot;:&quot;"/>
-									<template subtype="element" match="subraceTraits">
-										<children>
-											<template subtype="attribute" match="FID">
-												<children>
-													<content subtype="regular"/>
-												</children>
-												<variables/>
-											</template>
-										</children>
-										<variables/>
-									</template>
-									<text fixtext="&quot;}"/>
+									<newline/>
+									<text fixtext="      "/>
+									<calltemplate subtype="named" match="subraceTemplate">
+										<parameters/>
+									</calltemplate>
 								</children>
 								<variables/>
 							</template>
 							<template subtype="element" filter="position() &gt; 1" match="subrace">
 								<children>
-									<text fixtext=", {&quot;name&quot;:&quot;"/>
-									<template subtype="element" match="subraceName">
-										<children>
-											<content subtype="regular"/>
-										</children>
-										<variables/>
-									</template>
-									<text fixtext="&quot;,&quot;fid&quot;:&quot;"/>
-									<template subtype="attribute" match="FID">
-										<children>
-											<content subtype="regular"/>
-										</children>
-										<variables/>
-									</template>
-									<text fixtext="&quot;,&quot;traits&quot;:&quot;"/>
-									<template subtype="element" match="subraceTraits">
-										<children>
-											<template subtype="attribute" match="FID">
-												<children>
-													<content subtype="regular"/>
-												</children>
-												<variables/>
-											</template>
-										</children>
-										<variables/>
-									</template>
-									<text fixtext="&quot;}"/>
+									<text fixtext=","/>
+									<newline/>
+									<text fixtext="      "/>
+									<calltemplate subtype="named" match="subraceTemplate">
+										<parameters/>
+									</calltemplate>
 								</children>
 								<variables/>
 							</template>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="]}}"/>
+					<newline/>
+					<text fixtext="    ]}}"/>
 				</children>
 			</globaltemplate>
 			<globaltemplate subtype="named" match="backgroundTemplate">
@@ -446,7 +415,7 @@
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;,&quot;fid&quot;:&quot;"/>
+					<text fixtext="&quot;,&quot;weight&quot;:1,&quot;fid&quot;:&quot;"/>
 					<template subtype="attribute" match="FID">
 						<children>
 							<content subtype="regular"/>
@@ -568,6 +537,38 @@
 						<variables/>
 					</template>
 					<text fixtext="]}"/>
+				</children>
+			</globaltemplate>
+			<globaltemplate subtype="named" match="subraceTemplate">
+				<parameters/>
+				<children>
+					<text fixtext="{&quot;name&quot;:&quot;"/>
+					<template subtype="element" match="subraceName">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;weight&quot;:1,&quot;fid&quot;:&quot;"/>
+					<template subtype="attribute" match="FID">
+						<children>
+							<content subtype="regular"/>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;,&quot;traits&quot;:&quot;"/>
+					<template subtype="element" match="subraceTraits">
+						<children>
+							<template subtype="attribute" match="FID">
+								<children>
+									<content subtype="regular"/>
+								</children>
+								<variables/>
+							</template>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext="&quot;}"/>
 				</children>
 			</globaltemplate>
 		</children>

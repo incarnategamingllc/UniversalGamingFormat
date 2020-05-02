@@ -100,6 +100,17 @@
 																				</children>
 																				<variables/>
 																			</template>
+																			<template subtype="element" match="backgroundMiscellaneous">
+																				<children>
+																					<text fixtext=","/>
+																					<newline/>
+																					<text fixtext="    "/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
 																		</children>
 																		<variables/>
 																	</template>
@@ -144,6 +155,17 @@
 																				<variables/>
 																			</template>
 																			<template subtype="element" match="backgroundFlaw">
+																				<children>
+																					<text fixtext=","/>
+																					<newline/>
+																					<text fixtext="    "/>
+																					<calltemplate subtype="named" match="rollableTableFoundry">
+																						<parameters/>
+																					</calltemplate>
+																				</children>
+																				<variables/>
+																			</template>
+																			<template subtype="element" match="backgroundMiscellaneous">
 																				<children>
 																					<text fixtext=","/>
 																					<newline/>
