@@ -3003,6 +3003,14 @@
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
+													<xs:attribute name="FID" type="FID" use="required"/>
+													<xs:attribute name="raceTableId" use="required">
+														<xs:simpleType>
+															<xs:restriction base="xs:Name">
+																<xs:pattern value="tAtA\d+"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:attribute>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -5535,6 +5543,14 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
+					<xs:attribute name="FID" type="FID" use="required"/>
+					<xs:attribute name="raceTraitsTableId" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:Name">
+								<xs:pattern value="tAtA\d+"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
 				</xs:complexType>
 			</xs:element>
 			<xs:element ref="rulesets" minOccurs="0"/>
@@ -5628,6 +5644,14 @@
 													</xs:complexType>
 												</xs:element>
 											</xs:sequence>
+											<xs:attribute name="FID" type="FID" use="required"/>
+											<xs:attribute name="subraceTraitsTableId" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:Name">
+														<xs:pattern value="tAtA\d+"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:complexType>
 									</xs:element>
 									<xs:element name="VTTcode" type="VTTcodeType" minOccurs="0"/>
@@ -5643,6 +5667,14 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
+					<xs:attribute name="FID" type="FID" use="required"/>
+					<xs:attribute name="subraceTableId" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:Name">
+								<xs:pattern value="tAtA\d+"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="VTTcode" type="VTTcodeType" minOccurs="0"/>
