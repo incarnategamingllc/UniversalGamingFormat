@@ -54,7 +54,14 @@
 													<template subtype="element" match="backgrounds">
 														<children>
 															<newline/>
-															<text fixtext="  &quot;background&quot;:{&quot;table&quot;:&quot;&quot;,&quot;backgrounds&quot;:["/>
+															<text fixtext="  &quot;background&quot;:{&quot;table&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;,&quot;backgrounds&quot;:["/>
 															<template subtype="element" filter="position() = 1" match="background">
 																<children>
 																	<newline/>
@@ -156,7 +163,16 @@
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;,&quot;weight&quot;:1,&quot;fid&quot;:&quot;"/>
+					<text fixtext="&quot;,&quot;weight&quot;:"/>
+					<template subtype="element" match="commonality">
+						<children>
+							<content subtype="regular">
+								<format basic-type="xsd" datatype="int"/>
+							</content>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext=",&quot;fid&quot;:&quot;"/>
 					<template subtype="attribute" match="FID">
 						<children>
 							<content subtype="regular"/>
@@ -415,7 +431,16 @@
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;,&quot;weight&quot;:1,&quot;fid&quot;:&quot;"/>
+					<text fixtext="&quot;,&quot;weight&quot;:"/>
+					<template subtype="element" match="commonality">
+						<children>
+							<content subtype="regular">
+								<format basic-type="xsd" datatype="int"/>
+							</content>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext=",&quot;fid&quot;:&quot;"/>
 					<template subtype="attribute" match="FID">
 						<children>
 							<content subtype="regular"/>
@@ -549,7 +574,16 @@
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="&quot;,&quot;weight&quot;:1,&quot;fid&quot;:&quot;"/>
+					<text fixtext="&quot;,&quot;weight&quot;:"/>
+					<template subtype="element" match="commonality">
+						<children>
+							<content subtype="regular">
+								<format basic-type="xsd" datatype="int"/>
+							</content>
+						</children>
+						<variables/>
+					</template>
+					<text fixtext=",&quot;fid&quot;:&quot;"/>
 					<template subtype="attribute" match="FID">
 						<children>
 							<content subtype="regular"/>

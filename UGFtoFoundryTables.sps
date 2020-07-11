@@ -55,12 +55,76 @@
 												<children>
 													<template subtype="element" match="backgrounds">
 														<children>
+															<text fixtext="{&quot;_id&quot;:&quot;"/>
+															<template subtype="attribute" match="FID">
+																<children>
+																	<content subtype="regular"/>
+																</children>
+																<variables/>
+															</template>
+															<text fixtext="&quot;, &quot;name&quot;:&quot;Random - Background&quot;, &quot;permission&quot;:{&quot;default&quot;:0},&quot;data&quot;:{&quot;description&quot;:&quot;&quot;,&quot;row&quot;:["/>
+															<newline/>
+															<text fixtext="      "/>
+															<template subtype="element" filter="position() = 1" match="background">
+																<children>
+																	<text fixtext="{&quot;from&quot;:"/>
+																	<autocalc xpath="position()"/>
+																	<text fixtext=",&quot;to&quot;:"/>
+																	<autocalc xpath="position()"/>
+																	<text fixtext=",&quot;column&quot;:[{&quot;content&quot;:&quot;&lt;p&gt;&lt;span class=\&quot;generate\&quot; data-fid=\&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="\&quot; data-recurrance=\&quot;never\&quot;&gt;"/>
+																	<template subtype="element" match="backgroundName">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&lt;/span&gt;&lt;/p&gt;&quot;}]}"/>
+																</children>
+																<variables/>
+															</template>
+															<template subtype="element" filter="position() &gt; 1" match="background">
+																<children>
+																	<newline/>
+																	<text fixtext="      ,{&quot;from&quot;:"/>
+																	<autocalc xpath="position()"/>
+																	<text fixtext=",&quot;to&quot;:"/>
+																	<autocalc xpath="position()"/>
+																	<text fixtext=",&quot;column&quot;:[{&quot;content&quot;:&quot;&lt;p&gt;&lt;span class=\&quot;generate\&quot; data-fid=\&quot;"/>
+																	<template subtype="attribute" match="FID">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="\&quot; data-recurrance=\&quot;never\&quot;&gt;"/>
+																	<template subtype="element" match="backgroundName">
+																		<children>
+																			<content subtype="regular"/>
+																		</children>
+																		<variables/>
+																	</template>
+																	<text fixtext="&lt;/span&gt;&lt;/p&gt;&quot;}]}"/>
+																</children>
+																<variables/>
+															</template>
+															<newline/>
+															<text fixtext="    ]},&quot;flags&quot;:{},&quot;type&quot;:&quot;table&quot;,&quot;items&quot;:[]}"/>
 															<template subtype="element" filter="1" match="background">
 																<children>
 																	<template subtype="element" match="backgroundSuggestedCharacteristics">
 																		<children>
 																			<template subtype="element" match="backgroundPersonality">
 																				<children>
+																					<text fixtext=","/>
+																					<newline/>
+																					<text fixtext="    "/>
 																					<calltemplate subtype="named" match="rollableTableFoundry">
 																						<parameters/>
 																					</calltemplate>
@@ -202,6 +266,8 @@
 																<variables/>
 															</template>
 															<text fixtext="&quot;, &quot;name&quot;:&quot;Random - Race&quot;, &quot;permission&quot;:{&quot;default&quot;:0},&quot;data&quot;:{&quot;description&quot;:&quot;&quot;,&quot;row&quot;:["/>
+															<newline/>
+															<text fixtext="      "/>
 															<template subtype="element" filter="position() = 1" match="race">
 																<children>
 																	<text fixtext="{&quot;from&quot;:"/>
@@ -228,7 +294,8 @@
 															</template>
 															<template subtype="element" filter="position() &gt; 1" match="race">
 																<children>
-																	<text fixtext=",{&quot;from&quot;:"/>
+																	<newline/>
+																	<text fixtext="      ,{&quot;from&quot;:"/>
 																	<autocalc xpath="position()"/>
 																	<text fixtext=",&quot;to&quot;:"/>
 																	<autocalc xpath="position()"/>
@@ -250,7 +317,8 @@
 																</children>
 																<variables/>
 															</template>
-															<text fixtext="]},&quot;flags&quot;:{},&quot;type&quot;:&quot;table&quot;,&quot;items&quot;:[]}"/>
+															<newline/>
+															<text fixtext="    ]},&quot;flags&quot;:{},&quot;type&quot;:&quot;table&quot;,&quot;items&quot;:[]}"/>
 															<template subtype="element" match="race">
 																<children>
 																	<template subtype="element" match="raceTraits">
@@ -790,7 +858,8 @@
 					<text fixtext="&quot;,&quot;row&quot;:["/>
 					<template subtype="element" filter="1" match="tr">
 						<children>
-							<text fixtext="{&quot;from&quot;:"/>
+							<newline/>
+							<text fixtext="      {&quot;from&quot;:"/>
 							<template subtype="element" match="rollfrom">
 								<children>
 									<content subtype="regular">
@@ -811,7 +880,8 @@
 							<text fixtext=",&quot;column&quot;:["/>
 							<template subtype="element" filter="1" match="td">
 								<children>
-									<text fixtext="{&quot;content&quot;:&quot;"/>
+									<newline/>
+									<text fixtext="        {&quot;content&quot;:&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="&quot;}"/>
 								</children>
@@ -819,19 +889,24 @@
 							</template>
 							<template subtype="element" filter="position()&gt;1" match="td">
 								<children>
-									<text fixtext=",{&quot;content&quot;:&quot;"/>
+									<text fixtext=","/>
+									<newline/>
+									<text fixtext="        {&quot;content&quot;:&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="&quot;}"/>
 								</children>
 								<variables/>
 							</template>
-							<text fixtext="]}"/>
+							<newline/>
+							<text fixtext="      ]}"/>
 						</children>
 						<variables/>
 					</template>
 					<template subtype="element" filter="position()&gt;1" match="tr">
 						<children>
-							<text fixtext=",{&quot;from&quot;:"/>
+							<text fixtext=","/>
+							<newline/>
+							<text fixtext="      {&quot;from&quot;:"/>
 							<template subtype="element" match="rollfrom">
 								<children>
 									<content subtype="regular">
@@ -852,7 +927,8 @@
 							<text fixtext=",&quot;column&quot;:["/>
 							<template subtype="element" filter="1" match="td">
 								<children>
-									<text fixtext="{&quot;content&quot;:&quot;"/>
+									<newline/>
+									<text fixtext="        {&quot;content&quot;:&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="&quot;}"/>
 								</children>
@@ -860,17 +936,21 @@
 							</template>
 							<template subtype="element" filter="position()&gt;1" match="td">
 								<children>
-									<text fixtext=",{&quot;content&quot;:&quot;"/>
+									<text fixtext=","/>
+									<newline/>
+									<text fixtext="        {&quot;content&quot;:&quot;"/>
 									<content subtype="regular"/>
 									<text fixtext="&quot;}"/>
 								</children>
 								<variables/>
 							</template>
-							<text fixtext="]}"/>
+							<newline/>
+							<text fixtext="      ]}"/>
 						</children>
 						<variables/>
 					</template>
-					<text fixtext="]},&quot;flags&quot;:{},&quot;type&quot;:&quot;table&quot;,&quot;items&quot;:[]}"/>
+					<newline/>
+					<text fixtext="    ]},&quot;flags&quot;:{},&quot;type&quot;:&quot;table&quot;,&quot;items&quot;:[]}"/>
 				</children>
 			</globaltemplate>
 		</children>

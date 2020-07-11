@@ -528,6 +528,14 @@
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
+													<xs:attribute name="FID" type="FID" use="required"/>
+													<xs:attribute name="backgroundTable" use="required">
+														<xs:simpleType>
+															<xs:restriction base="xs:Name">
+																<xs:pattern value="tAtA\d+"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:attribute>
 												</xs:complexType>
 											</xs:element>
 											<xs:element name="dreams" minOccurs="0">
@@ -866,14 +874,6 @@
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
-										<xs:attribute name="FID" type="FID" use="required"/>
-										<xs:attribute name="backgroundTable" use="required">
-											<xs:simpleType>
-												<xs:restriction base="xs:Name">
-													<xs:pattern value="tAtA\d+"/>
-												</xs:restriction>
-											</xs:simpleType>
-										</xs:attribute>
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="classChapter" minOccurs="0">
@@ -1027,6 +1027,7 @@
 																									</xs:sequence>
 																								</xs:complexType>
 																							</xs:element>
+																							<xs:element ref="commonality"/>
 																							<xs:element name="darkvision" minOccurs="0">
 																								<xs:complexType>
 																									<xs:simpleContent>
@@ -1052,6 +1053,14 @@
 																					</xs:complexType>
 																				</xs:element>
 																			</xs:sequence>
+																			<xs:attribute name="FID" type="FID" use="required"/>
+																			<xs:attribute name="archetypeTable" use="required">
+																				<xs:simpleType>
+																					<xs:restriction base="xs:Name">
+																						<xs:pattern value="tAtA\d+"/>
+																					</xs:restriction>
+																				</xs:simpleType>
+																			</xs:attribute>
 																		</xs:complexType>
 																	</xs:element>
 																	<xs:element name="classDescription" type="paragraphType"/>
@@ -1326,6 +1335,7 @@
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
+																	<xs:element ref="commonality"/>
 																	<xs:element name="darkvision" minOccurs="0">
 																		<xs:complexType>
 																			<xs:simpleContent>
@@ -1351,6 +1361,14 @@
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
+													<xs:attribute name="FID" type="FID" use="required"/>
+													<xs:attribute name="classesTable" use="required">
+														<xs:simpleType>
+															<xs:restriction base="xs:Name">
+																<xs:pattern value="tAtA\d+"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:attribute>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
