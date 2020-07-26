@@ -1392,7 +1392,7 @@
 																						<xs:element name="encounterCR" maxOccurs="unbounded">
 																							<xs:complexType>
 																								<xs:simpleContent>
-																									<xs:extension base="validCRs">
+																									<xs:extension base="challengeRating">
 																										<xs:attribute name="FID" type="FID" use="required"/>
 																										<xs:attribute name="UGF" use="required">
 																											<xs:simpleType>
@@ -1444,7 +1444,7 @@
 														<xs:element name="encounter" maxOccurs="unbounded">
 															<xs:complexType>
 																<xs:sequence>
-																	<xs:element name="encounterCR" type="validCRs" minOccurs="0"/>
+																	<xs:element name="encounterCR" type="challengeRating" minOccurs="0"/>
 																	<xs:element name="encounterExperience" type="xs:nonNegativeInteger" minOccurs="0"/>
 																	<xs:element name="encounterGroups" minOccurs="0">
 																		<xs:complexType>
@@ -1557,6 +1557,235 @@
 																	</xs:simpleType>
 																</xs:attribute>
 																<xs:attribute name="FID" type="FID" use="required"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="generatorChapter" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="dungeons" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="dungeon" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="description" type="paragraphType"/>
+																	<xs:element name="type" type="xs:string"/>
+																	<xs:element name="randomEncounterTemplates" minOccurs="0">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element name="randomEncounterTemplate" maxOccurs="unbounded">
+																					<xs:complexType>
+																						<xs:sequence>
+																							<xs:element name="attackSaves" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="attackSave" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="ability"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="authors" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="author" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="author"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="challengeRatings" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="challengeRating" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="challengeRating"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="conditionImmunities" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="conditionImmunity" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="conditionImmunity"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="damageImmunities" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="damageImmunity" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="npcDamageType"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="damageResistances" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="damageResistance" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="npcDamageType"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="damageVulnerabilities" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="damageVulnerability" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="npcDamageType"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="functions" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="function" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="npcFunction"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="languages" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="language" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="language"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="lores" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="lore" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="npcLore"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="offical" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="official" maxOccurs="unbounded">
+																											<xs:complexType/>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="physicalImmunity" type="npcDamageTypePhysical" minOccurs="0"/>
+																							<xs:element name="physicalResistance" type="npcDamageTypePhysical" minOccurs="0"/>
+																							<xs:element name="sizes" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="size" maxOccurs="unbounded">
+																											<xs:complexType>
+																												<xs:simpleContent>
+																													<xs:extension base="npcSize"/>
+																												</xs:simpleContent>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="terrains" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="terrain" type="npcTerrain" maxOccurs="unbounded"/>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																							<xs:element name="type" minOccurs="0">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element name="type" type="npcType" maxOccurs="unbounded"/>
+																									</xs:sequence>
+																									<xs:attribute name="exclusivity" type="andOrNot"/>
+																								</xs:complexType>
+																							</xs:element>
+																						</xs:sequence>
+																						<xs:attribute name="weight" type="xs:int" use="required"/>
+																					</xs:complexType>
+																				</xs:element>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute name="FID" use="required">
+																	<xs:simpleType>
+																		<xs:restriction base="FID">
+																			<xs:pattern value="[0-9a-zA-Z]{16}"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:attribute>
+																<xs:attribute name="genDunId" use="required">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:Name">
+																			<xs:pattern value="gEdU\d+"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:attribute>
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
@@ -1980,7 +2209,7 @@
 																						<xs:element name="CR" maxOccurs="unbounded">
 																							<xs:complexType>
 																								<xs:simpleContent>
-																									<xs:extension base="validCRs">
+																									<xs:extension base="challengeRating">
 																										<xs:attribute name="FID" type="FID" use="required"/>
 																										<xs:attribute name="string" use="required">
 																											<xs:simpleType>
@@ -2208,7 +2437,7 @@
 																						<xs:element name="type" maxOccurs="unbounded">
 																							<xs:complexType>
 																								<xs:simpleContent>
-																									<xs:extension base="npctype">
+																									<xs:extension base="npcType">
 																										<xs:attribute name="FID" type="FID" use="required"/>
 																										<xs:attribute name="UGFReference" use="required">
 																											<xs:simpleType>
@@ -2383,7 +2612,7 @@
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:element name="npcCR" type="validCRs"/>
+																	<xs:element name="npcCR" type="challengeRating"/>
 																	<xs:element name="npcDescription" type="paragraphType" minOccurs="0"/>
 																	<xs:element name="npcFunction" type="npcFunction" minOccurs="0"/>
 																	<xs:element name="npcHitPoints">
@@ -2665,7 +2894,7 @@
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:element name="npcType" type="npctype" minOccurs="0"/>
+																	<xs:element name="npcType" type="npcType" minOccurs="0"/>
 																	<xs:element name="npcTypeSubType" minOccurs="0">
 																		<xs:complexType>
 																			<xs:sequence>
@@ -4209,6 +4438,14 @@
 			<xs:enumeration value="self"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="actionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="cast"/>
+			<xs:enumeration value="damage"/>
+			<xs:enumeration value="effect"/>
+			<xs:enumeration value="heal"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="alignment">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="lawful good"/>
@@ -4222,12 +4459,12 @@
 			<xs:enumeration value="chaotic evil"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="actionType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="cast"/>
-			<xs:enumeration value="damage"/>
-			<xs:enumeration value="effect"/>
-			<xs:enumeration value="heal"/>
+	<xs:simpleType name="andOrNot">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="and"/>
+			<xs:enumeration value="or"/>
+			<xs:enumeration value="xor"/>
+			<xs:enumeration value="not"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="author">
@@ -4311,6 +4548,65 @@
 			<xs:enumeration value="full"/>
 			<xs:enumeration value="half"/>
 			<xs:enumeration value="none"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="challengeRating">
+		<xs:restriction base="xs:float">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="0.0625"/>
+			<xs:enumeration value="0.125"/>
+			<xs:enumeration value="0.25"/>
+			<xs:enumeration value="0.5"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="9"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="19"/>
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="21"/>
+			<xs:enumeration value="22"/>
+			<xs:enumeration value="23"/>
+			<xs:enumeration value="24"/>
+			<xs:enumeration value="25"/>
+			<xs:enumeration value="26"/>
+			<xs:enumeration value="27"/>
+			<xs:enumeration value="28"/>
+			<xs:enumeration value="29"/>
+			<xs:enumeration value="30"/>
+			<xs:enumeration value="31"/>
+			<xs:enumeration value="32"/>
+			<xs:enumeration value="33"/>
+			<xs:enumeration value="34"/>
+			<xs:enumeration value="35"/>
+			<xs:enumeration value="36"/>
+			<xs:enumeration value="37"/>
+			<xs:enumeration value="38"/>
+			<xs:enumeration value="39"/>
+			<xs:enumeration value="40"/>
+			<xs:enumeration value="41"/>
+			<xs:enumeration value="42"/>
+			<xs:enumeration value="43"/>
+			<xs:enumeration value="44"/>
+			<xs:enumeration value="45"/>
+			<xs:enumeration value="46"/>
+			<xs:enumeration value="47"/>
+			<xs:enumeration value="48"/>
+			<xs:enumeration value="49"/>
+			<xs:enumeration value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="chapterID">
@@ -4920,7 +5216,7 @@
 			<xs:enumeration value="Volcanic"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="npctype">
+	<xs:simpleType name="npcType">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="aberration"/>
 			<xs:enumeration value="beast"/>
@@ -4941,6 +5237,16 @@
 	<xs:simpleType name="npcWeight">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="\d+(,\d)* Pounds"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="official">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="true"/>
+			<xs:enumeration value="false"/>
+			<xs:enumeration value="price modified"/>
+			<xs:enumeration value="mechanically modified"/>
+			<xs:enumeration value="description added"/>
+			<xs:enumeration value="heavily edited"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="pcLevel">
@@ -5405,65 +5711,6 @@
 			<xs:pattern value="tAtA\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="validCRs">
-		<xs:restriction base="xs:float">
-			<xs:enumeration value="0"/>
-			<xs:enumeration value="0.0625"/>
-			<xs:enumeration value="0.125"/>
-			<xs:enumeration value="0.25"/>
-			<xs:enumeration value="0.5"/>
-			<xs:enumeration value="1"/>
-			<xs:enumeration value="2"/>
-			<xs:enumeration value="3"/>
-			<xs:enumeration value="4"/>
-			<xs:enumeration value="5"/>
-			<xs:enumeration value="6"/>
-			<xs:enumeration value="7"/>
-			<xs:enumeration value="8"/>
-			<xs:enumeration value="9"/>
-			<xs:enumeration value="10"/>
-			<xs:enumeration value="11"/>
-			<xs:enumeration value="12"/>
-			<xs:enumeration value="13"/>
-			<xs:enumeration value="14"/>
-			<xs:enumeration value="15"/>
-			<xs:enumeration value="16"/>
-			<xs:enumeration value="17"/>
-			<xs:enumeration value="18"/>
-			<xs:enumeration value="19"/>
-			<xs:enumeration value="20"/>
-			<xs:enumeration value="21"/>
-			<xs:enumeration value="22"/>
-			<xs:enumeration value="23"/>
-			<xs:enumeration value="24"/>
-			<xs:enumeration value="25"/>
-			<xs:enumeration value="26"/>
-			<xs:enumeration value="27"/>
-			<xs:enumeration value="28"/>
-			<xs:enumeration value="29"/>
-			<xs:enumeration value="30"/>
-			<xs:enumeration value="31"/>
-			<xs:enumeration value="32"/>
-			<xs:enumeration value="33"/>
-			<xs:enumeration value="34"/>
-			<xs:enumeration value="35"/>
-			<xs:enumeration value="36"/>
-			<xs:enumeration value="37"/>
-			<xs:enumeration value="38"/>
-			<xs:enumeration value="39"/>
-			<xs:enumeration value="40"/>
-			<xs:enumeration value="41"/>
-			<xs:enumeration value="42"/>
-			<xs:enumeration value="43"/>
-			<xs:enumeration value="44"/>
-			<xs:enumeration value="45"/>
-			<xs:enumeration value="46"/>
-			<xs:enumeration value="47"/>
-			<xs:enumeration value="48"/>
-			<xs:enumeration value="49"/>
-			<xs:enumeration value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:element name="chapterPriority" type="chapterID"/>
 	<xs:attribute name="linkReference" type="xs:token"/>
 	<xs:attribute name="linkDataType" type="dataType"/>
@@ -5803,18 +6050,7 @@
 			</xs:simpleType>
 		</xs:attribute>
 	</xs:complexType>
-	<xs:element name="officialContent">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:enumeration value="true"/>
-				<xs:enumeration value="false"/>
-				<xs:enumeration value="price modified"/>
-				<xs:enumeration value="mechanically modified"/>
-				<xs:enumeration value="description added"/>
-				<xs:enumeration value="heavily edited"/>
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:element>
+	<xs:element name="officialContent" type="official"/>
 	<xs:complexType name="skillType">
 		<xs:sequence>
 			<xs:element name="author" type="author"/>
